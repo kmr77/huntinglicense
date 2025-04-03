@@ -1,0 +1,131 @@
+@charset "UTF-8";
+h1 {
+  color: #fff;
+}
+h2 {
+  text-align: center;
+  background: none;
+  margin: 15px 0;
+  padding: 8px 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+.main-visual {
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  padding: 15px 0;
+}
+.know {
+  background-image: url(../img/know.jpg);
+}
+.application {
+  background-image: url(../img/application.jpg);
+}
+.content {
+  background-image: url(../img/content.jpg);
+}
+.regist {
+  background-image: url(../img/regist.jpg);
+}
+@media screen and (min-width: 768px) {
+  .main-visual {
+    background-size: cover;
+    height: 450px;
+  }
+}
+.contents {
+  margin: 24px 0;
+}
+.contents h3 {
+  text-align: left;
+  font-size: 16px;
+}
+.contents span.marker {
+  background: linear-gradient(transparent 50%, #effe7a 50%);
+}
+.contents .number {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .contents h3 {
+    font-size: 24px;
+  }
+  .contents .number {
+    font-size: 32px;
+  }
+}
+.contents h4 {
+  margin: 10px 0 0;
+}
+.contents dd {
+  padding: 0 16px;
+}
+
+.contents-nav {
+  margin: 24px 0;
+}
+
+.contents-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contents-nav li {
+  width: 50%;
+}
+
+.number {
+  font-size: 32px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .contents-nav {
+    margin: 24px 0;
+  }
+  .contents-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contents-nav li {
+    width: 20%;
+  }
+}
+.age-limit, .info {
+  background-color: #efefef;
+  padding: 16px;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .age-limit {
+    width: 26%;
+  }
+}
+.photo-size {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .photo-size {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+.registration ul li {
+  list-style: inside;
+}
+.registration .list-none {
+  list-style: none;
+}
+/*# sourceMappingURL=top.css.map */

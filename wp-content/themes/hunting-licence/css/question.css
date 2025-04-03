@@ -1,0 +1,163 @@
+@charset "UTF-8";
+h1 {
+  color: #fff;
+}
+
+.container {
+  margin: 0;
+}
+
+.main-visual {
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  padding: 15px 0;
+}
+.all {
+  background-image: url(../img/all.jpg);
+}
+.laws {
+  background-image: url(../img/laws.jpg);
+}
+.type1 {
+  background-image: url(../img/type1.jpg);
+}
+.type2 {
+  background-image: url(../img/type2.jpg);
+}
+.wana {
+  background-image: url(../img/wana.jpg);
+}
+.ami {
+  background-image: url(../img/ami.jpg);
+}
+.animals {
+  background-image: url(../img/all.jpg);
+}
+.examination {
+  background-image: url(../img/examination.jpg);
+}
+.numbers {
+  background-image: url(../img/numbers.jpg);
+}
+.random-btn {
+  margin:0 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .main-visual {
+    background-size: cover;
+    height: 450px;
+  }
+}
+.question {
+  color: #000;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .question {
+    font-size: 16px;
+  }
+}
+.answer {
+  color: #f00;
+  font-size: 14px;
+}
+
+.title-img {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.title {
+  border-bottom: 1px solid #444444;
+  margin: 5px;
+  text-align: center;
+}
+
+#accordion {
+  margin: 5px 0;
+}
+
+.accordion-inner {
+  margin: 24px auto 0;
+}
+
+@media screen and (min-width: 768px) {
+  .accordion-inner {
+    width: 800px;
+    margin: 24px auto 0;
+  }
+}
+#accordion dt {
+  border: 1px solid #B7D1DD;
+  cursor: pointer;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: -1px;
+}
+#accordion dt.select-dt {
+  border: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#accordion dd {
+  background: #F8FFFF;
+  border: 1px solid #B7D1DD;
+  display: none;
+  font-size: 75%;
+  padding: 10px;
+  margin-bottom: -1px;
+}
+#accordion dd.answer-dd {
+  background: #FFFCD0;
+  border: 1px solid #B7D1DD;
+  display: none;
+}
+
+#accordion dt.active {
+  background: url(../../../it/images/arrow-top.png) 97% no-repeat;
+}
+
+.category {
+  margin: 0 5px;
+}
+
+.category ul {
+  list-style: none;
+}
+
+.category ul li {
+  font-size: 80%;
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+
+.category ul li a {
+  border: 1px solid #B7D1DD;
+  color: #444;
+  display: block;
+  padding: 10px;
+}
+
+.category li a.arrow {
+  position: relative;
+}
+
+.category li a.arrow:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
+  transform: rotate(45deg);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -6px;
+}
+/*# sourceMappingURL=question.css.map */

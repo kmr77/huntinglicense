@@ -1,0 +1,406 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
+  color: #585858;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+a:hover {
+  color: #4de2fc;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+}
+
+h2 {
+  text-align: center;
+  background: #3399CC;
+  margin: 15px 0;
+  padding: 8px 0;
+  color: #fff;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 0 15px;
+}
+
+h1 + p {
+  overflow-wrap: break-word;
+  font-size: 13px;
+  padding: 8px 0;
+}
+.bold {
+  font-weight:bold;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    text-align: left;
+    color: #000;
+    font-size: 28px;
+  }
+  h2 {
+    padding: 8px 0;
+    color: #000;
+    border-bottom: 3px solid #545454;
+    background: none;
+    font-size: 24px;
+  }
+  h1 + p {
+    font-size: 16px;
+  }
+}
+.annotation {
+  color: #f00;
+  font-weight:bold;
+}
+
+.pagetop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #fff;
+  border: solid 2px #3399CC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: #3399CC;
+  transition: all ease 0.3s;
+}
+.pagetop:hover {
+  transform: translateY(-3px);
+}
+
+.arrow {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: translateY(20%) rotate(-45deg);
+}
+
+.main-visual {
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+}
+
+.inner {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  margin: 5px;
+  padding: 8px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: ">";
+  margin: 0 2px;
+  font-family: Consolas;
+}
+
+.breadcrumb a {
+  padding: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+header {
+  height: 90px;
+}
+
+.header-nav {
+  margin: 0;
+}
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav li {
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 24px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 200ms linear;
+}
+
+.modal.is-open .modal-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background-color: #fff;
+  border-radius: 6px;
+  max-width: 900px;
+  max-height: 90vh;
+  padding: 1.5rem;
+  transform: translateY(24px);
+  transition: transform 300ms ease-in-out;
+  width: 90%;
+}
+
+.modal.is-open .modal-container {
+  transform: translateY(0);
+}
+
+.modal-title {
+  border-bottom: 3px solid #dedede;
+  font-size: 24px;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.modal-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.button {
+  background-color: #3399CC;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 0.75rem 1rem;
+}
+
+.close-button {
+  background-color: #717a7b;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 0.75rem 1rem;
+}
+
+.edit-btn {
+  background-color: #20c997;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 8px;
+}
+.openclose-btn {
+  background-color: #aaa;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 8px;
+}
+.answer-btn {
+  background-color: #F90000;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  outline: 0;
+  padding: 8px;
+}
+
+.modal-nav {
+  margin: 24px 0;
+}
+
+.modal-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.modal-nav li {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-nav {
+    margin: 24px 0;
+  }
+  .modal-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modal-nav li {
+    width: 25%;
+    text-align: center;
+  }
+}
+.footer-navi {
+  margin: 32px auto;
+  width: 100%;
+}
+.footer-navi ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+.footer-navi li {
+  width: 50%;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .footer-navi li {
+    width: 20%;
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=common.css.map */
