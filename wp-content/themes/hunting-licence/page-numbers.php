@@ -15,7 +15,8 @@ get_header(); ?>
       </div>
     </div>
     <div class="inner">
-      <h2><?php the_title(); ?></h2>
+    <?php get_template_part('parts-breadcrumb'); ?>
+    <h2><?php the_title(); ?> 過去問</h2>
         <p>狩猟免許試験は、法令関連の問題が
           <strong>全30問中13問</strong>出題されます。言葉が難しかったり紛らわしいものもありますが、法令関連の出来が合否をわけますのでしっかり準備しましょう。今回は
           <strong>網猟</strong>だけに出題される問題を練習します。全猟種共通の問題は

@@ -65,6 +65,7 @@
                 <li><a href="../animals/">鳥獣問題</a></li>
                 <li><a href="../examination/">猟銃等講習会 考査問題</a></li>
                 <li><a href="../numbers/">数字問題</a></li>
+                <li><a href="../contact/">お問い合わせ</a></li>
               </ul>
             </div>
           </div>
