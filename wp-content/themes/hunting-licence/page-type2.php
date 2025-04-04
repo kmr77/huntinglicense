@@ -17,10 +17,9 @@ get_header(); ?>
     <div class="inner">
     <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
-        <p>狩猟免許試験は、法令関連の問題が
-          <strong>全30問中13問</strong>出題されます。言葉が難しかったり紛らわしいものもありますが、法令関連の出来が合否をわけますのでしっかり準備しましょう。今回は
-          <strong>網猟</strong>だけに出題される問題を練習します。全猟種共通の問題は
-          <a href="laws" target="_blank">こちら</a>で見ることができます。</p>
+        <p>二種銃猟に関する問題も法令や猟具の使い方、銃器の管理方法などが問われます。
+          特に安全管理や法律的な規制に関する部分が多いため、試験準備を怠らず、しっかりと理解しておきましょう。
+          このページでは、<strong>二種銃猟</strong>に特化した問題を掲載しています。</p>
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner">

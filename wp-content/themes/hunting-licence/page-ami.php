@@ -17,10 +17,14 @@ get_header(); ?>
     <div class="inner">
     <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
+        <p>
+        網猟に関する問題は、網の種類や使用法に加え、設置基準や猟場に関する法律が問われます。
+        網猟特有の法的な規制や適切な使用方法を理解しておくことが、試験合格には欠かせません。
+        このページでは、網猟に関する出題内容をまとめて解説しています。
+        </p>
         <p>狩猟免許試験は、法令関連の問題が
           <strong>全30問中13問</strong>出題されます。言葉が難しかったり紛らわしいものもありますが、法令関連の出来が合否をわけますのでしっかり準備しましょう。今回は
-          <strong>網猟</strong>だけに出題される問題を練習します。全猟種共通の問題は
-          <a href="laws" target="_blank">こちら</a>で見ることができます。</p>
+          <strong>網猟</strong>だけに出題される問題を練習します。
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner">

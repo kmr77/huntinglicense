@@ -17,10 +17,9 @@ get_header(); ?>
     <div class="inner">
     <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
-        <p>狩猟免許試験は、法令関連の問題が
-          <strong>全30問中13問</strong>出題されます。言葉が難しかったり紛らわしいものもありますが、法令関連の出来が合否をわけますのでしっかり準備しましょう。今回は
-          <strong>網猟</strong>だけに出題される問題を練習します。全猟種共通の問題は
-          <a href="laws" target="_blank">こちら</a>で見ることができます。</p>
+    <p>わな猟に関する問題は、適法なわなの使用方法や設置条件、安全に関する規定などが中心です。
+      特に、わな猟の実施に関する法律的な細かい部分が出題されることが多いので、基本的な規定をしっかりと覚えておくことが重要です。
+      このページでは、<strong>わな猟</strong>に関する問題の出題内容を記載しています。</p>
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner">
