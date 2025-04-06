@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="main-visual application">
 		  <div class="inner">
 			<h1>狩猟免許受験申請｜狩猟免許試験過去問集</h1>
-			<p>あああああ</p>
+			<p>狩猟免許を受験するために必要な申請手続きや準備書類、申請時の注意点を紹介しています。</p>
 		  </div>
 		</div>
 		<div class="inner">

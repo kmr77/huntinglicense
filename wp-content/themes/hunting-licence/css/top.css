@@ -23,6 +23,9 @@ h2 {
   height: 200px;
   padding: 15px 0;
 }
+.top {
+  background-image: url(../img/top.avif);
+}
 .know {
   background-image: url(../img/know.jpg);
 }

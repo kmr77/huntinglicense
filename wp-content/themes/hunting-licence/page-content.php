@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="main-visual content">
 		  <div class="inner">
 			<h1>狩猟免許試験の内容と対策｜狩猟免許試験過去問集</h1>
-			<p>あああああ</p>
+			<p>狩猟免許試験の出題範囲や科目ごとの対策ポイントを、初心者にもわかりやすく解説します。</p>
 		  </div>
 		</div>
 		<div class="inner">

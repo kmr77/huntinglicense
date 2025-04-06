@@ -10,8 +10,8 @@ get_header(); ?>
     </div>
     <div class="main-visual regist">
 		  <div class="inner">
-			<h1>狩猟者登録</h1>
-			<p>あああああ</p>
+			<h1>狩猟者登録の方法｜狩猟免許試験過去問集</h1>
+			<p>狩猟免許取得後に必要な狩猟者登録の流れを、手続きや必要書類とあわせて簡単に紹介します。</p>
 		  </div>
 		</div>
 		<div class="inner">
