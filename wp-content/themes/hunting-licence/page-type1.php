@@ -4,7 +4,6 @@ Template Name: 一種銃猟問題
 */
 get_header(); ?>
 <div class="inner">
-        <!-- パンくずパーツ -->
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
@@ -15,7 +14,6 @@ get_header(); ?>
       </div>
     </div>
     <div class="inner">
-    <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
         <p>
         一種銃猟に関する問題も難易度が高い場合がありますが、銃の取り扱いや使用に関する法令や技術的なポイントが重要です。

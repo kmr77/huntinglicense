@@ -4,7 +4,6 @@ Template Name:全問題
 */
 get_header(); ?>
 <div class="inner">
-        <!-- パンくずパーツ -->
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>

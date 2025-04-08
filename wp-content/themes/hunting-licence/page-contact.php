@@ -5,8 +5,7 @@ Template Name: お問い合わせ
 ?>
 <?php get_header(); ?>
 
-<div class="inner">
-        <!-- パンくずパーツ -->
+    <div class="inner">
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
@@ -16,9 +15,7 @@ Template Name: お問い合わせ
         </div>
     </div>
     <div class="inner">
-    <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
     </div>
-</div>
 <?php get_footer(); ?>

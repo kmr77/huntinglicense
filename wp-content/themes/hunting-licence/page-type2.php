@@ -4,7 +4,6 @@ Template Name: 二種銃猟問題
 */
 get_header(); ?>
 <div class="inner">
-        <!-- パンくずパーツ -->
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
@@ -15,7 +14,6 @@ get_header(); ?>
       </div>
     </div>
     <div class="inner">
-    <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
         <p>二種銃猟に関する問題も法令や猟具の使い方、銃器の管理方法などが問われます。
           特に安全管理や法律的な規制に関する部分が多いため、試験準備を怠らず、しっかりと理解しておきましょう。

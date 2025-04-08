@@ -4,7 +4,6 @@ Template Name: あみ猟問題
 */
 get_header(); ?>
 <div class="inner">
-        <!-- パンくずパーツ -->
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
@@ -15,7 +14,6 @@ get_header(); ?>
       </div>
     </div>
     <div class="inner">
-    <?php get_template_part('parts-breadcrumb'); ?>
     <h2><?php the_title(); ?> 過去問</h2>
         <p>
         網猟に関する問題は、網の種類や使用法に加え、設置基準や猟場に関する法律が問われます。
