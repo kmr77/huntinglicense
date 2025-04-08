@@ -60,7 +60,7 @@
                 <li><a href="../application/">狩猟免許受験申請</a></li>
                 <li><a href="../content/">狩猟免許試験の内容と対策</a></li>
                 <li><a href="../registration/">狩猟者登録</a></li>
-                <li><a href="../all/">全問題</a></li>
+                <li><a href="../all/">全カテゴリ問題</a></li>
                 <li><a href="../laws/">法令問題</a></li>
                 <li><a href="../type1/">一種猟銃問題</a></li>
                 <li><a href="../type2/">二種猟銃問題</a></li>
