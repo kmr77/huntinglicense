@@ -15,6 +15,7 @@ get_header(); ?>
           銃の扱いや安全管理に必要な知識を効率的に学べます。
           スマートフォン対応で移動中も手軽に復習可能。
           試験合格に向けて確実な実力を身につけられます。</p>
+          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
@@ -26,7 +27,7 @@ get_header(); ?>
           このページでは、初心者講習考査に特化した問題を記載し、試験対策に役立つ情報を提供しています。</p>
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
-        <div class="accordion-inner">
+        <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
             // カウンター変数を定義（1からスタート）

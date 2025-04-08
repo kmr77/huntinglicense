@@ -15,6 +15,7 @@ get_header(); ?>
           捕獲数や猟期制限など、試験に出やすい数値問題を効率よく学べます。
           スマートフォン対応でスキマ時間を活用した復習が可能。
           合格に向けた強力なサポートを提供します。</p>
+          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
@@ -25,7 +26,7 @@ get_header(); ?>
           このページでは、数字問題に特化した出題内容を解説し、効率的な学習方法を提案しています。</p>
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
-        <div class="accordion-inner">
+        <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
             // カウンター変数を定義（1からスタート）

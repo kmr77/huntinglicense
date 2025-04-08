@@ -14,6 +14,7 @@ get_header(); ?>
         <p>鳥獣問題を徹底整理し、出題される法律や生態を簡潔に解説。
           狩猟可能な鳥獣や保護対象種についてしっかり学べます。
           スマートフォン対応で、どこでも手軽に復習でき、試験対策がスムーズに進められます。</p>
+          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
@@ -27,7 +28,7 @@ get_header(); ?>
       <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
       <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
         <!-- 問題ここから -->
-        <div class="accordion-inner">
+        <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
             // カウンター変数を定義（1からスタート）
