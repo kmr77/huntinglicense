@@ -41,6 +41,9 @@ h1 {
 .numbers {
   background-image: url(../img/numbers.jpg);
 }
+.contact {
+  background-image: url(../img/mail.jpg);
+}
 .random-btn {
   margin:0 0 16px;
 }
