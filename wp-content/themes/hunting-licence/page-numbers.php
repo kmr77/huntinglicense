@@ -58,7 +58,7 @@ get_header(); ?>
                 while ($the_query->have_posts()) : $the_query->the_post();
                     ?>
                     <dt>
-                        <span class="question">問<?php echo $counter; ?>：No.<?php the_field('no'); ?> <?php the_title(); ?></span>
+                        <span class="question">問<?php echo $counter; ?>：<span class="small">No.<?php the_field('no'); ?></span> <?php the_title(); ?></span>
                         <!-- <button class="openclose-btn">選択肢を開閉</button> -->
                     </dt>
                     <dd>
