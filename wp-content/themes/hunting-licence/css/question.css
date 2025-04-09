@@ -164,4 +164,9 @@ h1 {
   top: 50%;
   margin-top: -6px;
 }
+.btn-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
 /*# sourceMappingURL=question.css.map */
