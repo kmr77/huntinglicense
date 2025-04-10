@@ -1,29 +1,21 @@
-<?php 
-/*
-Template Name: 数字問題
-*/
-get_header(); ?>
+<?php get_header(); ?>
 <div class="inner">
         <!-- パンくずパーツ -->
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
-    <div class="main-visual numbers">
+    <div class="main-visual wana">
       <div class="inner">
-        <h1><?php the_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>狩猟免許試験の数字問題を徹底解析し、重要な数値や規定を整理。
-          捕獲数や猟期制限など、試験に出やすい数値問題を効率よく学べます。
-          スマートフォン対応でスキマ時間を活用した復習が可能。
-          合格に向けた強力なサポートを提供します。</p>
-          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
+        <p>網猟に関する過去問を厳選し、解答と詳細な解説を付けた問題集を提供。試験頻出の知識を効率的に学べるよう構成されています。特に、網猟特有の法規制や使用できる猟具に関する問題を重点的にカバー。スマートフォン対応で、移動時間やスキマ時間を活用しながら知識を定着させることができます。狩猟免許試験の網猟分野で確実に得点できるよう、合格を目指す受験生を徹底サポートします。</p>
+        <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
-    <h2>狩猟免許試験の<?php the_title(); ?> 過去問</h2>
-        <p>狩猟免許試験の数字問題は、捕獲制限数や許可数、猟期の制限など、数値に関する正確な知識を問われる問題が出題されます。
-          特に、法律で定められた捕獲数や銃の口径など、数値に関する細かい規定を理解し、暗記することが求められます。
-          数字問題は意外と難易度が高く、正確に覚えることが合格のポイントになります。
-          このページでは、数字問題に特化した出題内容を解説し、効率的な学習方法を提案しています。</p>
+    <h2><?php single_cat_title(); ?> 過去問</h2>
+    <p>わな猟に関する問題は、適法なわなの使用方法や設置条件、安全に関する規定などが中心です。
+      特に、わな猟の実施に関する法律的な細かい部分が出題されることが多いので、基本的な規定をしっかりと覚えておくことが重要です。
+      このページでは、<strong>わな猟</strong>に関する問題の出題内容を記載しています。</p>
         <?php get_template_part('parts-infotext'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
@@ -41,7 +33,7 @@ get_header(); ?>
             
             // 投稿のループを開始
             $args = array(
-                'category_name' => 'numbers', // カテゴリスラッグ「numbers」の記事のみ取得
+                'category_name' => 'wana', // カテゴリスラッグ「wana」の記事のみ取得
                 'posts_per_page' => -1,   // すべての投稿を表示（ページネーションなし）
                 'orderby' => $orderby,    // ランダム or ID順
                 'order' => $order
@@ -65,8 +57,20 @@ get_header(); ?>
                         </div>
                     </dt>
                     <dd>
-                        <span class="answer">答）<?php the_field('answer'); ?><br>
-                        <?php the_field('answer_body'); ?></span>
+                        <dl>
+                            <dt class="select-dt">
+                                <ul>
+                                    <li><span class="bold">ア：</span><?php the_field('select_a'); ?></li>
+                                    <li><span class="bold">イ：</span><?php the_field('select_i'); ?></li>
+                                    <li><span class="bold">ウ：</span><?php the_field('select_u'); ?></li>
+                                </ul>
+                                <button class="answer-btn">答えを開閉</button>
+                            </dt>
+                            <dd class="answer-dd">
+                                <span class="answer">答）<?php the_field('answer'); ?><br>
+                                <?php the_field('answer_body'); ?></span>
+                            </dd>
+                        </dl>
                     </dd>
                     <?php
                     // カウンターを1増やす

@@ -1,21 +1,17 @@
-<?php 
-/*
-Template Name: 二種銃猟問題
-*/
-get_header(); ?>
+<?php get_header(); ?>
 <div class="inner">
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
     <div class="main-visual type2">
       <div class="inner">
-        <h1><?php the_title(); ?>｜狩猟免許試験過去問集</h1>
+        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
         <p>網猟に関する過去問を厳選し、解答と詳細な解説を付けた問題集を提供。試験頻出の知識を効率的に学べるよう構成されています。特に、網猟特有の法規制や使用できる猟具に関する問題を重点的にカバー。スマートフォン対応で、移動時間やスキマ時間を活用しながら知識を定着させることができます。狩猟免許試験の網猟分野で確実に得点できるよう、合格を目指す受験生を徹底サポートします。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>  
     </div>
     </div>
     <div class="inner">
-    <h2><?php the_title(); ?> 過去問</h2>
+    <h2><?php single_cat_title(); ?> 過去問</h2>
         <p>二種銃猟に関する問題も法令や猟具の使い方、銃器の管理方法などが問われます。
           特に安全管理や法律的な規制に関する部分が多いため、試験準備を怠らず、しっかりと理解しておきましょう。
           このページでは、<strong>二種銃猟</strong>に特化した問題を掲載しています。</p>

@@ -1,21 +1,17 @@
-<?php 
-/*
-Template Name: あみ猟問題
-*/
-get_header(); ?>
+<?php get_header(); ?>
 <div class="inner">
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
     <div class="main-visual ami">
       <div class="inner">
-        <h1><?php the_title(); ?>｜狩猟免許試験過去問集</h1>
+        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
         <p>網猟に関する過去問を厳選し、解答と詳細な解説を付けた問題集を提供。試験頻出の知識を効率的に学べるよう構成されています。特に、網猟特有の法規制や使用できる猟具に関する問題を重点的にカバー。スマートフォン対応で、移動時間やスキマ時間を活用しながら知識を定着させることができます。狩猟免許試験の網猟分野で確実に得点できるよう、合格を目指す受験生を徹底サポートします。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
-    <h2><?php the_title(); ?> 過去問</h2>
+    <h2><?php single_cat_title(); ?>過去問</h2>
         <p>
         網猟に関する問題は、網の種類や使用法に加え、設置基準や猟場に関する法律が問われます。
         網猟特有の法的な規制や適切な使用方法を理解しておくことが、試験合格には欠かせません。
@@ -58,8 +54,8 @@ get_header(); ?>
                     <dt>
                         <span class="question">問<?php echo $counter; ?>：<span class="small">No.<?php the_field('no'); ?></span> <?php the_title(); ?></span>
                         <div class="btn-layout">
-                          <button class="open-btn">選択肢を見る</button>
-                          <button class="single-btn"><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" target="blank">設問へ移動</a></button>
+                        <button class="open-btn">選択肢を見る</button>
+                        <button class="single-btn"><a href="<?php the_permalink(); ?>" target="_blank">設問へ移動</a></button>
                         </div>
                     </dt>
                     <dd>

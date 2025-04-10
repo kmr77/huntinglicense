@@ -1,25 +1,32 @@
 <?php 
 /*
-Template Name: 法令問題
+Template Name: 鳥獣問題
 */
 get_header(); ?>
 <div class="inner">
-  <?php get_template_part('parts-breadcrumb'); ?>
+        <!-- パンくずパーツ -->
+        <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
-    <div class="main-visual laws">
+    <div class="main-visual animals">
       <div class="inner">
-        <h1><?php the_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>狩猟免許試験の法令問題を徹底分析し、過去問を体系的に整理。すべての問題に正確な解答と詳細な解説を付し、試験対策に必要な知識を網羅しています。さらに、スマートフォン対応で移動中でも手軽に復習可能。狩猟法や関連法規の理解を深め、実際の試験で問われる重要ポイントを確実に押さえることができます。これにより、受験者は効率的に学習を進め、合格への道を確実なものにすることができます。</p>
-        <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
+        <p>鳥獣問題を徹底整理し、出題される法律や生態を簡潔に解説。
+          狩猟可能な鳥獣や保護対象種についてしっかり学べます。
+          スマートフォン対応で、どこでも手軽に復習でき、試験対策がスムーズに進められます。</p>
+          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
-      <h2><?php the_title(); ?> 過去問</h2>
-      <p>狩猟免許試験における法令問題は、特に難解で紛らわしい表現が使われることが多いです。
-        しかし、法令に関する知識が試験合否を大きく左右するため、しっかりとした準備が求められます。
-        このページでは、<strong>法令問題</strong>に特化し、出題される内容を詳しく記載しています。</p>
-          <?php get_template_part('parts-infotext'); ?>
+    <h2><?php single_cat_title(); ?> 過去問</h2>
+      <p>鳥獣問題では、狩猟対象となる鳥類や獣類に関する基本的な知識が問われます。
+      具体的には、狩猟可能な種とその保護区分、捕獲方法の制限、さらには鳥獣の生態や特徴に関する問題が出題されます。
+      特に、違法に捕獲してはいけない保護鳥や絶滅危惧種の識別や、狩猟可能な時期と場所についての理解が重要です。
+      試験合格には、鳥獣に関する法的な規制や生態に関する知識をしっかりと身につけることが欠かせません。
+      このページでは、<strong>鳥獣問題</strong>に関する出題内容を詳しく解説し、効率的な学習をサポートします。</p>
+      <p>狩猟免許試験は<strong>全30問</strong>出題されます。</p>
+      <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
+      <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">
@@ -36,8 +43,7 @@ get_header(); ?>
             
             // 投稿のループを開始
             $args = array(
-                'category_name' => 'laws', // カテゴリスラッグ「net」の記事のみ取得
-                //'post_type' => 'post', // カテゴリスラッグ「net」の記事のみ取得
+                'category_name' => 'animals', // カテゴリスラッグ「animals」の記事のみ取得
                 'posts_per_page' => -1,   // すべての投稿を表示（ページネーションなし）
                 'orderby' => $orderby,    // ランダム or ID順
                 'order' => $order
