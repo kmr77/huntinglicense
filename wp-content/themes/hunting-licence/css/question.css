@@ -93,6 +93,15 @@ h1 {
     margin: 24px auto 0;
   }
 }
+.single-contents {
+  border: 1px solid #B7D1DD;
+  cursor: pointer;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: -1px;
+}
 #accordion dt {
   border: 1px solid #B7D1DD;
   cursor: pointer;
