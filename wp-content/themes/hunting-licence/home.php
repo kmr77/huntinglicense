@@ -11,14 +11,14 @@
 			<p>狩猟免許試験の過去問題を猟具ごとに整理し、全ての問題に答えと詳しい解説を網羅しています。また、スマートフォン対応により、移動中やテスト直前でも手軽に復習できる設計となっており、効率的な暗記や知識の定着に役立ちます。これにより、狩猟免許試験の準備をいつでもどこでも進めることができ、受験者が合格に向けた学習を効率的に行えるようサポートしています。</p>
 			<div class="contents-nav">
 				<ul>
-					<li><a href="all/">全問題</a></li>
-					<li><a href="laws/">法令問題</a></li>
-					<li><a href="type1/">一種猟銃問題</a></li>
-					<li><a href="type2/">二種猟銃問題</a></li>
-					<li><a href="ami/">網（あみ）猟問題</a></li>
-					<li><a href="wana/">罠（わな）猟問題</a></li>
-					<li><a href="examination/">猟銃等講習会 考査問題</a></li>
-					<li><a href="numbers/">数字問題</a></li>
+					<li><a href="category/all/">全問題</a></li>
+					<li><a href="category/laws/">法令問題</a></li>
+					<li><a href="category/type1/">一種猟銃問題</a></li>
+					<li><a href="category/type2/">二種猟銃問題</a></li>
+					<li><a href="category/ami/">網（あみ）猟問題</a></li>
+					<li><a href="category/wana/">罠（わな）猟問題</a></li>
+					<li><a href="category/examination/">猟銃等講習会 考査問題</a></li>
+					<li><a href="category/numbers/">数字問題</a></li>
 				</ul>
 			</div>
 			<h2>狩猟免許試験_申し込み〜取得までの流れ</h2>
