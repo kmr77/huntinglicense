@@ -21,7 +21,7 @@
 </div>
 <footer>
     <div class="inner">
-        <div class="copy">©️hunter-license.com</div>
+        <div class="copy">©️shuryo-menkyo.com</div>
     </div>
 </footer>
 <script src="<?php echo get_template_directory_uri() ?>/common.js" type="text/javaScript" charset="utf-8"></script>
