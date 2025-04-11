@@ -19,7 +19,7 @@
         </ul>
     </div>
 </div>
-<footer>
+<footer id="footer">
     <div class="inner">
         <div class="copy">©️shuryo-menkyo.com</div>
     </div>

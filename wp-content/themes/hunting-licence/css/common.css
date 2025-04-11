@@ -160,12 +160,6 @@ p {
 .align-center {
   text-align:center;
 }
-.mt-1 {
-  margin-top: 1rem;
-}
-.mb-1 {
-  margin-bottom: 1rem;
-}
 .annotation {
   color: #f00;
   font-weight:bold;
@@ -266,9 +260,6 @@ footer {
   padding: 24px 0;
   background-color: #000;
   color: #fff;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
-  width:100%;
 }
 
 * {
@@ -408,7 +399,7 @@ footer {
   padding: 8px;
 }
 .answer-btn {
-  background-color: #00a72f;
+  background-color: #F90000;
   border: 0;
   border-radius: 6px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
