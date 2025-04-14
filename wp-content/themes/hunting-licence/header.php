@@ -49,7 +49,7 @@
         <div class="header-nav">
           <ul>
             <li>
-              <div class="logo">ここにロゴ</div>
+              <div class="logo">狩猟免許試験勉強方法</div>
             </li>
             <li>
               <button class="button" data-modal-open="modal-1">MENU</button>
