@@ -31,7 +31,7 @@
 					<li><a href="registration/">狩猟者登録</a></li>
 				</ul>
 			</div>
-			<h2>都道府県狩猟免許問い合わせ先</h2>
+			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>
 			<p>問い合わせ先</p>
 			<div class="contents-nav">
 				<ul>
@@ -48,7 +48,7 @@
 					<li><a href="#">●●</a></li>
 					<li><a href="#">●●</a></li>
 				</ul>
-			</div>
+			</div> -->
 
 <!-- <?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
