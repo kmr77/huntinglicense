@@ -67,7 +67,7 @@
                                 </ul>
                                 <?php
                                 $no = get_field('no');
-                                $image_rel_path = '/img/question/' . $no . '.jpg';
+                                $image_rel_path = '/img/question/' . $no . '.avif';
                                 $image_full_path = get_template_directory() . $image_rel_path;
                                 $image_url = get_template_directory_uri() . $image_rel_path;
 
