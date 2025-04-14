@@ -23,7 +23,8 @@
 
     </div>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
+    <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
+    <div class="inner">
             <div class="accordion-inner">
                 <div class="single-contents">
                     <div>
