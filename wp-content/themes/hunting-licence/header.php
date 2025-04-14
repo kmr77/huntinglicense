@@ -12,9 +12,13 @@
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <?php if ( is_home() || is_front_page() ) : ?>
-    <title>狩猟免許試験例題集（狩猟免許試験過去問集）</title>
+  <title>狩猟免許試験例題集（狩猟免許試験過去問集）</title>
     <meta name="description" content="狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
+  <?php elseif ( is_single() ) : ?>
+    <title>問題番号<?php echo get_field('no'); ?>：<?php echo get_the_title(); ?></title>
+    <meta name="description" content="問題番号<?php echo get_field('no'); ?>の問題と回答と解説が記載されているページです。>
+    <meta name="keywords" content="問題番号<?php echo get_field('no'); ?>,狩猟,過去問,例題集,狩猟読本<?php echo get_the_title(); ?>">
   <?php endif; ?>
   <?php wp_head(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
