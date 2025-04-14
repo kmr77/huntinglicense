@@ -350,7 +350,8 @@ footer {
   font-size:18px;
   font-weight:bold;
 }
-.question-btn a:link, a:visited{
+.question-btn a:link, .question-btn a:visited{
+  color: #fff;
   text-decoration:none;
 }
 .question-btn a:hover{
@@ -368,7 +369,8 @@ footer {
   padding: 8px 16px;
   font-size:12px;
 }
-.single-btn a:link, a:visited{
+.single-btn a:link, .single-btn a:visited{
+  color: #fff;
   text-decoration:none;
 }
 .single-btn a:hover{
