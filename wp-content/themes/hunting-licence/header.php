@@ -15,10 +15,45 @@
   <title>狩猟免許試験例題集（狩猟免許試験過去問集）</title>
     <meta name="description" content="狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
+  <?php elseif ( is_page('know') ) : ?>
+    <title>狩猟免許取得に知っておくべき基本情報まとめ</title>
+    <meta name="description" content="狩猟を始める前に知っておきたい基礎知識や注意点を簡潔に紹介。初心者が安心して準備できる情報をまとめています。。">
+  <?php elseif ( is_page('application') ) : ?>
+    <title>狩猟免許受験申請の手順と必要書類ガイド</title>
+    <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
+  <?php elseif ( is_page('registration') ) : ?>
+    <title>狩猟免許受験申請の手順と必要書類ガイド</title>
+    <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
+  <?php elseif ( is_category('all') ) : ?>
+    <title>全カテゴリ対応の問題集｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="狩猟免許試験の全カテゴリを網羅した例題集と過去問を収録。効率よく学習できる解説付き問題で合格をサポート。">
+  <?php elseif ( is_category('laws') ) : ?>
+    <title>法令対策に特化した問題集｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="法令分野の出題傾向を分析し、重要な法規に特化した過去問と解説を掲載。狩猟免許試験の法令対策に最適です。">
+  <?php elseif ( is_category('type1') ) : ?>
+    <title>一種銃猟の出題対策に最適｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="ライフルや散弾銃を扱う一種銃猟の過去問を収録。構造や安全管理のポイントを押さえて、試験合格を目指しましょう。">
+  <?php elseif ( is_category('type2') ) : ?>
+    <title>二種銃猟の必須問題を収録｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="空気銃を扱う二種猟銃試験の例題を収録。初心者でも理解しやすい丁寧な解説付きで、効果的な試験対策が可能です。">
+  <?php elseif ( is_category('ami') ) : ?>
+    <title>網猟の出題傾向を完全分析｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="網（あみ）猟に関する使用ルールや出題傾向に基づいた過去問を掲載。網猟免許合格を目指す方におすすめの内容です。">
+  <?php elseif ( is_category('wana') ) : ?>
+    <title>わな猟試験に役立つ実践問題｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="わな猟の法令や設置方法に関する問題を厳選。実技を含めた総合的な対策が可能な、わな猟免許受験者向け問題集です。">
+  <?php elseif ( is_category('examination') ) : ?>
+    <title>猟銃等講習会 考査問題 - 狩猟免許試験 例題集（過去問勉強法）｜狩猟免許ナビ</title>
+    <meta name="description" content="猟銃等講習会で行われる考査問題を収録。銃の安全管理や基本操作の理解を深め、初心者でも安心して学べる構成です。">
+  <?php elseif ( is_category('numbers') ) : ?>
+    <title>数字に特化した対策問題集｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="捕獲制限や猟期など、数字に関する重要項目を過去問形式で学習。狩猟免許試験で出題されやすい数値を効率的に習得。">
+  <?php elseif ( is_category('animals') ) : ?>
+    <title>鳥獣識別と法令対策問題集｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="狩猟鳥獣や保護動物の識別問題を中心に構成。生態・法律両面からの出題対策で得点源を確保できます。">
   <?php elseif ( is_single() ) : ?>
     <title>問題番号<?php echo get_field('no'); ?>：<?php echo get_the_title(); ?></title>
-    <meta name="description" content="問題番号<?php echo get_field('no'); ?>の問題と回答と解説が記載されているページです。>
-    <meta name="keywords" content="問題番号<?php echo get_field('no'); ?>,狩猟,過去問,例題集,狩猟読本<?php echo get_the_title(); ?>">
+    <meta name="description" content="問題番号<?php echo get_field('no'); ?>の問題と回答と解説が記載されているページです。">
   <?php endif; ?>
   <?php wp_head(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
