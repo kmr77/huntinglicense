@@ -26,6 +26,13 @@
         $orderby = ($random == 1) ? 'rand' : 'ID';
         $order = ($random == 1) ? '' : 'ASC';
 
+        query_posts(array(
+          'category_name' => 'laws', // カテゴリースラッグ（必要に応じて変更）
+          'orderby' => $orderby,
+          'order' => $order,
+          'posts_per_page' => -1
+        ));
+
         if (have_posts()) :
           while (have_posts()) : the_post();
       ?>
