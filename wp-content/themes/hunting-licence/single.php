@@ -35,6 +35,15 @@
                                         <li><span class="bold">イ：</span><?php the_field('select_i'); ?></li>
                                         <li><span class="bold">ウ：</span><?php the_field('select_u'); ?></li>
                                     </ul>
+                                    <?php
+                                    $no = get_field('no');
+                                    $image_rel_path = '/img/question/' . $no . '.avif';
+                                    $image_full_path = get_template_directory() . $image_rel_path;
+                                    $image_url = get_template_directory_uri() . $image_rel_path;
+
+                                    if (file_exists($image_full_path)) : ?>
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="設問No.<?php the_field('no'); ?>の画像">
+                                    <?php endif; ?>
                                     <div class="mt-1 mb-1 align-center">
                                         <button class="answer-btn">答えを開閉</button>
                                     </div>

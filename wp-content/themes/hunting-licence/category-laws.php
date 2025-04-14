@@ -51,7 +51,7 @@
                 $image_url = get_template_directory_uri() . $image_rel_path;
 
                 if (file_exists($image_full_path)) : ?>
-                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="設問No.<?php the_field('no'); ?>の画像">
                 <?php endif; ?>
                 <button class="answer-btn">答えを開閉</button>
               </dt>
