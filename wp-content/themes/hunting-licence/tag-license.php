@@ -113,6 +113,5 @@
       <?php wp_reset_postdata(); ?>
     </dl>
   </div>
-</div>
 
 <?php get_footer(); ?>
