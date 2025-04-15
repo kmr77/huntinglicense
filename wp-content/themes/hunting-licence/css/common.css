@@ -423,7 +423,9 @@ footer {
 .modal-nav li {
   width: 50%;
 }
-
+.info-link a {
+  text-decoration: underline;
+}
 @media screen and (min-width: 768px) {
   .modal-nav {
     margin: 24px 0;
