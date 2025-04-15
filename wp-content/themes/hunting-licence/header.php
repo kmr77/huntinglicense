@@ -105,21 +105,21 @@
           <div class="modal-content">
             <div class="modal-nav">
               <ul>
-                <li><a href="/">狩猟免許試験過去問題集</a></li>
-                <li><a href="/know/">知っておくべきこと</a></li>
-                <li><a href="/application/">狩猟免許受験申請</a></li>
-                <li><a href="/content/">狩猟免許試験の内容と対策</a></li>
-                <li><a href="/registration/">狩猟者登録</a></li>
-                <li><a href="../category/all/">全カテゴリ問題</a></li>
-                <li><a href="/category/laws/">法令問題</a></li>
-                <li><a href="/category/type1/">一種猟銃問題</a></li>
-                <li><a href="/category/type2/">二種猟銃問題</a></li>
-                <li><a href="/category/ami/">網（あみ）猟問題</a></li>
-                <li><a href="/category/wana/">罠（わな）猟問題</a></li>
-                <li><a href="/category/animals/">鳥獣問題</a></li>
-                <li><a href="/category/examination/">猟銃等講習会 考査問題</a></li>
-                <li><a href="/category/numbers/">数字問題</a></li>
-                <li><a href="/contact/">お問い合わせ</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/">狩猟免許試験過去問題集</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/know/">知っておくべきこと</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/application/">狩猟免許受験申請</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/registration/">狩猟者登録</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/all/">全カテゴリ問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/type2/">二種猟銃問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/ami/">網（あみ）猟問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/wana/">罠（わな）猟問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/contact/">お問い合わせ</a></li>
               </ul>
             </div>
           </div>
