@@ -15,6 +15,8 @@
             <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
             <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
             <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
+            <li><a href="https://www.shuryo-menkyo.com/tag/license/">狩猟免許試験問題のみ</a></li>
+            <li><a href="https://www.shuryo-menkyo.com/tag/examination/">考査問題のみ</a></li>
             <li><a href="https://www.shuryo-menkyo.com/contact/">お問い合わせ</a></li>
         </ul>
     </div>
