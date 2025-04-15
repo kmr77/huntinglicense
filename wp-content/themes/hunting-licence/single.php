@@ -26,6 +26,20 @@
     <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
     <div class="inner">
             <div class="accordion-inner">
+                <div class="tag">
+                <ul>
+                    <?php
+                    $post_tags = get_the_tags();
+                    if ( $post_tags ) {
+                        foreach ( $post_tags as $tag ) {
+                            echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . esc_html($tag->name) . '</a></li>';
+                        }
+                    } else {
+                        echo '<li>タグはありません</li>';
+                    }
+                    ?>
+                </ul>
+                </div>
                 <div class="single-contents">
                     <div>
                         <dl id="accordion">
