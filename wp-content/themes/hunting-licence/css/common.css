@@ -15,7 +15,7 @@ ul, li {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #3c3c3c;
 }
 a:hover {
