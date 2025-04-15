@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css" type="text/css" />
   <?php endif; ?>
 
-  <?php if ( is_page() || is_category() || is_single() ): ?>
+  <?php if ( is_page() || is_category() || is_single() || is_tag() ): ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/question.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css">
   <?php endif; ?>

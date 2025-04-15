@@ -456,4 +456,72 @@ footer {
     font-size: 16px;
   }
 }
+.tag-archive-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.archive-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.post-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-title a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.post-title a:hover {
+  color: #0073aa;
+}
+
+.post-excerpt {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination .current {
+  background-color: #0073aa;
+  color: #fff;
+  border-color: #0073aa;
+}
 /*# sourceMappingURL=common.css.map */

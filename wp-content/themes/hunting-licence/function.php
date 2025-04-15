@@ -12,4 +12,12 @@ function hunting_licence_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'hunting_licence_enqueue_styles');
 
 add_theme_support( 'title-tag' );
+
+function custom_tag_archive_posts_per_page( $query ) {
+    if ( !is_admin() && $query->is_main_query() && $query->is_tag() ) {
+        $query->set( 'posts_per_page', 30 );
+    }
+}
+add_action( 'pre_get_posts', 'custom_tag_archive_posts_per_page' );
+
 ?>
