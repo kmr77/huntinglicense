@@ -143,4 +143,33 @@ new function(){
 	});
 	addEvent(window,"resize",footerFixed);
 	
+  //スクロール時は非表示
+  document.addEventListener('DOMContentLoaded', function () {
+    const pagetop = document.querySelector('.pagetop');
+    let isScrolling;
+    
+    // 初期状態で表示（最上部）
+    pagetop.classList.add('show');
+  
+    window.addEventListener('scroll', function () {
+      // スクロール中 → 非表示
+      pagetop.classList.remove('show');
+  
+      // 一旦スクロールが止まったら、300ms後に再表示
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(function () {
+        pagetop.classList.add('show');
+      }, 300);
+    });
+  
+    // トップへスムーズに戻る
+    pagetop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
 }
