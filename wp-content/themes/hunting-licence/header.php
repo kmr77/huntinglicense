@@ -54,6 +54,14 @@
   <?php elseif ( is_single() ) : ?>
     <title>問題番号<?php echo get_field('no'); ?>：<?php echo get_the_title(); ?></title>
     <meta name="description" content="問題番号<?php echo get_field('no'); ?>の問題と回答と解説が記載されているページです。">
+    <?php elseif ( is_tag('license') ) : ?>
+    <title>狩猟免許試験の重要問題まとめ｜狩猟免許試験例題集 過去問</title>
+    <meta name="description" content="狩猟免許試験の頻出問題をピックアップ。法令、猟具、安全管理に関する設問を徹底解説し、合格への近道を提供します。">
+    <meta name="keywords" content="狩猟免許, license, 試験問題, 過去問, 狩猟対策">
+  <?php elseif ( is_tag('examination') ) : ?>
+      <title>猟銃等講習会試験対策問題集｜狩猟免許試験例題集</title>
+      <meta name="description" content="猟銃等講習会で実施される知識試験に備えた練習問題集。銃の構造や安全管理の知識を網羅し、講習会受講者の理解を深めます。">
+      <meta name="keywords" content="猟銃等講習会, 試験問題, 銃の構造, 安全管理, 狩猟免許">
   <?php endif; ?>
   <?php wp_head(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
