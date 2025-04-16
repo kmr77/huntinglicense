@@ -57,7 +57,7 @@
     <?php elseif ( is_tag('license') ) : ?>
     <title>狩猟免許試験の重要問題まとめ｜狩猟免許試験例題集 過去問</title>
     <meta name="description" content="狩猟免許試験の頻出問題をピックアップ。法令、猟具、安全管理に関する設問を徹底解説し、合格への近道を提供します。">
-    <meta name="keywords" content="狩猟免許, license, 試験問題, 過去問, 狩猟対策">
+    <meta name="keywords" content="狩猟免許, 試験問題, 過去問, 狩猟対策">
   <?php elseif ( is_tag('examination') ) : ?>
       <title>猟銃等講習会試験対策問題集｜狩猟免許試験例題集</title>
       <meta name="description" content="猟銃等講習会で実施される知識試験に備えた練習問題集。銃の構造や安全管理の知識を網羅し、講習会受講者の理解を深めます。">
