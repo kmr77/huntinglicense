@@ -26,34 +26,41 @@
         <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
-            // カウンター変数を定義（1からスタート）
-            $counter = 1;
+            // 投稿件数設定
+            $posts_per_page = 30;
 
-            // ランダム表示のON/OFFをURLパラメータで制御
+            // 現在のページ番号取得
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        
+            // 投稿番号を連番で表示させるための開始値
+            $counter = ($paged - 1) * $posts_per_page + 1;
+        
+            // ランダム or 通常順の判定
             $random = isset($_GET['random']) ? $_GET['random'] : 0;
-
-            // 通常時は「投稿ID順（昇順）」で固定、ランダム時のみシャッフル
             $orderby = ($random == 1) ? 'rand' : 'ID';
-            $order = ($random == 1) ? '' : 'ASC'; // 通常時は昇順
-            
-            // 投稿のループを開始
+            $order = ($random == 1) ? '' : 'ASC';
+        
+
             $args = array(
-                'category_name' => 'examination', // カテゴリスラッグ「examination」の記事のみ取得
-                'posts_per_page' => -1,   // すべての投稿を表示（ページネーションなし）
-                'orderby' => $orderby,    // ランダム or ID順
-                'order' => $order
-
+              'category_name' => 'examination',
+              'posts_per_page' => 30,
+              'paged' => $paged,
+              'orderby' => $orderby,
+              'order' => $order
             );
+
             $the_query = new WP_Query($args);
-            ?>
 
-            <!-- ランダム表示切り替えボタン -->
-            <?php get_template_part('parts-random-btn'); ?>
+            // グローバル変数に上書き（これが重要！）
+            global $wp_query;
+            $wp_query = $the_query;
 
-            <?php
-            if ($the_query->have_posts()) :
+            // ページング表示などを含むパーツ読み込み
+            get_template_part('parts-random-btn');
+
+              if ($the_query->have_posts()) :
                 while ($the_query->have_posts()) : $the_query->the_post();
-                    ?>
+            ?>
                     <dt>
                         <span class="question">問<?php echo $counter; ?>：<span class="small">No.<?php the_field('no'); ?></span> <?php the_title(); ?></span>
                         <div class="btn-layout">
@@ -64,19 +71,30 @@
                     <dd>
                         <span class="answer">答）<?php the_field('answer'); ?><br>
                         <?php the_field('answer_body'); ?></span>
-                    </dd>
-                    <?php
-                    // カウンターを1増やす
-                    $counter++;
-                endwhile;
-                else :
-                    echo '<p>投稿が見つかりませんでした。</p>';
-                endif;
+                        </dd>
+                      <?php
+                          $counter++;
+                          endwhile;
+                        else :
+                          echo '<p>投稿が見つかりませんでした。</p>';
+                        endif;
+                      ?>
+                      </dl>
 
-            // 投稿ループをリセット
-            wp_reset_postdata();
-            ?>
-            </dl>
+                <!-- ページネーション -->
+                <div class="pagination">
+                  <?php
+                    echo paginate_links(array(
+                      'total' => $the_query->max_num_pages,
+                      'current' => $paged,
+                      'mid_size' => 2,
+                      'prev_text' => '« 前へ',
+                      'next_text' => '次へ »',
+                    ));
+                  ?>
+                </div>
+
+        <?php wp_reset_postdata(); ?>
       </div>
 
 <?php get_footer(); ?>

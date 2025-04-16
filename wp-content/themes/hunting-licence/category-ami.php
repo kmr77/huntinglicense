@@ -22,30 +22,29 @@
         <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
-            // カウンター変数を定義（1からスタート）
-            $counter = 1;
-
-            // ランダム表示のON/OFFをURLパラメータで制御
+            // クエリ作成
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             $random = isset($_GET['random']) ? $_GET['random'] : 0;
-
-            // 通常時は「投稿ID順（昇順）」で固定、ランダム時のみシャッフル
             $orderby = ($random == 1) ? 'rand' : 'ID';
-            $order = ($random == 1) ? '' : 'ASC'; // 通常時は昇順
-            
-            // 投稿のループを開始
+            $order = ($random == 1) ? '' : 'ASC';
+
             $args = array(
-                'category_name' => 'ami', // カテゴリスラッグ「ami」の記事のみ取得
-                //'post_type' => 'post', // カテゴリスラッグ「ami」の記事のみ取得
-                'posts_per_page' => -1,   // すべての投稿を表示（ページネーションなし）
-                'orderby' => $orderby,    // ランダム or ID順
-                'order' => $order
-
+            'category_name' => 'ami',
+            'posts_per_page' => 30,
+            'paged' => $paged,
+            'orderby' => $orderby,
+            'order' => $order
             );
-            $the_query = new WP_Query($args);
-            ?>
 
-            <!-- ランダム表示切り替えボタン -->
-            <?php get_template_part('parts-random-btn'); ?>
+            $the_query = new WP_Query($args);
+
+            // グローバル変数に上書き（これが重要！）
+            global $wp_query;
+            $wp_query = $the_query;
+
+            // ページング表示などを含むパーツ読み込み
+            get_template_part('parts-random-btn');
+            ?>
 
             <?php
             if ($the_query->have_posts()) :
@@ -73,7 +72,7 @@
                                 $image_url = get_template_directory_uri() . $image_rel_path;
 
                                 if (file_exists($image_full_path)) : ?>
-                                    <img src="<?php echo esc_url($image_url); ?>" alt="設問No.<?php the_field('no'); ?>の画像">
+                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
                                 <?php endif; ?>
                                 <button class="answer-btn">答えを開閉</button>
                             </dt>
