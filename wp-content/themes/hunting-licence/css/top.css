@@ -131,4 +131,38 @@ h2 {
 .registration .list-none {
   list-style: none;
 }
+/* スマートフォン用スタイル */
+.hunting-license-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hunting-license-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.hunting-license-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.hunting-license-list a:hover {
+  text-decoration: underline;
+}
+
+/* PC版スタイル（768px以上） */
+@media screen and (min-width: 768px) {
+  .hunting-license-list {
+    padding-left: 20px; /* 例: 左に少し余白を追加 */
+  }
+  
+  .hunting-license-list li {
+    font-size: 18px; /* フォントサイズを少し大きく */
+    display: inline-block; /* 横並びにする例 */
+    width: 45%; /* 2列に分ける例 */
+    margin-right: 10%; /* 右側にマージン */
+  }
+}
+
 /*# sourceMappingURL=top.css.map */
