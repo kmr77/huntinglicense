@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 body {
@@ -234,15 +235,19 @@ p {
   padding: 4px;
 }
 
+header {
+  height: 50px;
+}
 @media screen and (min-width: 768px) {
   .inner {
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
   }
-}
-header {
-  height: 50px;
+  header {
+    height: 50px;
+    margin: 50px;
+  }
 }
 
 .header-nav {
