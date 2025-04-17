@@ -147,7 +147,7 @@
           <div class="header-nav">
               <nav class="pc-nav">
                 <ul>
-                  <li><a href="https://www.shuryo-menkyo.com/" class="current">狩猟免許過去問TOP</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/">狩猟免許過去問TOP</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/all/">全カテゴリ問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>
