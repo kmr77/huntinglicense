@@ -55,7 +55,7 @@ get_header(); ?>
 				<dd>
 					縦3㎝×横2.4㎝ 申請前6ヶ月以内に撮影した無帽、正面、上三分身、無背景の写真
 					<p class="photo-size">
-						<img src="http://localhost:8888/huntinglicence/wp-content/uploads/2025/04/2230326.png" width="150" alt="">
+						<img src="https://www.shuryo-menkyo.com/wp-content/themes/hunting-licence/img/picture.avif" width="150" alt="">
 					</p>
 				</dd>
 				<dt>
