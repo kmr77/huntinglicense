@@ -39,26 +39,27 @@ let accordionTrigger = document.querySelectorAll(".js-sp-accordion-trigger");
 let accordion = document.querySelectorAll(".js-sp-accordion");
 
 // メニュー開閉制御
-hamburger.addEventListener("click", (e) => { //ハンバーガーボタンが選択されたら
+hamburger.addEventListener("click", (e) => {
   e.currentTarget.classList.toggle(CLASS);
   menu.classList.toggle(CLASS);
-  if (flg) {// flgの状態で制御内容を切り替え
-    backgroundFix(false);
+  if (flg) {
+    document.body.classList.remove("is-fixed");
     hamburger.setAttribute("aria-expanded", "false");
     hamburger.focus();
     flg = false;
   } else {
-    backgroundFix(true);
+    document.body.classList.add("is-fixed");
     hamburger.setAttribute("aria-expanded", "true");
     flg = true;
   }
 });
-window.addEventListener("keydown", () => {　//escキー押下でメニューを閉じられるように
+
+// escキーで閉じる
+window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     hamburger.classList.remove(CLASS);
     menu.classList.remove(CLASS);
-
-    backgroundFix(false);
+    document.body.classList.remove("is-fixed");
     hamburger.focus();
     hamburger.setAttribute("aria-expanded", "false");
     flg = false;

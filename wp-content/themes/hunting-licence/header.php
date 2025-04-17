@@ -144,17 +144,10 @@
       <div class="header-layout">
         <div class="logo"><img src="https://www.shuryo-menkyo.com/wp-content/themes/hunting-licence/img/logo.png" alt="狩猟免許試験勉強方法"></div>
         <div class="pc-header pc-only">
-          <ul class="header-nav">
-            <li>
-            </li>
-            <li>
+          <div class="header-nav">
               <nav class="pc-nav">
                 <ul>
-                  <li><a href="https://www.shuryo-menkyo.com/" class="current">狩猟免許試験過去問題集</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/know/">知っておくべきこと</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/application/">狩猟免許受験申請</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/registration/">狩猟者登録</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/" class="current">狩猟免許過去問TOP</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/all/">全カテゴリ問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>
@@ -164,11 +157,9 @@
                   <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/contact/">お問い合わせ</a></li>
                 </ul>
             </nav>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="header sp-only">
           <div class="header__inner">
@@ -180,10 +171,6 @@
               <nav id="js-global-navigation" class="global-navigation">
                 <ul class="global-navigation__list">
                   <li><a href="https://www.shuryo-menkyo.com/" class="global-navigation__link">狩猟免許試験過去問題集 TOP</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/know/" class="global-navigation__link">知っておくべきこと</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/application/" class="global-navigation__link">狩猟免許受験申請</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/content/" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/registration/" class="global-navigation__link">狩猟者登録</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/all/" class="global-navigation__link">全カテゴリ問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/laws/" class="global-navigation__link">法令問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/type1/" class="global-navigation__link">一種猟銃問題</a></li>
@@ -193,6 +180,10 @@
                   <li><a href="https://www.shuryo-menkyo.com/category/animals/" class="global-navigation__link">鳥獣問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/examination/" class="global-navigation__link">猟銃等講習会 考査問題</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/category/numbers/" class="global-navigation__link">数字問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/know/" class="global-navigation__link">知っておくべきこと</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/application/" class="global-navigation__link">狩猟免許受験申請</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/content/" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/registration/" class="global-navigation__link">狩猟者登録</a></li>
                   <li><a href="https://www.shuryo-menkyo.com/contact/" class="global-navigation__link">お問い合わせ</a></li>
                 </ul>
                 <div id="js-focus-trap" tabindex="0"></div>
