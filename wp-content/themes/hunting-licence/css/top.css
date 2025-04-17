@@ -27,16 +27,16 @@ h2 {
   background-image: url(../img/top.avif);
 }
 .know {
-  background-image: url(../img/know.jpg);
+  background-image: url(../img/know.avif);
 }
 .application {
-  background-image: url(../img/application.jpg);
+  background-image: url(../img/application.avif);
 }
 .content {
-  background-image: url(../img/content.jpg);
+  background-image: url(../img/content.avif);
 }
 .regist {
-  background-image: url(../img/regist.jpg);
+  background-image: url(../img/regist.avif);
 }
 @media screen and (min-width: 768px) {
   .main-visual {
