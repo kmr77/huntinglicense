@@ -8,6 +8,7 @@
                 <li><a href="https://www.shuryo-menkyo.com/application/">狩猟免許受験申請</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/registration/">狩猟者登録</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/information/">全国の狩猟者免許試験情報一覧<</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/all/">狩猟免許全カテゴリ問題</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>

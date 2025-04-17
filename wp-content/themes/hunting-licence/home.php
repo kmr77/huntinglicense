@@ -29,6 +29,7 @@
 					<li><a href="application/">狩猟免許受験申請</a></li>
 					<li><a href="content/">狩猟免許試験の内容と対策</a></li>
 					<li><a href="registration/">狩猟者登録</a></li>
+					<li><a href="information/">全国の狩猟者免許試験情報一覧</a></li>
 				</ul>
 			</div>
 			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>

@@ -38,6 +38,9 @@ h2 {
 .regist {
   background-image: url(../img/regist.avif);
 }
+.information {
+  background-image: url(../img/information.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;
@@ -133,36 +136,61 @@ h2 {
 }
 /* スマートフォン用スタイル */
 .hunting-license-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .hunting-license-list li {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 16px;
 }
 
-.hunting-license-list a {
-  color: #0066cc;
+.hunting-license-list li strong {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.hunting-license-list li a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
   text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
 }
 
-.hunting-license-list a:hover {
-  text-decoration: underline;
+.hunting-license-list li a:hover {
+  background-color: #0056b3;
 }
 
-/* PC版スタイル（768px以上） */
 @media screen and (min-width: 768px) {
   .hunting-license-list {
-    padding-left: 20px; /* 例: 左に少し余白を追加 */
+    grid-template-columns: 1fr 1fr;
   }
-  
+
   .hunting-license-list li {
-    font-size: 18px; /* フォントサイズを少し大きく */
-    display: inline-block; /* 横並びにする例 */
-    width: 45%; /* 2列に分ける例 */
-    margin-right: 10%; /* 右側にマージン */
+    font-size: 17px;
+    padding: 14px 20px;
+  }
+
+  .hunting-license-list li a {
+    font-size: 15px;
+    padding: 10px 14px;
   }
 }
+
 
 /*# sourceMappingURL=top.css.map */
