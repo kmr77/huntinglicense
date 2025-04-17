@@ -141,6 +141,68 @@
   </a>
   <div class="container">
     <header>
+      <div class="header-layout">
+        <div class="logo"><img src="https://www.shuryo-menkyo.com/wp-content/themes/hunting-licence/img/logo.png" alt="狩猟免許試験勉強方法"></div>
+        <div class="pc-header pc-only">
+          <ul class="header-nav">
+            <li>
+            </li>
+            <li>
+              <nav class="pc-nav">
+                <ul>
+                  <li><a href="https://www.shuryo-menkyo.com/" class="current">狩猟免許試験過去問題集</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/know/">知っておくべきこと</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/application/">狩猟免許受験申請</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/registration/">狩猟者登録</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/all/">全カテゴリ問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/type2/">二種猟銃問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/ami/">網（あみ）猟問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/wana/">罠（わな）猟問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/contact/">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            </li>
+          </ul>
+        </div>
+        <div class="header sp-only">
+          <div class="header__inner">
+            <button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__text"></span>
+              </button>
+            <div class="header__nav-area js-nav-area" id="navigation">
+              <nav id="js-global-navigation" class="global-navigation">
+                <ul class="global-navigation__list">
+                  <li><a href="https://www.shuryo-menkyo.com/" class="global-navigation__link">狩猟免許試験過去問題集 TOP</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/know/" class="global-navigation__link">知っておくべきこと</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/application/" class="global-navigation__link">狩猟免許受験申請</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/content/" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/registration/" class="global-navigation__link">狩猟者登録</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/all/" class="global-navigation__link">全カテゴリ問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/laws/" class="global-navigation__link">法令問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/type1/" class="global-navigation__link">一種猟銃問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/type2/" class="global-navigation__link">二種猟銃問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/ami/" class="global-navigation__link">網（あみ）猟問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/wana/" class="global-navigation__link">罠（わな）猟問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/animals/" class="global-navigation__link">鳥獣問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/examination/" class="global-navigation__link">猟銃等講習会 考査問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/category/numbers/" class="global-navigation__link">数字問題</a></li>
+                  <li><a href="https://www.shuryo-menkyo.com/contact/" class="global-navigation__link">お問い合わせ</a></li>
+                </ul>
+                <div id="js-focus-trap" tabindex="0"></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- <header class="pc-only">
       <div class="inner">
         <div class="header-nav">
           <ul>
@@ -153,7 +215,9 @@
           </ul>
         </div>
       </div>
-    </header>
+    </header> -->
+
+
       
     <div class="modal" id="modal-1">
       <div class="modal-overlay" data-modal-close>
