@@ -117,6 +117,7 @@
   <link rel="stylesheet" href="<?php bloginfo ('stylesheet_url'); ?>" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css" type="text/css" />
+  <link rel="canonical" href="<?php the_permalink(); ?>">
 
   <?php if ( is_home() || is_front_page() ) : ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css" type="text/css" />
