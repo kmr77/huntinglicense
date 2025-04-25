@@ -11,17 +11,17 @@
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <?php if ( is_home() || is_front_page() ) : ?>
-  <title>狩猟免許試験例題集（狩猟免許試験過去問集）</title>
+  <title>狩猟免許ドリル（狩猟免許試験過去問集）｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
-    <title>狩猟免許取得に知っておくべき基本情報まとめ</title>
+    <title>狩猟免許取得に知っておくべき基本情報まとめ｜狩猟免許取るには</title>
     <meta name="description" content="狩猟を始める前に知っておきたい基礎知識や注意点を簡潔に紹介。初心者が安心して準備できる情報をまとめています。。">
   <?php elseif ( is_page('application') ) : ?>
-    <title>狩猟免許受験申請の手順と必要書類ガイド</title>
+    <title>狩猟免許受験申請の手順と必要書類ガイド｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
   <?php elseif ( is_page('registration') ) : ?>
-    <title>狩猟免許受験申請の手順と必要書類ガイド</title>
+    <title>狩猟免許受験申請の手順と必要書類ガイド｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
   <?php elseif ( is_category('all') ) : 
     $title = '全カテゴリ対応の問題集｜狩猟免許試験例題集 過去問';
