@@ -6,14 +6,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# 🔁 リダイレクトルール（WordPressより前に記述）
-RewriteRule ^ami/?$ /category/ami/ [R=301,L]
-RewriteRule ^all/?$ /category/all/ [R=301,L]
-RewriteRule ^examination/?$ /category/examination/ [R=301,L]
-RewriteRule ^laws/?$ /category/laws/ [R=301,L]
-RewriteRule ^numbers/?$ /category/numbers/ [R=301,L]
-RewriteRule ^wana/?$ /category/wana/ [R=301,L]
-
 # 🔧 WordPress 標準ルール（そのまま）
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /huntinglicense/
@@ -21,7 +13,16 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /huntinglicense/index.php [L]
+
+# 🔁 リダイレクトルール（WordPressの後に記述）
+RewriteRule ^ami/?$ /category/ami/ [R=301,L]
+RewriteRule ^all/?$ /category/all/ [R=301,L]
+RewriteRule ^examination/?$ /category/examination/ [R=301,L]
+RewriteRule ^laws/?$ /category/laws/ [R=301,L]
+RewriteRule ^numbers/?$ /category/numbers/ [R=301,L]
+RewriteRule ^wana/?$ /category/wana/ [R=301,L]
 </IfModule>
+
 
 
 # END WordPress
