@@ -45,11 +45,24 @@
                         <dl id="accordion">
                             <dl>
                                 <dt class="select-dt">
-                                    <ul>
-                                        <li><span class="bold">ア：</span><?php the_field('select_a'); ?></li>
-                                        <li><span class="bold">イ：</span><?php the_field('select_i'); ?></li>
-                                        <li><span class="bold">ウ：</span><?php the_field('select_u'); ?></li>
-                                    </ul>
+                                    <div>
+                                    カテゴリ：
+                                    <?php
+                                        $categories = get_the_category();
+                                        if ( ! empty( $categories ) ) {
+                                            $cat_names = wp_list_pluck( $categories, 'name' );
+                                            echo esc_html( implode( ', ', $cat_names ) );
+                                        }
+                                        ?>
+                                    </div>
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php if ( !has_category(array('examination', 'numbers')) ) : ?>
+                                        <ul>
+                                            <li><span class="bold">ア：</span><?php the_field('select_a'); ?></li>
+                                            <li><span class="bold">イ：</span><?php the_field('select_i'); ?></li>
+                                            <li><span class="bold">ウ：</span><?php the_field('select_u'); ?></li>
+                                        </ul>
+                                    <?php endif; ?>
                                     <?php
                                     $no = get_field('no');
                                     $image_rel_path = '/img/question/' . $no . '.avif';
