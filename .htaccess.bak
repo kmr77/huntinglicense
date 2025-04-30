@@ -1,0 +1,23 @@
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# --- 追加： wwwあり → wwwなし へリダイレクト ---
+RewriteCond %{HTTP_HOST} ^www\.shuryo-menkyo\.com$ [NC]
+RewriteRule ^(.*)$ https://shuryo-menkyo.com/$1 [R=301,L]
+# --- 追加ここまで ---
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /huntinglicense/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /huntinglicense/index.php [L]
+</IfModule>
+
+
+# END WordPress
