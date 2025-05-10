@@ -93,17 +93,15 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="狩猟鳥獣や保護動物の識別問題を中心に構成。生態・法律両面からの出題対策で得点源を確保できます。">
   <?php elseif ( is_single() ) : ?>
-    <title>問題番号<?php echo get_field('no'); ?>：<?php echo get_the_title(); ?></title>
-    <meta name="description" content="問題番号<?php echo get_field('no'); ?>の問題と回答と解説が記載されているページです。">
-    <?php elseif ( is_tag('license') ) :
-    $title = '狩猟免許試験の重要問題まとめ｜狩猟免許試験例題集 過去問';
-    if ( $paged >= 2 ) {
-        $title = 'ページ' . $paged . '：' . $title;
-    }
-    echo '<title>' . esc_html($title) . '</title>';
+    <?php
+      $custom_title = get_field('custom_title');
+      $custom_description = get_field('custom_description');
+      $post_no = get_field('no');
+      $default_title = '問題番号' . $post_no . '：' . get_the_title();
+      $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
     ?>
-    <meta name="description" content="狩猟免許試験の頻出問題をピックアップ。法令、猟具、安全管理に関する設問を徹底解説し、合格への近道を提供します。">
-    <meta name="keywords" content="狩猟免許, 試験問題, 過去問, 狩猟対策">
+    <title><?php echo esc_html( $custom_title ? $custom_title : $default_title ); ?></title>
+    <meta name="description" content="<?php echo esc_attr( $custom_description ? $custom_description : $default_description ); ?>">
   <?php elseif ( is_tag('examination') ) :
     $title = '猟銃等講習会試験対策 問題集 過去問｜狩猟免許試験例題集';
     if ( $paged >= 2 ) {

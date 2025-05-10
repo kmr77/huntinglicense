@@ -3,23 +3,27 @@
     <nav class="breadcrumb">
         <ul>
             <li>
-            <a href="<?php echo home_url(); ?>">狩猟免許試験例題集 過去問</a>
+                <a href="<?php echo home_url(); ?>">狩猟免許試験例題集 過去問</a>
             </li>
 
             <?php
             // 投稿に関連付けられているカテゴリを取得
             $categories = get_the_category();
             if ( !empty($categories) ) {
-            // 先頭のカテゴリを使う（必要に応じて複数対応も可能）
-            $cat = $categories[0];
-            $cat_link = get_category_link( $cat->term_id );
-            echo '<li><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat->name ) . '</a></li>';
+                $cat = $categories[0]; // 最初のカテゴリのみ使用
+                $cat_link = get_category_link( $cat->term_id );
+                echo '<li><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat->name ) . '</a></li>';
             }
-            ?>
 
-            <li>問題番号<?php the_field('no'); ?>：<?php the_title(); ?></li>
+            // タイトルと問題番号の表示
+            $custom_title = get_field('custom_title');
+            $post_no = get_field('no');
+            $title_text = $custom_title ? $custom_title : get_the_title();
+            echo '<li>問題番号' . esc_html($post_no) . '：' . esc_html($title_text) . '</li>';
+            ?>
         </ul>
     </nav>
+
 
     </div>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -79,6 +83,16 @@
                                 <dd class="answer-dd">
                                     <span class="answer">答）<?php the_field('answer'); ?><br>
                                     <?php the_field('answer_body'); ?></span>
+                                    <?php
+                                    $answer_ai = get_field('answer_ai');
+                                    if ( $answer_ai ) : ?>
+                                        <section class="custom-ai-explanation">
+                                            <h3>AI解説</h3>
+                                            <p>
+                                                <?php echo wp_kses_post( $answer_ai ); ?>
+                                            </p>
+                                        </section>
+                                    <?php endif; ?>
                                 </dd>
                             </dl>
                         </dl>

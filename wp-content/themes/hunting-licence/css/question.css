@@ -48,7 +48,9 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
 }
-
+.custom-ai-explanation p {
+  font-weight: normal;
+}
 .random-toggle-area {
   margin-bottom: 1em;
 }
