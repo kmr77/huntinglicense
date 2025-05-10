@@ -19,7 +19,7 @@
             $custom_title = get_field('custom_title');
             $post_no = get_field('no');
             $title_text = $custom_title ? $custom_title : get_the_title();
-            echo '<li>問題番号' . esc_html($post_no) . '：' . esc_html($title_text) . '</li>';
+            echo '<li>' . esc_html($title_text) . '</li>';
             ?>
         </ul>
     </nav>
