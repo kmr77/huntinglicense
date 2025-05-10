@@ -191,6 +191,16 @@ h2 {
     padding: 10px 14px;
   }
 }
-
+.info-list {
+  background-color: #d7effa;
+  display: block;
+  font-weight: bold;
+  padding: 20px;
+  margin: 10px 0;
+}
+.info-list ul li {
+  list-style-position: inside;
+  list-style:disc;
+}
 
 /*# sourceMappingURL=top.css.map */
