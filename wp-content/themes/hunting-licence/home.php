@@ -7,6 +7,24 @@
 			</div>
 		</div>
 		<div class="inner">
+			<div class="top-intro-box">
+				<h2>狩猟免許試験の例題集</h2>
+				<p>狩猟免許試験の例題集は、狩猟免許を取得するために必要な知識を身につけるための重要な教材です。<br>このページでは、狩猟免許試験に出題される問題を厳選し、解答と詳細な解説を付けた問題集を提供しています。</p>
+				<p>特に、狩猟免許試験は法令や鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。<br>このサイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
+			</div>
+			<div class="top-intro-box">
+				<h2>狩猟免許の勉強を始めるには？</h2>
+				<p>このサイトでは、狩猟免許試験に必要な知識を例題形式で学ぶことができます。<br>独学で合格を目指す方に向けた学習法も解説しています。</p>
+				<ul class="top-links">
+					<li><a href="<?php echo home_url('/study-method/'); ?>">狩猟免許の勉強方法を知る</a></li>
+					<li><a href="<?php echo home_url('/know/'); ?>">狩猟免許の概要を見る</a></li>
+					<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
+					<li><a href="<?php echo home_url('/huntinglicense/'); ?>">都道府県別の申込情報を見る</a></li>
+				</ul>
+			</div>
+			<h2>狩猟免許試験の概要</h2>
+			<p>狩猟免許試験は、狩猟を行うために必要な知識と技術を確認するための試験です。<br>試験は筆記試験と実技試験に分かれており、合格することで狩猟免許を取得できます。</p>
+			<p>狩猟免許試験は、法令、鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。<br>このサイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
 			<h2>狩猟免許の合格を目指すあなたへ</h2>
 			<p>このサイト「狩猟免許の問題対策集」は、狩猟免許をこれから取得しようと考えている方や、すでに学習を始めている方のために作られた無料学習サイトです。</p>
 			<p>狩猟免許は、種類ごとに出題傾向が異なり、法令、鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。本サイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
@@ -24,27 +42,27 @@
 			<h2>過去問題集</h2>
 			<p>狩猟免許試験の過去問題を猟具ごとに整理し、全ての問題に答えと詳しい解説を網羅しています。また、スマートフォン対応により、移動中やテスト直前でも手軽に復習できる設計となっており、効率的な暗記や知識の定着に役立ちます。これにより、狩猟免許試験の準備をいつでもどこでも進めることができ、受験者が合格に向けた学習を効率的に行えるようサポートしています。</p>
 			<div class="contents-nav">
-				<ul>
-					<li><a href="category/all/">狩猟免許全カテゴリ問題</a></li>
-					<li><a href="category/laws/">法令問題</a></li>
-					<li><a href="category/type1/">一種猟銃問題</a></li>
-					<li><a href="category/type2/">二種猟銃問題</a></li>
-					<li><a href="category/ami/">網（あみ）猟問題</a></li>
-					<li><a href="category/wana/">罠（わな）猟問題</a></li>
-					<li><a href="category/examination/">猟銃等講習会 考査問題</a></li>
-					<li><a href="category/numbers/">数字問題</a></li>
-				</ul>
+			<ul>
+				<li><a href="<?php echo home_url('/category/all/'); ?>">狩猟免許全カテゴリ問題</a></li>
+				<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
+				<li><a href="<?php echo home_url('/category/type1/'); ?>">一種猟銃問題</a></li>
+				<li><a href="<?php echo home_url('/category/type2/'); ?>">二種猟銃問題</a></li>
+				<li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
+				<li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
+				<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li>
+				<li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
+			</ul>
 			</div>
 			<h2>狩猟免許試験_申し込み〜取得までの流れ</h2>
 			<p>狩猟免許を取得するためには、幅広い知識が求められます。具体的には、鳥獣の生態や保護に関する知識、狩猟に使用する猟具の取り扱いや使用方法、さらに狩猟に関連する法律や規制の理解が必要です。また、狩猟は安全性が重視されるため、猟具の操作技術や適切な使用方法も重要です。これらの知識と技術を身につけることで、安全で適法な狩猟が可能となり、狩猟免許試験の合格に必要不可欠です。</p>
 			<div class="contents-nav">
-				<ul>
-					<li><a href="know/">知っておくべきこと</a></li>
-					<li><a href="application/">狩猟免許受験申請</a></li>
-					<li><a href="content/">狩猟免許試験の内容と対策</a></li>
-					<li><a href="registration/">狩猟者登録</a></li>
-					<li><a href="information/">全国の狩猟者免許試験情報一覧</a></li>
-				</ul>
+			<ul>
+				<li><a href="<?php echo home_url('/know/'); ?>">知っておくべきこと</a></li>
+				<li><a href="<?php echo home_url('/application/'); ?>">狩猟免許受験申請</a></li>
+				<li><a href="<?php echo home_url('/content/'); ?>">狩猟免許試験の内容と対策</a></li>
+				<li><a href="<?php echo home_url('/registration/'); ?>">狩猟者登録</a></li>
+				<li><a href="<?php echo home_url('/information/'); ?>">全国の狩猟者免許試験情報一覧</a></li>
+			</ul>
 			</div>
 			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>
 			<p>問い合わせ先</p>
@@ -64,6 +82,35 @@
 					<li><a href="#">●●</a></li>
 				</ul>
 			</div> -->
+			<section class="category-overview">
+			<h2>猟具別の例題カテゴリから学ぶ</h2>
+			<ul class="category-links">
+			<li>
+			<a href="<?php echo home_url('/category/ami/'); ?>">
+				<strong>網猟（あみ猟）</strong><br>
+				設置可能な網の種類や法律の制限を確認できる問題集
+			</a>
+			</li>
+			<li>
+			<a href="<?php echo home_url('/category/wana/'); ?>">
+				<strong>罠猟（わな猟）</strong><br>
+				捕獲対象や罠の仕組みに関する問題を重点的に掲載
+			</a>
+			</li>
+			<li>
+			<a href="<?php echo home_url('/category/type1/'); ?>">
+				<strong>第一種銃猟</strong><br>
+				散弾銃・ライフル銃など装薬銃に関する試験対策問題
+			</a>
+			</li>
+			<li>
+			<a href="<?php echo home_url('/category/type2/'); ?>">
+				<strong>第二種銃猟</strong><br>
+				空気銃を扱う上で必要な知識を問う例題を収録
+			</a>
+			</li>
+			</ul>
+			</section>
 
 <!-- <?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
