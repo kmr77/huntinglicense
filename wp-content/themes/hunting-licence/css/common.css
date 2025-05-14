@@ -702,7 +702,7 @@ body.is-fixed {
   row-gap: 8px;
 }
 .footer-navi li {
-  width: 50%;
+  width: 48%;
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
