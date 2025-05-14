@@ -14,6 +14,7 @@
 			<p>このサイトでは、狩猟免許試験に必要な知識を例題形式で学ぶことができます。<br>独学で合格を目指す方に向けた学習法も解説しています。</p>
 			<ul class="top-links">
 				<li><a href="<?php echo home_url('/study-method/'); ?>">狩猟免許の勉強方法を知る</a></li>
+				<li><a href="<?php echo home_url('/study-method/'); ?>#exam-day">試験当日の流れと対策を見る</a></li>
 				<li><a href="<?php echo home_url('/know/'); ?>">狩猟免許の概要を見る</a></li>
 				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
 				<li><a href="<?php echo home_url('/information/'); ?>">都道府県別の申込情報を見る</a></li>
