@@ -13,8 +13,8 @@
         <li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
         <li><a href="<?php echo home_url('/category/type1/'); ?>">一種猟銃問題</a></li>
         <li><a href="<?php echo home_url('/category/type2/'); ?>">二種猟銃問題</a></li>
-        <li><a href="<?php echo home_url('/category/ami/'); ?>">網猟問題</a></li>
-        <li><a href="<?php echo home_url('/category/wana/'); ?>">罠猟問題</a></li>
+        <li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
+        <li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
         <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
         <li><a href="<?php echo home_url('/category/examination/'); ?>">講習会考査問題</a></li>
         <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
