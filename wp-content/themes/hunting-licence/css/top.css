@@ -234,7 +234,9 @@ h2 {
   margin-bottom: 16px;
   line-height: 1.6;
 }
-
+.top-link {
+  margin: 16px 0;
+}
 .top-links {
   list-style: none;
   padding: 0;
