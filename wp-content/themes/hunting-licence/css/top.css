@@ -335,12 +335,12 @@ h2 {
 }
 /* study-method */
 /* よくある質問（FAQ）デザイン */
-.contents dl {
+.study-method dl {
   margin-top: 24px;
   border-top: 2px solid #c8e6c9;
 }
 
-.contents dl dt {
+.study-method dl dt {
   background-color: #f0fdf4;
   padding: 12px 16px;
   font-weight: bold;
@@ -350,7 +350,7 @@ h2 {
   font-size: 16px;
 }
 
-.contents dl dd {
+.study-method dl dd {
   padding: 12px 16px;
   background-color: #ffffff;
   border-bottom: 1px solid #eee;
@@ -361,11 +361,11 @@ h2 {
 
 /* モバイル対応 */
 @media screen and (min-width: 768px) {
-  .contents dl dt {
+  .study-method dl dt {
     font-size: 18px;
   }
 
-  .contents dl dd {
+  .study-method dl dd {
     font-size: 16px;
   }
 }
