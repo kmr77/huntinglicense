@@ -25,6 +25,9 @@ crossorigin="anonymous"></script>
   <?php elseif ( is_page('registration') ) : ?>
     <title>狩猟免許受験申請の手順と必要書類ガイド｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
+  <?php elseif ( is_page('study-method') ) : ?>
+    <title>狩猟免許に独学で合格する勉強法まとめ｜狩猟免許取るには</title>
+    <meta name="description" content="狩猟免許試験に独学で合格するためのおすすめ勉強方法とスケジュール例を解説。初心者でも安心して始められる学習ガイド。">
   <?php elseif ( is_category('all') ) : 
     $title = '全カテゴリ対応の問題集｜狩猟免許試験例題集 過去問';
     if ( $paged >= 2 ) {
