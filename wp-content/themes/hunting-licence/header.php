@@ -14,7 +14,7 @@ crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <?php if ( is_home() || is_front_page() ) : ?>
   <title>狩猟免許ドリル（狩猟免許試験問題集 過去問）｜狩猟免許取るには</title>
-    <meta name="description" content="狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
+    <meta name="description" content="狩猟免許の過去問すべてを網羅しているサイトです！狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
     <title>狩猟免許取得に知っておくべき基本情報まとめ｜狩猟免許取るには</title>
