@@ -12,6 +12,20 @@ crossorigin="anonymous"></script>
   })(window,document,'script','dataLayer','GTM-N5KGH6GL');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
+  <?php
+  // 1. 固定ページでカスタムフィールドが入力されていたら優先して表示
+  if ( is_page() ) {
+      $custom_title = get_post_meta(get_the_ID(), 'custom_title', true);
+      $custom_description = get_post_meta(get_the_ID(), 'custom_description', true);
+      if ( $custom_title ) : ?>
+          <title><?php echo esc_html($custom_title); ?></title>
+          <meta name="description" content="<?php echo esc_attr($custom_description); ?>">
+      <?php 
+      // ここで終了。以下のelseifには入らない
+      return;
+      endif;
+  }
+  ?>
   <?php if ( is_home() || is_front_page() ) : ?>
   <title>狩猟免許ドリル（狩猟免許試験問題集 過去問）｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許の過去問すべてを網羅しているサイトです！狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
