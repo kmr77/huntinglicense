@@ -19,7 +19,7 @@ get_header(); ?>
     <a href="#area-hokkaido-tohoku">北海道・東北</a>
     <a href="#area-kanto-koshinetsu">関東・甲信越</a>
     <a href="#area-tokai">東海</a>
-    <a href="area-hokuriku">北陸</a>
+    <a href="#area-hokuriku">北陸</a>
     <a href="#area-kansai">関西</a>
     <a href="#area-chugoku-shikoku">中国・四国</a>
     <a href="#area-kyushu-okinawa">九州・沖縄</a>
