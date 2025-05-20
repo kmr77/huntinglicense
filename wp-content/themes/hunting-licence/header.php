@@ -13,18 +13,19 @@ crossorigin="anonymous"></script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <?php
-  // 1. 固定ページでカスタムフィールドが入力されていたら優先して表示
-  if ( is_page() ) {
-      $custom_title = get_post_meta(get_the_ID(), 'custom_title', true);
-      $custom_description = get_post_meta(get_the_ID(), 'custom_description', true);
-      if ( $custom_title ) : ?>
-          <title><?php echo esc_html($custom_title); ?></title>
-          <meta name="description" content="<?php echo esc_attr($custom_description); ?>">
-      <?php 
-      // ここで終了。以下のelseifには入らない
-      return;
-      endif;
-  }
+  // ▼▼ スケジュール系ページ（TOP/詳細）のカスタムフィールドによるSEO対応 ▼▼
+  if ( is_page_template(array('page-schedule.php', 'page-schedule-detail.php')) ) {
+      $custom_title = get_field('custom_title');
+      $custom_description = get_field('custom_description');
+      if ( $custom_title ) {
+          echo '<title>' . esc_html($custom_title) . '</title>';
+      } else {
+          echo '<title>' . esc_html(get_the_title()) . '｜狩猟免許スケジュール</title>';
+      }
+      if ( $custom_description ) {
+          echo '<meta name="description" content="' . esc_attr($custom_description) . '">';
+      }
+    } 
   ?>
   <?php if ( is_home() || is_front_page() ) : ?>
   <title>狩猟免許ドリル（狩猟免許試験問題集 過去問）｜狩猟免許取るには</title>
@@ -143,6 +144,12 @@ crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/question.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css">
   <?php endif; ?>
+  
+  <?php if ( is_page_template('page-schedule-detail.php') ) : ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/schedule.css">
+  <?php endif; ?>
+
+
 
   <!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
