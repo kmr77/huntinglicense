@@ -44,6 +44,12 @@ h2 {
 .study {
   background-image: url(../img/study.avif);
 }
+.schedule {
+  background-image: url(../img/schedule.avif);
+}
+.schedule-detail {
+  background-image: url(../img/schedule-detail.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;
