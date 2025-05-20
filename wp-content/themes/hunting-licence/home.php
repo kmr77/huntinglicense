@@ -13,14 +13,16 @@
 			<h2>狩猟免許の勉強を始めるには？</h2>
 			<p>このサイトでは、狩猟免許試験に必要な知識を例題形式で学ぶことができます。<br>独学で合格を目指す方に向けた学習法も解説しています。</p>
 			<div class="top-link">
-				<ul class="top-links">
-					<li><a href="<?php echo home_url('/study-method/'); ?>">狩猟免許の勉強方法を知る</a></li>
-					<li><a href="<?php echo home_url('/study-method/'); ?>#exam-day">試験当日の流れと対策を見る</a></li>
-					<li><a href="<?php echo home_url('/know/'); ?>">狩猟免許の概要を見る</a></li>
-					<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
-					<li><a href="<?php echo home_url('/information/'); ?>">都道府県別の申込情報を見る</a></li>
-					<li><a href="<?php echo home_url('/schedule/'); ?>" class="schedule-link-list">狩猟免許試験日程を見る</a></li>
-				</ul>
+			<ul class="top-links">
+				<li><a href="<?php echo home_url('/study-method/'); ?>">狩猟免許の勉強方法を知る</a></li>
+				<li><a href="<?php echo home_url('/study-method/'); ?>#exam-day">試験当日の流れと対策を見る</a></li>
+				<li><a href="<?php echo home_url('/know/'); ?>">狩猟免許の概要を見る</a></li>
+				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
+				<li><a href="<?php echo home_url('/information/'); ?>">都道府県別の申込情報を見る</a></li>
+				<li><a href="<?php echo home_url('/experience/'); ?>">合格者の体験談を読む</a></li>
+				<!-- <li><a href="<?php echo home_url('/schedule/'); ?>" class="schedule-link-list">狩猟免許試験日程を見る</a></li> -->
+			</ul>
+
 			</div>
 			<h2>狩猟免許試験の概要</h2>
 			<p>狩猟免許試験は、狩猟を行うために必要な知識と技術を確認するための試験です。<br>試験は筆記試験と実技試験に分かれており、合格することで狩猟免許を取得できます。</p>
