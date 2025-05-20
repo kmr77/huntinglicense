@@ -50,6 +50,9 @@ h2 {
 .schedule-detail {
   background-image: url(../img/schedule-detail.avif);
 }
+.experience {
+  background-image: url(../img/exp.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;

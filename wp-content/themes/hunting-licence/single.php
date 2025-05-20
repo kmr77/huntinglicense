@@ -1,3 +1,11 @@
+<?php
+if (in_category('experience')) {
+  // 体験談カテゴリの投稿なら専用テンプレートを読み込む
+  include(TEMPLATEPATH . '/single-experience.php');
+  return;
+}
+?>
+
 <?php get_header(); ?>
     <div class="inner">
     <nav class="breadcrumb">

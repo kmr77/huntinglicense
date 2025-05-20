@@ -24,7 +24,7 @@ get_header(); ?>
 
 <div class="inner">
   <h2>合格者の体験談一覧</h2>
-  <div class="contents experience">
+  <div class="contents">
     <?php
     $args = array(
       'post_type' => 'post',
