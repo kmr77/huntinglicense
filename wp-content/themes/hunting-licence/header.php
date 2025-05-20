@@ -87,13 +87,13 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="わな猟の法令や設置方法に関する問題を厳選。実技を含めた総合的な対策が可能な、わな猟免許受験者向け問題集です。">
   <?php elseif ( is_category('examination') ) :
-    $title = '猟銃等講習会 考査問題 - 狩猟免許試験 例題集（過去問勉強法）｜狩猟免許ナビ';
+    $title = '猟銃免許・猟銃等講習会の試験対策｜初心者向け過去問・練習問題集';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="猟銃等講習会で行われる考査問題を収録。銃の安全管理や基本操作の理解を深め、初心者でも安心して学べる構成です。">
+    <meta name="description" content="猟銃免許の取得を目指す方へ。猟銃等講習会で実施される考査問題をもとに、銃の安全管理・基本操作など試験対策に役立つ練習問題を掲載。初心者でも安心して学べます。">
   <?php elseif ( is_category('numbers') ) :
     $title = '数字に特化した対策問題集｜狩猟免許試験例題集 過去問';
     if ( $paged >= 2 ) {
@@ -164,62 +164,66 @@ crossorigin="anonymous"></script>
     <div class="arrow"></div>
   </a>
   <div class="container">
-    <header>
-      <div class="header-layout">
-        <div class="logo">
-          <a href="https://www.shuryo-menkyo.com/">
-            <img src="https://www.shuryo-menkyo.com/wp-content/themes/hunting-licence/img/logo.png" alt="狩猟免許試験 問題"></div>
-          </a>
-        <div class="pc-header pc-only">
-          <div class="header-nav">
-              <nav class="pc-nav">
-                <ul>
-                  <li><a href="https://www.shuryo-menkyo.com/">狩猟免許過去問TOP</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/all/">全カテゴリ問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/laws/">法令問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/type1/">一種猟銃問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/type2/">二種猟銃問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/ami/">網（あみ）猟問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/wana/">罠（わな）猟問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
-                </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="header sp-only">
-          <div class="header__inner">
-            <button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__text"></span>
-              </button>
-            <div class="header__nav-area js-nav-area" id="navigation">
-              <nav id="js-global-navigation" class="global-navigation">
-                <ul class="global-navigation__list">
-                  <li><a href="https://www.shuryo-menkyo.com/" class="global-navigation__link">狩猟免許試験過去問題集 TOP</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/all/" class="global-navigation__link">全カテゴリ問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/laws/" class="global-navigation__link">法令問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/type1/" class="global-navigation__link">一種猟銃問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/type2/" class="global-navigation__link">二種猟銃問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/ami/" class="global-navigation__link">網（あみ）猟問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/wana/" class="global-navigation__link">罠（わな）猟問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/animals/" class="global-navigation__link">鳥獣問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/examination/" class="global-navigation__link">猟銃等講習会 考査問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/category/numbers/" class="global-navigation__link">数字問題</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/know/" class="global-navigation__link">知っておくべきこと</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/application/" class="global-navigation__link">狩猟免許受験申請</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/content/" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/registration/" class="global-navigation__link">狩猟者登録</a></li>
-                  <li><a href="https://www.shuryo-menkyo.com/contact/" class="global-navigation__link">お問い合わせ</a></li>
-                </ul>
-                <div id="js-focus-trap" tabindex="0"></div>
-              </nav>
-            </div>
-          </div>
+  <header>
+  <div class="header-layout">
+    <div class="logo">
+      <a href="<?php echo home_url('/'); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許試験 問題">
+      </a>
+    </div>
+
+    <div class="pc-header pc-only">
+      <div class="header-nav">
+        <nav class="pc-nav">
+          <ul>
+            <li><a href="<?php echo home_url('/'); ?>">狩猟免許過去問TOP</a></li>
+            <li><a href="<?php echo home_url('/category/all/'); ?>">全カテゴリ問題</a></li>
+            <li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
+            <li><a href="<?php echo home_url('/category/type1/'); ?>">一種猟銃問題</a></li>
+            <li><a href="<?php echo home_url('/category/type2/'); ?>">二種猟銃問題</a></li>
+            <li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
+            <li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
+            <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
+            <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li>
+            <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header sp-only">
+      <div class="header__inner">
+        <button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__text"></span>
+        </button>
+        <div class="header__nav-area js-nav-area" id="navigation">
+          <nav id="js-global-navigation" class="global-navigation">
+            <ul class="global-navigation__list">
+              <li><a href="<?php echo home_url('/'); ?>" class="global-navigation__link">狩猟免許試験過去問題集 TOP</a></li>
+              <li><a href="<?php echo home_url('/category/all/'); ?>" class="global-navigation__link">全カテゴリ問題</a></li>
+              <li><a href="<?php echo home_url('/category/laws/'); ?>" class="global-navigation__link">法令問題</a></li>
+              <li><a href="<?php echo home_url('/category/type1/'); ?>" class="global-navigation__link">一種猟銃問題</a></li>
+              <li><a href="<?php echo home_url('/category/type2/'); ?>" class="global-navigation__link">二種猟銃問題</a></li>
+              <li><a href="<?php echo home_url('/category/ami/'); ?>" class="global-navigation__link">網（あみ）猟問題</a></li>
+              <li><a href="<?php echo home_url('/category/wana/'); ?>" class="global-navigation__link">罠（わな）猟問題</a></li>
+              <li><a href="<?php echo home_url('/category/animals/'); ?>" class="global-navigation__link">鳥獣問題</a></li>
+              <li><a href="<?php echo home_url('/category/examination/'); ?>" class="global-navigation__link">猟銃等講習会 考査問題</a></li>
+              <li><a href="<?php echo home_url('/category/numbers/'); ?>" class="global-navigation__link">数字問題</a></li>
+              <li><a href="<?php echo home_url('/know/'); ?>" class="global-navigation__link">知っておくべきこと</a></li>
+              <li><a href="<?php echo home_url('/application/'); ?>" class="global-navigation__link">狩猟免許受験申請</a></li>
+              <li><a href="<?php echo home_url('/content/'); ?>" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
+              <li><a href="<?php echo home_url('/registration/'); ?>" class="global-navigation__link">狩猟者登録</a></li>
+              <li><a href="<?php echo home_url('/contact/'); ?>" class="global-navigation__link">お問い合わせ</a></li>
+            </ul>
+            <div id="js-focus-trap" tabindex="0"></div>
+          </nav>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+  </header>
+
     <!-- <header class="pc-only">
       <div class="inner">
         <div class="header-nav">
