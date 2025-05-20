@@ -12,8 +12,20 @@ get_header(); ?>
 </div>
 
 <div class="inner">
+  <h2>試験日程一覧（47都道府県）</h2>
+  <p>狩猟免許試験は、各都道府県で実施されるため、日程や会場が異なります。</p>
+  <p>このページでは、2025年度の狩猟免許試験日程をまとめています。</p>
+  <div class="area-links">
+    <a href="#area-hokkaido-tohoku">北海道・東北</a>
+    <a href="#area-kanto-koshinetsu">関東・甲信越</a>
+    <a href="#area-tokai">東海</a>
+    <a href="#area-kansai">関西</a>
+    <a href="#area-chugoku-shikoku">中国・四国</a>
+    <a href="#area-kyushu-okinawa">九州・沖縄</a>
+  </div>
+</div>
+<div class="inner">
   <div class="schedule-table">
-    <h2>試験日程一覧（47都道府県）</h2>
     <div class="table-scroll">
       <?php the_content(); // ← ここに本文欄のHTML表が表示されます ?>
     </div>
