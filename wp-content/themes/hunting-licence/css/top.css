@@ -216,11 +216,10 @@ h2 {
   background-color: #d7effa;
   display: block;
   font-weight: bold;
-  padding: 20px;
+  padding: 20px 20px 20px 30px;
   margin: 10px 0;
 }
-.info-list ul li {
-  list-style-position: inside;
+.info-list li {
   list-style:disc;
 }
 .top-intro-box {

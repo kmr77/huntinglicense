@@ -213,21 +213,6 @@ h1 {
 .tag li a {
   text-decoration: none;
 }
-//猟銃等のリスト
-.lecture-points {
-  background-color: #e0f4ff; /* 薄い青背景 */
-  padding: 1em;
-  border-radius: 4px;
-  margin: 1.5em 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #000; /* 黒文字 */
-}
-
-.lecture-points li {
-  margin-left: 1.2em;
-  list-style-type: disc;
-}
 
 
 /*# sourceMappingURL=question.css.map */
