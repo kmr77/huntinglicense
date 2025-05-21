@@ -213,6 +213,24 @@ h1 {
 .tag li a {
   text-decoration: none;
 }
-
-
+.post-meta {
+  margin: 16px 0;
+  background: #F8FFFF;
+  padding: 16px;
+}
+.back-link {
+  text-align: center;
+}
+.post-navigation {
+  margin: 16px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.prev-post {
+  margin: 16px 0;
+}
+.next-post {
+  margin: 16px 0;
+}
 /*# sourceMappingURL=question.css.map */
