@@ -155,9 +155,7 @@ crossorigin="anonymous"></script>
   <?php if ( is_page_template('page-schedule-detail.php') ) : ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/schedule.css">
   <?php endif; ?>
-
-
-
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
   <!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
 </head>
