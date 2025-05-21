@@ -8,31 +8,7 @@ if (in_category('experience')) {
 
 <?php get_header(); ?>
     <div class="inner">
-    <nav class="breadcrumb">
-        <ul>
-            <li>
-                <a href="<?php echo home_url(); ?>">狩猟免許試験例題集 過去問</a>
-            </li>
-
-            <?php
-            // 投稿に関連付けられているカテゴリを取得
-            $categories = get_the_category();
-            if ( !empty($categories) ) {
-                $cat = $categories[0]; // 最初のカテゴリのみ使用
-                $cat_link = get_category_link( $cat->term_id );
-                echo '<li><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat->name ) . '</a></li>';
-            }
-
-            // タイトルと問題番号の表示
-            $custom_title = get_field('custom_title');
-            $post_no = get_field('no');
-            $title_text = $custom_title ? $custom_title : get_the_title();
-            echo '<li>' . esc_html($title_text) . '</li>';
-            ?>
-        </ul>
-    </nav>
-
-
+    <?php get_template_part('parts-breadcrumb'); ?>
     </div>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
