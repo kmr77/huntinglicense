@@ -110,16 +110,23 @@ crossorigin="anonymous"></script>
     echo '<title>' . esc_html($title) . '</title>';
     ?>
     <meta name="description" content="狩猟鳥獣や保護動物の識別問題を中心に構成。生態・法律両面からの出題対策で得点源を確保できます。">
-  <?php elseif ( is_single() ) : ?>
+    <?php elseif ( is_single() ) : ?>
     <?php
-      $custom_title = get_field('custom_title');
-      $custom_description = get_field('custom_description');
-      $post_no = get_field('no');
-      $default_title = '問題番号' . $post_no . '：' . get_the_title();
-      $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
+      if ( is_page_template('single-experience.php') || in_category('experience') ) {
+        $exp_title = get_field('exp_title');
+        $exp_description = get_field('exp_description');
+        $default_title = get_the_title();
+        $default_description = '狩猟免許試験の体験談・合格体験記を紹介します。';
+      } else {
+        $exp_title = get_field('custom_title');
+        $exp_description = get_field('custom_description');
+        $post_no = get_field('no');
+        $default_title = '問題番号' . $post_no . '：' . get_the_title();
+        $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
+      }
     ?>
-    <title><?php echo esc_html( $custom_title ? $custom_title : $default_title ); ?></title>
-    <meta name="description" content="<?php echo esc_attr( $custom_description ? $custom_description : $default_description ); ?>">
+    <title><?php echo esc_html( $exp_title ? $exp_title : $default_title ); ?></title>
+    <meta name="description" content="<?php echo esc_attr( $exp_description ? $exp_description : $default_description ); ?>">
   <?php elseif ( is_tag('examination') ) :
     $title = '猟銃等講習会試験対策 問題集 過去問｜狩猟免許試験例題集';
     if ( $paged >= 2 ) {

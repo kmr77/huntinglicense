@@ -27,7 +27,7 @@ get_header(); ?>
     <?php endwhile; endif; ?>
 
     <div class="post-meta">
-      <p>投稿日：<?php echo get_the_date(); ?></p>
+      <!-- <p>投稿日：<?php echo get_the_date(); ?></p> -->
       <p>カテゴリ：<?php the_category(', '); ?></p>
       <?php the_tags('<p>タグ：', ', ', '</p>'); ?>
     </div>
