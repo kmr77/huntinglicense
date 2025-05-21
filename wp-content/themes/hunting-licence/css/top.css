@@ -1,6 +1,7 @@
 @charset "UTF-8";
 h1 {
   color: #fff;
+  text-shadow: 1px 1px 2px black;
 }
 h2 {
   text-align: center;
@@ -52,6 +53,10 @@ h2 {
 }
 .experience {
   background-image: url(../img/exp.avif);
+}
+.common-img {
+  background-image: url(../img/common-img.avif);
+  height: 100px !important;
 }
 @media screen and (min-width: 768px) {
   .main-visual {
@@ -438,6 +443,29 @@ h2 {
 
 .link-buttons a:hover {
   background-color: #005d2b;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.experience-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+.experience-item h3 a {
+  text-decoration: none;
+  color: #222;
+}
+
+.experience-item p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=top.css.map */
