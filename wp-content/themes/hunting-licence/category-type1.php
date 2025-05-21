@@ -4,14 +4,11 @@
       </div>
     </div>
     <div class="main-visual type1">
-      <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>第一種銃猟では、ライフル銃・ハーフライフル銃・散弾銃の扱いに関する知識が問われます。
-            本教材では、過去問の中から代表的な問題を抽出し、それぞれの要点を明確に解説。
-            法令、安全管理、猟具の制限など、分野ごとに整理された内容で、理解を重ねながら学習を進められます。
-            外出先でも使いやすいよう、スマートフォンに最適化された設計となっています。</p>
+        <div class="inner">
+        <h1>一種銃猟免許 試験対策｜過去問と解説</h1>
+        <p>一種銃猟免許では、散弾銃やライフル銃の安全な取扱いと法令遵守の知識が問われます。本ページでは試験に頻出する問題を精選し、合格に必要な要点を効率よく学べます。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
-    </div>
+        </div>
     </div>
     <div class="inner">
     <h2><?php single_cat_title(); ?> 過去問</h2>

@@ -6,12 +6,9 @@
     </div>
     <div class="main-visual numbers">
       <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>狩猟免許試験の数字問題を徹底解析し、重要な数値や規定を整理。
-          捕獲数や猟期制限など、試験に出やすい数値問題を効率よく学べます。
-          スマートフォン対応でスキマ時間を活用した復習が可能。
-          合格に向けた強力なサポートを提供します。</p>
-          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+      <h1>狩猟免許 数字問題 対策｜覚えておくべき数値集</h1>
+      <p>捕獲制限距離や銃の口径制限など、数字に関する設問が頻出します。覚えておくべき基準値を過去問から整理し、得点源にできるようまとめました。</p>
+      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">

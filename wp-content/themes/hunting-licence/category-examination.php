@@ -6,12 +6,9 @@
     </div>
     <div class="main-visual examination">
       <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>猟銃初心者講習考査の問題を徹底分析し、過去問に基づいた解答と解説を提供。
-          銃の扱いや安全管理に必要な知識を効率的に学べます。
-          スマートフォン対応で移動中も手軽に復習可能。
-          試験合格に向けて確実な実力を身につけられます。</p>
-          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+      <h1>猟銃等講習会 考査対策｜知識試験の過去問と解説</h1>
+      <p>猟銃免許取得前に必須の猟銃等講習会では、銃の構造・安全管理・法律に関する知識が出題されます。本ページでは考査の出題傾向に即した問題を掲載しています。</p>
+      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">

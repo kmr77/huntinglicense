@@ -5,9 +5,9 @@
     </div>
     <div class="main-visual all">
       <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>網猟に関する過去問を厳選し、解答と詳細な解説を付けた問題集を提供。試験頻出の知識を効率的に学べるよう構成されています。特に、網猟特有の法規制や使用できる猟具に関する問題を重点的にカバー。スマートフォン対応で、移動時間やスキマ時間を活用しながら知識を定着させることができます。狩猟免許試験の網猟分野で確実に得点できるよう、合格を目指す受験生を徹底サポートします。</p>
-        <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+      <h1>狩猟免許 試験問題 全カテゴリ総まとめ</h1>
+      <p>一種・二種銃猟、わな、網、法令、鳥獣など全カテゴリの過去問を一括掲載。狩猟免許試験の総合対策としてご活用いただける便利な一覧ページです。</p>
+      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">

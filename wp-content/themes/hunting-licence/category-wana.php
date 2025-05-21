@@ -6,12 +6,10 @@
     </div>
     <div class="main-visual wana">
       <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>わな猟に関する過去問をもとに、実際の試験に出やすい問題を精選。設問ごとに詳しい解説を加えることで、知識の背景まで理解できる構成です。
-          わな猟特有の仕組みや使用できる器具の条件、関係法令など、出題範囲を体系的に整理しています。
-          スマートフォンでも見やすく、短時間で繰り返し学習できるため、日常の中で自然に知識を深められます。</p>
-        <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
-      </div>
+      <h1>罠猟免許 試験対策｜過去問と解説</h1>
+      <p>罠猟免許では、くくり罠・はこ罠の使い方や構造、安全管理が重要視されます。試験対策として頻出項目を過去問から抽出し、実践形式で学べる構成です。</p>
+      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+    </div>
     </div>
     <div class="inner">
     <h2><?php single_cat_title(); ?> 過去問</h2>

@@ -4,13 +4,11 @@
       </div>
     </div>
     <div class="main-visual type2">
-      <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>空気銃を扱う第二種銃猟に関する問題の中から、重要度の高い設問を選び出し、図や用語の解説を交えてわかりやすくまとめています。
-            試験で出題されやすい安全に関する知識や法的な制限、使用条件などをバランスよくカバー。
-            スマホにも対応しており、空いた時間を使って効率的に学べる構成です。</p>
+        <div class="inner">
+        <h1>二種銃猟免許 試験対策｜過去問と解説</h1>
+        <p>二種銃猟免許は空気銃を対象とした試験です。銃の構造、安全確認、狩猟時の注意点などが出題されます。合格に直結する練習問題と要点をわかりやすくまとめています。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>  
-    </div>
+        </div>
     </div>
     <div class="inner">
     <h2><?php single_cat_title(); ?> 過去問</h2>

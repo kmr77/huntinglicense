@@ -7,9 +7,9 @@
 </div>
 <div class="main-visual laws">
   <div class="inner">
-    <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-    <p>狩猟免許試験の法令問題を徹底分析し、過去問を体系的に整理。すべての問題に正確な解答と詳細な解説を付し、試験対策に必要な知識を網羅しています。さらに、スマートフォン対応で移動中でも手軽に復習可能。狩猟法や関連法規の理解を深め、実際の試験で問われる重要ポイントを確実に押さえることができます。これにより、受験者は効率的に学習を進め、合格への道を確実なものにすることができます。</p>
-    <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+  <h1>狩猟法令問題 対策｜過去問と要点解説</h1>
+  <p>狩猟に関わる法律（鳥獣保護法・銃刀法など）の知識が出題されます。罰則や許可制度に関する問題を中心に、重要ポイントを過去問で効率的に学べます。</p>   
+  <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
   </div>
 </div>
 

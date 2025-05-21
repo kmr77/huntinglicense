@@ -10,11 +10,9 @@ get_header(); ?>
     </div>
     <div class="main-visual animals">
       <div class="inner">
-        <h1><?php single_cat_title(); ?>｜狩猟免許試験過去問集</h1>
-        <p>鳥獣問題を徹底整理し、出題される法律や生態を簡潔に解説。
-          狩猟可能な鳥獣や保護対象種についてしっかり学べます。
-          スマートフォン対応で、どこでも手軽に復習でき、試験対策がスムーズに進められます。</p>
-          <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+      <h1>鳥獣識別・生態問題 対策｜過去問で覚える</h1>
+      <p>狩猟対象となる鳥獣の種類、生態、繁殖時期などの知識が問われます。識別に必要なポイントを過去問形式で整理し、実践力を身につけるための教材です。</p>
+      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
