@@ -81,50 +81,41 @@ if (in_category('experience')) {
                             </dl>
                         </dl>
                         <?php
-                        // カテゴリスラッグと表示名の一覧
+                        // カテゴリ一覧（スラッグ => 表示名）
                         $categories = [
-                        'laws' => '法令問題',
                         'type1' => '一種猟銃問題',
                         'type2' => '二種猟銃問題',
-                        'ami' => '網（あみ）猟問題',
                         'wana' => '罠（わな）猟問題',
-                        'animals' => '鳥獣問題',
+                        'ami' => '網（あみ）猟問題',
+                        'laws' => '法令問題',
                         'examination' => '猟銃等講習会 考査問題',
                         'numbers' => '数字問題',
+                        'animals' => '鳥獣問題',
                         'all' => '全カテゴリ問題'
                         ];
 
-                        // 現在の投稿のカテゴリスラッグを取得
-                        $current_cats = get_the_category();
-                        $current_slugs = [];
-                        foreach ($current_cats as $cat) {
-                        $current_slugs[] = $cat->slug;
-                        }
-
-                        // リンク表示（現在のカテゴリを除外）
+                        // 全カテゴリリンクを出力
                         echo '<div class="related-links">';
                         echo '<h3>他の狩猟免許の問題を見る</h3>';
                         echo '<ul>';
 
                         foreach ($categories as $slug => $label) {
-                        if (!in_array($slug, $current_slugs)) {
-                            echo '<li><a href="/category/' . esc_attr($slug) . '/">' . esc_html($label) . '</a></li>';
+                        $cat = get_category_by_slug($slug);
+                        if ($cat) {
+                            $url = get_category_link($cat->term_id);
+                            echo '<li><a href="' . esc_url($url) . '">' . esc_html($label) . '</a></li>';
                         }
                         }
 
                         echo '</ul>';
                         echo '</div>';
 
-                        // 現在の投稿のカテゴリを取得（複数ある場合は最初の1つを使用）
-                        $category = get_the_category();
-                        if (!empty($category)) {
-                        $category_link = get_category_link($category[0]->term_id);
-                        $category_name = $category[0]->name;
-                        echo '<div class="back-to-list">';
-                        echo '<a href="' . esc_url($category_link) . '">一覧へ戻る（' . esc_html($category_name) . '）</a>';
+                        // 「このページを閉じる」リンクを出力
+                        echo '<div class="close-this-page">';
+                        echo '<a href="javascript:window.close();">このページを閉じる</a>';
                         echo '</div>';
-                        }
                         ?>
+
 
                         </div>
                     </div>
