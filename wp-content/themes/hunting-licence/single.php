@@ -80,9 +80,22 @@ if (in_category('experience')) {
                                 </dd>
                             </dl>
                         </dl>
+                        <div class="related-links">
+                        <h3>他の狩猟免許の問題を見る</h3>
+                        <ul>
+                            <li><a href="/category/type1/">第一種銃猟免許の問題</a></li>
+                            <li><a href="/category/type2/">第二種銃猟免許の問題</a></li>
+                            <li><a href="/category/wana/">わな猟免許の問題</a></li>
+                            <li><a href="/category/ami/">網猟免許の問題</a></li>
+                            <li><a href="/category/laws/">法令問題</a></li>
+                            <li><a href="/category/examination/">猟銃講習会の問題</a></li>
+                            <li><a href="/category/examination/">数字問題</a></li>
+                            <li><a href="/category/all/">全カテゴリの問題まとめ</a></li>
+                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </article>
+
     <?php endwhile; endif; ?>
 <?php get_footer(); ?>

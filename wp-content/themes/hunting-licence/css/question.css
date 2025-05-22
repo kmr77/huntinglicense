@@ -228,4 +228,12 @@
 .next-post {
   margin: 16px 0;
 }
+.related-links {
+  margin: 16px 0;
+}
+.related-links li {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
 /*# sourceMappingURL=question.css.map */
