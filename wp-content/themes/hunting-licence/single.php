@@ -80,19 +80,41 @@ if (in_category('experience')) {
                                 </dd>
                             </dl>
                         </dl>
-                        <div class="related-links">
-                        <h3>他の狩猟免許の問題を見る</h3>
-                        <ul>
-                            <li><a href="/category/type1/">第一種銃猟免許の問題</a></li>
-                            <li><a href="/category/type2/">第二種銃猟免許の問題</a></li>
-                            <li><a href="/category/wana/">わな猟免許の問題</a></li>
-                            <li><a href="/category/ami/">網猟免許の問題</a></li>
-                            <li><a href="/category/laws/">法令問題</a></li>
-                            <li><a href="/category/examination/">猟銃講習会の問題</a></li>
-                            <li><a href="/category/examination/">数字問題</a></li>
-                            <li><a href="/category/all/">全カテゴリの問題まとめ</a></li>
-                        </ul>
                         <?php
+                        // カテゴリスラッグと表示名の一覧
+                        $categories = [
+                        'laws' => '法令問題',
+                        'type1' => '一種猟銃問題',
+                        'type2' => '二種猟銃問題',
+                        'ami' => '網（あみ）猟問題',
+                        'wana' => '罠（わな）猟問題',
+                        'animals' => '鳥獣問題',
+                        'examination' => '猟銃等講習会 考査問題',
+                        'numbers' => '数字問題',
+                        'all' => '全カテゴリ問題'
+                        ];
+
+                        // 現在の投稿のカテゴリスラッグを取得
+                        $current_cats = get_the_category();
+                        $current_slugs = [];
+                        foreach ($current_cats as $cat) {
+                        $current_slugs[] = $cat->slug;
+                        }
+
+                        // リンク表示（現在のカテゴリを除外）
+                        echo '<div class="related-links">';
+                        echo '<h3>他の狩猟免許の問題を見る</h3>';
+                        echo '<ul>';
+
+                        foreach ($categories as $slug => $label) {
+                        if (!in_array($slug, $current_slugs)) {
+                            echo '<li><a href="/category/' . esc_attr($slug) . '/">' . esc_html($label) . '</a></li>';
+                        }
+                        }
+
+                        echo '</ul>';
+                        echo '</div>';
+
                         // 現在の投稿のカテゴリを取得（複数ある場合は最初の1つを使用）
                         $category = get_the_category();
                         if (!empty($category)) {

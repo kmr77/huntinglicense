@@ -236,7 +236,7 @@
 }
 //問題文下の回遊リンク
 .related-links h3 {
-  margin-bottom: 0.5em;
+  margin-bottom: 16px;
   font-size: 20px;
 }
 .related-links ul {
@@ -250,6 +250,8 @@
 }
 //一覧へ戻る
 .back-to-list {
+  margin: 16px 0;
+  width: 100%;
   text-align: center;
 }
 .back-to-list a {
