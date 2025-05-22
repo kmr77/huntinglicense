@@ -92,6 +92,18 @@ if (in_category('experience')) {
                             <li><a href="/category/examination/">数字問題</a></li>
                             <li><a href="/category/all/">全カテゴリの問題まとめ</a></li>
                         </ul>
+                        <?php
+                        // 現在の投稿のカテゴリを取得（複数ある場合は最初の1つを使用）
+                        $category = get_the_category();
+                        if (!empty($category)) {
+                        $category_link = get_category_link($category[0]->term_id);
+                        $category_name = $category[0]->name;
+                        echo '<div class="back-to-list">';
+                        echo '<a href="' . esc_url($category_link) . '">一覧へ戻る（' . esc_html($category_name) . '）</a>';
+                        echo '</div>';
+                        }
+                        ?>
+
                         </div>
                     </div>
                 </div>
