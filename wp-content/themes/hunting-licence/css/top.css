@@ -467,5 +467,31 @@ h2 {
   color: #444;
   line-height: 1.6;
 }
+//初心者向けコンテンツ
+.top-link-box {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+}
+.top-link-box h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.top-link-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.top-link-box ul li {
+  margin-bottom: 0.4em;
+}
+.top-link-box ul li a {
+  color: #007baf;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-link-box ul li a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=top.css.map */
