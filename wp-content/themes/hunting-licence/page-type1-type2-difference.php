@@ -54,14 +54,14 @@ get_header(); ?>
     <p>また、地域によっては空気銃による狩猟が適していない場合もあるため、地元の猟友会や自治体の指導員からアドバイスを受けることも有効です。目的に合った免許を選ぶことで、安全かつ充実した狩猟活動につながります。</p>
 
     <h2>よくある質問と注意点</h2>
-    <ul class="info-list">
-      <li><span class="marker"><strong>Q.</strong> 第二種免許ではシカを獲れませんか？</span><br>→ 空気銃では威力が不十分なため、基本的に対象外です。</li>
-      <li><<span class="marker">strong>Q.</strong> 第一種を取れば第二種も兼ねられますか？</span><br>→ はい、第一種銃猟免許には第二種の内容が含まれており、空気銃による猟も可能です。個別に第二種を取る必要はありません。</li>
+    <ul>
+      <li><h3><span class="marker">Q. 第二種免許ではシカを獲れませんか？</span></h3><br>→ 空気銃では威力が不十分なため、基本的に対象外です。</li>
+      <li><h3><span class="marker">Q. 第一種を取れば第二種も兼ねられますか？</span></h3><br>→ はい、第一種銃猟免許には第二種の内容が含まれており、空気銃による猟も可能です。個別に第二種を取る必要はありません。</li>
 
     </ul>
 
     <h2>関連記事</h2>
-    <ul class="info-list">
+    <ul>
       <li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の4種類を比較する</a></li>
       <li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃の所持許可の違いを見る</a></li>
       <li><a href="<?php echo home_url('/study-method/'); ?>">▶ 狩猟免許の勉強方法まとめ</a></li>
