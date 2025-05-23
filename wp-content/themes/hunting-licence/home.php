@@ -48,6 +48,9 @@
 				<li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">▶ 第一種銃猟と第二種銃猟免許の違い</a></li>
 				<li><a href="<?php echo home_url('/license-extermination/'); ?>">▶ 狩猟免許と有害駆除（捕獲従事者）の違い</a></li>
   				<li><a href="<?php echo home_url('/gun-difference/'); ?>">▶ 散弾銃と空気銃の違い</a></li>
+				<li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
+				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
+
 			</ul>
 			</div>
 			<h2>過去問題集</h2>

@@ -25,7 +25,10 @@
         <li><a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類比較</a></li>
         <li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">一種・二種銃猟の違い</a></li>
         <li><a href="<?php echo home_url('/license-extermination/'); ?>">狩猟免許と有害駆除の違い</a></li>
+        <li><a href="<?php echo home_url('/gun-types/'); ?>">銃の種類の違い</a></li>
+				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">法改正とハーフライフル</a></li>
         <li><a href="<?php echo home_url('/gun-difference/'); ?>">散弾銃と空気銃の違い</a></li>
+        
         <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
       </ul>
     </nav>
