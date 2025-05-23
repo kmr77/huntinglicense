@@ -64,6 +64,9 @@ h2 {
 .beginner {
   background-image: url(../img/beginner.avif);
 }
+.gun {
+  background-image: url(../img/gun.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;
