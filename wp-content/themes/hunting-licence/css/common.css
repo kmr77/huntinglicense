@@ -233,6 +233,24 @@ p {
   background-position: center;
 }
 
+//デフォルト固定ページビジュアル
+.default-visual {
+  background-size: cover;
+  background-position: center;
+  padding: 15px 0;
+}
+.default-visual h1{
+  color: #000;
+  text-shadow:none;
+  text-align: center;
+  margin: 15px 0;
+  padding: 8px 0;
+  font-size: 30px;
+  border-bottom: 3px solid #545454;
+}
+.default-visual p{
+  color: #000;
+}
 .container {
   margin: 0;
   display: flex;
