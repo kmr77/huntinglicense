@@ -45,6 +45,9 @@
 				<li><a href="<?php echo home_url('/study-method/'); ?>">▶ 狩猟免許の勉強方法まとめ</a></li>
 				<li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持許可の違いを知る</a></li>
 				<li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の種類と違いを比較する</a></li>
+				<li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">▶ 第一種銃猟と第二種銃猟免許の違い</a></li>
+				<li><a href="<?php echo home_url('/license-extermination/'); ?>">▶ 狩猟免許と有害駆除（捕獲従事者）の違い</a></li>
+  				<li><a href="<?php echo home_url('/gun-difference/'); ?>">▶ 散弾銃と空気銃の違い</a></li>
 			</ul>
 			</div>
 			<h2>過去問題集</h2>
