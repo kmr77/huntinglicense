@@ -23,6 +23,19 @@
       <p>狩猟免許試験は<strong>全30問</strong>出題されます。</p>
       <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
       <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
+      <div class="category-intro">
+        <h2>狩猟免許 全カテゴリ問題一覧</h2>
+        <p>このページでは、狩猟免許試験で出題される全カテゴリ（第一種銃猟・第二種銃猟・わな猟・網猟・法令）すべての問題を一括で掲載しています。ジャンルを問わず繰り返し学習したい方に最適な構成です。</p>
+        <p>カテゴリごとに学習したい場合は、以下のリンクからそれぞれの問題ページへ移動できます。</p>
+        <ul class="info-list">
+          <li><a href="<?php echo home_url('/category/type1/'); ?>">▶ 第一種銃猟免許の問題へ</a></li>
+          <li><a href="<?php echo home_url('/category/type2/'); ?>">▶ 第二種銃猟免許の問題へ</a></li>
+          <li><a href="<?php echo home_url('/category/wana/'); ?>">▶ わな猟免許の問題へ</a></li>
+          <li><a href="<?php echo home_url('/category/ami/'); ?>">▶ 網猟免許の問題へ</a></li>
+          <li><a href="<?php echo home_url('/category/laws/'); ?>">▶ 法令問題一覧へ</a></li>
+        </ul>
+      </div>
+
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">
