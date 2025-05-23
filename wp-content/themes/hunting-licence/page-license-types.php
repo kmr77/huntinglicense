@@ -69,11 +69,7 @@ get_header(); ?>
     <p>狩猟免許試験は決して簡単ではありませんが、しっかりと対策をすれば独学でも十分に合格可能です。試験には筆記試験と実技試験があり、主に狩猟に関する法律、鳥獣の識別、器具の扱い、安全対策が問われます。特に法令問題や識別問題は繰り返し学習することが重要です。</p>
     <p>▶ <a href="<?php echo home_url('/study-method/'); ?>">勉強方法の詳しいページはこちら</a></p>
 
-    <h2>関連リンク</h2>
-    <ul class="info-list">
-      <li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃の所持許可の違いを知る</a></li>
-      <li><a href="<?php echo home_url('/study-method/'); ?>">▶ 狩猟免許の勉強方法まとめ</a></li>
-    </ul>
+    <?php get_template_part('parts-connection'); ?>
 
   </div>
 </div>

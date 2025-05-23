@@ -67,9 +67,7 @@ get_header(); ?>
 			<li><strong>免許と許可の更新は別物</strong><br>狩猟免許と銃所持許可は別々に更新が必要です。</li>
 		</ul>
 
-		<h2>関連記事</h2>
-		<p>▶ <a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会の考査問題はこちら</a></p>
-
+		<?php get_template_part('parts-connection-gun'); ?>
 	</div>
 </div>
 
