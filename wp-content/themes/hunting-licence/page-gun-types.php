@@ -4,7 +4,7 @@ Template Name: 銃の種類と違い
 */
 get_header(); ?>
 
-<div class="main-visual beginner">
+<div class="main-visual gun">
   <div class="inner">
     <h1><?php the_title(); ?></h1>
     <p>銃にはさまざまな種類がありますが、日本で猟銃として所持できるものは主に「散弾銃」「ライフル銃」「ハーフライフル銃」に分類されます。それぞれの構造・性能・用途は大きく異なり、法律上の取扱いにも明確な違いがあります。このページでは、これら3つの銃種の特徴・違い・メリット・注意点について詳しく解説します。</p>
