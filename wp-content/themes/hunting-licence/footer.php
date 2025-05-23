@@ -23,7 +23,7 @@
         <li><a href="<?php echo home_url('/study-method/'); ?>">勉強方法まとめ</a></li>
         <li><a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の違い</a></li>
         <li><a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類比較</a></li>
-        <li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">第一種と第二種銃猟免許の違い</a></li>
+        <li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">第一種・二種銃猟の違い</a></li>
         <li><a href="<?php echo home_url('/license-extermination/'); ?>">狩猟免許と有害駆除の違い</a></li>
         <li><a href="<?php echo home_url('/gun-difference/'); ?>">散弾銃と空気銃の違い</a></li>
         <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
