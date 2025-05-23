@@ -13,30 +13,26 @@ crossorigin="anonymous"></script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <?php
-  // ▼▼ スケジュール系ページ（TOP/詳細）のカスタムフィールドによるSEO対応 ▼▼
-  if ( is_page_template(array(
-      'page-schedule.php',
-      'page-schedule-detail.php',
-      'page-license-difference.php',
-      'page-type1-type2-difference.php',
-      'page-license-types.php',
-      'page-license-extermination.php',
-      'page-gun-difference.php',
-      'page-gun-types.php',
-      'page-rifle-revision.php'
-    ))) {
-      $custom_title = get_field('custom_title');
-      $custom_description = get_field('custom_description');
+  // ▼▼ 固定ページにカスタムフィールドが設定されている場合のSEO表示対応 ▼▼
+  if ( is_page() ) {
+    $template = get_page_template_slug(); // 空文字ならデフォルトテンプレート
+    $custom_title = get_post_meta(get_the_ID(), 'custom_title', true);
+    $custom_description = get_post_meta(get_the_ID(), 'custom_description', true);
+
+    // 対象：カスタムテンプレート使用ページ or デフォルトテンプレートページ（テンプレート未指定）
+    if ( $template || $custom_title || $custom_description ) {
       if ( $custom_title ) {
           echo '<title>' . esc_html($custom_title) . '</title>';
       } else {
           echo '<title>' . esc_html(get_the_title()) . '｜狩猟免許スケジュール</title>';
       }
+
       if ( $custom_description ) {
           echo '<meta name="description" content="' . esc_attr($custom_description) . '">';
       }
-    } 
-  ?>
+    }
+  }
+?>
   <?php if ( is_home() || is_front_page() ) : ?>
   <title>狩猟免許ドリル（狩猟免許試験問題集 過去問）｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許の過去問すべてを網羅しているサイトです！狩猟免許試験の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
