@@ -47,12 +47,7 @@ get_header(); ?>
       <li><h3><span class="marker">Q. 散弾銃は危険ですか？</span></h3>→ 威力がある分、厳格な管理が必要ですが、適切に扱えば安全に使用できます。</li>
     </ul>
 
-    <h2>関連記事</h2>
-    <ul>
-      <li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の4種類を比較する</a></li>
-      <li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持の違いを知る</a></li>
-      <li><a href="<?php echo home_url('/study-method/'); ?>">▶ 勉強方法まとめ</a></li>
-    </ul>
+    <?php get_template_part('parts-connection'); ?>
 
   </div>
 </div>

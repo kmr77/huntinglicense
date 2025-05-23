@@ -128,6 +128,7 @@ get_header(); ?>
 		<dd>→ 各都道府県の環境課・自然保護課などが案内しています。申込締切や試験日は県ごとに異なりますので、必ず公式サイトを確認してください。<a href="<?php echo home_url('/information/'); ?>">全国の試験情報一覧</a>もご活用ください。</dd>
 		</dl>
 
+		<?php get_template_part('parts-connection'); ?>
 	</div>
 </div>
 <?php get_footer(); ?>

@@ -54,12 +54,7 @@ get_header(); ?>
       <li><h3><span class="marker">Q. 報酬は誰でももらえる？</span></h3>→ 自治体との契約内容によります。登録された捕獲従事者のみが対象です。</li>
     </ul>
 
-    <h2>関連記事</h2>
-    <ul>
-      <li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の4種類を比較する</a></li>
-      <li><a href="<?php echo home_url('/study-method/'); ?>">▶ 狩猟免許の勉強方法まとめ</a></li>
-    </ul>
-
+    <?php get_template_part('parts-connection'); ?>
   </div>
 </div>
 
