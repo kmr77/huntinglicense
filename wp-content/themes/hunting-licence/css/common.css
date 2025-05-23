@@ -829,4 +829,25 @@ body.is-fixed {
   color: #fff;
   border-color: #0073aa;
 }
+// スマホ用サイトタイトル
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.site-title-sp {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0 10px;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+@media screen and (min-width: 768px) {
+  .site-title-sp {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=common.css.map */

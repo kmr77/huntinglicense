@@ -182,7 +182,10 @@ crossorigin="anonymous"></script>
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許試験 問題">
       </a>
     </div>
-
+    <!-- スマホ用サイトタイトル -->
+    <div class="site-title-sp">
+      <a href="<?php echo home_url('/'); ?>">狩猟免許過去問題集</a>
+    </div>
     <div class="pc-header pc-only">
       <div class="header-nav">
         <nav class="pc-nav">
