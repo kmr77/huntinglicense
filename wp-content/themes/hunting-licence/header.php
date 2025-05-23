@@ -14,7 +14,17 @@ crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <?php
   // ▼▼ スケジュール系ページ（TOP/詳細）のカスタムフィールドによるSEO対応 ▼▼
-  if ( is_page_template(array('page-schedule.php', 'page-schedule-detail.php', 'page-license-difference.php', 'page-type1-type2-difference', 'page-license-types', 'page-license-extermination', 'page-gun-difference', 'page-gun-types', 'page-rifle-revision')) ) {
+  if ( is_page_template(array(
+      'page-schedule.php',
+      'page-schedule-detail.php',
+      'page-license-difference.php',
+      'page-type1-type2-difference.php',
+      'page-license-types.php',
+      'page-license-extermination.php',
+      'page-gun-difference.php',
+      'page-gun-types.php',
+      'page-rifle-revision.php'
+    ))) {
       $custom_title = get_field('custom_title');
       $custom_description = get_field('custom_description');
       if ( $custom_title ) {
