@@ -4,7 +4,7 @@ Template Name: 狩猟免許と銃所持許可の違い
 */
 get_header(); ?>
 
-<div class="main-visual study">	
+<div class="main-visual difference">	
 	<div class="inner">
 		<h1>狩猟免許と銃所持許可の違いとは？</h1>
 		<p>「狩猟免許を取れば銃が持てる」と思っていませんか？実は狩猟免許と銃の所持許可は全く別の制度です。このページでは、両者の違いと、銃を所持するために必要な手続きについて初心者でもわかるように詳しく解説します。</p>
