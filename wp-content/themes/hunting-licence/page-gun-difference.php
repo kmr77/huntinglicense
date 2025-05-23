@@ -48,7 +48,7 @@ get_header(); ?>
     </ul>
 
     <h2>関連記事</h2>
-    <ul class="info-list">
+    <ul>
       <li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の4種類を比較する</a></li>
       <li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持の違いを知る</a></li>
       <li><a href="<?php echo home_url('/study-method/'); ?>">▶ 勉強方法まとめ</a></li>
