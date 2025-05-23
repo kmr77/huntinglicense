@@ -16,10 +16,13 @@
         <li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
         <li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
         <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
-        <li><a href="<?php echo home_url('/category/examination/'); ?>">講習会考査問題</a></li>
+        <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃所持許可</a></li>
         <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
         <li><a href="<?php echo home_url('/tag/license/'); ?>">試験問題のみ</a></li>
         <li><a href="<?php echo home_url('/tag/examination/'); ?>">考査問題のみ</a></li>
+        <li><a href="<?php echo home_url('/study-method/'); ?>">勉強方法まとめ</a></li>
+        <li><a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の違い</a></li>
+        <li><a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類比較</a></li>
         <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
       </ul>
     </nav>
