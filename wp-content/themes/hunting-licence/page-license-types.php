@@ -12,7 +12,7 @@ get_header(); ?>
 </div>
 
 <div class="inner">
-  <div class="contents">
+  <div class="contents study-method">
 
     <h2>狩猟免許は4種類あります</h2>
     <p>狩猟に必要な免許は、使う道具や目的によって以下の4種類に分かれています。どの免許を選ぶかによって、準備すべき知識や実技内容、さらには取得後の活動範囲も大きく変わります。</p>
