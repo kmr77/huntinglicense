@@ -20,7 +20,7 @@
         <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
         <li><a href="<?php echo home_url('/tag/license/'); ?>">試験問題のみ</a></li>
         <li><a href="<?php echo home_url('/tag/examination/'); ?>">考査問題のみ</a></li>
-        <li><a href="<?php echo home_url('/study-method/'); ?>">勉強方法まとめ</a></li>
+        <li><a href="<?php echo home_url('/study-method/'); ?>">狩猟免許の独学勉強法</a></li>
         <li><a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の違い</a></li>
         <li><a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類比較</a></li>
         <li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">一種・二種銃猟の違い</a></li>
