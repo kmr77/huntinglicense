@@ -86,3 +86,92 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+<!-- ▼ /gun-types/ ページ用 FAQ構造化データ（JSON-LD形式） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "散弾銃とライフル銃の違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "散弾銃は複数の小弾を発射し、広範囲をカバーします。ライフル銃は単弾で高精度な長距離射撃が可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ハーフライフル銃とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "銃身の一部に旋条（ライフリング）がある銃で、2025年の法改正によりライフルと同等の扱いになりました。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "初心者にはどの銃がおすすめ？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "散弾銃が最も入門向けとされています。構造がシンプルで所持許可も比較的取得しやすいです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "空気銃は銃猟免許が必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。第二種銃猟免許と警察の銃所持許可が必要です。主に小型動物の狩猟に使用されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃を自宅で保管できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ただし、鍵付きの銃保管庫と実包保管庫の設置、警察の確認が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃所持に必要な条件は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "20歳以上で、適性検査・講習・身辺調査・技術審査を経て警察の許可を受ける必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃所持許可までにかかる期間は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "初めての場合、申請から許可までに3〜6ヶ月程度かかります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自作の銃は所持できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。銃刀法により自作の銃の所持や製造は禁止されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ライフルは誰でも所持できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "原則として10年以上の散弾銃の所持歴と猟歴・実績が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ハーフライフルは今でも取得できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ただし2025年法改正によりライフルと同様の所持条件が適用されます。"
+      }
+    }
+  ]
+}
+</script>

@@ -12,7 +12,7 @@ get_header(); ?>
 </div>
 
 <div class="inner">
-  <div class="contents">
+  <div class="contents study-method">
 
     <h2>狩猟免許試験に関する質問</h2>
 
@@ -74,3 +74,92 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+<!-- ▼ FAQ構造化データ（JSON-LD形式） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "狩猟免許のテスト内容は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "狩猟免許試験では法令、猟具の構造と使用法、鳥獣の識別、安全管理、実技（わな猟など）について出題されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許の合格ラインは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "筆記試験では7割以上の正答率が一般的な合格基準です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "わな猟の合格率は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "わな猟免許は比較的取得しやすく、合格率は8割前後とされています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試験の勉強時間はどれくらい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1日1〜2時間の勉強を2〜3週間続けると合格圏に達するケースが多いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許を取れない人は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "法令違反歴や精神疾患、アルコール依存症などがある場合は取得できません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許の試験は年に何回ある？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多くの都道府県では年2回（前期・後期）実施されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試験当日の持ち物は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "受験票、身分証明書、黒のボールペンなどを持参します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免許の有効期限は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有効期限は3年で、更新には講習受講と手続きが必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "女性でも狩猟免許は取れる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、女性の受験者も年々増えており、講習や装備のサポート体制も整っています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許の種類は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第一種銃猟、第二種銃猟、網猟、わな猟の4種類があります。"
+      }
+    }
+  ]
+}
+</script>

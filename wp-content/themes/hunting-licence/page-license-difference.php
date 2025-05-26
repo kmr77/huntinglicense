@@ -99,3 +99,92 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+<!-- ▼ /license-difference/ ページ用 FAQ構造化データ（JSON-LD形式） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "狩猟免許と銃所持許可は同じものですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、狩猟免許は狩猟をする資格、銃所持許可は銃を持つための警察による許可であり、別の制度です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どちらを先に取得すべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "狩猟免許を先に取得するのが一般的ですが、銃所持許可は申請から時間がかかるため、並行して準備を進めると効率的です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃を持っていれば狩猟してもよいのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、狩猟を行うには狩猟免許と狩猟者登録が必要です。銃所持許可だけでは狩猟はできません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃所持許可の申請先はどこですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "居住地を管轄する警察署（生活安全課）です。適性検査、講習、審査などが行われます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許の試験と銃の講習会は別ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。狩猟免許試験は都道府県が実施し、銃の講習会（猟銃等講習会）は警察が主催します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃所持許可を持っていても狩猟しない人はいますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。クレー射撃や標的射撃などを目的に銃を所持する方は狩猟免許を必要としません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃所持許可の更新頻度は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通常は3年ごとです。再講習と審査、射撃実技の実績証明が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃の種類で許可の難易度は変わりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ライフルの所持には原則10年以上の実績が必要です。散弾銃は比較的取得しやすいです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許に年齢制限はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "罠猟・網猟は18歳以上、銃猟は20歳以上が条件です。銃所持許可にも年齢・適性要件があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "両方の申請は同時にできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "手続き自体は別ですが、書類準備やスケジュール調整をすれば並行して進められます。"
+      }
+    }
+  ]
+}
+</script>

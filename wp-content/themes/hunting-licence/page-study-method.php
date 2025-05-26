@@ -132,3 +132,93 @@ get_header(); ?>
 	</div>
 </div>
 <?php get_footer(); ?>
+<!-- ▼ /study-method/ ページ用 FAQ構造化データ（JSON-LD形式） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "独学でも合格できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、独学でも十分合格可能です。例題集を繰り返し解くことで対応できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どの問題から手を付ければいい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "法令と数字問題を優先しましょう。これらは全猟法共通で出題されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試験の難易度はどれくらい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "合格率は70〜90％で、例題をしっかり対策すれば難易度は高くありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "過去問はどこで手に入る？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "都道府県が配布する例題集が基本で、当サイトでもカテゴリ別に学習できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "合格後すぐに狩猟を始められますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、狩猟者登録が必要です。銃猟の場合は所持許可も必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から受験できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "罠猟・網猟は18歳以上、銃猟は20歳以上から受験可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "女性でも受験していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、女性の受験者も増えており、講習会やサポート体制も整っています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "勉強期間はどれくらい必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "早い人で3日〜1週間、2週間あれば十分対策可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "模擬試験は受けられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "当サイトではカテゴリ別の問題で模擬演習可能です。模試機能も準備中です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "実技試験はどうやって対策すればいい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "講習会で実際に指導されます。事前に動画や内容を把握しておくと安心です。"
+      }
+    }
+  ]
+}
+</script>
+
