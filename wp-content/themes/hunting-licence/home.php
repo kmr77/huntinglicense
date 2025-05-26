@@ -51,7 +51,7 @@
 				<li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
 				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
 				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">▶ 狩猟免許に関するよくある質問（Q&A）を見る</a></li>
-
+				<li></li>
 			</ul>
 			</div>
 			<h2>過去問題集</h2>
@@ -65,8 +65,9 @@
 						<li><a href="<?php echo home_url('/category/type2/'); ?>">二種猟銃問題</a></li>
 						<li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
 						<li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
-						<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li>
 						<li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
+						<li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃等講習会の流れと考査対策ガイド</a></li>
+						<!-- <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li> -->
 					</ul>
 				</div>
 			</div>
