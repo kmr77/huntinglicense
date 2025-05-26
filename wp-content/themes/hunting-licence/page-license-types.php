@@ -51,7 +51,7 @@ get_header(); ?>
     </table>
 
     <h2>各免許の対策問題を見てみる</h2>
-    <ul class="info-list">
+    <ul>
       <li><a href="<?php echo home_url('/category/type1/'); ?>">▶ 第一種銃猟免許の問題へ</a></li>
       <li><a href="<?php echo home_url('/category/type2/'); ?>">▶ 第二種銃猟免許の問題へ</a></li>
       <li><a href="<?php echo home_url('/category/wana/'); ?>">▶ わな猟免許の問題へ</a></li>
