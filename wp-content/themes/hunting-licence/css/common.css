@@ -15,15 +15,30 @@ ul, li {
   list-style: none;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: #3c3c3c;
 }
 a:hover {
   color: #4de2fc;
   text-decoration: none;
+} */
+a {
+  text-decoration: underline;
+  color: #0073aa;
 }
-
+a:hover {
+  text-decoration: none;
+  color: #007b3c;
+}
+.tag a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+.tag a:hover {
+  text-decoration: none;
+  color: #007b3c;
+}
 img {
   width: 100%;
 }
