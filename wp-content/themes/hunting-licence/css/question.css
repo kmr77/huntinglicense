@@ -275,5 +275,14 @@
   background-color: #ddd;
 }
 
+.back-to-info a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #eee;
+  border-left: 4px solid #007B9E;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 8px;
+}
 
 /*# sourceMappingURL=question.css.map */
