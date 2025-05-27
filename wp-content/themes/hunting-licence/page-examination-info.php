@@ -67,3 +67,92 @@ get_header();
 </div>
 
 <?php get_footer(); ?>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "狩猟免許と銃の講習はどちらが先？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般的には狩猟免許が先ですが、猟銃講習が先でも問題ありません。ただし所持許可申請の時間がかかるため、計画的に進めることが重要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "講習会は誰でも受けられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "原則として20歳以上で、一定の適性が必要です。過去に禁固刑などの履歴がある場合は制限があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃はすぐに持てますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。講習や審査、保管設備確認などを経て、所持許可が下りてから初めて所持できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試験問題は難しい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "問題自体は過去問をベースにしており、事前学習をしていれば十分に対応可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "実技試験はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "実技はありませんが、銃の構造や安全確認の説明、取り扱いのデモが含まれます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟をしない人でも必要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。狩猟を目的としない、クレー射撃や標的射撃目的の方もこの講習が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "女性でも受講できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。性別による制限はありません。近年では女性の銃所持者も増えています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "実際の講習時間はどれくらい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "学科講習は半日〜1日程度で、考査は40問前後のマークシート形式です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "落ちることもある？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。考査に合格しなければ再受験が必要になります。合格率は高めですが油断は禁物です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試験問題はどこで見られる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "当サイトの猟銃等講習会 考査問題集ページで確認できます。"
+      }
+    }
+  ]
+}
+</script>
+
