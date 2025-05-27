@@ -59,6 +59,7 @@ get_header(); ?>
 				<tr><td>有効期間</td><td>3年（更新制）</td><td>3年（銃ごとに更新）</td></tr>
 			</tbody>
 		</table>
+    <?php get_template_part('parts-gun-question'); ?>
 
 		<h2>よくある誤解と注意点</h2>
 		<dl>
