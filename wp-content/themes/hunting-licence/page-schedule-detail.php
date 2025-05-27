@@ -3,7 +3,10 @@
 Template Name: 狩猟免許スケジュール詳細（年度別）
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual schedule-detail">
   <div class="inner">
     <h1><?php the_title(); ?></h1>

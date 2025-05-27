@@ -3,7 +3,10 @@
 Template Name: 勉強法まとめ
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual study">	
 	<div class="inner">
 		<h1>狩猟免許に独学で合格するための勉強方法まとめ</h1>

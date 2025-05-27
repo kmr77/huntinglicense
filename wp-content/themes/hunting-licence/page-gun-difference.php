@@ -3,7 +3,10 @@
 Template Name: 散弾銃と空気銃の違い
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual beginner">
   <div class="inner">
     <h1><?php the_title(); ?></h1>

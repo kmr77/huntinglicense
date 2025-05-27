@@ -4,7 +4,10 @@ Template Name: 網猟免許 解説ページ
 */
 get_header();
 ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual ami">
   <div class="inner">
     <h1><?php the_title(); ?>｜網猟免許の内容と試験対策</h1>

@@ -4,7 +4,10 @@ Template Name: わな猟免許 解説ページ
 */
 get_header();
 ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual wana">
   <div class="inner">
     <h1><?php the_title(); ?>｜わな猟免許の内容と試験対策</h1>

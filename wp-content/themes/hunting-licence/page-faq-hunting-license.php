@@ -3,7 +3,10 @@
 Template Name: 狩猟免許Q&Aページ
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual beginner">
   <div class="inner">
     <h1>狩猟免許に関するよくある質問</h1>

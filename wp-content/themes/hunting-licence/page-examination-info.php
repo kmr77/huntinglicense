@@ -4,7 +4,10 @@ Template Name: 猟銃等講習会の解説
 */
 get_header();
 ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual gun">
   <div class="inner">
     <h1><?php the_title(); ?>｜猟銃所持と講習の基礎知識</h1>

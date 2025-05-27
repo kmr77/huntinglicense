@@ -3,7 +3,10 @@
 Template Name: 銃の種類と違い
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual gun">
   <div class="inner">
     <h1><?php the_title(); ?></h1>

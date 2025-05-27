@@ -3,7 +3,10 @@
 Template Name: 2025年法改正とハーフライフルの扱い
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual gun">
   <div class="inner">
     <h1><?php the_title(); ?></h1>

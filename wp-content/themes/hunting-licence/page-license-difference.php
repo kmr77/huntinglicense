@@ -3,7 +3,10 @@
 Template Name: 狩猟免許と銃所持許可の違い
 */
 get_header(); ?>
-
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual difference">	
 	<div class="inner">
 		<h1>狩猟免許と銃所持許可の違いとは？</h1>
