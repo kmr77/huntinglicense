@@ -16,7 +16,7 @@
         <li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
         <li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
         <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
-        <li><a href="<?php echo home_url('/category/examination-info/'); ?>">猟銃所持許可について</a></li>
+        <li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃所持許可について</a></li>
         <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃所持許可問題</a></li>
         <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
         <li><a href="<?php echo home_url('/tag/license/'); ?>">試験問題のみ</a></li>
