@@ -8,7 +8,7 @@
 <div class="main-visual laws">
   <div class="inner">
   <h1>狩猟法令問題 対策｜過去問と要点解説</h1>
-  <p>狩猟に関わる法律（鳥獣保護法・銃刀法など）の知識が出題されます。罰則や許可制度に関する問題を中心に、重要ポイントを過去問で効率的に学べます。</p>   
+  <p>狩猟免許試験の約3割を占める重要分野が法令問題です。鳥獣の保護管理や狩猟制度に関する法律が出題されるため、制度の仕組みを正しく理解しておく必要があります。</p>
   <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
   </div>
 </div>

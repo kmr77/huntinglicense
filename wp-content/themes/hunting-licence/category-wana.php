@@ -7,7 +7,7 @@
     <div class="main-visual wana">
       <div class="inner">
       <h1>罠猟免許 試験対策｜過去問と解説</h1>
-      <p>罠猟免許では、くくり罠・はこ罠の使い方や構造、安全管理が重要視されます。試験対策として頻出項目を過去問から抽出し、実践形式で学べる構成です。</p>
+      <p>わな猟免許では、くくりわな・はこわななどの猟具の構造や設置条件、対象動物の行動特性、安全措置などに関する出題が中心です。技能試験も含まれるため実践知識が重要です。</p>
       <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
     </div>
     </div>

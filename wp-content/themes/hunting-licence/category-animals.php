@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="main-visual animals">
       <div class="inner">
       <h1>鳥獣識別・生態問題 対策｜過去問で覚える</h1>
-      <p>狩猟対象となる鳥獣の種類、生態、繁殖時期などの知識が問われます。識別に必要なポイントを過去問形式で整理し、実践力を身につけるための教材です。</p>
+      <p>このカテゴリでは、狩猟対象鳥獣と保護鳥獣の識別力が問われます。写真や特徴から正確に判断する力が必要で、見分けを誤ると違法行為につながるため重要な分野です。</p>
       <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>

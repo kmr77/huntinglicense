@@ -7,7 +7,7 @@
     <div class="main-visual numbers">
       <div class="inner">
       <h1>狩猟免許 数字問題 対策｜覚えておくべき数値集</h1>
-      <p>捕獲制限距離や銃の口径制限など、数字に関する設問が頻出します。覚えておくべき基準値を過去問から整理し、得点源にできるようまとめました。</p>
+      <p>このカテゴリでは、狩猟に関わる日数・距離・猟期・捕獲制限などの数値を問う問題が出題されます。法令と組み合わせて覚えることで得点源にしやすい分野です。</p>
       <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>

@@ -6,7 +6,7 @@
     <div class="main-visual ami">
         <div class="inner">
         <h1>網猟免許 試験対策｜過去問と解説</h1>
-        <p>網猟免許では、はこおとしやむそう網の構造や設置方法、安全確保に関する知識が問われます。本ページでは出題傾向に基づいた問題で確実な理解を目指せます。</p>
+        <p>網猟免許では、むそう網やはり網の構造や設置方法、安全確保に関する知識が問われます。本ページでは出題傾向に基づいた問題で確実な理解を目指せます。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
         </div>
     </div>

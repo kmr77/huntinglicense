@@ -6,7 +6,7 @@
     <div class="main-visual type1">
         <div class="inner">
         <h1>一種銃猟免許 試験対策｜過去問と解説</h1>
-        <p>一種銃猟免許では、散弾銃やライフル銃の安全な取扱いと法令遵守の知識が問われます。本ページでは試験に頻出する問題を精選し、合格に必要な要点を効率よく学べます。</p>
+        <p>第一種銃猟免許では、装薬銃や空気銃を使用してイノシシやシカなどの大型獣を狩猟できます。銃の構造、安全管理、関連法令などが幅広く出題されます。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
         </div>
     </div>
