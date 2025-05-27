@@ -83,7 +83,7 @@
                     <dt>
                         <span class="question">問<?php echo $counter; ?>：<span class="small">No.<?php the_field('no'); ?></span> <?php the_title(); ?></span>
                         <div class="btn-layout">
-                          <button class="open-btn">選択肢を見る</button>
+                          <button class="open-btn">答えを見る</button>
                           <button class="single-btn"><a href="<?php the_permalink(); ?>" target="_blank">設問へ移動</a></button>
                         </div>
                     </dt>
