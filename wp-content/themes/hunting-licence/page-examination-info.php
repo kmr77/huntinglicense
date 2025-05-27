@@ -13,7 +13,7 @@ get_header();
 </div>
 
 <div class="inner">
-  <div class="contents">
+  <div class="contents study-method">
     <p>このページでは「猟銃を持ちたい」と考えている方に向けて、<strong>猟銃等講習会</strong>の概要、狩猟免許との違い、受講の流れや対策方法を初心者にも分かりやすく解説しています。</p>
 
     <h2>猟銃等講習会とは？</h2>
