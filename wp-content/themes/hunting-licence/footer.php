@@ -1,7 +1,6 @@
-<?php get_template_part('parts-share'); ?>
-
 </div>
 <footer id="footer">
+  <?php get_template_part('parts-share'); ?>
   <div class="inner">
     <nav class="footer-navi" aria-label="フッターナビゲーション">
       <ul class="footer-links">

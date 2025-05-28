@@ -870,6 +870,7 @@ body.is-fixed {
   justify-content: center;
   gap: 16px;
   margin: 20px 0;
+  text-align: center;
 }
 
 .sns-share-icons a img {
