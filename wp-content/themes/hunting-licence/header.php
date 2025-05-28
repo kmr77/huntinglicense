@@ -164,6 +164,19 @@ crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
   <!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
+  <!-- SNS共有用OGP・Twitter Card -->
+  <meta property="og:title" content="<?php echo esc_html(get_the_title()); ?>">
+  <meta property="og:description" content="<?php echo esc_attr(get_post_meta(get_the_ID(), 'custom_description', true)); ?>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<?php echo esc_url(get_permalink()); ?>">
+  <meta property="og:site_name" content="狩猟免許ドリル">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?php echo esc_html(get_the_title()); ?>">
+  <meta name="twitter:description" content="<?php echo esc_attr(get_post_meta(get_the_ID(), 'custom_description', true)); ?>">
+  <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.jpg">
 </head>
 
 <body>
