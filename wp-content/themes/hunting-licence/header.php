@@ -170,13 +170,14 @@ crossorigin="anonymous"></script>
   <meta property="og:type" content="article">
   <meta property="og:url" content="<?php echo esc_url(get_permalink()); ?>">
   <meta property="og:site_name" content="狩猟免許ドリル">
-  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.jpg">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png">
 
-  <!-- Twitter Card -->
+  <!-- Twitter Card対応 -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?php echo esc_html(get_the_title()); ?>">
   <meta name="twitter:description" content="<?php echo esc_attr(get_post_meta(get_the_ID(), 'custom_description', true)); ?>">
-  <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.jpg">
+  <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png">
+  <meta name="twitter:site" content="@あなたのXアカウント"> <!-- 任意：Xアカウントがあれば設定 -->
 </head>
 
 <body>
