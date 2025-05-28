@@ -2,6 +2,8 @@
 <html lang="ja">
 
 <head>
+  <!-- Font Awesome CDN（v6.5.0）-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oW9vUlEMr2RZzXFlcRr6j2U4a1lOZ6F2loKe3RoHCE1zB5ZzPxvmcVZ9V1qZgTz5ULZxQvYh7XU9M38NR0GPnQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830250751942529"
 crossorigin="anonymous"></script>
   <!-- Google Tag Manager -->
@@ -178,6 +180,7 @@ crossorigin="anonymous"></script>
   <meta name="twitter:description" content="<?php echo esc_attr(get_post_meta(get_the_ID(), 'custom_description', true)); ?>">
   <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png">
   <meta name="twitter:site" content="@あなたのXアカウント"> <!-- 任意：Xアカウントがあれば設定 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oW9vUlEMr2RZzXFlcRr6j2U4a1lOZ6F2loKe3RoHCE1zB5ZzPxvmcVZ9V1qZgTz5ULZxQvYh7XU9M38NR0GPnQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>

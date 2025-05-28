@@ -1,3 +1,5 @@
+<?php get_template_part('parts-share'); ?>
+
 </div>
 <footer id="footer">
   <div class="inner">
