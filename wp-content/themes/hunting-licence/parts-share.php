@@ -1,4 +1,3 @@
-<h2>SNSでシェアする</h2>
 <div class="sns-share-icons">
   <a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener">
     <img src="<?php echo get_template_directory_uri(); ?>/img/line.png" alt="LINEで共有">
