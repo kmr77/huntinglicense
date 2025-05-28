@@ -193,7 +193,7 @@ crossorigin="anonymous"></script>
   <div class="header-layout">
     <div class="logo">
       <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許試験 問題">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許 試験問題 過去問">
       </a>
     </div>
     <!-- スマホ用サイトタイトル -->
