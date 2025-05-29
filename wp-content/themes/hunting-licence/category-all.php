@@ -39,8 +39,9 @@
         銃所持のために必要な猟銃等講習会では、筆記試験が実施されます。<br>
         銃の構造、安全管理、法令に関する過去問はこちらからご確認ください。
         </p>
-        <ul class="category-links">
-          <li><a href="/category/examination/">▶ 猟銃免許の筆記試験・過去問対策はこちら</a></li>
+        <ul>
+          <li><a href="/examination-info/">▶ 猟銃等講習会とは？銃を持つために必要な知識と流れ</a></li>
+          <li><a href="/category/examination/">▶ 猟銃免許の筆記試験・過去問はこちら</a></li>
         </ul>
       </div>
 
