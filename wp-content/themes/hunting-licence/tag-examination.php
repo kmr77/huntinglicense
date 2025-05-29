@@ -20,10 +20,12 @@
   また、出題傾向や学習のコツも紹介しており、初めて受講する方でも効率よく準備を進められます。
   スマートフォンにも完全対応しているため、スキマ時間を活かしてどこでも学習可能です。
   <strong>猟銃等講習会の合格</strong>を目指す方にとって、信頼できる学習ツールとなっています。</p>
-<p class="info-link"><a href="https://www.shuryo-menkyo.com/category/all/">狩猟免許試験の全カテゴリ問題はこちら</a>で見ることができます。</p>
+<p class="info-link"><a href="<?php echo home_url('/category/all/'); ?>">狩猟免許試験の全カテゴリ問題はこちら</a>で見ることができます。</p>
 <p>考査問題は<strong>全50問</strong>出題されます。</p>
-<p>2024年の猟銃取扱読本から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact" target="_blank">メールフォームはこちら</a></p>
+<p>2024年の猟銃取扱読本から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="<?php echo home_url('/contact/'); ?>" target="_blank">メールフォームはこちら</a></p>
 <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
+
+<?php get_template_part('parts-category-intro'); ?>
 
   <div class="accordion-inner" id="question">
     <dl id="accordion">

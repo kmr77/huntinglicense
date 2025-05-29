@@ -20,7 +20,8 @@
   出題傾向に応じた学習アドバイスも掲載しており、試験対策を効率よく進めることが可能です。
   また、スマートフォン対応により、通勤中や外出先などのスキマ時間でも手軽に勉強できます。
   <strong>狩猟免許試験合格</strong>を目指すすべての受験者にとって、有用な学習コンテンツです。</p>
-
+  <?php get_template_part('parts-category-intro'); ?>
+  <br>
   <?php get_template_part('parts-infotext'); ?>
 
   <div class="accordion-inner" id="question">
