@@ -52,7 +52,7 @@ crossorigin="anonymous"></script>
     <title>狩猟免許に独学で合格する勉強法まとめ｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験に独学で合格するためのおすすめ勉強方法とスケジュール例を解説。初心者でも安心して始められる学習ガイド。">
   <?php elseif ( is_category('all') ) : 
-    $title = '全カテゴリ対応の問題集｜狩猟免許試験例題集 過去問';
+    $title = '狩猟免許の全カテゴリ試験問題｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -60,7 +60,7 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="狩猟免許試験の全カテゴリを網羅した例題集と過去問を収録。効率よく学習できる解説付き問題で合格をサポート。">
   <?php elseif ( is_category('laws') ) :
-    $title = '法令問題対策に特化した問題集｜狩猟免許試験例題集 過去問';
+    $title = '法令問題対策に特化した問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -68,7 +68,7 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="法令分野の出題傾向を分析し、重要な法規に特化した過去問と解説を掲載。狩猟免許試験の法令対策に最適です。">
   <?php elseif ( is_category('type1') ) :
-    $title = '一種銃猟の出題対策に最適｜狩猟免許試験例題集 過去問';
+    $title = '第一種銃猟免許（ライフル・散弾銃）試験対策｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -76,7 +76,7 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="ライフルや散弾銃を扱う一種銃猟の過去問を収録。構造や安全管理のポイントを押さえて、試験合格を目指しましょう。">
   <?php elseif ( is_category('type2') ) :
-    $title = '二種銃猟の必須問題を収録｜狩猟免許試験例題集 過去問';
+    $title = '第二種銃猟免許（空気銃）試験対策｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -84,10 +84,10 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="空気銃を扱う二種猟銃試験の例題を収録。初心者でも理解しやすい丁寧な解説付きで、効果的な試験対策が可能です。">
   <?php elseif ( is_category('ami') ) : ?>
-    <title>網猟の出題傾向を完全分析｜狩猟免許試験例題集 過去問</title>
+    <title>網猟の出題傾向を完全分析｜狩猟免許過去問ドリル</title>
     <meta name="description" content="網（あみ）猟に関する使用ルールや出題傾向に基づいた過去問を掲載。網猟免許合格を目指す方におすすめの内容です。">
   <?php elseif ( is_category('wana') ) :
-    $title = 'わな猟試験に役立つ実践問題｜狩猟免許試験例題集 過去問';
+    $title = 'わな猟試験に役立つ実践問題｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -103,7 +103,7 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="猟銃免許の取得を目指す方へ。猟銃等講習会で実施される考査問題をもとに、銃の安全管理・基本操作など試験対策に役立つ練習問題を掲載。初心者でも安心して学べます。">
   <?php elseif ( is_category('numbers') ) :
-    $title = '数字に特化した対策問題集｜狩猟免許試験例題集 過去問';
+    $title = '数字に特化した対策問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
@@ -111,7 +111,7 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="捕獲制限や猟期など、数字に関する重要項目を過去問形式で学習。狩猟免許試験で出題されやすい数値を効率的に習得。">
   <?php elseif ( is_category('animals') ) :
-    $title = '鳥獣識別と法令対策問題集｜狩猟免許試験例題集 過去問';
+    $title = '鳥獣識別と法令対策問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
