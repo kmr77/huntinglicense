@@ -34,6 +34,14 @@
           <li><a href="<?php echo home_url('/category/ami/'); ?>">▶ 網猟免許の問題へ</a></li>
           <li><a href="<?php echo home_url('/category/laws/'); ?>">▶ 法令問題一覧へ</a></li>
         </ul>
+        <h2 id="exam-guide">猟銃免許の筆記試験対策（猟銃等講習会）</h2>
+        <p>
+        銃所持のために必要な猟銃等講習会では、筆記試験が実施されます。<br>
+        銃の構造、安全管理、法令に関する過去問はこちらからご確認ください。
+        </p>
+        <ul class="category-links">
+          <li><a href="/category/examination/">▶ 猟銃免許の筆記試験・過去問対策はこちら</a></li>
+        </ul>
       </div>
 
         <!-- 問題ここから -->
