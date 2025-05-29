@@ -145,7 +145,6 @@ crossorigin="anonymous"></script>
       <meta name="description" content="猟銃等講習会で実施される知識試験に備えた練習問題集。銃の構造や安全管理の知識を網羅し、講習会受講者の理解を深めます。">
       <meta name="keywords" content="猟銃等講習会, 試験問題, 銃の構造, 安全管理, 狩猟免許">
   <?php endif; ?>
-  <?php wp_head(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="<?php bloginfo ('stylesheet_url'); ?>" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />
@@ -180,7 +179,16 @@ crossorigin="anonymous"></script>
   <meta name="twitter:description" content="<?php echo esc_attr(get_post_meta(get_the_ID(), 'custom_description', true)); ?>">
   <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png">
   <meta name="twitter:site" content="@あなたのXアカウント"> <!-- 任意：Xアカウントがあれば設定 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oW9vUlEMr2RZzXFlcRr6j2U4a1lOZ6F2loKe3RoHCE1zB5ZzPxvmcVZ9V1qZgTz5ULZxQvYh7XU9M38NR0GPnQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 構造化データ（JSON-LD） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "狩猟免許過去問ドリル",
+    "url": "https://www.shuryo-menkyo.com"
+  }
+  </script>
+<?php wp_head(); ?>
 </head>
 
 <body>
