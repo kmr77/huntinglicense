@@ -135,16 +135,45 @@ crossorigin="anonymous"></script>
     ?>
     <title><?php echo esc_html( $exp_title ? $exp_title : $default_title ); ?></title>
     <meta name="description" content="<?php echo esc_attr( $exp_description ? $exp_description : $default_description ); ?>">
-  <?php elseif ( is_tag('examination') ) :
-    $title = '猟銃等講習会試験対策 問題集 過去問｜狩猟免許試験例題集';
-    if ( $paged >= 2 ) {
-        $title = 'ページ' . $paged . '：' . $title;
+    <?php endif; ?>
+  <?php
+  if ( is_tag() ) {
+    $paged = get_query_var('paged') ? (int)get_query_var('paged') : 1;
+    $tag = get_queried_object();
+    $slug = $tag->slug;
+    $tag_name = single_tag_title('', false);
+
+    // タグごとのSEOタイトル・ディスクリプション分岐
+    switch ($slug) {
+      case 'examination':
+        $title = ($paged >= 2)
+          ? 'ページ'.$paged.'：猟銃免許（猟銃等講習会）試験の過去問・練習問題集｜合格対策'
+          : '猟銃免許（猟銃等講習会）試験の過去問・練習問題集｜合格対策';
+        $description = '猟銃免許（猟銃等講習会）の筆記試験に対応した過去問と練習問題をまとめて掲載。銃の構造や安全管理・法令の要点を効率よく学習できます。初心者でも安心して使える合格対策用の問題集サイトです。';
+        break;
+
+      case 'license':
+        $title = ($paged >= 2)
+          ? 'ページ'.$paged.'：狩猟免許の試験問題まとめ｜過去問・例題集'
+          : '狩猟免許の試験問題まとめ｜過去問・例題集';
+        $description = '狩猟免許の試験問題・過去問・例題集を厳選掲載。法令、鳥獣識別、猟法、安全管理など全ジャンルの出題傾向と解説つき。独学・初心者にもおすすめの合格サポートサイト。';
+        break;
+
+      // 他のタグ用にカスタマイズ可能
+      default:
+        $title = ($paged >= 2)
+          ? 'ページ'.$paged.'：'.$tag_name.'｜狩猟免許過去問ドリル'
+          : $tag_name.'｜狩猟免許過去問ドリル';
+        $description = $tag_name.'に関する過去問・例題・練習問題を厳選掲載。狩猟免許合格を目指す全受験生向けの問題集です。';
+        break;
     }
-    echo '<title>' . esc_html($title) . '</title>';
     ?>
-      <meta name="description" content="猟銃等講習会で実施される知識試験に備えた練習問題集。銃の構造や安全管理の知識を網羅し、講習会受講者の理解を深めます。">
-      <meta name="keywords" content="猟銃等講習会, 試験問題, 銃の構造, 安全管理, 狩猟免許">
-  <?php endif; ?>
+    <title><?php echo esc_html($title); ?></title>
+    <meta name="description" content="<?php echo esc_attr($description); ?>">
+  <?php
+}
+?>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="<?php bloginfo ('stylesheet_url'); ?>" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />
