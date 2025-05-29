@@ -16,6 +16,11 @@ get_header();
       このページでは「猟銃免許（猟銃等講習会）」の流れや受講のポイント、試験内容、合格のコツ、過去問、よくある質問まで総合的に解説しています。<br>
       これから受験を考えている方、独学で合格を目指したい方のための最新・最強のまとめページです。
     </p>
+  </div>
+</div>
+<div class="inner">
+  <div class="contents study-method">
+    <h2>猟銃免許・猟銃等講習会の解説と総合ガイド</h2>
     <ul class="jump-link-list">
       <li><a href="#about">猟銃等講習会とは？</a></li>
       <li><a href="#flow">受講の流れ・日程</a></li>
@@ -25,10 +30,6 @@ get_header();
       <li><a href="#faq">よくある質問</a></li>
       <li><a href="#experience">合格体験談</a></li>
     </ul>
-  </div>
-</div>
-<div class="inner">
-  <div class="contents study-method">
     <h2 id="about">猟銃等講習会とは？</h2>
     <p>
       猟銃免許（猟銃等講習会）は、銃を安全に所持・使用するために必須の資格試験です。<br>
