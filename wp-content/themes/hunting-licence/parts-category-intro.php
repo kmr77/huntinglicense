@@ -15,7 +15,7 @@
         銃の構造、安全管理、法令に関する過去問はこちらからご確認ください。
         </p>
         <ul>
-          <li><a href="<?php echo home_url('/category/examination-info/'); ?>">▶ 猟銃等講習会とは？銃を持つために必要な知識と流れ</a></li>
+          <li><a href="<?php echo home_url('/examination-info/'); ?>">▶ 猟銃等講習会とは？銃を持つために必要な知識と流れ</a></li>
           <li><a href="<?php echo home_url('/category/examination/'); ?>">▶ 猟銃免許の筆記試験・過去問はこちら</a></li>
         </ul>
       </div>
