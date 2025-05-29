@@ -22,13 +22,13 @@ get_header();
   <div class="contents study-method">
     <h2>猟銃免許・猟銃等講習会の解説と総合ガイド</h2>
     <ul class="jump-link-list">
-      <li><a href="#about">猟銃等講習会とは？</a></li>
-      <li><a href="#flow">受講の流れ・日程</a></li>
-      <li><a href="#content">試験の内容と合格基準</a></li>
-      <li><a href="#past-question">猟銃免許の過去問</a></li>
-      <li><a href="#apply">申請・手続き</a></li>
-      <li><a href="#faq">よくある質問</a></li>
-      <li><a href="#experience">合格体験談</a></li>
+      <li><a href="#about">▶ 猟銃等講習会とは？</a></li>
+      <li><a href="#flow">▶ 受講の流れ・日程</a></li>
+      <li><a href="#content">▶ 試験の内容と合格基準</a></li>
+      <li><a href="#past-question">▶ 猟銃免許の過去問</a></li>
+      <li><a href="#apply">▶ 申請・手続き</a></li>
+      <li><a href="#faq">▶ よくある質問</a></li>
+      <!-- <li><a href="#experience">▶ 合格体験談</a></li> -->
     </ul>
     <h2 id="about">猟銃等講習会とは？</h2>
     <p>
