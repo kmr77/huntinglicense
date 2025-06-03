@@ -919,6 +919,32 @@ body.is-fixed {
 .sns-share-icons a:hover img {
   opacity: 0.7;
 }
-
-
+//アフィリ
+.affiliate-box {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em 0;
+  background: #f9f9f9;
+}
+.affiliate-box h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  color: #d9534f;
+}
+.affiliate-box p {
+  margin: 0.5em 0;
+}
+.affiliate-btn {
+  display: inline-block;
+  background: #d9534f;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.affiliate-btn:hover {
+  background: #c9302c;
+}
 /*# sourceMappingURL=common.css.map */
