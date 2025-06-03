@@ -63,7 +63,7 @@ get_header(); ?>
 			</tbody>
 		</table>
     <?php get_template_part('parts-gun-question'); ?>
-
+    <?php get_template_part('parts-affiliate'); ?>
 		<h2>よくある誤解と注意点</h2>
 		<dl>
 			<dt>Q. 狩猟免許と銃所持許可は同じものですか？</dt>

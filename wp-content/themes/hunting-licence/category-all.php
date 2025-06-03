@@ -24,7 +24,7 @@
       <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
       <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
       <?php get_template_part('parts-category-intro'); ?>
-
+      <?php get_template_part('parts-affiliate'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

@@ -73,7 +73,7 @@ get_header();
       詳しい申請手続きや必要な書類の記入例は
       <a href="<?php echo home_url('/application/'); ?>">▶ 猟銃免許の申請方法ガイド</a>をご覧ください。
     </p>
-
+    <?php get_template_part('parts-affiliate'); ?>
     <h2 id="faq">よくある質問（FAQ）</h2>
     <section class="tag-faq">
       <dl>

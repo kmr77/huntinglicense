@@ -28,6 +28,7 @@ get_header(); ?>
 		<p>このため、狩猟に対してネガティブな印象を持つ人も少なくありません。</p>
 		<p>ハンターは、世間の厳しい視線を認識し、法令に基づいたルールやマナーを守り、常に安全を心がけた狩猟を行うことが求められます。</p>
 		<p>以下に代表的なルールやマナーをご紹介します。</p>
+		<?php get_template_part('parts-affiliate'); ?>
 		<div class="contents">
 			<dl>
 				<dt>
@@ -57,5 +58,6 @@ get_header(); ?>
 					猟期内でも、猟銃による狩猟は日没後から日の出前まで禁止されているため、猟期や日の出・日没時間を確認して、安全に狩猟を行いましょう。</dd>
 			</dl>
 		</div>
+		<?php get_template_part('parts-affiliate'); ?>
 
 <?php get_footer(); ?>

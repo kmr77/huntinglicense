@@ -38,7 +38,7 @@ get_header(); ?>
 				狩猟免許の試験内容は、数十問の正誤問題が中心です。通勤中や寝る前などの短時間でもスマートフォンで繰り返し問題に触れることで、記憶の定着が進みます。1日10分でも継続することが、合格への近道です。
 			</li>
 		</ol>
-
+		<?php get_template_part('parts-affiliate'); ?>
 		<h2>例題集を使った効率的な学習法</h2>
 		<p>このサイトに掲載されている例題集は、過去の公式問題集から抜粋されています。カテゴリ別に学習できるので、自分の猟法に合わせて選んでください。</p>
 		<div class="link-buttons">
@@ -73,7 +73,7 @@ get_header(); ?>
 			</tr>
 		</tbody>
 		</table>
-
+		<?php get_template_part('parts-affiliate'); ?>
 		<h2 id="exam-day">試験畳りの流れと実際の注意点</h2>
 		<p>狩猏免許試験の当日は、持ち物や流れを事前に確認することが大切です。試験は紹介（説明）→筆記（正誤）→実技（需要な場合）の順で実施されます。</p>
 		<h3><span class="marker">当日の持ち物チェックリスト</span></h3>
@@ -130,7 +130,7 @@ get_header(); ?>
 		<dt>Q. 試験日や申込期間はどうやって調べる？</dt>
 		<dd>→ 各都道府県の環境課・自然保護課などが案内しています。申込締切や試験日は県ごとに異なりますので、必ず公式サイトを確認してください。<a href="<?php echo home_url('/information/'); ?>">全国の試験情報一覧</a>もご活用ください。</dd>
 		</dl>
-
+		<?php get_template_part('parts-affiliate'); ?>
 		<?php get_template_part('parts-connection'); ?>
 	</div>
 </div>

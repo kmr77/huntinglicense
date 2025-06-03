@@ -52,7 +52,7 @@ get_header(); ?>
         </tr>
       </tbody>
     </table>
-
+    <?php get_template_part('parts-affiliate'); ?>
     <h2>各免許の対策問題を見てみる</h2>
     <ul>
       <li><a href="<?php echo home_url('/category/type1/'); ?>">▶ 第一種銃猟免許の問題へ</a></li>
