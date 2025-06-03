@@ -284,5 +284,15 @@
   text-decoration: none;
   margin-top: 8px;
 }
-
+.custom-meta-section {
+  margin: 16px 0;
+}
+.custom-meta-section h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.custom-meta-section p{
+  text-align: center;
+}
 /*# sourceMappingURL=question.css.map */
