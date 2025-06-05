@@ -120,22 +120,30 @@ crossorigin="anonymous"></script>
     <meta name="description" content="狩猟鳥獣や保護動物の識別問題を中心に構成。生態・法律両面からの出題対策で得点源を確保できます。">
     <?php elseif ( is_single() ) : ?>
     <?php
+      // 体験談（single-experience.php または experienceカテゴリ）ならnoindexを付けない
       if ( is_page_template('single-experience.php') || in_category('experience') ) {
         $exp_title = get_field('exp_title');
         $exp_description = get_field('exp_description');
         $default_title = get_the_title();
         $default_description = '狩猟免許試験の体験談・合格体験記を紹介します。';
+        $use_noindex = false;
       } else {
+        // 通常投稿（設問）はnoindexを付与
         $exp_title = get_field('custom_title');
         $exp_description = get_field('custom_description');
         $post_no = get_field('no');
         $default_title = '問題番号' . $post_no . '：' . get_the_title();
         $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
+        $use_noindex = true;
       }
     ?>
+    <?php if ($use_noindex): ?>
+      <meta name="robots" content="noindex,follow">
+    <?php endif; ?>
     <title><?php echo esc_html( $exp_title ? $exp_title : $default_title ); ?></title>
     <meta name="description" content="<?php echo esc_attr( $exp_description ? $exp_description : $default_description ); ?>">
-    <?php endif; ?>
+  <?php endif; ?>
+
   <?php
   if ( is_tag() ) {
     $paged = get_query_var('paged') ? (int)get_query_var('paged') : 1;
