@@ -19,6 +19,7 @@
       <p>▶ <a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類と違いを比較する</a></p>
       <p>▶ <a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の所持許可の違いを知る</a></p>
     </div>
+    <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
     <p>わな猟に関する問題は、適法なわなの使用方法や設置条件、安全に関する規定などが中心です。

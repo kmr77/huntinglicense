@@ -24,6 +24,7 @@ get_header(); ?>
 
 <div class="inner">
   <h2>合格者の体験談一覧</h2>
+  <?php get_template_part('parts-ads'); ?>
   <div class="contents">
     <?php
     $args = array(

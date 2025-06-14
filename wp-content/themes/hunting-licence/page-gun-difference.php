@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="inner">
   <div class="contents study-method">
-
+  <?php get_template_part('parts-ads'); ?>
     <h2>このページでわかること</h2>
     <p>このページでは、散弾銃と空気銃の仕組みの違いや、狩猟対象、免許制度の違い、実際にどちらを選ぶべきかについて初心者向けに解説しています。</p>
 
@@ -44,6 +44,7 @@ get_header(); ?>
 
     <h2>どちらを選ぶべきか？</h2>
     <p>初心者で鳥類を中心に狩猟したいなら空気銃が向いています。静かで扱いやすく、導入もしやすいためです。一方、シカやイノシシを対象にした本格的な狩猟をしたい場合は、散弾銃が必須になります。</p>
+    <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
     <h2>よくある質問</h2>
     <dl>

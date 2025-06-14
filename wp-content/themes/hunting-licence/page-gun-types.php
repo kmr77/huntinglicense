@@ -24,7 +24,7 @@ get_header(); ?>
       <li><strong>ライフル銃：</strong>1発の弾を遠距離に精密に撃つことができる銃。銃身に旋条あり。</li>
       <li><strong>ハーフライフル銃：</strong>旋条が一部にのみある中間的な構造。精度・威力も中程度。</li>
     </ul>
-
+    <?php get_template_part('parts-ads'); ?>
     <h2>銃種別比較表</h2>
     <table class="table-scroll">
       <thead><tr><th>銃種</th><th>構造</th><th>弾の性質</th><th>用途</th><th>所持条件</th></tr></thead>

@@ -17,6 +17,7 @@ get_header(); ?>
 	<div class="contents study-method">
 		<h2>狩猟免許の試験とは？</h2>
 		<p>狩猟免許は「銃猟」「罠猟」「網猟」に分かれており、受験者はそれぞれの猟法に応じた筆記・実技試験を受けます。この記事では、主に筆記試験に向けた効率的な勉強法をご紹介します。</p>
+		<?php get_template_part('parts-ads'); ?>
 		<h2>どの猟法を選べばいい？</h2>
 		<p>初心者には罠猟や網猟が比較的始めやすく、銃猟は講習・所持許可などの手続きが多くなります。</p>
 		<div class="link-buttons">
@@ -26,6 +27,7 @@ get_header(); ?>
 		</div>
 
 		<h2>おすすめの勉強方法【独学OK】</h2>
+		<?php get_template_part('parts-ads'); ?>
 		<p>狩猟免許試験は、しっかりとした計画とポイントを押さえた学習を行えば、独学でも十分に合格可能です。以下のステップに沿って、効率よく対策を進めましょう。</p>
 		<ol>
 			<li><strong><span class="marker">狩猟免許の例題集を活用する</span></strong><br>

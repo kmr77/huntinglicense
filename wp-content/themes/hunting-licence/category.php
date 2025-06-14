@@ -15,6 +15,7 @@
           $custom_desc = get_field('exp_description');
         ?>
         <article class="experience-item">
+        <?php get_template_part('parts-ads'); ?>
           <h3>
             <a href="<?php the_permalink(); ?>">
               <?php echo $custom_title ? esc_html($custom_title) : get_the_title(); ?>

@@ -125,7 +125,7 @@ if (in_category('experience')) {
         ?>
       </div>
     </div>
-
+    <?php get_template_part('parts-ads'); ?>
     <?php
     $keywords = get_post_meta(get_the_ID(), 'related_keyword', true);
     if ($keywords) : ?>

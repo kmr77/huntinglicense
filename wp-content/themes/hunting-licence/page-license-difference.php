@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="inner">
 	<div class="contents study-method">
-
+  <?php get_template_part('parts-ads'); ?>
 		<h2>狩猟免許とは？</h2>
 		<p>狩猟免許は、野生鳥獣を捕獲する「狩猟行為」を行うために必要な免許です。都道府県が実施する試験に合格することで取得できます。種類は以下の4つに分かれています。</p>
 		<ul class="info-list">
@@ -63,6 +63,7 @@ get_header(); ?>
 			</tbody>
 		</table>
     <?php get_template_part('parts-gun-question'); ?>
+    <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
 		<h2>よくある誤解と注意点</h2>
 		<dl>

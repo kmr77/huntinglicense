@@ -18,6 +18,7 @@ get_header(); ?>
   <div class="contents study-method">
 
     <h2>狩猟免許試験に関する質問</h2>
+    <?php get_template_part('parts-ads'); ?>
 
     <h3><span class="marker">Q. 狩猟免許のテスト内容は？</span></h3>
     <p>A. 狩猟免許試験の内容は、狩猟の種類によって異なりますが、共通して法令に関する筆記試験、猟具の構造・取扱い、鳥獣の識別、安全管理に関する知識を問う筆記試験、さらには実技試験が実施されます。わな猟や網猟では実際の設置や取り扱い方法が実技として出題されます。詳細は<a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策ページ</a>をご覧ください。</p>

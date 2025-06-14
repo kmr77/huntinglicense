@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="inner">
   <div class="contents study-method">
-
+  <?php get_template_part('parts-ads'); ?>
     <h2>狩猟免許は4種類あります</h2>
     <p>狩猟に必要な免許は、使う道具や目的によって以下の4種類に分かれています。どの免許を選ぶかによって、準備すべき知識や実技内容、さらには取得後の活動範囲も大きく変わります。</p>
     <table class="table-scroll">
@@ -71,7 +71,7 @@ get_header(); ?>
     <h2>試験の難易度と勉強方法</h2>
     <p>狩猟免許試験は決して簡単ではありませんが、しっかりと対策をすれば独学でも十分に合格可能です。試験には筆記試験と実技試験があり、主に狩猟に関する法律、鳥獣の識別、器具の扱い、安全対策が問われます。特に法令問題や識別問題は繰り返し学習することが重要です。</p>
     <p>▶ <a href="<?php echo home_url('/study-method/'); ?>">勉強方法の詳しいページはこちら</a></p>
-
+    <?php get_template_part('parts-ads'); ?>
     <h2>よくある質問</h2>
 		<dl>
       <dt>Q. 第一種銃猟免許でできることは？</dt>

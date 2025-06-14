@@ -19,6 +19,7 @@ get_header(); ?>
 </div>
 
 <div class="inner">
+<?php get_template_part('parts-ads'); ?>
   <article class="experience-single">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div class="post-content">

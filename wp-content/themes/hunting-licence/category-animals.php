@@ -16,6 +16,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="inner">
+    <?php get_template_part('parts-ads'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
       <p>鳥獣問題では、狩猟対象となる鳥類や獣類に関する基本的な知識が問われます。
       具体的には、狩猟可能な種とその保護区分、捕獲方法の制限、さらには鳥獣の生態や特徴に関する問題が出題されます。
