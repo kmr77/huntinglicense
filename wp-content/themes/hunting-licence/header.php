@@ -52,13 +52,13 @@ crossorigin="anonymous"></script>
     <title>狩猟免許に独学で合格する勉強法まとめ｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験に独学で合格するためのおすすめ勉強方法とスケジュール例を解説。初心者でも安心して始められる学習ガイド。">
   <?php elseif ( is_category('all') ) : 
-    $title = '狩猟免許の全カテゴリ試験問題｜狩猟免許過去問ドリル';
+    $title = '狩猟免許 全カテゴリ問題集｜模擬30問・無料の過去問で合格対策';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="狩猟免許試験の全カテゴリを網羅した例題集と過去問を収録。効率よく学習できる解説付き問題で合格をサポート。">
+    <meta name="description" content="狩猟免許試験の法令・猟具・識別・数字など全カテゴリ問題を無料で収録。模擬30問・解説付きで、効率よく合格対策できます。">
   <?php elseif ( is_category('laws') ) :
     $title = '法令問題対策に特化した問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
