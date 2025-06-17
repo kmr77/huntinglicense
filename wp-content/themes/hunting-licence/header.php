@@ -51,6 +51,13 @@ crossorigin="anonymous"></script>
   <?php elseif ( is_page('study-method') ) : ?>
     <title>狩猟免許に独学で合格する勉強法まとめ｜狩猟免許取るには</title>
     <meta name="description" content="狩猟免許試験に独学で合格するためのおすすめ勉強方法とスケジュール例を解説。初心者でも安心して始められる学習ガイド。">
+  <?php elseif ( is_page('schedule') ) : 
+  $year = isset($_GET['year']) ? intval($_GET['year']) : 2025;
+  $custom_title = $year . '年度 狩猟免許試験スケジュール一覧｜都道府県別リンク付き';
+  $custom_description = $year . '年度の狩猟免許試験スケジュールを都道府県別に掲載。試験日・申請期間・会場情報を一覧表示。最新情報・リンク付きで効率よく確認できます。';
+  ?>
+  <title><?php echo esc_html($custom_title); ?></title>
+  <meta name="description" content="<?php echo esc_attr($custom_description); ?>">
   <?php elseif ( is_category('all') ) : 
     $title = '狩猟免許 全カテゴリ問題集｜模擬30問・無料の過去問で合格対策';
     if ( $paged >= 2 ) {
