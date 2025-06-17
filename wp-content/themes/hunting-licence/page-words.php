@@ -20,7 +20,7 @@ get_header();
 	<div class="inner">
 
 		<section>
-		  <h2>狩猟用語・猟具用語一覧（50音順・カテゴリ別）</h2>
+		  <h2>狩猟用語・猟具用語一覧</h2>
 			  <?php get_template_part('parts-ads'); ?>
 		  <div class="table-scroll">
 			<table class="base_tbl" width="100%">
