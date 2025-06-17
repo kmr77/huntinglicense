@@ -22,7 +22,10 @@ $prefectures = [
   'fukuoka' => '福岡', 'saga' => '佐賀', 'nagasaki' => '長崎', 'kumamoto' => '熊本', 'oita' => '大分', 'miyazaki' => '宮崎', 'kagoshima' => '鹿児島', 'okinawa' => '沖縄'
 ];
 ?>
-
+<div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
 <div class="main-visual schedule">
   <div class="inner">
     <h1><?php echo esc_html($year); ?>年度 狩猟免許試験スケジュール</h1>

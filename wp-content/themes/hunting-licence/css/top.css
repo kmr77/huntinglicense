@@ -505,9 +505,19 @@ h2 {
 //スケジュール 
 /* section要素全体にスクロールを許可 */
 .schedule-block {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1em; /* スクロールバーが重ならないように */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.schedule-block h2 {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5em; /* 適宜調整 */
+  padding: 0 12px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* テーブルラッパー */
