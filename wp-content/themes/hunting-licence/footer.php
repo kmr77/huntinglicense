@@ -1,3 +1,4 @@
+<?php get_template_part('parts-ads-wide'); ?>
 </div>
 <footer id="footer">
   <?php get_template_part('parts-share'); ?>
