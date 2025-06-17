@@ -32,6 +32,7 @@ $prefectures = [
 
 <div class="inner">
   <div class="contents">
+    <p class="bold"><span class="marker">※情報に間違いがある場合もあります、各都道府県の情報を必ず確認してください。</span></p>
     <?php
     foreach ($prefectures as $slug => $name) {
       $file = $dir . $slug . ".php";
@@ -42,6 +43,7 @@ $prefectures = [
       } else {
         echo '<p>現在、データは未登録です。</p>';
       }
+      echo '<p class="bold"><span class="marker">※各都道府県の情報を必ず確認してください。</span></p>';
       echo '</section>';
     }
     ?>

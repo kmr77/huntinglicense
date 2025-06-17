@@ -502,52 +502,36 @@ h2 {
 .top-link-box ul li a:hover {
   text-decoration: underline;
 }
-//スケジュール 都道府県個別用
-.schedule_tbl {
+//スケジュール 
+/* section要素全体にスクロールを許可 */
+.schedule-block {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1em; /* スクロールバーが重ならないように */
+}
+
+/* テーブルラッパー */
+.table-scroll {
+  overflow-x: auto;
+  display: block;
   width: 100%;
-  min-width: 700px;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.schedule-table {
+  min-width: 600px;
+  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
-}
-.schedule_tbl th, .schedule_tbl td {
-  padding: 8px 6px;
-  border: 1px solid #d4d4d4;
-  background: #f7fbee;
-  word-break: break-all;
-}
-.schedule_tbl th {
-  background: #d7eac4;
-  font-weight: bold;
-  text-align: center;
-}
-// スケジュール一覧
-.area-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
 }
 
-.area-links a {
-  display: inline-block;
-  width: calc(50% - 8px); /* スマホ2列 */
-  padding: 8px 0;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #007bff;
-  color: #007bff;
-  font-weight: bold;
-  border-radius: 6px;
-  box-sizing: border-box;
-  font-size: 14px;
+.schedule-table th,
+.schedule-table td {
+  white-space: nowrap;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-/* PC：6列表示 */
-@media screen and (min-width: 768px) {
-  .area-links a {
-    width: calc(16.66% - 8px); /* 6列 */
-    font-size: 15px;
-  }
-}
 
 /*# sourceMappingURL=top.css.map */
