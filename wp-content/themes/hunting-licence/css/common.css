@@ -947,4 +947,41 @@ body.is-fixed {
 .affiliate-btn:hover {
   background: #c9302c;
 }
+//用語集テーブル
+/* テーブル全体 */
+.base_tbl {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+/* 各列ごとのバランス */
+.base_tbl th,
+.base_tbl td {
+  padding: 8px 6px;
+  border: 1px solid #d4d4d4;
+  word-break: break-all;
+  vertical-align: top;
+}
+.base_tbl th {
+  font-weight: bold;
+  text-align: center;
+}
+.base_tbl td {
+  font-size: 15px;
+}
+
+/* スマホ対応：横スクロール */
+.table-scroll {
+  overflow-x: auto;
+}
+.base_tbl {
+  min-width: 700px; /* スマホ時は横スクロール */
+}
+
+/* ボタンや長文があるtdを圧迫しないように */
+.base_tbl td,
+.base_tbl th {
+  white-space: normal;
+}
+
 /*# sourceMappingURL=common.css.map */
