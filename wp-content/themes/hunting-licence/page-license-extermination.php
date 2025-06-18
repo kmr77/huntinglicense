@@ -55,10 +55,106 @@ get_header(); ?>
     <ul>
       <li><h3><span class="marker">Q. 有害駆除には狩猟免許が不要？</span></h3>→ 基本的に狩猟免許が必要です。特例で罠だけの使用を認められる場合もあります。</li>
       <li><h3><span class="marker">Q. 報酬は誰でももらえる？</span></h3>→ 自治体との契約内容によります。登録された捕獲従事者のみが対象です。</li>
+      <li><h3><span class="marker">Q. 狩猟免許があれば自動的に駆除ができる？</span></h3>→ いいえ。有害駆除には別途自治体の許可が必要です。</li>
+      <li><h3><span class="marker">Q. 猟銃を持っていれば自由に駆除できる？</span></h3>→ いいえ。銃の所持と駆除活動の許可は別問題です。</li>
+      <li><h3><span class="marker">Q. 狩猟免許は一度取得すれば更新不要？</span></h3>→ いいえ。狩猟免許には更新制度があり、定期的な講習が必要です。</li>
+      <li><h3><span class="marker">Q. 駆除対象はどんな鳥獣でもよい？</span></h3>→ 指定された対象鳥獣に限られます。間違えて捕獲すると処罰の可能性もあります。</li>
+      <li><h3><span class="marker">Q. 市や町からの委嘱がなくても駆除活動できる？</span></h3>→ いいえ。委嘱または個別の許可が必要です。</li>
+      <li><h3><span class="marker">Q. 捕獲した動物は自由に処分してよい？</span></h3>→ いいえ。適正な処理が義務付けられており、報告も必要です。</li>
+      <li><h3><span class="marker">Q. 農地や山林なら勝手に駆除してもよい？</span></h3>→ いいえ。所有地でも許可なく駆除することは法律違反です。</li>
+      <li><h3><span class="marker">Q. 有害駆除と狩猟は同じ扱い？</span></h3>→ いいえ。有害駆除は法令上、特例的な活動で狩猟とは区別されます。</li>
     </ul>
 
     <?php get_template_part('parts-connection'); ?>
   </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "有害駆除には狩猟免許が不要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "基本的に狩猟免許が必要です。特例で罠だけの使用を認められる場合もあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "報酬は誰でももらえる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "自治体との契約内容によります。登録された捕獲従事者のみが対象です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許があれば自動的に駆除ができる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。有害駆除には別途自治体の許可が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "猟銃を持っていれば自由に駆除できる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。銃の所持と駆除活動の許可は別問題です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許は一度取得すれば更新不要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。狩猟免許には更新制度があり、定期的な講習が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "駆除対象はどんな鳥獣でもよい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "指定された対象鳥獣に限られます。間違えて捕獲すると処罰の可能性もあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "市や町からの委嘱がなくても駆除活動できる？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。委嘱または個別の許可が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "捕獲した動物は自由に処分してよい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。適正な処理が義務付けられており、報告も必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "農地や山林なら勝手に駆除してもよい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。所有地でも許可なく駆除することは法律違反です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "有害駆除と狩猟は同じ扱い？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。有害駆除は法令上、特例的な活動で狩猟とは区別されます。"
+      }
+    }
+  ]
+}
+</script>
 
 <?php get_footer(); ?>

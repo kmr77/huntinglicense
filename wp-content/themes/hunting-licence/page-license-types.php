@@ -103,5 +103,77 @@ get_header(); ?>
 
   </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "第一種銃猟免許でできることは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "散弾銃・ライフル銃・空気銃を用いた狩猟が可能です。対象となる鳥獣の種類も多く、比較的本格的な猟ができる免許です。ただし銃の所持には別途警察の許可が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "第二種銃猟免許の違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第二種は空気銃のみでの猟が対象です。ライフルや散弾銃は使用できません。比較的軽装での猟が可能なため、初心者にも適しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "網猟と罠猟の違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "網猟は主に鳥類の捕獲に使われ、網を投げたり固定して使う方法です。罠猟はイノシシやシカなどの獣類を対象に、くくり罠や箱罠を使用します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "第一種と第二種を同時に取得できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、同時に申請・受験することが可能です。ただし試験の内容はそれぞれ異なるため、両方の出題範囲に備える必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "種類ごとの実技試験の内容は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "銃猟では安全確認・射撃姿勢・銃の操作などが確認されます。網猟や罠猟では網や罠の設置方法、構造説明、安全配慮が問われます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どの免許が初心者におすすめ？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "初心者にはわな猟免許が比較的取りやすく、実践もしやすいためおすすめです。銃を使わないため、所持許可などの手続きも不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "銃猟免許は全員が所持できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、銃猟免許取得には精神・身体の適性、前歴の有無などの条件を満たす必要があります。さらに、銃所持の許可は警察の審査を通過する必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "全ての免許を取得する人もいるの？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、目的に応じて全種類の免許を取得している方もいます。狩猟スタイルに応じて選択的に取得するのが一般的です。"
+      }
+    }
+  ]
+}
+</script>
 
 <?php get_footer(); ?>

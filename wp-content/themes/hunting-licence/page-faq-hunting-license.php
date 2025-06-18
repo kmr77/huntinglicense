@@ -77,7 +77,6 @@ get_header(); ?>
   </div>
 </div>
 
-<?php get_footer(); ?>
 <!-- ▼ FAQ構造化データ（JSON-LD形式） -->
 <script type="application/ld+json">
 {
@@ -167,3 +166,4 @@ get_header(); ?>
   ]
 }
 </script>
+<?php get_footer(); ?>

@@ -93,64 +93,7 @@ get_header();
       </dl>
     </section>
 
-    <!-- FAQ構造化データ（JSON-LD） -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "猟銃免許の取得に年齢制限はありますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "原則20歳以上で、欠格事由（前科、精神疾患など）がないことが条件です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "猟銃等講習会の合格率は？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "筆記考査は8割以上正解で合格。適切な対策をすれば合格は十分可能です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "必要書類が一部不足している場合は？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "事前に警察署・公安委員会へ相談し、不備のないよう準備しましょう。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "実技試験は全員必須ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "実技は地域により異なります。詳しくは各自治体の案内を確認してください。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "狩猟免許と猟銃免許の違いは？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "狩猟免許は狩猟行為の資格、猟銃免許（正確には「所持許可」）は銃を所持するための資格です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "所持許可取得後の手続きは？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "所持許可証の交付後、猟銃登録や猟友会入会など、次のステップがあります。"
-          }
-        }
-      ]
-    }
-    </script>
-
+    
     <h2 id="links">関連リンク</h2>
     <ul>
       <li><a href="<?php echo home_url('/tag/examination/'); ?>">▶ 猟銃免許の過去問・練習問題一覧</a></li>
@@ -162,4 +105,61 @@ get_header();
   </div>
 </div>
 
+<!-- FAQ構造化データ（JSON-LD） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "猟銃免許の取得に年齢制限はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "原則20歳以上で、欠格事由（前科、精神疾患など）がないことが条件です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "猟銃等講習会の合格率は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "筆記考査は8割以上正解で合格。適切な対策をすれば合格は十分可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "必要書類が一部不足している場合は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "事前に警察署・公安委員会へ相談し、不備のないよう準備しましょう。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "実技試験は全員必須ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "実技は地域により異なります。詳しくは各自治体の案内を確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "狩猟免許と猟銃免許の違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "狩猟免許は狩猟行為の資格、猟銃免許（正確には「所持許可」）は銃を所持するための資格です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "所持許可取得後の手続きは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "所持許可証の交付後、猟銃登録や猟友会入会など、次のステップがあります。"
+      }
+    }
+  ]
+}
+</script>
 <?php get_footer(); ?>

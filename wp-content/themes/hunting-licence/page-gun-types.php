@@ -89,7 +89,6 @@ get_header(); ?>
   </div>
 </div>
 
-<?php get_footer(); ?>
 <!-- ▼ /gun-types/ ページ用 FAQ構造化データ（JSON-LD形式） -->
 <script type="application/ld+json">
 {
@@ -179,3 +178,4 @@ get_header(); ?>
   ]
 }
 </script>
+<?php get_footer(); ?>

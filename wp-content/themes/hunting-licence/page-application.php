@@ -107,93 +107,93 @@ get_header(); ?>
 			<h3><span class="marker">Q. 試験情報を一覧で確認できますか？</span></h3>
 			<p>A. はい。当サイトでは<a href="https://www.shuryo-menkyo.com/information/">全国の狩猟免許試験日程一覧</a>ページを用意しています。都道府県別の申込期間・試験日程が確認できます。</p>
 		</div>
-<?php get_footer(); ?>
-<!-- ▼ /application/ ページ用 FAQ構造化データ（JSON-LD形式） -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+    <!-- ▼ /application/ ページ用 FAQ構造化データ（JSON-LD形式） -->
+    <script type="application/ld+json">
     {
-      "@type": "Question",
-      "name": "狩猟免許の申請はどこで行いますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "都道府県の環境課や自然保護課などで受付しています。オンライン申請を導入している自治体もあります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "申請の時期はいつですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "多くの都道府県では年2回（前期・後期）の試験が行われ、申請受付は1か月ほど前から始まります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "申請に必要な書類は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "受験申請書、証明写真、住民票（本籍入り）、身分証明書のコピー、受験料の納付書などが必要です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "書類はどこで入手できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "各都道府県の窓口、または公式サイトからダウンロードできます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "試験会場はどこですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "県庁舎や公民館など、自治体によって異なります。試験案内に記載されています。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "受験料はいくらですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "5,200円〜8,200円程度で、自治体によって異なります。教材費や講習費が別途かかることもあります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "申請から合格までの期間は？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "申請から試験まで1〜2ヶ月、試験後は1〜2週間程度で合格通知が届くのが一般的です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "不合格になったらどうなりますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "次回の試験で再受験が可能です。自治体によっては一部免除制度もあります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "銃猟免許の申請はどう異なりますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "銃所持許可は警察署で申請します。講習・実技・審査など独自の手続きがあります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "試験情報を一覧で確認できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "当サイトの全国試験情報ページ（/information/）で、都道府県別に確認できます。"
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "狩猟免許の申請はどこで行いますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "都道府県の環境課や自然保護課などで受付しています。オンライン申請を導入している自治体もあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "申請の時期はいつですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "多くの都道府県では年2回（前期・後期）の試験が行われ、申請受付は1か月ほど前から始まります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "申請に必要な書類は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "受験申請書、証明写真、住民票（本籍入り）、身分証明書のコピー、受験料の納付書などが必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "書類はどこで入手できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "各都道府県の窓口、または公式サイトからダウンロードできます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "試験会場はどこですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "県庁舎や公民館など、自治体によって異なります。試験案内に記載されています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "受験料はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5,200円〜8,200円程度で、自治体によって異なります。教材費や講習費が別途かかることもあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "申請から合格までの期間は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "申請から試験まで1〜2ヶ月、試験後は1〜2週間程度で合格通知が届くのが一般的です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "不合格になったらどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "次回の試験で再受験が可能です。自治体によっては一部免除制度もあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "銃猟免許の申請はどう異なりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "銃所持許可は警察署で申請します。講習・実技・審査など独自の手続きがあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "試験情報を一覧で確認できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当サイトの全国試験情報ページ（/information/）で、都道府県別に確認できます。"
+          }
+        }
+      ]
     }
-  ]
-}
-</script>
+    </script>
+<?php get_footer(); ?>

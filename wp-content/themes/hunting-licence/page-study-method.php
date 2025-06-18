@@ -136,7 +136,6 @@ get_header(); ?>
 		<?php get_template_part('parts-connection'); ?>
 	</div>
 </div>
-<?php get_footer(); ?>
 <!-- ▼ /study-method/ ページ用 FAQ構造化データ（JSON-LD形式） -->
 <script type="application/ld+json">
 {
@@ -226,4 +225,5 @@ get_header(); ?>
   ]
 }
 </script>
+<?php get_footer(); ?>
 
