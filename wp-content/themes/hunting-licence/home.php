@@ -20,6 +20,7 @@
 				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
 				<li><a href="<?php echo home_url('/information/'); ?>">都道府県別の申込情報を見る</a></li>
 				<li><a href="<?php echo home_url('/experience/'); ?>">合格者の体験談を読む</a></li>
+				<li><a href="<?php echo home_url('/license-job/'); ?>">狩猟免許で副業をする</a></li>
 				<li><a href="<?php echo home_url('/schedule/'); ?>" class="schedule-link-list">狩猟免許試験日程を見る</a></li>
 			</ul>
 
