@@ -59,13 +59,13 @@ crossorigin="anonymous"></script>
   <title><?php echo esc_html($custom_title); ?></title>
   <meta name="description" content="<?php echo esc_attr($custom_description); ?>">
   <?php elseif ( is_category('all') ) : 
-    $title = '狩猟免許 全カテゴリ問題集｜模擬30問・無料の過去問で合格対策';
+    $title = '狩猟免許 全問題ミックス｜試験直前対策・試験問題過去問ドリル';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="狩猟免許試験の法令・猟具・識別・数字など全カテゴリ問題を無料で収録。模擬30問・解説付きで、効率よく合格対策できます。">
+    <meta name="description" content="狩猟免許試験のすべてのカテゴリから厳選した全問題ミックス集。試験直前対策として模擬試験問題に挑戦でき、解説付きで理解も深まります">
   <?php elseif ( is_category('laws') ) :
     $title = '法令問題対策に特化した問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
