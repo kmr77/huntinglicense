@@ -31,8 +31,8 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
       <?php breadcrumb_item('', '網猟の過去問', $position++, true); ?>
 
     <?php elseif (is_category('examination')) : ?>
-      <?php breadcrumb_item(home_url('/examination-info/'), '猟銃等講習会の解説', $position++); ?>
-      <?php breadcrumb_item('', '猟銃等講習会の過去問', $position++, true); ?>
+      <?php breadcrumb_item(home_url('/examination-info/'), '「猟銃を持つためには」完全ガイド', $position++); ?>
+      <?php breadcrumb_item('', '猟銃免許・猟銃許可試験の過去問', $position++, true); ?>
 
     <?php elseif (is_category()) : ?>
       <?php breadcrumb_item('', single_cat_title('', false) . 'の過去問', $position++, true); ?>

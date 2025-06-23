@@ -267,7 +267,7 @@ crossorigin="anonymous"></script>
             <li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
             <li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
             <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
-            <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li>
+            <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃免許 過去問</a></li>
             <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
           </ul>
         </nav>
@@ -291,7 +291,7 @@ crossorigin="anonymous"></script>
               <li><a href="<?php echo home_url('/category/ami/'); ?>" class="global-navigation__link">網（あみ）猟問題</a></li>
               <li><a href="<?php echo home_url('/category/wana/'); ?>" class="global-navigation__link">罠（わな）猟問題</a></li>
               <li><a href="<?php echo home_url('/category/animals/'); ?>" class="global-navigation__link">鳥獣問題</a></li>
-              <li><a href="<?php echo home_url('/category/examination/'); ?>" class="global-navigation__link">猟銃等講習会 考査問題</a></li>
+              <li><a href="<?php echo home_url('/category/examination/'); ?>" class="global-navigation__link">猟銃免許 過去問</a></li>
               <li><a href="<?php echo home_url('/category/numbers/'); ?>" class="global-navigation__link">数字問題</a></li>
               <li><a href="<?php echo home_url('/know/'); ?>" class="global-navigation__link">知っておくべきこと</a></li>
               <li><a href="<?php echo home_url('/application/'); ?>" class="global-navigation__link">狩猟免許受験申請</a></li>
@@ -343,7 +343,7 @@ crossorigin="anonymous"></script>
                 <li><a href="https://www.shuryo-menkyo.com/category/ami/">網（あみ）猟問題</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/wana/">罠（わな）猟問題</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/animals/">鳥獣問題</a></li>
-                <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃等講習会 考査問題</a></li>
+                <li><a href="https://www.shuryo-menkyo.com/category/examination/">猟銃免許 過去問</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/category/numbers/">数字問題</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/contact/">お問い合わせ</a></li>
               </ul>
