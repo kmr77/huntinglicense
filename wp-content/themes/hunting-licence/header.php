@@ -102,13 +102,13 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="わな猟の法令や設置方法に関する問題を厳選。実技を含めた総合的な対策が可能な、わな猟免許受験者向け問題集です。">
   <?php elseif ( is_category('examination') ) :
-    $title = '猟銃免許・猟銃等講習会の試験対策｜初心者向け過去問・練習問題集';
+    $title = '猟銃免許 過去問｜猟銃等講習会 試験直前対策・初心者向け練習問題集';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="猟銃免許の取得を目指す方へ。猟銃等講習会で実施される考査問題をもとに、銃の安全管理・基本操作など試験対策に役立つ練習問題を掲載。初心者でも安心して学べます。">
+    <meta name="description" content="猟銃免許の取得に必要な猟銃等講習会の考査試験対策ページ。銃の構造・安全管理・関係法令まで、初心者でも安心して解ける練習問題・過去問を無料で掲載。">
   <?php elseif ( is_category('numbers') ) :
     $title = '数字に特化した対策問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
