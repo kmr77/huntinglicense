@@ -17,7 +17,7 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
 
 <nav class="breadcrumb" aria-label="パンくずリスト" itemscope itemtype="https://schema.org/BreadcrumbList">
   <ul>
-    <?php breadcrumb_item(home_url('/'), '狩猟免許過去問題集 TOP', $position++); ?>
+    <?php breadcrumb_item(home_url('/'), '狩猟免許 過去問', $position++); ?>
 
     <?php if (is_page()) : ?>
       <?php breadcrumb_item('', get_the_title(), $position++, true); ?>
