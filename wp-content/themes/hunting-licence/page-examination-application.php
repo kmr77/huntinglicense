@@ -26,7 +26,7 @@ get_header(); ?>
       <li>所定の申込窓口へ提出（持参または郵送）</li>
       <li>受講票の受領と講習日時の確認</li>
     </ol>
-
+<?php get_template_part('parts-ads'); ?>
     <h2>必要書類一覧</h2>
     <ul>
       <li>猟銃等講習会受講申込書（各県ごとに様式が異なる）</li>
@@ -51,6 +51,7 @@ get_header(); ?>
     <p>申し込みの方法や必要書類は都道府県により異なります。必ず事前にお住まいの県の公安委員会公式情報を確認してください。</p>
 
     <!-- <p>次のステップ：<a href="<?php echo home_url('/examination/schedule/'); ?>">講習会のスケジュールを確認する ▶</a></p> -->
+     <?php get_template_part('parts-connection-gun'); ?>
   </div>
 </div>
 
