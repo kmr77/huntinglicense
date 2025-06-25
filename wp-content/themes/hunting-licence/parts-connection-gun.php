@@ -1,6 +1,7 @@
 <!-- 猟銃所持関連記事 -->
 <h2>猟銃所持関連記事</h2>
 <ul>
+    <li><a href="<?php echo home_url('/examination/'); ?>">▶ 猟銃等講習会の完全ガイド</a></li>
     <li><a href="<?php echo home_url('/category/examination/'); ?>">▶ 猟銃等講習会の考査問題はこちら</a></li>
     <li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
     <li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
