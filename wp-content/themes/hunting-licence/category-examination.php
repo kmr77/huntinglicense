@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="inner">
-    <?php get_template_part('parts-ads'); ?>
+    
     <h2>猟銃等講習会の考査問題とは？</h2>
     <p>このページでは、<strong>猟銃等講習会で実施される筆記試験（考査）</strong>の過去問を掲載しています。</p>
     <p>「猟銃を持ちたい」「狩猟やクレー射撃を始めたい」と考えている方は、まず警察主催の講習会を受ける必要があります。</p>
@@ -34,6 +34,7 @@
     <p>なお、一般には「銃免許」「散弾銃免許」「銃の更新」などと呼ばれることもありますが、正しくは警察が実施する「猟銃等講習会考査」が正式名称です。</p>
     <p class="back-to-info"><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持許可の違いはこちらで詳しく解説しています</a></p>
   </div>
+  <?php get_template_part('parts-ads'); ?>
   <?php get_template_part('parts-affiliate'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
         <p>猟銃初心者講習考査では、銃の取り扱いや安全管理に関する基本的な知識が問われます。

@@ -17,52 +17,86 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
 
 <nav class="breadcrumb" aria-label="パンくずリスト" itemscope itemtype="https://schema.org/BreadcrumbList">
   <ul>
-    <?php breadcrumb_item(home_url('/'), '狩猟免許 過去問', $position++); ?>
+    <?php
+    $position = 1;
+    $uri = $_SERVER['REQUEST_URI'];
 
-    <?php if (is_page()) : ?>
-      <?php breadcrumb_item('', get_the_title(), $position++, true); ?>
+    // 該当ページが「examination系」かどうかを判定
+    $is_examination_area = false;
 
-    <?php elseif (is_category('wana')) : ?>
-      <?php breadcrumb_item(home_url('/wana-info/'), 'わな猟免許とは', $position++); ?>
-      <?php breadcrumb_item('', 'わな猟の過去問', $position++, true); ?>
+    // カテゴリが examination
+    if (is_category('examination')) {
+      $is_examination_area = true;
+    }
 
-    <?php elseif (is_category('ami')) : ?>
-      <?php breadcrumb_item(home_url('/ami-info/'), '網猟免許とは', $position++); ?>
-      <?php breadcrumb_item('', '網猟の過去問', $position++, true); ?>
-
-    <?php elseif (is_category('examination')) : ?>
-      <?php breadcrumb_item(home_url('/examination-info/'), '「猟銃を持つためには」完全ガイド', $position++); ?>
-      <?php breadcrumb_item('', '猟銃免許・猟銃許可試験の過去問', $position++, true); ?>
-
-    <?php elseif (is_category()) : ?>
-      <?php breadcrumb_item('', single_cat_title('', false) . 'の過去問', $position++, true); ?>
-
-    <?php elseif (is_single()) : ?>
-      <?php
-        $categories = get_the_category();
-        if (!empty($categories)) {
-          $cat = $categories[0];
-          if ($cat->slug === 'wana') {
-            breadcrumb_item(home_url('/wana-info/'), 'わな猟免許とは', $position++);
-          } elseif ($cat->slug === 'ami') {
-            breadcrumb_item(home_url('/ami-info/'), '網猟免許とは', $position++);
-          } elseif ($cat->slug === 'examination') {
-            breadcrumb_item(home_url('/examination-info/'), '猟銃等講習会の解説', $position++);
+    // 投稿でカテゴリが examination
+    if (is_single()) {
+      $categories = get_the_category();
+      if (!empty($categories)) {
+        foreach ($categories as $cat) {
+          if ($cat->slug === 'examination') {
+            $is_examination_area = true;
+            break;
           }
-          breadcrumb_item(get_category_link($cat->term_id), $cat->name, $position++);
         }
-        breadcrumb_item('', get_the_title(), $position++, true);
-      ?>
+      }
+    }
 
-    <?php elseif (is_tag()) : ?>
-      <?php breadcrumb_item('', 'タグ：' . single_tag_title('', false), $position++, true); ?>
+    // examination配下の固定ページ（/examination/...）
+    if (preg_match('#^/examination(/|$)#', $uri)) {
+      $is_examination_area = true;
+    }
 
-    <?php elseif (is_search()) : ?>
-      <?php breadcrumb_item('', '検索結果：' . get_search_query(), $position++, true); ?>
+    // トップパンくず
+    if ($is_examination_area) {
+      breadcrumb_item(home_url('/'), '狩猟免許・猟銃免許TOP', $position++);
+    } else {
+      breadcrumb_item(home_url('/'), '狩猟免許 過去問', $position++);
+    }
 
-    <?php elseif (is_404()) : ?>
-      <?php breadcrumb_item('', 'ページが見つかりません', $position++, true); ?>
+    // 以下は従来の判定ロジック（内容省略せず）
+    if (is_page()) {
+      breadcrumb_item('', get_the_title(), $position++, true);
 
-    <?php endif; ?>
+    } elseif (is_category('wana')) {
+      breadcrumb_item(home_url('/wana-info/'), 'わな猟免許とは', $position++);
+      breadcrumb_item('', 'わな猟の過去問', $position++, true);
+
+    } elseif (is_category('ami')) {
+      breadcrumb_item(home_url('/ami-info/'), '網猟免許とは', $position++);
+      breadcrumb_item('', '網猟の過去問', $position++, true);
+
+    } elseif (is_category('examination')) {
+      breadcrumb_item(home_url('/examination/'), '猟銃免許 講習会', $position++);
+      breadcrumb_item('', '猟銃免許試験の過去問', $position++, true);
+
+    } elseif (is_category()) {
+      breadcrumb_item('', single_cat_title('', false) . 'の過去問', $position++, true);
+
+    } elseif (is_single()) {
+      $categories = get_the_category();
+      if (!empty($categories)) {
+        $cat = $categories[0];
+        if ($cat->slug === 'wana') {
+          breadcrumb_item(home_url('/wana-info/'), 'わな猟免許とは', $position++);
+        } elseif ($cat->slug === 'ami') {
+          breadcrumb_item(home_url('/ami-info/'), '網猟免許とは', $position++);
+        } elseif ($cat->slug === 'examination') {
+          breadcrumb_item(home_url('/examination/'), '猟銃免許 講習会', $position++);
+        }
+        breadcrumb_item(get_category_link($cat->term_id), $cat->name, $position++);
+      }
+      breadcrumb_item('', get_the_title(), $position++, true);
+
+    } elseif (is_tag()) {
+      breadcrumb_item('', 'タグ：' . single_tag_title('', false), $position++, true);
+
+    } elseif (is_search()) {
+      breadcrumb_item('', '検索結果：' . get_search_query(), $position++, true);
+
+    } elseif (is_404()) {
+      breadcrumb_item('', 'ページが見つかりません', $position++, true);
+    }
+    ?>
   </ul>
 </nav>
