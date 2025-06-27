@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="contents study-method">
   <div class="inner">
     <p>猟銃等講習会は、都道府県ごとの公安委員会が年に数回開催しています。申込みには、提出期限を守ることが非常に重要です。また、必要書類の不備によって受付が無効となるケースもあるため、詳細をよく確認のうえ対応しましょう。</p>
-
+ <?php get_template_part('parts-ads'); ?>
     <h2>申込の流れ</h2>
     <ol>
       <li><strong>都道府県の公安委員会または最寄りの警察署に問い合わせ</strong><br>
@@ -31,7 +31,7 @@ get_header(); ?>
         正しく申込まれていれば、受講票または確認書類が発行されます。講習日時・会場を確認しておきましょう。</li>
     </ol>
 
-    <?php get_template_part('parts-ads'); ?>
+   
 
     <h2>必要書類一覧と解説</h2>
     <ul>
