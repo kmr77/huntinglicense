@@ -229,9 +229,23 @@ crossorigin="anonymous"></script>
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "狩猟免許過去問ドリル",
+    "alternateName": "shuryo-menkyo.com",
     "url": "https://www.shuryo-menkyo.com"
   }
   </script>
+
+  <!-- Organization（新規追加） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "狩猟免許過去問ドリル",
+    "url": "https://www.shuryo-menkyo.com",
+    "logo": "https://www.shuryo-menkyo.com/img/og-image.png"
+  }
+  </script>
+  <meta property="og:site_name" content="狩猟免許過去問ドリル">
+
 <?php wp_head(); ?>
 </head>
 
