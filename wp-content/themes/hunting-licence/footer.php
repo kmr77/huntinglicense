@@ -41,6 +41,7 @@
         <li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許に関するよくある質問</a></li>
         <li><a href="<?php echo home_url('/privacy-policy/'); ?>">プライバシーポリシー</a></li>
         <li><a href="<?php echo home_url('/about/'); ?>">運営者情報</a></li>
+        <li><a href="<?php echo home_url('/for-corporate/'); ?>">法人・自治体の皆さまへ</a></li>
         <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
       </ul>
     </nav>

@@ -23,6 +23,7 @@
 				<li><a href="<?php echo home_url('/license-job/'); ?>">狩猟免許で副業をする</a></li>
 				<li><a href="<?php echo home_url('/schedule/'); ?>" class="schedule-link-list">狩猟免許試験日程を見る</a></li>
 				<li><a href="<?php echo home_url('/examination/'); ?>">猟銃講習会とは？</a></li>
+				<li><a href="<?php echo home_url('/for-corporate/'); ?>">法人・自治体の皆さまへ</a></li>
 			</ul>
 
 			</div>
