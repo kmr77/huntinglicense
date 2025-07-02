@@ -245,7 +245,6 @@ crossorigin="anonymous"></script>
   }
   </script>
   <meta property="og:site_name" content="狩猟免許過去問ドリル">
-
 <?php wp_head(); ?>
 </head>
 
