@@ -106,6 +106,7 @@
 				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">▶ 狩猟免許に関するよくある質問</a></li>
 				<li><a href="<?php echo home_url('/category/experience/'); ?>">▶ 合格者の体験談</a></li>
 				<li><a href="<?php echo home_url('/application/'); ?>">▶ 狩猟免許の申請・受験手続き方法</a></li>
+				<li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
 			</ul>
 			</div>
 			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>
