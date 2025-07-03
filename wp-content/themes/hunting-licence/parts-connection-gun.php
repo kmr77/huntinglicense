@@ -1,12 +1,40 @@
 <!-- 猟銃所持関連記事 -->
 <h2>猟銃所持関連記事</h2>
-<ul>
-    <li><a href="<?php echo home_url('/examination/'); ?>">▶ 猟銃等講習会の完全ガイド</a></li>
-    <li><a href="<?php echo home_url('/category/examination/'); ?>">▶ 猟銃等講習会の考査問題はこちら</a></li>
-    <li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
-    <li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
-    <li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
+<?php
+$current_url = home_url( add_query_arg( null, null ) );
+?>
+
+<ul class="connection-list">
+  <li>
+    <?php if ($current_url !== home_url('/gun-types/')): ?>
+      <a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い（ライフル・散弾銃・空気銃）</a>
+      <?php else: ?>
+        <span class="current-page">▶ 銃の種類の違い（ライフル・散弾銃・空気銃）</span>
+        <?php endif; ?>
+      </li>
+      <li>
+        <?php if ($current_url !== home_url('/rifle-revision/')): ?>
+          <a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正：ハーフライフルがライフル扱いに</a>
+          <?php else: ?>
+            <span class="current-page">▶ 2025年法改正：ハーフライフルがライフル扱いに</span>
+    <?php endif; ?>
+  </li>
+  <li>
+    <?php if ($current_url !== home_url('/faq-guns-license/')): ?>
+    <a href="<?php echo home_url('/faq-guns-license/'); ?>">▶ 猟銃所持に関するよくある質問</a>
+    <?php else: ?>
+      <span class="current-page">▶ 猟銃所持に関するよくある質問</span>
+      <?php endif; ?>
+  </li>
+  <li>
+    <?php if ($current_url !== home_url('/gun-cost/')): ?>
+      <a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持にかかる費用</a>
+    <?php else: ?>
+      <span class="current-page">▶ 猟銃の所持にかかる費用</span>
+    <?php endif; ?>
+  </li>
 </ul>
+
 <h2>狩猟免許関連記事</h2>
 <ul>
   <li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持許可の違いを知る</a></li>
