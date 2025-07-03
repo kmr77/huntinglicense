@@ -107,7 +107,6 @@
 				<li><a href="<?php echo home_url('/category/experience/'); ?>">▶ 合格者の体験談</a></li>
 				<li><a href="<?php echo home_url('/application/'); ?>">▶ 狩猟免許の申請・受験手続き方法</a></li>
 			</ul>
-			</div>
 			<h2>猟銃所持関連ページ</h2>
 			<ul>
 				<li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
