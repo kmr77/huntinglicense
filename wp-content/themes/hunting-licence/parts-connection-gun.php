@@ -33,6 +33,13 @@ $current_url = home_url( add_query_arg( null, null ) );
       <span class="current-page">▶ 猟銃の所持にかかる費用</span>
     <?php endif; ?>
   </li>
+  <li>
+    <?php if ($current_url !== home_url('/gun-locker/')): ?>
+      <a href="<?php echo home_url('/gun-locker/'); ?>">▶ ガンロッカーの選び方</a>
+    <?php else: ?>
+      <span class="current-page">▶ ガンロッカーの選び方</span>
+    <?php endif; ?>
+  </li>
 </ul>
 
 <h2>狩猟免許関連記事</h2>
