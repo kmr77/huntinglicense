@@ -55,7 +55,6 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
     // パターン別
     if (is_page()) {
       if (preg_match('#^/examination(/|$)#', $uri) && !is_page('examination')) {
-        // 子ページの場合に中間に「猟銃等講習会のすべて」追加
         breadcrumb_item(home_url('/examination/'), '猟銃等講習会のすべて', $position++);
       }
       breadcrumb_item('', get_the_title(), $position++, true);
@@ -75,6 +74,9 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
         } elseif ($cat->slug === 'examination') {
           breadcrumb_item(home_url('/examination/'), '猟銃等講習会のすべて', $position++);
           breadcrumb_item(get_category_link($cat->term_id), '猟銃免許試験の過去問', $position++);
+        } elseif ($cat->slug === 'experience') {
+          // 👇 修正：体験談カテゴリのときは /experience/ にリンク
+          breadcrumb_item(home_url('/experience/'), '体験談まとめ', $position++);
         } else {
           breadcrumb_item(get_category_link($cat->term_id), $cat->name, $position++);
         }
@@ -93,4 +95,3 @@ function breadcrumb_item($url, $label, $position, $is_current = false) {
     ?>
   </ul>
 </nav>
-
