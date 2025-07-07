@@ -1,6 +1,6 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830250751942529"
      crossorigin="anonymous"></script>
-<!-- アコーディオン内 -->
+<!-- 設問間 -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4830250751942529"

@@ -92,7 +92,6 @@
                                 <?php endif; ?>
 
                                 <button class="answer-btn">答えを開閉</button>
-                                <?php get_template_part('parts-ads-accordion'); ?>
                             </dt>
                             <dd class="answer-dd">
                                 <span class="answer">答）<?php the_field('answer'); ?><br>
@@ -103,7 +102,7 @@
                     <?php
                     if ($counter % 10 === 0) {
                         echo '<div class="ads-between-questions">';
-                        get_template_part('parts-ads-accordion');
+                        get_template_part('parts-ads-between');
                         echo '</div>';
                     }
 

@@ -90,7 +90,6 @@ get_header(); ?>
                                     <img src="<?php echo esc_url($image_url); ?>" alt="設問No.<?php the_field('no'); ?>の画像">
                                 <?php endif; ?>
                                 <button class="answer-btn">答えを開閉</button>
-                                <?php get_template_part('parts-ads-accordion'); ?>
                             </dt>
                             <dd class="answer-dd">
                                 <span class="answer">答）<?php the_field('answer'); ?><br>
@@ -101,7 +100,7 @@ get_header(); ?>
                       <?php
                       if ($counter % 10 === 0) {
                           echo '<div class="ads-between-questions">';
-                          get_template_part('parts-ads-accordion');
+                          get_template_part('parts-ads-between');
                           echo '</div>';
                       }
 

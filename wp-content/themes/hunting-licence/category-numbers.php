@@ -72,7 +72,7 @@
                     <?php
                     if ($counter % 10 === 0) {
                         echo '<div class="ads-between-questions">';
-                        get_template_part('parts-ads-accordion');
+                        get_template_part('parts-ads-between');
                         echo '</div>';
                     }
 

@@ -71,7 +71,6 @@
         <dt>
           <span class="question">問<?php echo $counter; ?>：<span class="small">No.<?php the_field('no'); ?></span> <?php the_title(); ?></span>
           <div class="btn-layout">
-            <?php get_template_part('parts-ads-accordion'); ?>
             <button class="open-btn">選択肢を見る</button>
             <button class="single-btn"><a href="<?php the_permalink(); ?>" target="_blank">設問へ移動</a></button>
           </div>
@@ -104,7 +103,7 @@
         <?php
           if ($counter % 10 === 0) {
               echo '<div class="ads-between-questions">';
-              get_template_part('parts-ads-accordion');
+              get_template_part('parts-ads-between');
               echo '</div>';
           }
 
