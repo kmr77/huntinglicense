@@ -89,6 +89,7 @@
                                     <img src="<?php echo esc_url($image_url); ?>" alt="設問No.<?php the_field('no'); ?>の画像">
                                 <?php endif; ?>
                                 <button class="answer-btn">答えを開閉</button>
+                                <?php get_template_part('parts-ads-accordion'); ?>
                             </dt>
                             <dd class="answer-dd">
                                 <span class="answer">答）<?php the_field('answer'); ?><br>
@@ -96,14 +97,20 @@
                             </dd>
                         </dl>
                         </dd>
-                <?php
-                    $counter++;
-                    endwhile;
-                else :
-                    echo '<p>投稿が見つかりませんでした。</p>';
-                endif;
-                ?>
-                </dl>
+                        <?php
+                        if ($counter % 10 === 0) {
+                            echo '<div class="ads-between-questions">';
+                            get_template_part('parts-ads-accordion');
+                            echo '</div>';
+                        }
+
+                        $counter++;
+                        endwhile;
+                    else :
+                        echo '<p>投稿が見つかりませんでした。</p>';
+                    endif;
+                    ?>
+                    </dl>
 
             <!-- ページネーション -->
             <div class="pagination">

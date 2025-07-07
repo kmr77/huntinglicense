@@ -94,13 +94,19 @@
                         <?php the_field('answer_body'); ?></span>
                         </dd>
                       <?php
-                          $counter++;
-                          endwhile;
-                        else :
-                          echo '<p>投稿が見つかりませんでした。</p>';
-                        endif;
-                      ?>
-                      </dl>
+          if ($counter % 10 === 0) {
+              echo '<div class="ads-between-questions">';
+              get_template_part('parts-ads-accordion');
+              echo '</div>';
+          }
+
+          $counter++;
+        endwhile;
+      else :
+        echo '<p>投稿が見つかりませんでした。</p>';
+      endif;
+    ?>
+    </dl>
 
                 <!-- ページネーション -->
                 <div class="pagination">

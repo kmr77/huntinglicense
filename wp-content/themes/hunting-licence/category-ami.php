@@ -84,6 +84,7 @@
                                     <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
                                 <?php endif; ?>
                                 <button class="answer-btn">答えを開閉</button>
+                                <?php get_template_part('parts-ads-accordion'); ?>
                             </dt>
                             <dd class="answer-dd">
                                 <span class="answer">答）<?php the_field('answer'); ?><br>
@@ -92,17 +93,19 @@
                         </dl>
                     </dd>
                     <?php
-                    // カウンターを1増やす
-                    $counter++;
-                endwhile;
-                else :
-                    echo '<p>投稿が見つかりませんでした。</p>';
-                endif;
+                if ($counter % 10 === 0) {
+                    echo '<div class="ads-between-questions">';
+                    get_template_part('parts-ads-accordion');
+                    echo '</div>';
+                }
 
-            // 投稿ループをリセット
-            wp_reset_postdata();
-            ?>
-            </dl>
+                $counter++;
+              endwhile;
+            else :
+              echo '<p>投稿が見つかりませんでした。</p>';
+            endif;
+          ?>
+          </dl>
       </div>
 
 <?php get_footer(); ?>
