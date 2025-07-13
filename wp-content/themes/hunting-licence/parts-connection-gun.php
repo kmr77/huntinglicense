@@ -40,6 +40,13 @@ $current_url = home_url( add_query_arg( null, null ) );
       <span class="current-page">▶ ガンロッカーの選び方</span>
     <?php endif; ?>
   </li>
+  <li>
+    <?php if ($current_url !== home_url('/examination/gun-procedure/')): ?>
+      <a href="<?php echo home_url('/examination/gun-procedure/'); ?>">▶ 猟銃所持許可の手続きと費用まとめ</a>
+    <?php else: ?>
+      <span class="current-page">▶ 猟銃等講習会とは？試験・申込・所持手続きの総合ガイド</span>
+    <?php endif; ?>
+  </li>
 </ul>
 
 <h2>狩猟免許関連記事</h2>

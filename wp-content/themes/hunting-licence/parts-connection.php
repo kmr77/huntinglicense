@@ -14,4 +14,5 @@
     <li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
     <li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
     <li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
+    <li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">▶ 猟銃所持許可の手続きと費用まとめ</a></li>
 </ul>
