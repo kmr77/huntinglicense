@@ -26,6 +26,7 @@
         <li><a href="<?php echo home_url('/examination/requirements/'); ?>">猟銃免許に必要な条件</a></li>
         <li><a href="<?php echo home_url('/examination/application/'); ?>">猟銃免許申込方法</a></li>
         <li><a href="<?php echo home_url('/examination/after/'); ?>">猟銃免許合格後の手続き</a></li>
+        <li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">猟銃所持許可の手続きと費用まとめ</a></li>
         <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃所持許可問題</a></li>
         <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
         <li><a href="<?php echo home_url('/tag/license/'); ?>">試験問題のみ</a></li>

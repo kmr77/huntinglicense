@@ -79,6 +79,7 @@
 						<li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
 						<li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
 						<li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃等講習会の流れと考査対策ガイド</a></li>
+						<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">猟銃所持許可の手続きと費用まとめ</a></li>
 						<!-- <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li> -->
 					</ul>
 				</div>
