@@ -4,24 +4,25 @@ Template Name: 猟銃所持許可の手続きと費用まとめ
 */
 get_header();
 ?>
-
-<div id="main-visual gun">
+  <div class="inner">
+    <?php get_template_part('parts-breadcrumb'); ?>
+  </div>
+</div>
+<div class="main-visual gun">
   <div class="inner">
     <h1>猟銃所持許可の手続きと費用まとめ</h1>
     <p>北海道の実例をもとに、猟銃取得までの流れと必要な金額を詳しく解説します。</p>
   </div>
 </div>
 
-<div id="inner">
+<div class="inner">
   <div class="contents study-method">
-
     <p>猟銃の所持には、講習・申請・射撃教習・銃の購入など、多くの手続きが必要です。ここでは、北海道での実例をもとに、手続きの順番と実際にかかる費用を一覧表でまとめています。</p>
     <p>この流れに沿って準備を進めることで、必要な書類や費用の全体像が把握でき、スムーズに猟銃所持まで到達できます。射撃教習の料金は地域差があるものの、北海道ではライフル教習で35,000円、散弾銃教習で50,000円かかるのが一般的です。</p>
-
     <h2>猟銃所持許可取得までの手続き一覧（北海道実例／費用付き）</h2>
-<?php get_template_part('parts-ads'); ?>
-    <div class="scroll-table">
-      <table>
+    <?php get_template_part('parts-ads'); ?>
+    <div class="table-scroll">
+    <table class="base_tbl" width="100%">
         <thead>
           <tr>
             <th>手順</th>
@@ -53,7 +54,7 @@ get_header();
 <?php get_template_part('parts-ads'); ?>
     <h2>猟銃所持許可取得までの手続き一覧（最新版・解説付き）</h2>
 
-    <h3>① 猟銃等講習会の受講（警察署）</h3>
+    <h3><span class="marker">① 猟銃等講習会の受講（警察署）</span></h3>
     <ol>
       <li><strong>猟銃等講習会の申込</strong>（警察署・公安委員会）<br>
         写真、本人確認書類などを提出。</li>
@@ -63,7 +64,7 @@ get_header();
         合格者には「猟銃等講習修了証明書」が発行されます。</li>
     </ol>
 
-    <h3>② 教習資格の申請（警察署）</h3>
+    <h3><span class="marker">② 教習資格の申請（警察署）</span></h3>
     <ol start="4">
       <li><strong>教習資格認定申請</strong><br>
         診断書や講習修了証明書を添えて申請します。</li>
@@ -71,7 +72,7 @@ get_header();
         射撃教習を受けるための許可証として交付されます。</li>
     </ol>
 
-    <h3>③ 火薬類の譲受許可（警察署）</h3>
+    <h3><span class="marker">③ 火薬類の譲受許可（警察署）</span></h3>
     <ol start="6">
       <li><strong>猟銃用火薬類等譲受許可申請</strong><br>
         射撃教習で使用する火薬・弾薬の譲受申請を行います。</li>
@@ -79,14 +80,14 @@ get_header();
         許可証を取得後に購入が可能になります。</li>
     </ol>
 
-    <h3>④ 火薬類の譲受（銃砲店）</h3>
+    <h3><span class="marker">④ 火薬類の譲受（銃砲店）</span></h3>
     <ol start="8">
       <li><strong>譲受許可証の提示 → 火薬類等を譲受</strong><br>
         許可証を持って銃砲店で火薬・弾を購入します。<br>
         ※この時点で射撃教習の予約が可能です。</li>
     </ol>
 
-    <h3>⑤ 射撃教習の実施（教習射撃場）</h3>
+    <h3><span class="marker">⑤ 射撃教習の実施（教習射撃場）</span></h3>
     <ol start="9">
       <li><strong>教習射撃の受講</strong><br>
         所定の射撃（例：散弾銃1回、ライフル1回）を行います。</li>
@@ -94,13 +95,13 @@ get_header();
         合格者には射撃場から証明書が交付されます。</li>
     </ol>
 
-    <h3>⑥ 銃本体の購入予約（銃砲店）</h3>
+    <h3><span class="marker">⑥ 銃本体の購入予約（銃砲店）</span></h3>
     <ol start="11">
       <li><strong>譲渡等承諾書の取得</strong><br>
         銃砲店で所持予定の銃を決め、書類を受け取ります。</li>
     </ol>
 
-    <h3>⑦ 猟銃所持許可の申請（警察署）</h3>
+    <h3><span class="marker">⑦ 猟銃所持許可の申請（警察署）</span></h3>
     <ol start="12">
       <li><strong>猟銃所持許可申請</strong><br>
         書類一式を提出し、ガンロッカーの設置確認を受けます。</li>
@@ -108,7 +109,7 @@ get_header();
         警察から正式に猟銃所持許可証が交付されます。</li>
     </ol>
 
-    <h3>⑧ 猟銃の受取と最終確認（銃砲店・警察署）</h3>
+    <h3><span class="marker">⑧ 猟銃の受取と最終確認（銃砲店・警察署）</span></h3>
     <ol start="14">
       <li><strong>銃砲店に許可証を提示 → 猟銃の譲受</strong><br>
         所持許可証を提示して銃を受け取ります。</li>
@@ -117,6 +118,6 @@ get_header();
     </ol>
 
   </div>
-</div>
+<?php get_template_part('parts-connection-gun'); ?>
 
 <?php get_footer(); ?>
