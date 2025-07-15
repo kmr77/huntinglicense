@@ -12,6 +12,7 @@
     </div>
     </div>
     <div class="inner">
+<?php if ( !is_paged() ) : ?>
     <div class="category-intro">
       <h2>わな猟免許とは？</h2>
       <p>わな猟免許は、くくりわな・箱わなを使用してイノシシやシカなどの野生動物を捕獲するための免許です。銃を使わないため、取得のハードルが比較的低く、初心者にもおすすめです。</p>
@@ -26,6 +27,7 @@
       特に、わな猟の実施に関する法律的な細かい部分が出題されることが多いので、基本的な規定をしっかりと覚えておくことが重要です。
       このページでは、<strong>わな猟</strong>に関する問題の出題内容を記載しています。</p>
         <?php get_template_part('parts-infotext'); ?>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

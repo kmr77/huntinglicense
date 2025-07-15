@@ -12,7 +12,8 @@
   </div>
 </div>
 
-<div class="inner">
+  <div class="inner">
+<?php if ( !is_paged() ) : ?>
   <h2><?php single_tag_title(); ?> 考査問題</h2>
   <p>このページでは、<strong>猟銃等講習会</strong>の考査対策として重要な例題をピックアップし、わかりやすく解説付きで掲載しています。
   猟銃の安全な取り扱いや保管方法、法令知識、銃に関する基礎事項など、講習会の考査で問われるポイントを幅広く網羅。
@@ -26,7 +27,7 @@
 <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
 
 <?php get_template_part('parts-category-intro'); ?>
-
+<?php endif; ?>
   <div class="accordion-inner" id="question">
     <dl id="accordion">
       <?php

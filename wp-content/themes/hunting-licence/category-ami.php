@@ -11,6 +11,7 @@
         </div>
     </div>
     <div class="inner">
+<?php if ( !is_paged() ) : ?>
     <div class="category-intro">
         <h2>網猟免許とは？</h2>
         <p>網猟免許は、落とし網やむそう網などを使って鳥類を捕獲するための免許です。使用できる器具や対象が限られており、受験者は比較的少ない傾向があります。</p>
@@ -27,6 +28,7 @@
         このページでは、網猟に関する出題内容をまとめて解説しています。
         </p>
         <?php get_template_part('parts-infotext'); ?>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

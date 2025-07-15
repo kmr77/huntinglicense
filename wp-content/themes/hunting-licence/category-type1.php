@@ -11,6 +11,7 @@
         </div>
     </div>
     <div class="inner">
+    <?php if ( !is_paged() ) : ?>
     <div class="category-intro">
         <h2>第一種銃猟免許とは？</h2>
         <p>第一種銃猟免許は、散弾銃やライフル銃を使って、鳥類やシカ・イノシシなどの大型獣を狩猟するための本格的な免許です。銃を所持するには、別途「猟銃等講習会」や「銃の所持許可」が必要となります。</p>
@@ -27,6 +28,7 @@
         このページでは、<strong>一種銃猟</strong>に関連する出題内容を集めて紹介しています。
         </p>
         <?php get_template_part('parts-infotext'); ?>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

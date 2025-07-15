@@ -11,7 +11,7 @@
     <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
   </div>
 </div>
-
+<?php if ( !is_paged() ) : ?>
 <div class="inner">
   <h2><?php single_tag_title(); ?> 例題集過去問</h2>
   <p>このページでは、<strong>狩猟免許試験</strong>に対応した例題と解説を掲載しています。
@@ -23,7 +23,7 @@
   <?php get_template_part('parts-category-intro'); ?>
   <br>
   <?php get_template_part('parts-infotext'); ?>
-
+<?php endif; ?>
   <div class="accordion-inner" id="question">
     <dl id="accordion">
       <?php

@@ -13,12 +13,14 @@
     </div>
     <div class="inner">
     <?php get_template_part('parts-ads'); ?>
+<?php if ( !is_paged() ) : ?>
     <h2>狩猟免許試験の<?php single_cat_title(); ?> 過去問</h2>
         <p>狩猟免許試験の数字問題は、捕獲制限数や許可数、猟期の制限など、数値に関する正確な知識を問われる問題が出題されます。
           特に、法律で定められた捕獲数や銃の口径など、数値に関する細かい規定を理解し、暗記することが求められます。
           数字問題は意外と難易度が高く、正確に覚えることが合格のポイントになります。
           このページでは、数字問題に特化した出題内容を解説し、効率的な学習方法を提案しています。</p>
         <?php get_template_part('parts-infotext'); ?>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

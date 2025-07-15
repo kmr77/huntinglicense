@@ -14,6 +14,7 @@
 </div>
 
 <div class="inner">
+<?php if ( !is_paged() ) : ?>
   <div class="category-intro">
     <h2>狩猟免許試験の法令問題とは？</h2>
     <p>法令問題はすべての狩猟免許試験に共通して出題される重要な分野です。狩猟に関する法律、安全管理、禁止事項などを正しく理解することが求められます。</p>
@@ -27,7 +28,7 @@
     このページでは、<strong>法令問題</strong>に特化し、出題される内容を詳しく記載しています。</p>
 
   <?php get_template_part('parts-infotext'); ?>
-
+<?php endif; ?>
 
   <!-- 問題ここから -->
   <div class="accordion-inner" id="question">

@@ -10,12 +10,13 @@ get_header(); ?>
     </div>
     <div class="main-visual animals">
       <div class="inner">
-      <h1>鳥獣識別・生態問題 対策｜過去問で覚える</h1>
-      <p>このカテゴリでは、狩猟対象鳥獣と保護鳥獣の識別力が問われます。写真や特徴から正確に判断する力が必要で、見分けを誤ると違法行為につながるため重要な分野です。</p>
-      <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
+        <h1>鳥獣識別・生態問題 対策｜過去問で覚える</h1>
+        <p>このカテゴリでは、狩猟対象鳥獣と保護鳥獣の識別力が問われます。写真や特徴から正確に判断する力が必要で、見分けを誤ると違法行為につながるため重要な分野です。</p>
+        <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
     <div class="inner">
+<?php if ( !is_paged() ) : ?>
     <?php get_template_part('parts-ads'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
       <p>鳥獣問題では、狩猟対象となる鳥類や獣類に関する基本的な知識が問われます。
@@ -26,6 +27,7 @@ get_header(); ?>
       <p>狩猟免許試験は<strong>全30問</strong>出題されます。</p>
       <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
       <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">

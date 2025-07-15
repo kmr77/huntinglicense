@@ -11,6 +11,7 @@
       </div>
     </div>
     <div class="inner">
+<?php if ( !is_paged() ) : ?>
       <h2>狩猟免許試験例題集全問</h2>
       <p>
       このページでは、狩猟免許試験のために必要な<strong>全問題</strong>を完全網羅しています。
@@ -25,6 +26,7 @@
       <p>2024年の例題集から抜粋していますので、法律が改訂されたりして答えが違う場合はご連絡ください。<a href="../contact">メールフォームはこちら</a></p>
       <p class="annotation">※問題文をクリックすると選択肢・解答が表示されます。</p>
       <?php get_template_part('parts-category-intro'); ?>
+<?php endif; ?>
       <?php get_template_part('parts-affiliate'); ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">

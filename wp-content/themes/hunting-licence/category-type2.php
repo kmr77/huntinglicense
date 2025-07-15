@@ -11,6 +11,7 @@
         </div>
     </div>
     <div class="inner">
+        <?php if ( !is_paged() ) : ?>
     <div class="category-intro">
         <h2>第二種銃猟免許とは？</h2>
         <p>第二種銃猟免許は、空気銃を使って鳥類などを狩猟するための免許です。第一種よりも取り扱いが容易で、比較的初心者にも人気があります。</p>
@@ -25,6 +26,7 @@
           特に安全管理や法律的な規制に関する部分が多いため、試験準備を怠らず、しっかりと理解しておきましょう。
           このページでは、<strong>二種銃猟</strong>に特化した問題を掲載しています。</p>
         <?php get_template_part('parts-infotext'); ?>
+<?php endif; ?>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">
