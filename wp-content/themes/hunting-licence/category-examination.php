@@ -6,7 +6,7 @@
     </div>
     <div class="main-visual examination">
       <div class="inner">
-      <h1>猟銃等講習会 考査対策｜知識試験の過去問と解説</h1>
+      <h1>猟銃等講習会 過去問・考査対策｜猟銃免許の試験対策</h1>
       <p>猟銃免許取得前に必須の猟銃等講習会では、銃の構造・安全管理・法律に関する知識が出題されます。本ページでは考査の出題傾向に即した問題を掲載しています。</p>
       <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
