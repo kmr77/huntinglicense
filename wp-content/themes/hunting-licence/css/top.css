@@ -542,6 +542,53 @@ h2 {
   border: 1px solid #ccc;
   text-align: left;
 }
+// TOP猟銃関連リンク
+.gun-links-box {
+  margin: 2em 0;
+  padding: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.gun-links-box p {
+  margin-bottom: 1em;
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #555;
+}
+
+.gun-links-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gun-links-list a {
+  display: block;
+  background: rgb(193, 22, 22);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.gun-links-list a:hover {
+  background: #a81515;
+}
+
+/* PC表示は3列 */
+@media screen and (min-width: 768px) {
+  .gun-links-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 
 /*# sourceMappingURL=top.css.map */

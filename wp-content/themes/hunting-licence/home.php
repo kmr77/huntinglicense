@@ -7,6 +7,22 @@
 			</div>
 		</div>
 		<div class="inner">
+			<div class="gun-links-box">
+			<h2>猟銃の所持・講習会を考えている方へ</h2>
+			<p>狩猟免許を取得したあとに「猟銃を持ちたい」と考えている方は、猟銃等講習会や所持許可の取得、費用の目安、安全な保管方法などについても事前に理解しておく必要があります。
+				以下のリンク集では、猟銃を持つために必要な情報をわかりやすくまとめているので、狩猟免許とあわせてぜひ参考にしてください。▶ <a href="<?php echo home_url('/category/examination/'); ?>">猟銃免許 過去問はこちら</a></p>
+			<div class="top-link">
+				<ul class="gun-links-list">
+					<li><a href="<?php echo home_url('/examination/'); ?>">猟銃等講習会とは？講習内容と試験の流れ</a></li>
+					<li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃等講習会の流れと考査対策ガイド</a></li>
+					<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">猟銃所持許可の手続きと費用まとめ</a></li>
+					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用の詳細</a></li>
+					<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカー・装弾ロッカーの選び方</a></li>
+					<li><a href="<?php echo home_url('/faq-guns-license/'); ?>">猟銃免許・所持許可に関するQ&A</a></li>
+				</ul>
+			</div>
+			</div>
+
 			<h2>狩猟免許試験の例題集</h2>
 			<p>狩猟免許試験の例題集は、狩猟免許を取得するために必要な知識を身につけるための重要な教材です。<br>このページでは、狩猟免許試験に出題される問題を厳選し、解答と詳細な解説を付けた問題集を提供しています。</p>
 			<p>特に、狩猟免許試験は法令や鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。<br>このサイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
