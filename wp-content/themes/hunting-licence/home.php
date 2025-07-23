@@ -10,7 +10,8 @@
 			<div class="gun-links-box">
 			<h2>猟銃の所持・講習会を考えている方へ</h2>
 			<p>狩猟免許を取得したあとに「猟銃を持ちたい」と考えている方は、猟銃等講習会や所持許可の取得、費用の目安、安全な保管方法などについても事前に理解しておく必要があります。
-				以下のリンク集では、猟銃を持つために必要な情報をわかりやすくまとめているので、狩猟免許とあわせてぜひ参考にしてください。▶ <a href="<?php echo home_url('/category/examination/'); ?>">猟銃免許 過去問はこちら</a></p>
+				以下のリンク集では、猟銃を持つために必要な情報をわかりやすくまとめているので、狩猟免許とあわせてぜひ参考にしてください。<br>
+				▶ <a href="<?php echo home_url('/category/examination/'); ?>">猟銃免許 過去問はこちら</a></p>
 			<div class="top-link">
 				<ul class="gun-links-list">
 					<li><a href="<?php echo home_url('/examination/'); ?>">猟銃等講習会とは？講習内容と試験の流れ</a></li>
