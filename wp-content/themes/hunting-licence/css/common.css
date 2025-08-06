@@ -319,7 +319,9 @@ p {
 .header-nav li {
   margin: 16px 0;
 }
-
+span.marker {
+  background: linear-gradient(transparent 50%, #effe7a 50%);
+}
 footer {
   margin-top: 24px;
   text-align: center;
