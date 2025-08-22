@@ -16,9 +16,17 @@ get_header(); ?>
 
 <div class="inner">
   <div class="contents study-method">
-  <?php get_template_part('parts-ads'); ?>
+    
+    <?php get_template_part('parts-ads'); ?>
     <h2>今回の法改正の概要</h2>
     <p>2025年3月施行の銃刀法改正により、「ハーフライフル銃」は従来の散弾銃扱いからライフル銃扱いに変更されました。これは、構造上ライフル銃と同等の性能を持ちながら、比較的所持しやすかったハーフライフルの実態に法制度を整合させる目的で実施されたものです。</p>
+    <div class="callout info">
+      <ul>
+        <li><strong>結論：</strong>ハーフライフルは2025年改正で<strong>ライフル扱い</strong>に。</li>
+        <li><strong>初心者：</strong>まずは散弾銃/空気銃で実績→段階的に申請が現実的。</li>
+        <li><strong>次の行動：</strong><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会の過去問</a>で合格→<a href="<?php echo home_url('/gun-cost/'); ?>">費用目安</a>確認。</li>
+      </ul>
+    </div>
 
     <h2>法改正の背景と動機</h2>
     <p>2023年、長野県中野市で発生した事件ではハーフライフル銃が使用され、4人が犠牲となる重大事件が起きました。この事件や近年の銃器関連事件を受けて、安全性確保のために所持規制の強化が求められ、今回の法改正に繋がりました。</p>
@@ -36,6 +44,11 @@ get_header(); ?>
         <tr><td>罰則強化</td><td>特に変更なし</td><td>不法所持・製造教唆で懲役1年以下または罰金30万円以下</td></tr>
       </tbody>
     </table>
+    <p class="next-cta">
+      これから準備する方は、<a href="<?php echo home_url('/examination/'); ?>">講習会の基礎知識</a>→
+      <a href="<?php echo home_url('/gun-cost/'); ?>">費用の目安</a>→
+      <a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会の過去問</a> の順で確認するとスムーズです。
+    </p>
 
     <h2>北海道での特例措置について</h2>
     <p>北海道ではエゾシカやヒグマによる農業被害が深刻なため、以下の特例措置が設定されています。</p>
@@ -43,7 +56,6 @@ get_header(); ?>
       <li><strong>特例①：</strong> 捕獲従事者がエゾシカ・ヒグマ以外の獣類にも使用 → 市町村推薦書＋北海道確認書で許可緩和</li>
       <li><strong>特例②：</strong> 一般の狩猟者がエゾシカ・ヒグマのみを対象とする場合 → 国への通知を基に所持が認可される</li>
     </ul>
-
     <h2>現場の声と懸念点</h2>
     <p>若手ハンターがライフルまで到達するまでの猟歴が求められることで、担い手不足が加速するとの懸念があります。特に北海道などで大型獣の駆除活動を担う人材の確保に支障が出るとの指摘もあります。また、経済的・時間的コストの増加により、猟友会や自治体との調整が今後の課題です。</p>
     <?php get_template_part('parts-ads'); ?>
@@ -79,6 +91,13 @@ get_header(); ?>
       <dt>Q. 詳しい情報はどこで確認できますか？</dt>
       <dd>→ 警察庁や都道府県警の生活安全課、または<a href="https://www.shuryo-menkyo.com/rifle-revision/">当サイトの特設解説ページ</a>をご確認ください。</dd>
     </dl>
+    <details>
+      <summary>今から何をすれば良い？</summary>
+      <div>
+        <p>まずは猟銃等講習会に合格し、散弾銃/空気銃で安全運用の実績を重ねます。
+        学習の前に <a href="<?php echo home_url('/examination/'); ?>">講習会の基礎知識</a>、費用は <a href="<?php echo home_url('/gun-cost/'); ?>">費用ページ</a> を参照してください。</p>
+      </div>
+    </details>
     <?php get_template_part('parts-connection-gun'); ?>
   </div>
 </div>
