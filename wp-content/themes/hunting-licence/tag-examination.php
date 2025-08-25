@@ -36,7 +36,7 @@
       $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
       // 1ページあたりの投稿数（$argsにも使用している値と同じに）
-      $posts_per_page = 30;
+      $posts_per_page = 10;
 
       // カウンターの初期値を設定
       $counter = ($paged - 1) * $posts_per_page + 1;
@@ -60,7 +60,7 @@
       // クエリ作成：licenseタグを明示的に指定
       $args = array(
         'tag' => 'examination',
-        'posts_per_page' => 30,
+        'posts_per_page' => $posts_per_page,
         'paged' => $paged,
         'orderby' => $orderby,
         'order' => $order,

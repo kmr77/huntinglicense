@@ -33,7 +33,7 @@
           <dl id="accordion">
           <?php
             // 投稿件数設定
-            $posts_per_page = 30;
+            $posts_per_page = 10;
 
             // 現在のページ番号取得
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -99,7 +99,7 @@
               </dd>
 
               <?php
-                if ($counter % 10 === 0) {
+                if ($counter % 5 === 0) {
                     echo '<div class="ads-between-questions">';
                     get_template_part('parts-ads-between');
                     echo '</div>';
