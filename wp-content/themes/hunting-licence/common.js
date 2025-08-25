@@ -263,4 +263,16 @@ new function(){
     });
   });
   
+  (function(){
+  var btn = document.getElementById('more-cta-toggle');
+  var box = document.getElementById('more-cta');
+  if(!btn || !box) return;
+  btn.addEventListener('click', function(){
+    var open = box.style.display === 'block';
+    box.style.display = open ? 'none' : 'block';
+    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    btn.textContent = open ? 'もっと見る' : '閉じる';
+  });
+})();
+
 }
