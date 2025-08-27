@@ -35,6 +35,12 @@ $prefectures = [
 
 <div class="inner">
   <div class="contents">
+    <p>
+    全国47都道府県で実施される狩猟免許試験の日程を一覧でまとめています。<br>
+    前期・後期ごとの申込期間や試験日、会場を確認でき、受験準備に役立つ最新情報を掲載しています。<br>
+    詳細は各自治体の公式発表ページもあわせてご参照ください。<br>
+    👉 <a href="<?php echo home_url('/information/'); ?>">自治体公式リンク集はこちら</a>
+    </p>
     <p class="bold"><span class="marker">※情報に間違いがある場合もあります、各都道府県の情報を必ず確認してください。</span></p>
     <?php
     foreach ($prefectures as $slug => $name) {
