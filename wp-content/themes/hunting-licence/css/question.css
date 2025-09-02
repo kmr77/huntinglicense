@@ -78,7 +78,7 @@
 }
 .answer {
   color: #f00;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .title-img {
@@ -110,7 +110,6 @@
   border: 1px solid #B7D1DD;
   cursor: pointer;
   display: block;
-  font-size: 80%;
   font-weight: bold;
   padding: 10px;
   margin-bottom: -1px;
@@ -119,7 +118,6 @@
   border: 1px solid #B7D1DD;
   cursor: pointer;
   display: block;
-  font-size: 80%;
   font-weight: bold;
   padding: 10px;
   margin-bottom: -1px;
@@ -134,7 +132,6 @@
   background: #F8FFFF;
   border: 1px solid #B7D1DD;
   display: none;
-  font-size: 75%;
   padding: 10px;
   margin-bottom: -1px;
 }
@@ -295,4 +292,42 @@
 .custom-meta-section p{
   text-align: center;
 }
+/* 解説ボックス：縦並び。見出しの下にアンダーライン、その下に内容 */
+.explain-box{
+  background:#fff8cc;
+  border:1px solid #f2e6a3;
+  border-radius:8px;
+  padding:16px 18px;
+  margin-top:14px;
+  text-align:left;
+}
+.explain-title{
+  margin:0 0 14px;
+  font-weight:700;
+}
+.ex-item{          /* 各項目の塊にしっかり余白 */
+  margin-bottom:18px;
+}
+.ex-item:last-child{
+  margin-bottom:0;
+}
+.ex-label{         /* 項目名：太字＋下線 */
+  font-weight:700;
+  border-bottom:2px solid #dcdcdc;
+  padding-bottom:4px;
+  margin-bottom:8px;
+}
+.ex-body{          /* 内容：通常太さ、左寄せ、改行維持 */
+  font-weight:400;
+  line-height:1.8;
+  white-space:pre-wrap;
+}
+.ex-body p {
+  margin: 0 0 8px;   /* 下にだけ余白 */
+}
+.ex-body p:last-child {
+  margin-bottom: 0;  /* 最後は余白なし */
+}
+
+
 /*# sourceMappingURL=question.css.map */

@@ -125,30 +125,68 @@ crossorigin="anonymous"></script>
     echo '<title>' . esc_html($title) . '</title>';
     ?>
     <meta name="description" content="狩猟鳥獣や保護動物の識別問題を中心に構成。生態・法律両面からの出題対策で得点源を確保できます。">
-    <?php elseif ( is_single() ) : ?>
-    <?php
-      // 体験談（single-experience.php または experienceカテゴリ）ならnoindexを付けない
-      if ( is_page_template('single-experience.php') || in_category('experience') ) {
-        $exp_title = get_field('exp_title');
-        $exp_description = get_field('exp_description');
-        $default_title = get_the_title();
-        $default_description = '狩猟免許試験の体験談・合格体験記を紹介します。';
-        $use_noindex = false;
-      } else {
-        // 通常投稿（設問）はnoindexを付与
-        $exp_title = get_field('custom_title');
-        $exp_description = get_field('custom_description');
-        $post_no = get_field('no');
-        $default_title = '問題番号' . $post_no . '：' . get_the_title();
-        $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
-        $use_noindex = true;
-      }
+    <?php elseif ( is_category('animals-judge') ) :
+    $title = '鳥獣識別イラスト｜【狩猟免許対策】写真で学ぶ狩猟鳥獣と保護鳥獣の判別問題集';
+    if ( $paged >= 2 ) {
+        $title = 'ページ' . $paged . '：' . $title;
+    }
+    echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <?php if ($use_noindex): ?>
-      <meta name="robots" content="noindex,follow">
-    <?php endif; ?>
-    <title><?php echo esc_html( $exp_title ? $exp_title : $default_title ); ?></title>
-    <meta name="description" content="<?php echo esc_attr( $exp_description ? $exp_description : $default_description ); ?>">
+    <meta name="description" content="狩猟免許試験で必須となる鳥獣識別問題を徹底収録。写真付きの過去問と解答・解説で、狩猟鳥獣と保護鳥獣を正しく判別する力を効率的に養えます。初心者から合格を目指す方まで必見の対策ページです。">
+    <?php elseif ( is_single() ) : ?>
+  <?php
+    $post_id    = get_queried_object_id();
+    $post_title = get_the_title($post_id);
+
+    // デフォルト初期化（Notice回避用）
+    $exp_title = '';
+    $exp_description = '';
+    $default_title = $post_title;
+    $default_description = get_bloginfo('description');
+    $use_noindex = true;
+
+    // 体験談
+    if ( is_page_template('single-experience.php') || in_category('experience', $post_id) ) {
+      $exp_title       = get_field('exp_title', $post_id);
+      $exp_description = get_field('exp_description', $post_id);
+      $default_title   = $post_title;
+      $default_description = '狩猟免許試験の体験談・合格体験記を紹介します。';
+      $use_noindex     = false;
+
+    // animals-judge
+    } elseif ( in_category('animals-judge', $post_id) ) {
+      $custom_title       = get_field('custom_title', $post_id);
+      $custom_description = get_field('custom_description', $post_id);
+
+      $default_title       = $post_title . 'のイラスト判別｜狩猟鳥獣識別イラスト問題';
+      $default_description = $post_title . 'は狩猟対象か？特徴・生息地・習性の要点と〇×判定を解説。';
+      $exp_title           = $custom_title;
+      $exp_description     = $custom_description;
+      $use_noindex         = false;
+
+    // 通常投稿（設問）
+    } else {
+      $custom_title       = get_field('custom_title', $post_id);
+      $custom_description = get_field('custom_description', $post_id);
+      $post_no            = get_field('no', $post_id);
+
+      $default_title       = '問題番号' . $post_no . '：' . $post_title;
+      $default_description = '問題番号' . $post_no . 'の問題と回答と解説が記載されているページです。';
+      $exp_title           = $custom_title;
+      $exp_description     = $custom_description;
+      $use_noindex         = true;
+    }
+  ?>
+
+  <?php if ($use_noindex): ?>
+    <meta name="robots" content="noindex,follow">
+  <?php else: ?>
+    <meta name="robots" content="index,follow">
+  <?php endif; ?>
+
+  <title><?php echo esc_html( $exp_title ?: $default_title ); ?></title>
+  <meta name="description" content="<?php echo esc_attr( $exp_description ?: $default_description ); ?>">
+
   <?php endif; ?>
 
   <?php
@@ -282,6 +320,7 @@ crossorigin="anonymous"></script>
             <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
             <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
             <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
+            <li><a href="<?php echo home_url('/category/animals-judge/'); ?>">鳥獣識別</a></li>
           </ul>
         </nav>
       </div>
