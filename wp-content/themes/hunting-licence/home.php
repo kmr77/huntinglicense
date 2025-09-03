@@ -14,8 +14,8 @@
 			 <h3>よく使われている過去問と情報</h3>
 			<nav class="primary-cta-nav">
 				<ul class="primary-cta gun-links-list">
-					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 					<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
+					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 					<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
 					<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
 					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
