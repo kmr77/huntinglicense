@@ -24,21 +24,6 @@ if (in_category('experience')) {
 
 <div class="inner">
   <div class="accordion-inner">
-    <div class="tag">
-      <ul>
-        <?php
-        $post_tags = get_the_tags();
-        if ( $post_tags ) {
-          foreach ( $post_tags as $tag ) {
-            echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . esc_html($tag->name) . '</a></li>';
-          }
-        } else {
-          echo '<li>タグはありません</li>';
-        }
-        ?>
-      </ul>
-    </div>
-
     <div class="single-contents">
       <div>
         <dl id="accordion">
@@ -97,46 +82,46 @@ if (in_category('experience')) {
               </span>
 
               <?php if ( $is_animals_judge ) : ?>
-  <?php
-    $habitat  = get_post_meta(get_the_ID(), 'habitat',  true);
-    $habit    = get_post_meta(get_the_ID(), 'habit',    true);
-    $features = get_post_meta(get_the_ID(), 'features', true);
-    $type     = get_post_meta(get_the_ID(), 'type',     true);
-  ?>
-  <?php if ($habitat || $habit || $features || $type): ?>
-    <section class="explain-box">
-      <h3 class="explain-title">解説</h3>
+    <?php
+      $habitat  = get_post_meta(get_the_ID(), 'habitat',  true);
+      $habit    = get_post_meta(get_the_ID(), 'habit',    true);
+      $features = get_post_meta(get_the_ID(), 'features', true);
+      $type     = get_post_meta(get_the_ID(), 'type',     true);
+    ?>
+    <?php if ($habitat || $habit || $features || $type): ?>
+      <section class="explain-box">
+        <h3 class="explain-title">解説</h3>
 
-      <?php if ($habitat): ?>
-        <div class="ex-item">
-          <div class="ex-label">生息地</div>
-          <div class="ex-body"><?php echo nl2br(esc_html($habitat)); ?></div>
-        </div>
-      <?php endif; ?>
+        <?php if ($habitat): ?>
+          <div class="ex-item">
+            <div class="ex-label">生息地</div>
+            <div class="ex-body"><?php echo nl2br(esc_html($habitat)); ?></div>
+          </div>
+        <?php endif; ?>
 
-      <?php if ($habit): ?>
-        <div class="ex-item">
-          <div class="ex-label">習性</div>
-          <div class="ex-body"><?php echo nl2br(esc_html($habit)); ?></div>
-        </div>
-      <?php endif; ?>
+        <?php if ($habit): ?>
+          <div class="ex-item">
+            <div class="ex-label">習性</div>
+            <div class="ex-body"><?php echo nl2br(esc_html($habit)); ?></div>
+          </div>
+        <?php endif; ?>
 
-      <?php if ($features): ?>
-        <div class="ex-item">
-          <div class="ex-label">特徴</div>
-          <div class="ex-body"><?php echo nl2br(esc_html($features)); ?></div>
-        </div>
-      <?php endif; ?>
+        <?php if ($features): ?>
+          <div class="ex-item">
+            <div class="ex-label">特徴</div>
+            <div class="ex-body"><?php echo nl2br(esc_html($features)); ?></div>
+          </div>
+        <?php endif; ?>
 
-      <?php if ($type): ?>
-        <div class="ex-item">
-          <div class="ex-label">分類</div>
-          <div class="ex-body"><?php echo nl2br(esc_html($type)); ?></div>
-        </div>
-      <?php endif; ?>
-    </section>
-  <?php endif; ?>
-<?php endif; ?>
+        <?php if ($type): ?>
+          <div class="ex-item">
+            <div class="ex-label">分類</div>
+            <div class="ex-body"><?php echo nl2br(esc_html($type)); ?></div>
+          </div>
+        <?php endif; ?>
+      </section>
+    <?php endif; ?>
+    <?php endif; ?>
 
             </dd>
           </dl>
@@ -175,7 +160,20 @@ if (in_category('experience')) {
         ?>
       </div>
     </div>
-
+    <div class="tag">
+          <ul>
+            <?php
+            $post_tags = get_the_tags();
+            if ( $post_tags ) {
+              foreach ( $post_tags as $tag ) {
+                echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . esc_html($tag->name) . '</a></li>';
+              }
+            } else {
+              echo '<li>タグはありません</li>';
+            }
+            ?>
+          </ul>
+        </div>
     <?php get_template_part('parts-ads'); ?>
 
     <?php
