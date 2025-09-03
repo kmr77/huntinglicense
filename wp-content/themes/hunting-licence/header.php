@@ -320,7 +320,7 @@ crossorigin="anonymous"></script>
             <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
             <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
             <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
-            <li><a href="<?php echo home_url('/category/animals-judge/'); ?>">鳥獣識別</a></li>
+            <li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト</a></li>
           </ul>
         </nav>
       </div>
@@ -343,6 +343,7 @@ crossorigin="anonymous"></script>
               <li><a href="<?php echo home_url('/category/ami/'); ?>" class="global-navigation__link">網（あみ）猟問題</a></li>
               <li><a href="<?php echo home_url('/category/wana/'); ?>" class="global-navigation__link">罠（わな）猟問題</a></li>
               <li><a href="<?php echo home_url('/category/animals/'); ?>" class="global-navigation__link">鳥獣問題</a></li>
+              <li><a href="<?php echo home_url('/category/animals-judge/'); ?>"class="global-navigation__link">狩猟鳥獣イラスト</a></li>
               <li><a href="<?php echo home_url('/category/examination/'); ?>" class="global-navigation__link">猟銃免許 過去問</a></li>
               <li><a href="<?php echo home_url('/category/numbers/'); ?>" class="global-navigation__link">数字問題</a></li>
               <li><a href="<?php echo home_url('/know/'); ?>" class="global-navigation__link">知っておくべきこと</a></li>
