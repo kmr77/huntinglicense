@@ -16,7 +16,11 @@ if (in_category('experience')) {
   $is_animals_judge = has_category('animals-judge');
   $hide_choices     = has_category(array('examination','numbers','animals-judge')); // ア・イ・ウを隠す
 ?>
-<h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
+<?php if ( in_category('animals-judge') ) : ?>
+  <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?>は狩猟鳥獣か？イラスト（写真）を見て判別してください</h2>
+<?php else : ?>
+  <h2>設問No.<?php the_field('no'); ?>：<?php the_title(); ?></h2>
+<?php endif; ?>
 
 <div class="inner">
   <div class="accordion-inner">
