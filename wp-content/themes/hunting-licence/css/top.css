@@ -67,6 +67,9 @@ h2 {
 .gun {
   background-image: url(../img/gun.avif);
 }
+.animals-judge {
+  background-image: url(../img/animals-judge.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;

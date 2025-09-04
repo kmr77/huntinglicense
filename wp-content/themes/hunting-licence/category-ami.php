@@ -18,6 +18,9 @@
         <p>このページでは、網猟免許試験に関する筆記問題を掲載しています。法令や器具の取り扱い、識別に関する内容を中心にまとめています。</p>
         <p>▶ <a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類と違いを比較する</a></p>
         <p>▶ <a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の所持許可の違いを知る</a></p>
+        <h2>狩猟鳥獣イラスト問題</h2>
+      <p>網猟免許では、紙芝居形式のイラストを使った狩猟鳥獣の識別問題が行われます。</p>
+      <p>▶ <a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト問題</a></p>
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>

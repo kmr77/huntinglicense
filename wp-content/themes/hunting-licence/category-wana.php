@@ -19,6 +19,9 @@
       <p>このページでは、わな猟免許試験に出題される筆記問題をまとめています。法令や識別に関する問題を中心に、合格に役立つ内容を掲載しています。</p>
       <p>▶ <a href="<?php echo home_url('/license-types/'); ?>">狩猟免許の種類と違いを比較する</a></p>
       <p>▶ <a href="<?php echo home_url('/license-difference/'); ?>">狩猟免許と銃の所持許可の違いを知る</a></p>
+      <h2>狩猟鳥獣イラスト問題</h2>
+      <p>わな猟免許では、紙芝居形式のイラストを使った狩猟鳥獣の識別問題が行われます。</p>
+      <p>▶ <a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト問題</a></p>
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>

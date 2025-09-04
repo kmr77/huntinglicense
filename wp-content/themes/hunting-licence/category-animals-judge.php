@@ -8,10 +8,12 @@ get_header(); ?>
         <?php get_template_part('parts-breadcrumb'); ?>
       </div>
     </div>
-    <div class="main-visual animals">
+    <div class="main-visual animals-judge">
       <div class="inner">
-        <h1>鳥獣識別・生態問題 対策｜過去問で覚える</h1>
-        <p>このカテゴリでは、狩猟対象鳥獣と保護鳥獣の識別力が問われます。写真や特徴から正確に判断する力が必要で、見分けを誤ると違法行為につながるため重要な分野です。</p>
+        <h1>鳥獣イラスト識別 問題対策｜過去問で判別力を鍛える</h1>
+        <p>このカテゴリは、わな猟・網猟の試験で出題される「イラスト（写真）からの識別」に特化しています。
+          各設問で提示される鳥獣が狩猟鳥獣か非狩猟鳥獣かを瞬時に見極める練習ができ、嘴の形・羽色や模様・体型・尾・サイズ感などのチェックポイントを整理。
+          誤判別による違法捕獲を防ぐための実戦的な判断力を養います。個別ページには「見分け方」「生息地」「特徴」「習性」「区分」の詳細解説も掲載しています。</p>
         <p class="align-center"><button class="question-btn"><a href="#question">問題へ進む</a></button></p>
       </div>
     </div>
