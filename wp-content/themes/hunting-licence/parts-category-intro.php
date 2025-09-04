@@ -9,6 +9,9 @@
           <li><a href="<?php echo home_url('/category/ami/'); ?>">▶ 網猟免許の問題へ</a></li>
           <li><a href="<?php echo home_url('/category/laws/'); ?>">▶ 法令問題一覧へ</a></li>
         </ul>
+        <h2>狩猟鳥獣イラスト問題</h2>
+          <p>わな猟・あみ猟免許では、紙芝居形式のイラストを使った狩猟鳥獣の識別問題が行われます。ここは確実に点を取っておきましょう！</p>
+          <p>▶ <a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト問題</a></p>
         <h2 id="exam-guide">猟銃免許の筆記試験対策（猟銃等講習会）</h2>
         <p>
         銃所持のために必要な猟銃等講習会では、筆記試験が実施されます。<br>
