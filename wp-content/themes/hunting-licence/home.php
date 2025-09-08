@@ -15,21 +15,22 @@
 			<nav class="primary-cta-nav">
 				<ul class="primary-cta gun-links-list">
 					<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
-					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 					<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
 					<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
 					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
-					<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
-					<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
+					<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
+					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 				</ul>
 				<p class="center">
 					<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta" class="more-cta-btn">
 						もっと見る
 					</button>
 				</p>
-
+				
 				<div id="more-cta" class="more-cta" style="display:none;">
 					<ul class="secondary-cta gun-links-list">
+						<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
+						<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
 						<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
 						<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
 						<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
