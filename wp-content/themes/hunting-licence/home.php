@@ -7,11 +7,8 @@
 			</div>
 		</div>
 		<div class="inner">
-			<h2>2025年 狩猟免許試験の申込みと日程</h2>
-			<p>2025年の試験申込み期間と試験日程です。<br><span class="marker bold">※日程が変更になっている場合がありますので必ず受験希望の自治体の情報を確認してください。</span></p>
-			<p><a href="<?php echo home_url('/schedule/'); ?>">▶ 狩猟免許試験日程を見る</a></p>
 			<!-- ▼ 主要ナビ（常時表示の5ボタン＋折りたたみ） -->
-			 <h3>よく使われている過去問と情報</h3>
+			<h2>よく使われている過去問と情報</h2>
 			<nav class="primary-cta-nav">
 				<ul class="primary-cta gun-links-list">
 					<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
@@ -42,6 +39,9 @@
 				</div>
 			</nav>
 			<!-- ▲ 主要ナビここまで -->
+			<h2>2025年 狩猟免許試験の申込みと日程</h2>
+			<p>2025年の試験申込み期間と試験日程です。<br><span class="marker bold">※日程が変更になっている場合がありますので必ず受験希望の自治体の情報を確認してください。</span></p>
+			<p><a href="<?php echo home_url('/schedule/'); ?>">▶ 狩猟免許試験日程を見る</a></p>
 			<div class="gun-links-box">
 			<h2>猟銃の所持・講習会を考えている方へ</h2>
 			<p>狩猟免許を取得したあとに「猟銃を持ちたい」と考えている方は、猟銃等講習会や所持許可の取得、費用の目安、安全な保管方法などについても事前に理解しておく必要があります。
