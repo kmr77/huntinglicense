@@ -1,0 +1,333 @@
+@charset "UTF-8";
+.container {
+  margin: 0;
+}
+
+.main-visual {
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  padding: 15px 0;
+}
+.all {
+  background-image: url(../img/all.avif);
+}
+.laws {
+  background-image: url(../img/laws.avif);
+}
+.type1 {
+  background-image: url(../img/type1.avif);
+}
+.type2 {
+  background-image: url(../img/type2.avif);
+}
+.wana {
+  background-image: url(../img/wana.avif);
+}
+.ami {
+  background-image: url(../img/ami.avif);
+}
+.animals {
+  background-image: url(../img/all.avif);
+}
+.examination {
+  background-image: url(../img/examination.avif);
+}
+.numbers {
+  background-image: url(../img/numbers.avif);
+}
+.contact {
+  background-image: url(../img/mail.avif);
+}
+.random-btn {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.custom-ai-explanation p {
+  font-weight: normal;
+}
+.random-toggle-area {
+  margin-bottom: 1em;
+}
+
+.random-toggle-area .page-count {
+  font-weight: bold;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .main-visual {
+    background-size: cover;
+    height: 450px;
+  }
+  .random-btn {
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}
+.question {
+  color: #000;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .question {
+    font-size: 16px;
+  }
+}
+.answer {
+  color: #f00;
+  font-size: 16px;
+}
+
+.title-img {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.title {
+  border-bottom: 1px solid #444444;
+  margin: 5px;
+  text-align: center;
+}
+
+#accordion {
+  margin: 5px 0;
+}
+
+.accordion-inner {
+  margin: 24px auto 0;
+}
+
+@media screen and (min-width: 768px) {
+  .accordion-inner {
+    width: 800px;
+    margin: 24px auto 0;
+  }
+}
+.single-contents {
+  border: 1px solid #B7D1DD;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: -1px;
+}
+#accordion dt {
+  border: 1px solid #B7D1DD;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: -1px;
+}
+#accordion dt.select-dt {
+  border: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#accordion dd {
+  background: #F8FFFF;
+  border: 1px solid #B7D1DD;
+  display: none;
+  padding: 10px;
+  margin-bottom: -1px;
+}
+#accordion dd.answer-dd {
+  background: #FFFCD0;
+  border: 1px solid #B7D1DD;
+  display: none;
+}
+
+#accordion dt.active {
+  background: url(../../../it/images/arrow-top.png) 97% no-repeat;
+}
+
+.category {
+  margin: 0 5px;
+}
+
+.category ul {
+  list-style: none;
+}
+
+.category ul li {
+  font-size: 80%;
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+
+.category ul li a {
+  border: 1px solid #B7D1DD;
+  color: #444;
+  display: block;
+  padding: 10px;
+}
+
+.category li a.arrow {
+  position: relative;
+}
+
+.category li a.arrow:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
+  transform: rotate(45deg);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -6px;
+}
+.btn-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.tag {
+  margin: 16px 0;
+}
+.tag ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag li {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.tag li a {
+  text-decoration: none;
+}
+.post-meta {
+  margin: 16px 0;
+  background: #F8FFFF;
+  padding: 16px;
+}
+.back-link {
+  text-align: center;
+}
+.post-navigation {
+  margin: 16px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.prev-post {
+  margin: 16px 0;
+}
+.next-post {
+  margin: 16px 0;
+}
+.related-links {
+  margin-top: 2em;
+  padding: 1em;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+//問題文下の回遊リンク
+.related-links, .close-this-page {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.related-links h3 {
+  margin-bottom: 0.5em;
+  font-size: 20px;
+}
+
+.related-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.related-links ul li {
+  margin: 0.5em 0;
+  font-size: 1rem;
+}
+
+.related-links ul li a,
+.close-this-page a {
+  display: inline-block;
+  padding: 0.6em 1em;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+}
+
+.related-links ul li a:hover,
+.close-this-page a:hover {
+  background-color: #ddd;
+}
+
+.back-to-info a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #eee;
+  border-left: 4px solid #007B9E;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 8px;
+}
+.custom-meta-section {
+  margin: 16px 0;
+}
+.custom-meta-section h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.custom-meta-section p{
+  text-align: center;
+}
+/* 解説ボックス：縦並び。見出しの下にアンダーライン、その下に内容 */
+.explain-box{
+  background:#fff8cc;
+  border:1px solid #f2e6a3;
+  border-radius:8px;
+  padding:16px 18px;
+  margin-top:14px;
+  text-align:left;
+}
+.explain-title{
+  margin:0 0 14px;
+  font-weight:700;
+}
+.ex-item{          /* 各項目の塊にしっかり余白 */
+  margin-bottom:18px;
+}
+.ex-item:last-child{
+  margin-bottom:0;
+}
+.ex-label{         /* 項目名：太字＋下線 */
+  font-weight:700;
+  border-bottom:2px solid #dcdcdc;
+  padding-bottom:4px;
+  margin-bottom:8px;
+}
+.ex-body{          /* 内容：通常太さ、左寄せ、改行維持 */
+  font-weight:400;
+  line-height:1.8;
+  white-space:pre-wrap;
+}
+.ex-body p {
+  margin: 0 0 8px;   /* 下にだけ余白 */
+}
+.ex-body p:last-child {
+  margin-bottom: 0;  /* 最後は余白なし */
+}
+
+
+/*# sourceMappingURL=question.css.map */

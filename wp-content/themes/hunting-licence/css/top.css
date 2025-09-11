@@ -1,0 +1,621 @@
+@charset "UTF-8";
+h1 {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+h2 {
+  text-align: center;
+  background: none;
+  margin: 15px 0;
+  padding: 8px 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+.main-visual {
+  background-size: cover;
+  color: #fff;
+  height: 100%;
+  padding: 15px 0;
+}
+.top {
+  background-image: url(../img/top.avif);
+}
+.know {
+  background-image: url(../img/know.avif);
+}
+.application {
+  background-image: url(../img/application.avif);
+}
+.content {
+  background-image: url(../img/content.avif);
+}
+.regist {
+  background-image: url(../img/regist.avif);
+}
+.information {
+  background-image: url(../img/information.avif);
+}
+.study {
+  background-image: url(../img/study.avif);
+}
+.schedule {
+  background-image: url(../img/schedule.avif);
+}
+.schedule-detail {
+  background-image: url(../img/schedule-detail.avif);
+}
+.experience {
+  background-image: url(../img/exp.avif);
+}
+.common-img {
+  background-image: url(../img/common-img.avif);
+  height: 100px !important;
+}
+.difference {
+  background-image: url(../img/difference.avif);
+}
+.beginner {
+  background-image: url(../img/beginner.avif);
+}
+.gun {
+  background-image: url(../img/gun.avif);
+}
+.animals-judge {
+  background-image: url(../img/animals-judge.avif);
+}
+@media screen and (min-width: 768px) {
+  .main-visual {
+    background-size: cover;
+    height: 450px;
+  }
+}
+.contents {
+  margin: 24px 0;
+}
+.contents h3 {
+  text-align: left;
+  font-size: 16px;
+}
+.contents .number {
+  font-size: 24px;
+}
+.number {
+  font-size: 32px;
+  margin-right: 8px;
+}
+.contents-nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* スマホで2列 */
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.contents-nav li {
+  list-style: none;
+}
+
+.contents-nav a {
+  display: block;
+  padding: 14px 12px;
+  background-color: #007b3c;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.contents-nav a:hover,
+.contents-nav a:focus {
+  background-color: #005d2b;
+  transform: scale(1.02);
+}
+
+@media screen and (min-width: 768px) {
+  .contents-nav ul {
+    grid-template-columns: repeat(3, 1fr); /* タブレット〜PCで3列 */
+    gap: 16px;
+  }
+
+  .contents-nav a {
+    font-size: 17px;
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contents-nav ul {
+    grid-template-columns: repeat(4, 1fr); /* PC大画面では4列 */
+  }
+}
+
+.age-limit, .info {
+  background-color: #efefef;
+  padding: 16px;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .age-limit {
+    width: 26%;
+  }
+}
+.photo-size {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .photo-size {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+.registration ul li {
+  list-style: inside;
+}
+.registration .list-none {
+  list-style: none;
+}
+/* スマートフォン用スタイル */
+.hunting-license-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.hunting-license-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.hunting-license-list li strong {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.hunting-license-list li a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.hunting-license-list li a:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  .hunting-license-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hunting-license-list li {
+    font-size: 17px;
+    padding: 14px 20px;
+  }
+
+  .hunting-license-list li a {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+}
+.info-list {
+  background-color: #d7effa;
+  display: block;
+  font-weight: bold;
+  padding: 20px 20px 20px 30px;
+  margin: 10px 0;
+}
+.info-list li {
+  list-style:disc;
+}
+.top-intro-box {
+  background-color: #f3fdf3;
+  border: 2px solid #c8e6c9;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 24px 16px;
+  text-align: left;
+}
+
+.top-intro-box h2 {
+  font-size: 20px;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.top-intro-box p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.top-link {
+  margin: 16px 0;
+}
+.top-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+@media screen and (min-width: 768px) {
+  .top-links {
+    justify-content: space-evenly;
+  }
+}
+.top-links li {
+  margin-bottom: 8px;
+}
+
+.top-links a {
+  display: inline-block;
+  background-color: #007b3c;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.top-links a:hover {
+  background-color: #005d2b;
+}
+
+@media screen and (min-width: 768px) {
+  .top-intro-box {
+    margin: 24px auto;
+  }
+
+  .top-intro-box h2 {
+    font-size: 24px;
+  }
+
+  .top-intro-box p {
+    font-size: 18px;
+  }
+}
+
+.category-overview {
+  margin: 32px 16px;
+  padding: 24px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.category-overview h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1b5e20;
+}
+
+.category-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.category-links li a {
+  display: block;
+  padding: 16px;
+  background-color: #ffffff;
+  border-left: 6px solid #007b3c;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  line-height: 1.5;
+}
+
+.category-links li a:hover {
+  background-color: #e6f4ea;
+}
+
+.category-links li strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+  color: #2e7d32;
+}
+
+@media screen and (min-width: 768px) {
+  .category-links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-overview h2 {
+    font-size: 26px;
+  }
+
+  .category-links li strong {
+    font-size: 20px;
+  }
+}
+/* study-method */
+/* よくある質問（FAQ）デザイン */
+.study-method dl {
+  margin-top: 24px;
+  border-top: 2px solid #c8e6c9;
+}
+
+.study-method dl dt {
+  background-color: #f0fdf4;
+  padding: 12px 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #d0e8d0;
+  position: relative;
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.study-method dl dd {
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* モバイル対応 */
+@media screen and (min-width: 768px) {
+  .study-method dl dt {
+    font-size: 18px;
+  }
+
+  .study-method dl dd {
+    font-size: 16px;
+  }
+}
+/* テーブル横スクロール対応 */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.table-scroll th, .table-scroll td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.table-scroll thead {
+  background-color: #e8f5e9;
+}
+
+.table-scroll tbody tr:nth-child(odd) {
+  background-color: #f9fdf9;
+}
+
+.table-scroll tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+//リンクボタン化
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.link-buttons a {
+  display: inline-block;
+  background-color: #007b3c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.link-buttons a:hover {
+  background-color: #005d2b;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.experience-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+.experience-item h3 a {
+  text-decoration: none;
+  color: #222;
+}
+
+.experience-item p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+//初心者向けコンテンツ
+.top-link-box {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+}
+.top-link-box h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.top-link-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.top-link-box ul li {
+  margin-bottom: 0.4em;
+}
+.top-link-box ul li a {
+  color: #007baf;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-link-box ul li a:hover {
+  text-decoration: underline;
+}
+//スケジュール 
+/* section要素全体にスクロールを許可 */
+.schedule-block {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.schedule-block h2 {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5em; /* 適宜調整 */
+  padding: 0 12px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* テーブルラッパー */
+.table-scroll {
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.schedule-table {
+  min-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  white-space: nowrap;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+// TOP猟銃関連リンク
+.gun-links-box {
+  margin: 2em 0;
+  padding: 1.5em;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.gun-links-box p {
+  margin-bottom: 1em;
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #555;
+}
+
+.gun-links-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gun-links-list a {
+  display: block;
+  background: rgb(193, 22, 22);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.gun-links-list a:hover {
+  background: #a81515;
+}
+
+/* PC表示は3列 */
+@media screen and (min-width: 768px) {
+  .gun-links-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* 地域×都道府県の表レイアウト */
+.region-table { width:100%; margin: 1rem 0 2rem; border-top:1px solid #e5e7eb; font-size:15px; }
+.region-table__head, .region-table__row {
+  display:grid; grid-template-columns: 12rem 1fr; gap: .75rem; align-items:flex-start;
+}
+.region-table__head { font-weight:700; color:#374151; padding:.75rem 0; border-bottom:1px solid #e5e7eb; }
+.region-table__row  { padding:.75rem 0; border-bottom:1px solid #f3f4f6; }
+.region-table .col-prefs { line-height:1.9; }
+.region-table .sep { opacity:.45; margin:0 .25rem; }
+
+/* リンク見た目 */
+.pref-link.ext { position:relative; padding-right:1rem; white-space:nowrap; }
+.pref-link.ext::after{
+  content:""; position:absolute; right:0; top:.25em; width:.7em; height:.7em;
+  border:1.5px solid currentColor; border-left:none; border-bottom:none; transform:rotate(45deg);
+}
+.pref-link.ext:hover{ text-decoration:underline; }
+
+/* URL未登録（リンクなし） */
+.pref-link.disabled { color:#9ca3af; pointer-events:none; cursor:default; white-space:nowrap; }
+.pref-link.disabled::after{ display:none; }
+
+/* モバイル */
+@media (max-width: 640px){
+  .region-table__head, .region-table__row { grid-template-columns: 1fr; }
+  .region-table .col-region { margin-bottom:.25rem; font-weight:700; }
+}
+
+
+/*# sourceMappingURL=top.css.map */
