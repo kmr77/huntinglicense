@@ -17,6 +17,7 @@
 					<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
 					<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
 					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
+					<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
 				</ul>
 				<p class="center">
 					<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta" class="more-cta-btn">
