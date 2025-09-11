@@ -1,1 +1,39 @@
-wp-content/plugins/*
+# === WordPress Core ===
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# === wp-content ===
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/uploads/
+/wp-content/debug.log
+
+# プラグインは全部無視
+/wp-content/plugins/*
+
+# 自作プラグインだけ追跡（例：answer-ai）
+!wp-content/plugins/answer-ai/
+
+# テーマは全部無視
+/wp-content/themes/*
+
+# 自作テーマだけ追跡（例：my-theme）
+!wp-content/themes/my-theme/
+
+# === その他不要ファイル ===
+*.log
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+vendor/
