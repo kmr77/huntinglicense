@@ -21,6 +21,7 @@
         <li><a href="<?php echo home_url('/wana-info/'); ?>">わな猟免許とは？</a></li>
         <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
         <li><a href="<?php echo home_url('/category/animals-judge/'); ?>">鳥獣イラスト識別</a></li>
+        <li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
         <li><a href="<?php echo home_url('/examination/'); ?>">猟銃講習会とは</a></li>
         <li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
         <li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃所持許可について</a></li>
