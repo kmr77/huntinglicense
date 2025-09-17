@@ -7,7 +7,7 @@ get_header(); ?>
     <?php get_template_part('parts-breadcrumb'); ?>
   </div>
 </div>
-<div class="main-visual study">
+<div class="main-visual gun">
   <div class="inner">
     <h1><?php the_title(); ?></h1>
     <p>狩猟免許試験に合格するためには独学も可能ですが、多くの受験者が活用しているのが「猟友会による予備講習」です。このページでは、予備講習の内容・費用・メリット・注意点を初心者向けにわかりやすく解説します。</p>
@@ -15,7 +15,7 @@ get_header(); ?>
 </div>
 
 <div class="inner">
-  <div class="contents gun">
+  <div class="contents study-method">
 
     <h2>猟友会予備講習とは？</h2>
     <p>猟友会が主催する予備講習は、狩猟免許試験の受験者を対象に行われる事前学習会です。試験直前に開催されることが多く、公式の例題集をベースに法令・鳥獣判別・猟具の取扱いなどを総合的に学ぶことができます。</p>
