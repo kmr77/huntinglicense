@@ -1067,4 +1067,16 @@ img{ max-width:100%; height:auto; display:block; }
 .gun-links-box,
 .primary-cta-nav{ width:100% !important; }
 
+/* アドセンスセンタリング */
+.ad-center {
+  margin: 20px 0;
+  text-align: center;
+}
+.ad-center ins.adsbygoogle,
+.ad-center ins.adsbygoogle iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
 /*# sourceMappingURL=common.css.map */

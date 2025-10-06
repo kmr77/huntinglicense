@@ -50,7 +50,9 @@
   
   <p>これらを把握しておくことで、無駄な出費を防ぎ、効率よく狩猟免許の取得を進められます。<br>
   ▶ <a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめを見る</a></p>
-  
+  <div class="ad-center">
+    <?php get_template_part('parts-ads'); ?>
+  </div>
   <h2><?php single_cat_title(); ?> 過去問</h2>
       <p>猟銃初心者講習考査では、銃の取り扱いや安全管理に関する基本的な知識が問われます。
         特に、銃の構造や操作方法、撃つ際の安全確認、そして実際の狩猟場での注意点に関する問題が出題されます。
@@ -58,6 +60,9 @@
         このページでは、初心者講習考査に特化した問題を記載し、試験対策に役立つ情報を提供しています。</p>
           <?php get_template_part('parts-infotext'); ?>
 <?php endif; ?>
+        <div class="ad-center">
+          <?php get_template_part('parts-ads'); ?>
+        </div>
         <!-- 問題ここから -->
         <div class="accordion-inner" id="question">
           <dl id="accordion">
@@ -135,6 +140,15 @@
                     ));
                   ?>
                 </div>
+                <div class="ad-center">
+                  <?php get_template_part('parts-ads'); ?>
+                </div>
+    <h2>あわせて読みたい関連記事</h2>
+    <ul class="related-links">
+    <li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用の詳細</a></li>
+    <li><a href="<?php echo home_url('/examination-info/'); ?>">講習会の流れと考査対策ガイド</a></li>
+    <li><a href="<?php echo home_url('/faq-guns-license/'); ?>">猟銃免許・所持許可に関するQ&A</a></li>
+    </ul>
 
         <?php wp_reset_postdata(); ?>
       </div>
