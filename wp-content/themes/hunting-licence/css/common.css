@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -251,7 +252,7 @@ p.center {
   background-position: center;
 }
 
-//デフォルト固定ページビジュアル
+/* デフォルト固定ページビジュアル */
 .default-visual {
   background-size: cover;
   background-position: center;
@@ -718,7 +719,7 @@ body.is-fixed {
   margin: 0;
 }
 
-//アコーディオン
+/* アコーディオン */
 .accordion {
     height: 0;
     overflow: hidden;
@@ -895,7 +896,7 @@ body.is-fixed {
   color: #fff;
   border-color: #0073aa;
 }
-// スマホ用サイトタイトル
+/* スマホ用サイトタイトル */
 .header__inner {
   display: flex;
   align-items: center;
@@ -915,7 +916,7 @@ body.is-fixed {
     display: none;
   }
 }
-//SNSボタン
+/* SNSボタン */
 .sns-share-icons {
   display: flex;
   justify-content: center;
@@ -934,7 +935,7 @@ body.is-fixed {
 .sns-share-icons a:hover img {
   opacity: 0.7;
 }
-//アフィリ
+/* アフィリ */
 .affiliate-box {
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -962,7 +963,7 @@ body.is-fixed {
 .affiliate-btn:hover {
   background: #c9302c;
 }
-//用語集テーブル
+/* 用語集テーブル */
 /* テーブル全体 */
 .base_tbl {
   width: 100%;
@@ -998,5 +999,72 @@ body.is-fixed {
 .base_tbl th {
   white-space: normal;
 }
+
+/* アドセンスレイアウト */
+.adsbygoogle {
+  display: block;
+  min-height: 280px; /* 広告枠の高さを事前に確保 */
+}
+.ads-wrap {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.ads-wrap ins.adsbygoogle,
+.ads-wrap ins.adsbygoogle iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+/* ====== スマホ時の左右余白を .inner に統一 ====== */
+@media (max-width: 767.98px){
+
+  /* 1) 余白は .inner だけに持たせる（共通） */
+  .inner{
+    width:100%;
+    margin:0 auto;
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+    box-sizing: border-box;
+  }
+
+  /* 2) 親コンテナ側の左右パディングは打ち消す（重複防止） */
+  .main-visual,
+  .default-visual,
+  .contents,
+  .primary-cta-nav,
+  .gun-links-box,
+  .top-link,
+  .top-link-box,
+  .popular-pages-block,
+  .category-overview,
+  .breadcrumb{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    /* 横幅は常に100%にして100vw起因のはみ出しも防止 */
+    width: 100% !important;
+  }
+
+  /* 3) ボタン群は箱モデル固定（左右端に張り付かないように） */
+  .gun-links-list li a,
+  .primary-cta li a,
+  .secondary-cta li a{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+  }
+}
+
+
+/* 画像が親幅を超えて余白を相殺するのを防止（安全） */
+img{ max-width:100%; height:auto; display:block; }
+
+/* 100vw のはみ出し対策（もしどこかで指定していたら上書き） */
+.main-visual,
+.default-visual,
+.section,
+.top-link,
+.gun-links-box,
+.primary-cta-nav{ width:100% !important; }
 
 /*# sourceMappingURL=common.css.map */
