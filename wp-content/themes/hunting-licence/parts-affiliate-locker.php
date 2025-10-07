@@ -1,26 +1,29 @@
 <div class="affiliate-box">
-  準備中
-<!-- <h3>ガンロッカー（猟銃保管用）</h3>
-      <ul>
-        <li>
-          <a href="https://example.com/affiliate-gunlocker1" target="_blank" rel="nofollow noopener">▶ 小型ガンロッカー（1〜2挺用）【警察推奨タイプ】</a><br>
-          鉄製／施錠式／壁固定対応／約25,000円
-        </li>
-        <li>
-          <a href="https://example.com/affiliate-gunlocker2" target="_blank" rel="nofollow noopener">▶ 中型ガンロッカー（3挺用）【防錆加工済み】</a><br>
-          鍵2重構造／固定金具付き／約32,000円
-        </li>
-      </ul>
+  <h3>おすすめのガンロッカー・装弾ロッカー</h3>
 
-      <h3>装弾ロッカー（弾丸保管用）</h3>
-      <ul>
-        <li>
-          <a href="https://example.com/affiliate-ammo1" target="_blank" rel="nofollow noopener">▶ シンプル装弾ロッカー（20発収納）</a><br>
-          鍵付き／コンパクト設計／約7,000円
-        </li>
-        <li>
-          <a href="https://example.com/affiliate-ammo2" target="_blank" rel="nofollow noopener">▶ 大容量装弾ロッカー（50発以上）</a><br>
-          防火対応／強化スチール製／約12,000円
-        </li>
-      </ul> -->
+  <h4>🔒 ガンロッカー（猟銃保管用）</h4>
+  <ul>
+    <li>
+      <a href="https://amzn.to/4mVv4ym" target="_blank" rel="sponsored noopener">▶ テンキー式ガンロッカー（1〜2丁用）【警察検査対応・人気モデル】</a><br>
+      鋼板製／電子錠テンキー式／壁・床固定対応／重量約23kg／約24,000円前後。<br>
+      自宅設置や賃貸住宅でも対応しやすく、私（管理人）もこのタイプを使用しています。
+    </li>
+    <li>
+      <a href="https://amzn.to/4pWPqdp" target="_blank" rel="sponsored noopener">▶ ガンロッカー＋装弾ロッカーセット【まとめ購入でコスパ良】</a><br>
+      セット購入でサイズ・色統一。両方の鍵を分けて管理できる安心構造。<br>
+      約35,000〜40,000円前後。
+    </li>
+  </ul>
+
+  <h4>💡 装弾ロッカー（弾丸保管用）</h4>
+  <ul>
+    <li>
+      <a href="https://amzn.to/4pOUBMi" target="_blank" rel="sponsored noopener">▶ 装弾ロッカー（弾薬庫）【20〜50発対応・別体施錠式】</a><br>
+      鍵付きスチール製／別体構造／軽量コンパクトで棚や床下にも収納可能。<br>
+      約15,000円前後。銃ロッカーと別保管が必須なため、初心者の方にもおすすめ。
+    </li>
+  </ul>
+
+  <p class="small">※価格・在庫状況は変動する場合があります。購入前に販売ページで最新情報をご確認ください。<br>
+  ※リンクはAmazonアソシエイトを利用しています。</p>
 </div>
