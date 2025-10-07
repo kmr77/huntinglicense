@@ -70,6 +70,9 @@ h2 {
 .animals-judge {
   background-image: url(../img/animals-judge.avif);
 }
+.locker {
+  background-image: url(../img/locker.avif);
+}
 @media screen and (min-width: 768px) {
   .main-visual {
     background-size: cover;

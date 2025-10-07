@@ -945,6 +945,7 @@ body.is-fixed {
 }
 .affiliate-box h3 {
   font-size: 1.1em;
+  margin-top: 0;
   margin-bottom: 0.5em;
   color: #d9534f;
 }
