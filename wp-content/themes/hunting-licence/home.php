@@ -10,35 +10,38 @@
 			<!-- ▼ 主要ナビ（常時表示の5ボタン＋折りたたみ） -->
 			<h2>よく使われている過去問と情報</h2>
 			<nav class="primary-cta-nav">
-				<ul class="primary-cta gun-links-list">
-					<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
-					<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
-					<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
-					<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
-					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
-					<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
-					<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
-					<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
-					<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
+			<ul class="primary-cta gun-links-list">
+
+				<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
+				<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
+				<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
+				<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
+				<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
+				<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方</a></li>
+				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
+				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
+				<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
+				<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
+			</ul>
+
+			<p class="center">
+				<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta">
+				もっと見る
+				</button>
+			</p>
+
+			<div id="more-cta" class="more-cta" style="display:none;">
+				<ul class="secondary-cta gun-links-list">
+				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
+				<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
+				<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
+				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
+				<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格の勉強法</a></li>
+				<li><a href="<?php echo home_url('/information/'); ?>">都道府県の申込情報まとめ</a></li>
+				<li><a href="<?php echo home_url('/examination-info/'); ?>">講習会の流れと対策</a></li>
+				<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">所持許可の手続き</a></li>
 				</ul>
-				<p class="center">
-					<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta" class="more-cta-btn">
-						もっと見る
-					</button>
-				</p>
-				
-				<div id="more-cta" class="more-cta" style="display:none;">
-					<ul class="secondary-cta gun-links-list">
-						<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
-						<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
-						<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
-						<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
-						<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格の勉強法</a></li>
-						<li><a href="<?php echo home_url('/information/'); ?>">都道府県の申込情報</a></li>
-						<li><a href="<?php echo home_url('/examination-info/'); ?>">講習会の流れと対策</a></li>
-						<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">所持許可の手続き</a></li>
-					</ul>
-				</div>
+			</div>
 			</nav>
 			<!-- ▲ 主要ナビここまで -->
 			<h2>2025年 狩猟免許試験の申込みと日程</h2>
@@ -55,7 +58,7 @@
 					<li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃等講習会の流れと考査対策ガイド</a></li>
 					<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">猟銃所持許可の手続きと費用まとめ</a></li>
 					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用の詳細</a></li>
-					<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカー・装弾ロッカーの選び方</a></li>
+					<li><a href="<?php echo home_url('/gun-types/'); ?>">銃の種類の違い（ライフル・散弾銃・空気銃）</a></li>
 					<li><a href="<?php echo home_url('/faq-guns-license/'); ?>">猟銃免許・所持許可に関するQ&A</a></li>
 				</ul>
 			</div>
@@ -107,16 +110,17 @@
 				<li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の種類と違いを比較する</a></li>
 				<li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">▶ 第一種銃猟と第二種銃猟免許の違い</a></li>
 				<li><a href="<?php echo home_url('/license-extermination/'); ?>">▶ 狩猟免許と有害駆除（捕獲従事者）の違い</a></li>
-  				<li><a href="<?php echo home_url('/gun-difference/'); ?>">▶ 散弾銃と空気銃の違い</a></li>
+				<li><a href="<?php echo home_url('/gun-difference/'); ?>">▶ 散弾銃と空気銃の違い</a></li>
 				<li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
 				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
 				<li><a href="<?php echo home_url('/words/'); ?>">▶ 狩猟用語・猟具用語集</a></li>
 				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">▶ 狩猟免許に関するよくある質問（Q&A）を見る</a></li>
-				<li><a href="<?php echo home_url('/examination-info/'); ?>">▶ 猟銃等講習会の流れと考査対策ガイド</a></li>
-				<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">▶ 猟銃所持許可の手続きと費用まとめ</a></li>
-				<li></li>
+				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">▶ 猟友会による予備講習の受け方と注意点</a></li>
+				<li><a href="<?php echo home_url('/application/'); ?>">▶ 狩猟免許の受験申請の手順（必要書類・費用）</a></li>
+				<!-- ↑ 差し替え -->
 			</ul>
 			</div>
+
 			<h2>免許別の解説ページを見る</h2>
 			<ul>
 				<li><a href="<?php echo home_url('/wana-info/'); ?>">▶ わな猟免許とは？使える罠と試験のポイント</a></li>
@@ -165,7 +169,7 @@
 			<h2>猟銃所持関連ページ</h2>
 			<ul>
 				<li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
-				<li><a href="<?php echo home_url('/gun-locker/'); ?>">▶ おすすめガンロッカーの選び方</a></li>
+				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">▶ 猟友会の予備講習（内容・費用・申込み）</a></li>
 			</ul>
 			</div>
 			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>

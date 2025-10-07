@@ -95,7 +95,7 @@ get_header(); ?>
       </ul>
     </div>
     <p>上記を合計すると、<strong>年間でおおよそ1万5,000〜2万5,000円</strong>が目安です（地域・加入保険により変動）。</p>
-
+    
     <h2>節約のコツと注意点</h2>
     <div class="box">
       <ul class="list-style">
@@ -137,6 +137,7 @@ get_header(); ?>
         <tr><td><strong>合計目安</strong></td><td><strong>125,000〜225,000円</strong></td></tr>
       </tbody>
     </table>
+    <p>銃の保管に必要な設備については、<a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカー・装弾ロッカーの選び方</a>で詳しく解説しています。</p> 
     </div>
 
     <h2>よくある質問（Q&A）</h2>
