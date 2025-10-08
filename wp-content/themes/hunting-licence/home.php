@@ -7,11 +7,11 @@
 			</div>
 		</div>
 		<div class="inner">
-			<!-- ▼ 主要ナビ（常時表示の5ボタン＋折りたたみ） -->
-			<h2>よく使われている過去問と情報</h2>
-			<nav class="primary-cta-nav">
-			<ul class="primary-cta gun-links-list">
-
+			<!-- ▼ 主要ナビ（常時表示のボタン＋折りたたみ） -->
+<h2>よく使われている過去問と情報</h2>
+<nav class="primary-cta-nav">
+			<!-- ★ クラスを gun-links-list → quick-links に変更（赤ボタン化） -->
+			<ul class="primary-cta quick-links">
 				<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
 				<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
 				<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
@@ -31,7 +31,8 @@
 			</p>
 
 			<div id="more-cta" class="more-cta" style="display:none;">
-				<ul class="secondary-cta gun-links-list">
+				<!-- ★ こちらも gun-links-list → quick-links に変更（赤ボタン化を揃える） -->
+				<ul class="secondary-cta quick-links">
 				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
 				<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
 				<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
@@ -42,8 +43,10 @@
 				<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">所持許可の手続き</a></li>
 				</ul>
 			</div>
+
 			</nav>
 			<!-- ▲ 主要ナビここまで -->
+
 			<h2>2025年 狩猟免許試験の申込みと日程</h2>
 			<p>2025年の試験申込み期間と試験日程です。<br><span class="marker bold">※日程が変更になっている場合がありますので必ず受験希望の自治体の情報を確認してください。</span></p>
 			<p><a href="<?php echo home_url('/schedule/'); ?>">▶ 狩猟免許試験日程を見る</a></p>

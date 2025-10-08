@@ -545,53 +545,107 @@ h2 {
   border: 1px solid #ccc;
   text-align: left;
 }
-// TOP猟銃関連リンク
+/* ==========================
+   TOP 猟銃関連リンク（改良版）
+   ========================== */
+
+/* セクション本体（薄グレーの箱） */
 .gun-links-box {
   margin: 2em 0;
-  padding: 1.5em;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  padding: 1.5em 0;          /* 本文は子要素側で左右にパディング付与 */
+  background-color: #f3f5f4; /* ほんの少し明るめのグレーで可読性UP */
+  border: 1px solid #dde2e0;
+  border-radius: 8px;
 }
 
+/* ── フルブリード化（PCで横幅いっぱい） ──
+   ※ .inner の中にあっても、この指定で画面幅いっぱいに広げます */
+@media (min-width: 1024px) {
+  .gun-links-box {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%); /* セクション自体を中央に */
+  }
+}
+
+/* セクション内部のコンテンツを最大幅で中央寄せ
+   （HTMLを変えずに、h2・p・リンク群をまとめて中央 1200px に収める） */
+.gun-links-box h2,
+.gun-links-box p,
+.gun-links-box .top-link {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 見出しの下線と余白を少し強調 */
+.gun-links-box h2 {
+  margin: 0 0 0.75em;
+  padding: 0 16px 8px;       /* スマホで左右に余白（本文と揃える） */
+  border-bottom: 2px solid #cfd8dc;
+}
+
+/* 本文の可読性向上（スマホ左右に余白を追加） */
 .gun-links-box p {
   margin-bottom: 1em;
   font-size: 0.95em;
-  line-height: 1.7;
-  color: #555;
+  line-height: 1.8;
+  color: #444;
+  padding: 0 16px;           /* ← これでスマホのテキスト左右の詰まりを解消 */
 }
 
+/* リンク一覧：グリッド配置 */
 .gun-links-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* モバイルは1列 */
   gap: 1rem;
-  margin: 2em 0;
-  padding: 0;
+  margin: 1.5em auto 0;
+  padding: 0 16px;            /* モバイル時ボタン左右に余白 */
   list-style: none;
+  max-width: 1200px;          /* 中身は中央1200px */
 }
 
+/* PCは3列 */
+@media (min-width: 768px) {
+  .gun-links-list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 24px;          /* デスクトップで少し余裕 */
+  }
+}
+
+/* ── ボタン（濃い緑 & 可読性UP） ── */
 .gun-links-list a {
   display: block;
-  background: rgb(193, 22, 22);
+  background: #2e7d32;        /* 指定の濃い緑 */
   color: #fff;
   text-align: center;
   padding: 1em;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 700;
   font-size: 0.95em;
+  line-height: 1.4;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+  word-break: keep-all;       /* 日本語の不自然な改行を抑制 */
 }
 
 .gun-links-list a:hover {
-  background: #a81515;
+  background: #276c2b;        /* 少し暗くしてホバー明確に */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 rgba(0,0,0,.03), 0 10px 20px rgba(0,0,0,.08);
 }
 
-/* PC表示は3列 */
-@media screen and (min-width: 768px) {
-  .gun-links-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.gun-links-list a:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
 }
+
+/* 参考リンク（「猟銃免許 過去問はこちら」）の行間調整 */
+.gun-links-box p a {
+  text-decoration: underline;
+}
+
 /* 地域×都道府県の表レイアウト */
 .region-table { width:100%; margin: 1rem 0 2rem; border-top:1px solid #e5e7eb; font-size:15px; }
 .region-table__head, .region-table__row {
@@ -620,5 +674,54 @@ h2 {
   .region-table .col-region { margin-bottom:.25rem; font-weight:700; }
 }
 
+/* ================================
+   上部クイックリンク（赤ボタン用）
+   gun-links-list とは切り離して運用
+   ================================ */
+
+/* レイアウト：gun-links-list と同等 */
+.quick-links {
+  display: grid;
+  grid-template-columns: 1fr;   /* SP: 1列 */
+  gap: 1rem;
+  margin: 1.5em auto 0;
+  padding: 0 16px;              /* SPで左右に余白 */
+  list-style: none;
+  max-width: 1200px;
+}
+@media (min-width: 768px) {
+  .quick-links {
+    grid-template-columns: repeat(3, 1fr); /* タブレット～PC: 3列 */
+    padding: 0 24px;
+  }
+}
+
+/* ボタン（赤系） */
+.quick-links a {
+  display: block;
+  background: #c62828;   /* 赤 */
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95em;
+  line-height: 1.4;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+  word-break: keep-all;
+}
+.quick-links a:hover {
+  background: #8e0000;   /* 濃い赤でホバー */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 rgba(0,0,0,.03), 0 10px 20px rgba(0,0,0,.08);
+}
+.quick-links a:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* 既存の緑ボタン（gun-links-list）はそのまま */
 
 /*# sourceMappingURL=top.css.map */
