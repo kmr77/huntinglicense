@@ -724,4 +724,45 @@ h2 {
 
 /* 既存の緑ボタン（gun-links-list）はそのまま */
 
+/* 賃貸×ガンロッカー設置ブロック */
+.rental-locker-tips {
+  margin: 24px 0;
+  padding: 16px 18px;
+  background: #f6faf7;                /* 薄いグリーン系（安全/保管の文脈に合う） */
+  border: 1px solid #d9ead3;
+  border-radius: 8px;
+}
+
+.rental-locker-tips h2 {
+  margin: 0 0 10px;
+}
+
+.rental-locker-tips p {
+  margin: 0 0 10px;
+  line-height: 1.75;
+}
+
+.rental-locker-tips .rental-locker-links {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.rental-locker-tips .rental-locker-links a {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .rental-locker-tips {
+    padding: 18px 20px;
+  }
+  .rental-locker-tips .rental-locker-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /*# sourceMappingURL=top.css.map */
