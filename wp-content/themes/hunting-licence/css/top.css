@@ -764,5 +764,19 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+.insurance-info-box {
+  background: #f7f9f9;
+  border: 1px solid #d9e2e2;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-top: 2em;
+}
+.insurance-info-box h3 {
+  margin:0 0 0.5em;
+}
+.insurance-info-box a {
+  color: #006699;
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=top.css.map */

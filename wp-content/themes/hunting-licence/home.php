@@ -83,8 +83,23 @@
 				<li>▶ <a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方・おすすめ製品</a></li>
 				<li>▶ <a href="<?php echo home_url('/gun-cost/'); ?>">初期費用・維持費の目安（所持許可・設備費）</a></li>
 			</ul>
+			<div class="insurance-info-box">
+		   <h3><span class="marker">ガンロッカー設置時に知っておきたい保険・補償制度</span></h3>
+		   <p>賃貸住宅でガンロッカーを設置する場合、<strong>火災・水漏れ・盗難</strong>などのトラブルに備えて保険内容を確認しておくことが重要です。  
+		   加入している<strong>火災保険や家財保険に「個人賠償責任補償」</strong>が含まれていれば、万一の破損や事故にも対応できるケースがあります。</p>
+
+		   <p>また、狩猟・射撃を行う方は、猟友会などを通じて加入できる<strong>「ハンター保険（猟銃保険）」</strong>にも注目しましょう。  
+		   銃の誤射や第三者への損害にも対応する補償内容があり、<a href="<?php echo home_url('/gun-insurance/'); ?>">猟銃保険・補償ガイド</a>で詳細を解説しています。</p>
+
+		   <ul class="link-list">
+			<li>▶ <a href="<?php echo home_url('/gun-insurance/'); ?>">猟銃保険・補償ガイド（加入方法と費用）</a></li>
+			<li>▶ <a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用まとめ</a></li>
+		  </ul>
+
+		   </div>
 			</section>
 			<!-- ▲ 賃貸×ガンロッカー設置（高CPC文脈ブロック） -->
+
 
 			<?php // 高視認ゾーンで広告も1枠だけ挿入（クリック率向上）
 			get_template_part('parts-ads'); ?>
