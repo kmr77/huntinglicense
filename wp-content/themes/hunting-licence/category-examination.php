@@ -152,5 +152,5 @@
 
         <?php wp_reset_postdata(); ?>
       </div>
-
+<?php get_template_part('parts-category-faq'); ?>
 <?php get_footer(); ?>

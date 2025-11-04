@@ -43,18 +43,27 @@
         <div class="accordion-inner" id="question">
           <dl id="accordion">
           <?php
-            // クエリ作成
+            // 投稿件数設定
+            $posts_per_page = 10;
+
+            // 現在のページ番号取得
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        
+            // 投稿番号を連番で表示させるための開始値
+            $counter = ($paged - 1) * $posts_per_page + 1;
+        
+            // ランダム or 通常順の判定
             $random = isset($_GET['random']) ? $_GET['random'] : 0;
             $orderby = ($random == 1) ? 'rand' : 'ID';
             $order = ($random == 1) ? '' : 'ASC';
+        
 
             $args = array(
-            'category_name' => 'ami',
-            'posts_per_page' => 30,
-            'paged' => $paged,
-            'orderby' => $orderby,
-            'order' => $order
+              'category_name' => 'ami',
+              'posts_per_page' => $posts_per_page,
+              'paged' => $paged,
+              'orderby' => $orderby,
+              'order' => $order
             );
 
             $the_query = new WP_Query($args);
@@ -118,6 +127,20 @@
             endif;
           ?>
           </dl>
-      </div>
+          <!-- ページネーション -->
+          <div class="pagination">
+            <?php
+              echo paginate_links(array(
+                'total' => $the_query->max_num_pages,
+                'current' => $paged,
+                'mid_size' => 2,
+                'prev_text' => '« 前へ',
+                'next_text' => '次へ »',
+              ));
+            ?>
+          </div>
 
+  <?php wp_reset_postdata(); ?>
+      </div>
+<?php get_template_part('parts-category-faq'); ?>
 <?php get_footer(); ?>
