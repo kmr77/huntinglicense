@@ -40,17 +40,8 @@ crossorigin="anonymous"></script>
     <meta name="description" content="狩猟免許の過去問すべてを網羅しているサイトです！600問以上の狩猟免許・猟銃許可の過去問を猟具別に狩猟免許試験例題集の問題をもとに掲載している合格対策サイトです。狩猟免許とはどういう免許なのかを学ぶこともできます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
-    <title>狩猟免許取得に知っておくべき基本情報まとめ｜狩猟免許取るには</title>
+    <title>狩猟免許取得に知っておくべき基本情報まとめ</title>
     <meta name="description" content="狩猟を始める前に知っておきたい基礎知識や注意点を簡潔に紹介。初心者が安心して準備できる情報をまとめています。。">
-  <?php elseif ( is_page('application') ) : ?>
-    <title>狩猟免許受験申請の手順と必要書類ガイド｜狩猟免許取るには</title>
-    <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
-  <?php elseif ( is_page('registration') ) : ?>
-    <title>狩猟免許受験申請の手順と必要書類ガイド｜狩猟免許取るには</title>
-    <meta name="description" content="狩猟免許試験を受けるための申請方法や準備すべき書類を詳しく解説。受験までの流れをスムーズに進められます。">
-  <?php elseif ( is_page('study-method') ) : ?>
-    <title>狩猟免許に独学で合格する勉強法まとめ｜狩猟免許取るには</title>
-    <meta name="description" content="狩猟免許試験に独学で合格するためのおすすめ勉強方法とスケジュール例を解説。初心者でも安心して始められる学習ガイド。">
   <?php elseif ( is_page('schedule') ) : 
   $year = isset($_GET['year']) ? intval($_GET['year']) : 2025;
   $custom_title = $year . '年度 狩猟免許試験スケジュール一覧｜都道府県別リンク付き';
