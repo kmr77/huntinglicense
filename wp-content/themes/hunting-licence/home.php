@@ -19,26 +19,27 @@
 				<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
 				<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方</a></li>
 				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
-				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
+				<li><a href="<?php echo home_url('/rifle/'); ?>">ライフルとは？</a></li>
 				<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 				<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
 			</ul>
-
+			
 			<p class="center">
 				<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta">
-				もっと見る
+					もっと見る
 				</button>
 			</p>
-
+			
 			<div id="more-cta" class="more-cta" style="display:none;">
 				<!-- ★ こちらも gun-links-list → quick-links に変更（赤ボタン化を揃える） -->
 				<ul class="secondary-cta quick-links">
-				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
-				<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
-				<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格の勉強法</a></li>
-				<li><a href="<?php echo home_url('/information/'); ?>">都道府県の申込情報まとめ</a></li>
+					<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
+					<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
+					<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
+					<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
+					<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格の勉強法</a></li>
+					<li><a href="<?php echo home_url('/information/'); ?>">都道府県の申込情報まとめ</a></li>
+					<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
 				<li><a href="<?php echo home_url('/examination-info/'); ?>">講習会の流れと対策</a></li>
 				<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">所持許可の手続き</a></li>
 				</ul>
