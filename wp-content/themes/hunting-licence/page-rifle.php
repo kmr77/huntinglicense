@@ -32,6 +32,8 @@ get_header(); ?>
       <li><strong>大型獣に有効な貫通力</strong>を持つ</li>
     </ul>
     <p>そのため、ライフル銃は<strong>精密射撃用の銃</strong>として位置付けられています。</p>
+    <p><img class="rifle-img-small" src="<?php echo get_template_directory_uri(); ?>/img/rifling.avif" alt="ライフリング" width="300"></p>
+
 
     <h2>ライフル銃の種類</h2>
     <p>ライフル銃にはいくつかの方式があります。</p>

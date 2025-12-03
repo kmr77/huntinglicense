@@ -778,5 +778,11 @@ h2 {
   color: #006699;
   text-decoration: underline;
 }
+.rifle-img-small {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=top.css.map */
