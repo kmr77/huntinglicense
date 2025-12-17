@@ -12,14 +12,14 @@
 <nav class="primary-cta-nav">
 			<!-- ★ クラスを gun-links-list → quick-links に変更（赤ボタン化） -->
 			<ul class="primary-cta quick-links">
-				<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
-				<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
 				<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
 				<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
 				<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方</a></li>
-				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
 				<li><a href="<?php echo home_url('/rifle/'); ?>">ライフルとは？</a></li>
+				<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
+				<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
+				<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
+				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
 				<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
 				<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
 			</ul>
