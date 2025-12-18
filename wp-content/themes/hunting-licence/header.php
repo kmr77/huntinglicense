@@ -182,6 +182,7 @@ crossorigin="anonymous"></script>
 
   <?php
   if ( is_tag() ) {
+    echo '<meta name="robots" content="noindex,follow">';
     $paged = get_query_var('paged') ? (int)get_query_var('paged') : 1;
     $tag = get_queried_object();
     $slug = $tag->slug;
