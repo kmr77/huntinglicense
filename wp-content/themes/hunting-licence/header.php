@@ -99,7 +99,7 @@ crossorigin="anonymous"></script>
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="猟銃等講習会の初心者考査に出題される重要例題50問を収録。過去問解答と解説つきで、初めての方でも効率よく学べる保存版の猟銃免許対策ページです。">
+    <meta name="description" content="猟銃等講習会の初心者考査・試験問題に出題される重要過去問50問を厳選収録。実際の猟銃等講習会で出やすい問題を中心に、解答と詳しい解説つきで初心者でも一発合格を目指せます。">
   <?php elseif ( is_category('numbers') ) :
     $title = '数字に特化した対策問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
