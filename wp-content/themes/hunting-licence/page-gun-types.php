@@ -34,6 +34,12 @@ get_header(); ?>
         <tr><td>ハーフライフル銃</td><td>銃身の一部に旋条</td><td>回転するが精度は中程度</td><td>中距離での大型獣猟</td><td>2025年法改正でライフルと同等扱い</td></tr>
       </tbody>
     </table>
+    <p class="link-next">
+      ▶ <a href="<?php echo home_url('/gun-types-detail/'); ?>">
+        銃の種類ごとの有効射程距離・狩猟対象・所持条件を詳しく解説
+      </a>
+    </p>
+
     <?php get_template_part('parts-gun-question'); ?>
 
 		<h2>銃猟とは？</h2>

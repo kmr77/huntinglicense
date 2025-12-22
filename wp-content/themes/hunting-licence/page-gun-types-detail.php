@@ -63,7 +63,7 @@ get_header(); ?>
         </tr>
       </tbody>
     </table>
-
+    
     <?php get_template_part('parts-ads'); ?>
 
     <h2>有効射程距離と最高到達距離の違い</h2>
@@ -98,6 +98,13 @@ get_header(); ?>
     <p>
       2025年の法改正により、ハーフライフル銃はライフル銃と同等の扱いとなり、
       所持条件や審査基準が厳格化されました。
+    </p>
+    <p class="link-back">
+      ※ 銃の基本的な種類や構造については  
+      <a href="<?php echo home_url('/gun-types/'); ?>">
+        銃の種類（概要）ページ
+      </a>
+      で解説しています。
     </p>
 
     <h2>初心者が誤解しやすいポイント</h2>
