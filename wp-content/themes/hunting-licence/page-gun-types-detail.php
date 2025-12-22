@@ -21,7 +21,7 @@ get_header(); ?>
 </div>
 
 <div class="inner">
-  <div class="contents">
+  <div class="contents study-method">
 
     <h2>銃の種類ごとの有効射程距離（読本ベースの目安）</h2>
     <p>
