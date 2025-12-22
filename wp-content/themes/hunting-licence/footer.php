@@ -40,6 +40,8 @@
         <li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">一種・二種銃猟の違い</a></li>
         <li><a href="<?php echo home_url('/license-extermination/'); ?>">狩猟免許と有害駆除の違い</a></li>
         <li><a href="<?php echo home_url('/gun-types/'); ?>">銃の種類の違い</a></li>
+        <li><a href="<?php echo home_url('/gun-types-detail/'); ?>">銃の種類（射程・所持条件）</a></li>
+        <li><a href="<?php echo home_url('/rifle/'); ?>">ライフルとは？</a></li>
         <li><a href="<?php echo home_url('/rifle-revision/'); ?>">法改正とハーフライフル</a></li>
         <li><a href="<?php echo home_url('/gun-difference/'); ?>">散弾銃と空気銃の違い</a></li>
         <li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許に関するよくある質問</a></li>

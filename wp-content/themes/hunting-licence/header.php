@@ -312,12 +312,7 @@ crossorigin="anonymous"></script>
             <li><a href="<?php echo home_url('/category/animals/'); ?>">鳥獣問題</a></li>
             <li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
             <li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
-            <li>
-              <div class="new-icon">
-                <span><img src="<?php echo get_template_directory_uri(); ?>/img/new12.gif" alt="NEW" width="31" height="15"></span>
-                <span><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト</a></span>
-              </div>
-          </li>
+            <li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣イラスト</a></li>
           </ul>
         </nav>
       </div>
