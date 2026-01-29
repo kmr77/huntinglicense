@@ -684,7 +684,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;   /* SP: 1列 */
   gap: 1rem;
-  margin: 1.5em auto 0;
+  margin: 1.5em auto;
   padding: 0 16px;              /* SPで左右に余白 */
   list-style: none;
   max-width: 1200px;
