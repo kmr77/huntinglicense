@@ -8,8 +8,8 @@
 		</div>
 		<div class="inner">
 			<!-- ▼ 主要ナビ（常時表示のボタン＋折りたたみ） -->
-<h2>よく使われている過去問と情報</h2>
-<nav class="primary-cta-nav">
+		<h2>よく使われている過去問と情報</h2>
+		<nav class="primary-cta-nav">
 			<!-- ★ クラスを gun-links-list → quick-links に変更（赤ボタン化） -->
 			<ul class="primary-cta quick-links">
 				<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
@@ -48,10 +48,7 @@
 
 			</nav>
 			<!-- ▲ 主要ナビここまで -->
-
-			<h2>2025年 狩猟免許試験の申込みと日程</h2>
-			<p>2025年の試験申込み期間と試験日程です。<br><span class="marker bold">※日程が変更になっている場合がありますので必ず受験希望の自治体の情報を確認してください。</span></p>
-			<p><a href="<?php echo home_url('/schedule/'); ?>">▶ 狩猟免許試験日程を見る</a></p>
+			
 			<div class="gun-links-box">
 			<h2>猟銃の所持・講習会を考えている方へ</h2>
 			<p>狩猟免許を取得したあとに「猟銃を持ちたい」と考えている方は、猟銃等講習会や所持許可の取得、費用の目安、安全な保管方法などについても事前に理解しておく必要があります。
@@ -261,7 +258,14 @@
 			</a>
 			</li>
 			</ul>
-			</section>
+		</section>
+		<hr>
+		<h2>過去の試験日程（参考情報）</h2>
+		<p>
+		以下は<strong>2025年に実施された狩猟免許試験の日程</strong>です。<br>
+		現在の申込受付や試験日程ではありませんので、最新情報は各都道府県の公式発表をご確認ください。
+		</p>
+		<p><a href="<?php echo home_url('/schedule/'); ?>">【参考】2025年 狩猟免許試験日程（終了）</a></p>
 
 <!-- <?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
