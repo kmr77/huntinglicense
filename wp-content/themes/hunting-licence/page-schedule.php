@@ -6,7 +6,8 @@ get_header();
 
 // 年度パラメータ取得（例：?year=2026）
 // ✅ デフォルトは最新年度：2026
-$year = isset($_GET['year']) ? intval($_GET['year']) : 2026;
+$year = isset($_GET['sy']) ? intval($_GET['sy']) : 2026;
+
 
 // 表示対象年度（ハブUI用）…「2026 / 2025 まで」
 $available_years = [2026, 2025];
