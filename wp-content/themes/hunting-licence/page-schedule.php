@@ -4,7 +4,7 @@ Template Name: 狩猟免許 試験日程ページ（年度別）
 */
 get_header();
 
-// 年度パラメータ取得（例：?year=2026）
+// 年度パラメータ取得（例：?sy=2026）
 // ✅ デフォルトは最新年度：2026
 $year = isset($_GET['sy']) ? intval($_GET['sy']) : 2026;
 
@@ -96,11 +96,11 @@ if ($has_csv) {
   }
 }
 
-// 年度リンクURL生成
+// 年度リンクURL生成（※ year パラメータはWP予約語なので sy を使用）
 function schedule_year_url($y) {
   // /schedule/ を基点にする想定（固定ページのURLが /schedule/ である前提）
   // もし違う場合は、このURL生成だけあなたの実URLに合わせて変更してください。
-  return home_url('/schedule/?year=' . intval($y));
+  return home_url('/schedule/?sy=' . intval($y));
 }
 ?>
 <div class="inner">
@@ -118,9 +118,9 @@ function schedule_year_url($y) {
 <div class="inner">
   <div class="contents study-method">
 
-    <!-- ✅ 年度ハブUI（2026 / 2025のみ） -->
     <h2 class="schedule-year-title">年度を選択</h2>
 
+    <!-- ✅ 年度ハブUI（2026 / 2025のみ） -->
     <nav class="schedule-year-nav" aria-label="年度選択">
       <ul class="schedule-year-nav__list">
         <?php foreach ($available_years as $y): ?>
@@ -138,7 +138,6 @@ function schedule_year_url($y) {
         <?php endforeach; ?>
       </ul>
     </nav>
-
 
     <p>
       全国47都道府県で実施される狩猟免許試験の日程を一覧でまとめています。<br>
@@ -257,7 +256,7 @@ function schedule_year_url($y) {
       <dd>はい。申請方法・受付期間・必要書類は自治体によって異なります。</dd>
 
       <dt>Q. 年度の切り替えはどうすればいいですか？</dt>
-      <dd>ページ上部の年度リンクから切り替えできます。URLに「?year=2026」などを指定して表示することも可能です。</dd>
+      <dd>ページ上部の年度リンクから切り替えできます。URLに「?sy=2026」などを指定して表示することも可能です。</dd>
 
       <dt>Q. 最新の更新日はどこで確認できますか？</dt>
       <dd>ページ上部に「最終更新日」を表示しています（CSVに記録された確認日の最大値）。</dd>
@@ -300,7 +299,7 @@ function schedule_year_url($y) {
       "name": "年度の切り替えはどうすればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ページ上部の年度リンクから切り替えできます。URLに「?year=2026」などを指定して表示することも可能です。"
+        "text": "ページ上部の年度リンクから切り替えできます。URLに「?sy=2026」などを指定して表示することも可能です。"
       }
     },
     {
