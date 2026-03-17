@@ -276,6 +276,15 @@ crossorigin="anonymous"></script>
   </script>
   <meta property="og:site_name" content="狩猟免許過去問ドリル">
 <?php wp_head(); ?>
+<?php
+// カテゴリの2ページ目以降（/page/2/～）は noindex,follow
+if ( is_category() ) {
+  $paged = (int) get_query_var('paged');
+  if ( $paged >= 2 ) {
+    echo '<meta name="robots" content="noindex,follow">' . "\n";
+  }
+}
+?>
 </head>
 
 <body>
