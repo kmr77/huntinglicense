@@ -153,7 +153,7 @@ crossorigin="anonymous"></script>
       $default_description = $post_title . 'は狩猟対象か？特徴・生息地・習性の要点と〇×判定を解説。';
       $exp_title           = $custom_title;
       $exp_description     = $custom_description;
-      $use_noindex         = false;
+      $use_noindex         = true;
 
     // 通常投稿（設問）
     } else {
