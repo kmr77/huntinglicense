@@ -347,7 +347,8 @@ if ( is_category() ) {
               <li><a href="<?php echo home_url('/category/animals-judge/'); ?>"class="global-navigation__link">狩猟鳥獣イラスト</a></li>
               <li><a href="<?php echo home_url('/category/examination/'); ?>" class="global-navigation__link">猟銃免許 過去問</a></li>
               <li><a href="<?php echo home_url('/category/numbers/'); ?>" class="global-navigation__link">数字問題</a></li>
-              <li><a href="<?php echo home_url('/know/'); ?>" class="global-navigation__link">知っておくべきこと</a></li>
+              <li><a href="https://shuryo-checker.com/" target="_blank" rel="noopener noreferrer" class="global-navigation__link">狩猟免許更新チェッカー</a></li>
+              <li><a href="<?php echo home_url('/know/'); ?>" class="global-navigation__link" >知っておくべきこと</a></li>
               <li><a href="<?php echo home_url('/application/'); ?>" class="global-navigation__link">狩猟免許受験申請</a></li>
               <li><a href="<?php echo home_url('/content/'); ?>" class="global-navigation__link">狩猟免許試験の内容と対策</a></li>
               <li><a href="<?php echo home_url('/registration/'); ?>" class="global-navigation__link">狩猟者登録</a></li>
@@ -386,6 +387,7 @@ if ( is_category() ) {
             <div class="modal-nav">
               <ul>
                 <li><a href="https://www.shuryo-menkyo.com/">狩猟免許試験過去問題集</a></li>
+                <li><a href="https://shuryo-checker.com/" target="_blank" rel="noopener noreferrer">狩猟免許更新チェッカー</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/know/">知っておくべきこと</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/application/">狩猟免許受験申請</a></li>
                 <li><a href="https://www.shuryo-menkyo.com/content/">狩猟免許試験の内容と対策</a></li>

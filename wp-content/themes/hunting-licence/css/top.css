@@ -821,5 +821,46 @@ h2 {
 .schedule-year-nav__link.is-current{
   font-weight: 700;
 }
+/* TOP更新チェッカーリンク */
+.checker-intro-box {
+	margin-top: 24px;
+	padding: 20px;
+	border: 1px solid #d9e6dd;
+	border-radius: 12px;
+	background: #f8fbf9;
+}
 
+.checker-intro-box h3 {
+	margin: 0 0 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+.checker-intro-box p {
+	margin: 0 0 12px;
+	line-height: 1.9;
+}
+
+.checker-intro-note span {
+	font-weight: 700;
+	color: #256b47;
+}
+
+.checker-intro-btn {
+	margin-bottom: 0;
+}
+
+.checker-intro-btn a {
+	display: inline-block;
+	padding: 12px 20px;
+	border-radius: 999px;
+	background: #d94b45;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.checker-intro-btn a:hover {
+	opacity: 0.9;
+}
 /*# sourceMappingURL=top.css.map */
