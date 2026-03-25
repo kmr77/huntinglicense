@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="inner">
   <div class="contents study-method">
-
+  <?php get_template_part('parts-checker'); ?>
     <h2>狩猟免許試験に関する質問</h2>
     <?php get_template_part('parts-ads'); ?>
 

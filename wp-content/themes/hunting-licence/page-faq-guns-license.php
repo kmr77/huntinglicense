@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="inner">
     <div class="contents study-method">
     <p>このページでは、猟銃等講習会に関してよく寄せられる質問とその回答をまとめています。初めての方が不安を感じやすいポイントや、制度上の注意点について詳しく解説しています。</p>
-    
+    <?php get_template_part('parts-checker'); ?>
     <?php get_template_part('parts-ads'); ?>
     <h2>よくある質問</h2>
     <dl>

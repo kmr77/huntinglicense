@@ -45,7 +45,7 @@ get_header(); ?>
       <li>各手続きには有効期限があり、速やかに次の段階へ進む必要があります</li>
       <li>都道府県によって若干の流れや必要書類が異なるため、事前に確認を</li>
     </ul>
-
+    <?php get_template_part('parts-checker'); ?>
     <p>次のステップ：<a href="<?php echo home_url('/examination/faq/'); ?>">よくある質問を確認する ▶</a></p>
     <?php get_template_part('parts-connection-gun'); ?>
   </div>
