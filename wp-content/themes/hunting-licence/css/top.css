@@ -863,4 +863,139 @@ h2 {
 .checker-intro-btn a:hover {
 	opacity: 0.9;
 }
+.schedule-page .schedule-lead {
+	margin-bottom: 24px;
+	line-height: 1.9;
+}
+
+.schedule-year-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+}
+
+.schedule-year-nav li {
+	margin: 0;
+}
+
+.schedule-year-nav a,
+.schedule-year-nav span {
+	display: inline-block;
+	padding: 10px 16px;
+	border: 1px solid #d8d8d8;
+	border-radius: 999px;
+	background: #fff;
+	text-decoration: none;
+	line-height: 1.4;
+	font-weight: 700;
+}
+
+.schedule-year-nav .current span {
+	background: #333;
+	color: #fff;
+	border-color: #333;
+}
+
+.schedule-note {
+	margin-bottom: 24px;
+	line-height: 1.8;
+}
+
+.schedule-region-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0 0 28px;
+	padding: 0;
+	list-style: none;
+}
+
+.schedule-region-nav li {
+	margin: 0;
+}
+
+.schedule-region-nav a {
+	display: inline-block;
+	padding: 10px 16px;
+	border: 1px solid #d8d8d8;
+	border-radius: 999px;
+	background: #f7f7f7;
+	text-decoration: none;
+	line-height: 1.4;
+	font-weight: 700;
+	transition: 0.2s;
+}
+
+.schedule-region-nav a:hover {
+	background: #ececec;
+}
+
+.schedule-updated {
+	margin: 0 0 24px;
+	font-weight: 700;
+}
+
+.schedule-region-heading {
+	margin-top: 40px;
+	margin-bottom: 14px;
+	padding-left: 12px;
+	border-left: 4px solid #333;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+.schedule-table-wrap {
+	margin-bottom: 32px;
+}
+
+.schedule-table {
+	width: 100%;
+	min-width: 980px;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.schedule-table th,
+.schedule-table td {
+	padding: 12px 10px;
+	border: 1px solid #dcdcdc;
+	vertical-align: top;
+	line-height: 1.7;
+	font-size: 1rem;
+}
+
+.schedule-table th {
+	background: #f3f3f3;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.schedule-prefecture-cell {
+	font-weight: 700;
+	background: #fafafa;
+	scroll-margin-top: 90px;
+}
+
+@media screen and (max-width: 767px) {
+	.schedule-year-nav a,
+	.schedule-year-nav span,
+	.schedule-region-nav a {
+		padding: 9px 14px;
+		font-size: 1rem;
+	}
+
+	.schedule-region-heading {
+		font-size: 1.1rem;
+		margin-top: 32px;
+	}
+
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+}
 /*# sourceMappingURL=top.css.map */

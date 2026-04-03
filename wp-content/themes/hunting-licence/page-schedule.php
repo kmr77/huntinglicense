@@ -5,14 +5,13 @@ Template Name: 狩猟免許 試験日程ページ（年度別）
 get_header();
 
 // 年度パラメータ取得（例：?sy=2026）
-// ✅ デフォルトは最新年度：2026
+// デフォルトは最新年度：2026
 $year = isset($_GET['sy']) ? intval($_GET['sy']) : 2026;
 
-
-// 表示対象年度（ハブUI用）…「2026 / 2025 まで」
+// 表示対象年度
 $available_years = [2026, 2025];
 
-// 変な値が来たときの安全策：許可年度以外はデフォルトへ戻す
+// 許可年度以外はデフォルトへ戻す
 if (!in_array($year, $available_years, true)) {
   $year = 2026;
 }
@@ -20,10 +19,10 @@ if (!in_array($year, $available_years, true)) {
 // データディレクトリのパス
 $dir = get_template_directory() . "/schedule-list/{$year}/";
 
-// ✅ CSV（狩猟免許試験）正本ファイル
+// CSV（狩猟免許試験）正本ファイル
 $csv_path = $dir . "hunting-license.csv";
 
-// 都道府県スラッグと表示名（従来方式の互換用）
+// 都道府県スラッグと表示名（旧方式互換用）
 $prefectures = [
   'hokkaido' => '北海道', 'aomori' => '青森', 'iwate' => '岩手', 'miyagi' => '宮城', 'akita' => '秋田', 'yamagata' => '山形', 'fukushima' => '福島',
   'ibaraki' => '茨城', 'tochigi' => '栃木', 'gunma' => '群馬', 'saitama' => '埼玉', 'chiba' => '千葉', 'tokyo' => '東京', 'kanagawa' => '神奈川',
@@ -35,11 +34,40 @@ $prefectures = [
   'fukuoka' => '福岡', 'saga' => '佐賀', 'nagasaki' => '長崎', 'kumamoto' => '熊本', 'oita' => '大分', 'miyazaki' => '宮崎', 'kagoshima' => '鹿児島', 'okinawa' => '沖縄'
 ];
 
+// 地域ボタン用
+$regions = [
+  '北海道・東北' => [
+    'anchor' => 'pref-hokkaido',
+    'prefectures' => ['北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県']
+  ],
+  '関東' => [
+    'anchor' => 'pref-ibaraki',
+    'prefectures' => ['茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県']
+  ],
+  '中部' => [
+    'anchor' => 'pref-niigata',
+    'prefectures' => ['新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県', '岐阜県', '静岡県', '愛知県']
+  ],
+  '近畿' => [
+    'anchor' => 'pref-mie',
+    'prefectures' => ['三重県', '滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県']
+  ],
+  '中国' => [
+    'anchor' => 'pref-tottori',
+    'prefectures' => ['鳥取県', '島根県', '岡山県', '広島県', '山口県']
+  ],
+  '四国' => [
+    'anchor' => 'pref-tokushima',
+    'prefectures' => ['徳島県', '香川県', '愛媛県', '高知県']
+  ],
+  '九州・沖縄' => [
+    'anchor' => 'pref-fukuoka',
+    'prefectures' => ['福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県']
+  ],
+];
+
 /**
- * CSVヘッダーをキーとして1行ずつ連想配列にして読み込む（事故防止強め）
- * - BOM除去
- * - ヘッダーtrim + lowercase
- * - 列数不一致行はスキップ
+ * CSVヘッダーをキーとして1行ずつ連想配列にして読み込む
  */
 function schedule_read_csv_as_assoc($csv_path) {
   $rows = [];
@@ -55,18 +83,17 @@ function schedule_read_csv_as_assoc($csv_path) {
     return $rows;
   }
 
-  // BOM除去（1列目）
   if (isset($header[0])) {
     $header[0] = preg_replace('/^\xEF\xBB\xBF/', '', $header[0]);
   }
 
   $keys = [];
   foreach ($header as $h) {
-    $keys[] = strtolower(trim((string)$h));
+    $keys[] = trim((string)$h);
   }
 
   while (($data = fgetcsv($fp)) !== false) {
-    if (count($data) !== count($keys)) continue;
+    if (count($data) === 1 && trim((string)$data[0]) === '') continue;
 
     $row = [];
     foreach ($keys as $i => $k) {
@@ -79,28 +106,88 @@ function schedule_read_csv_as_assoc($csv_path) {
   return $rows;
 }
 
-// CSVがあるか（新方式）
-$has_csv = file_exists($csv_path);
+function schedule_year_url($y) {
+  return home_url('/schedule/?sy=' . intval($y));
+}
 
-// CSV読込
+function schedule_pref_anchor($prefecture) {
+  $map = [
+    '北海道' => 'pref-hokkaido',
+    '青森県' => 'pref-aomori',
+    '岩手県' => 'pref-iwate',
+    '宮城県' => 'pref-miyagi',
+    '秋田県' => 'pref-akita',
+    '山形県' => 'pref-yamagata',
+    '福島県' => 'pref-fukushima',
+    '茨城県' => 'pref-ibaraki',
+    '栃木県' => 'pref-tochigi',
+    '群馬県' => 'pref-gunma',
+    '埼玉県' => 'pref-saitama',
+    '千葉県' => 'pref-chiba',
+    '東京都' => 'pref-tokyo',
+    '神奈川県' => 'pref-kanagawa',
+    '新潟県' => 'pref-niigata',
+    '富山県' => 'pref-toyama',
+    '石川県' => 'pref-ishikawa',
+    '福井県' => 'pref-fukui',
+    '山梨県' => 'pref-yamanashi',
+    '長野県' => 'pref-nagano',
+    '岐阜県' => 'pref-gifu',
+    '静岡県' => 'pref-shizuoka',
+    '愛知県' => 'pref-aichi',
+    '三重県' => 'pref-mie',
+    '滋賀県' => 'pref-shiga',
+    '京都府' => 'pref-kyoto',
+    '大阪府' => 'pref-osaka',
+    '兵庫県' => 'pref-hyogo',
+    '奈良県' => 'pref-nara',
+    '和歌山県' => 'pref-wakayama',
+    '鳥取県' => 'pref-tottori',
+    '島根県' => 'pref-shimane',
+    '岡山県' => 'pref-okayama',
+    '広島県' => 'pref-hiroshima',
+    '山口県' => 'pref-yamaguchi',
+    '徳島県' => 'pref-tokushima',
+    '香川県' => 'pref-kagawa',
+    '愛媛県' => 'pref-ehime',
+    '高知県' => 'pref-kochi',
+    '福岡県' => 'pref-fukuoka',
+    '佐賀県' => 'pref-saga',
+    '長崎県' => 'pref-nagasaki',
+    '熊本県' => 'pref-kumamoto',
+    '大分県' => 'pref-oita',
+    '宮崎県' => 'pref-miyazaki',
+    '鹿児島県' => 'pref-kagoshima',
+    '沖縄県' => 'pref-okinawa',
+  ];
+
+  return isset($map[$prefecture]) ? $map[$prefecture] : sanitize_title($prefecture);
+}
+
+$has_csv = file_exists($csv_path);
 $csv_rows = [];
 $max_checked = '';
+
 if ($has_csv) {
   $csv_rows = schedule_read_csv_as_assoc($csv_path);
 
-  // last_checked 最大値（YYYY-MM-DD前提）
   foreach ($csv_rows as $r) {
-    if (!empty($r['last_checked']) && $r['last_checked'] > $max_checked) {
-      $max_checked = $r['last_checked'];
+    if (!empty($r['checked_date']) && $r['checked_date'] > $max_checked) {
+      $max_checked = $r['checked_date'];
     }
   }
 }
 
-// 年度リンクURL生成（※ year パラメータはWP予約語なので sy を使用）
-function schedule_year_url($y) {
-  // /schedule/ を基点にする想定（固定ページのURLが /schedule/ である前提）
-  // もし違う場合は、このURL生成だけあなたの実URLに合わせて変更してください。
-  return home_url('/schedule/?sy=' . intval($y));
+// 都道府県ごとにまとめる
+$grouped = [];
+foreach ($csv_rows as $r) {
+  $pref = $r['prefecture'] ?? '';
+  if ($pref === '') continue;
+
+  if (!isset($grouped[$pref])) {
+    $grouped[$pref] = [];
+  }
+  $grouped[$pref][] = $r;
 }
 ?>
 <div class="inner">
@@ -120,7 +207,6 @@ function schedule_year_url($y) {
 
     <h2 class="schedule-year-title">年度を選択</h2>
 
-    <!-- ✅ 年度ハブUI（2026 / 2025のみ） -->
     <nav class="schedule-year-nav" aria-label="年度選択">
       <ul class="schedule-year-nav__list">
         <?php foreach ($available_years as $y): ?>
@@ -147,7 +233,20 @@ function schedule_year_url($y) {
     <p class="bold"><span class="marker">※日程は変更される場合があります。各都道府県の公式情報を必ず確認してください。</span></p>
 
     <?php if ($has_csv): ?>
-      <!-- ✅ 新方式：CSV一覧表示（2026想定） -->
+
+      <h2 class="schedule-year-title">地域から探す</h2>
+      <nav class="schedule-year-nav" aria-label="地域選択">
+        <ul class="schedule-year-nav__list">
+          <?php foreach ($regions as $region_name => $region_data): ?>
+            <li class="schedule-year-nav__item">
+              <a class="schedule-year-nav__link" href="#<?php echo esc_attr($region_data['anchor']); ?>">
+                <?php echo esc_html($region_name); ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </nav>
+
       <?php if (!empty($max_checked)): ?>
         <p class="update">最終更新日：<?php echo esc_html($max_checked); ?></p>
       <?php endif; ?>
@@ -155,77 +254,99 @@ function schedule_year_url($y) {
       <?php if (empty($csv_rows)): ?>
         <p>現在、この年度のデータは未登録です。（CSVが空です）</p>
       <?php else: ?>
-        <div class="schedule-table-wrap table-scroll">
-          <table class="schedule-table ">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>都道府県</th>
-                <th>状況</th>
-                <th>申込期間</th>
-                <th>試験日</th>
-                <th>会場</th>
-                <th>公式</th>
-                <th>確認日</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($csv_rows as $r): ?>
-                <?php
-                  $no = $r['no'] ?? '';
-                  $pref = $r['pref'] ?? '';
-                  $status = trim($r['status'] ?? '');
 
-                  $apply_start = $r['apply_start'] ?? '';
-                  $apply_end   = $r['apply_end'] ?? '';
-                  $apply = '';
-                  if ($apply_start !== '' || $apply_end !== '') {
-                    $apply = $apply_start . '〜' . $apply_end;
-                  }
+        <?php foreach ($regions as $region_name => $region_data): ?>
+          <?php
+          $has_region_rows = false;
+          foreach ($region_data['prefectures'] as $pref_name) {
+            if (!empty($grouped[$pref_name])) {
+              $has_region_rows = true;
+              break;
+            }
+          }
+          if (!$has_region_rows) continue;
+          ?>
 
-                  $exam_date = str_replace('|', ' / ', $r['exam_date'] ?? '');
-                  $venue = str_replace('|', ' / ', $r['venue'] ?? '');
-                  $url = $r['official_url'] ?? '';
-                  $checked = $r['last_checked'] ?? '';
+          <section class="schedule-block">
+            <h2><?php echo esc_html($region_name); ?></h2>
 
-                  // status正規化
-                  $status_class = 'status--open';
-                  $status_label = '公開済';
-                  if ($status === '未公表') {
-                    $status_class = 'status--pending';
-                    $status_label = '未公表';
-                  } elseif ($status === '要確認') {
-                    $status_class = 'status--check';
-                    $status_label = '要確認';
-                  } elseif ($status !== '') {
-                    $status_label = $status; // 独自表記が入っていたらそのまま
-                    $status_class = 'status--open';
-                  }
-                ?>
-                <tr>
-                  <td><?php echo esc_html($no); ?></td>
-                  <td><?php echo esc_html($pref); ?></td>
-                  <td><span class="status <?php echo esc_attr($status_class); ?>"><?php echo esc_html($status_label); ?></span></td>
-                  <td><?php echo esc_html($apply); ?></td>
-                  <td><?php echo esc_html($exam_date); ?></td>
-                  <td><?php echo esc_html($venue); ?></td>
-                  <td>
-                    <?php if (!empty($url)): ?>
-                      <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener">公式</a>
-                    <?php endif; ?>
-                  </td>
-                  <td><?php echo esc_html($checked); ?></td>
-                </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        </div>
+            <div class="schedule-table-wrap table-scroll">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>都道府県</th>
+                    <th>公式</th>
+                    <th>状況</th>
+                    <th>申込期間</th>
+                    <th>試験日</th>
+                    <th>猟の種別</th>
+                    <th>会場</th>
+                    <th>確認日</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($region_data['prefectures'] as $pref_name): ?>
+                    <?php if (empty($grouped[$pref_name])) continue; ?>
+                    <?php
+                    $pref_rows = $grouped[$pref_name];
+                    $rowspan = count($pref_rows);
+                    $anchor_id = schedule_pref_anchor($pref_name);
+                    ?>
+
+                    <?php foreach ($pref_rows as $index => $r): ?>
+                      <tr>
+                        <td><?php echo esc_html($r['no'] ?? ''); ?></td>
+
+                        <?php if ($index === 0): ?>
+                          <td rowspan="<?php echo esc_attr($rowspan); ?>" id="<?php echo esc_attr($anchor_id); ?>">
+                            <?php echo esc_html($pref_name); ?>
+                          </td>
+                        <?php endif; ?>
+
+                        <td>
+                          <?php if (!empty($r['official_url'])): ?>
+                            <a href="<?php echo esc_url($r['official_url']); ?>" target="_blank" rel="noopener noreferrer">公式</a>
+                          <?php endif; ?>
+                        </td>
+
+                        <td>
+                          <?php
+                          $status = trim($r['status'] ?? '');
+                          $status_class = 'status--open';
+                          $status_label = '公開済';
+
+                          if ($status === '未公表') {
+                            $status_class = 'status--pending';
+                            $status_label = '未公表';
+                          } elseif ($status === '要確認') {
+                            $status_class = 'status--check';
+                            $status_label = '要確認';
+                          } elseif ($status !== '') {
+                            $status_label = $status;
+                          }
+                          ?>
+                          <span class="status <?php echo esc_attr($status_class); ?>"><?php echo esc_html($status_label); ?></span>
+                        </td>
+
+                        <td><?php echo nl2br(esc_html($r['application_period'] ?? '—')); ?></td>
+                        <td><?php echo nl2br(esc_html($r['exam_date'] ?? '—')); ?></td>
+                        <td><?php echo nl2br(esc_html($r['exam_type'] ?? '—')); ?></td>
+                        <td><?php echo nl2br(esc_html($r['venue'] ?? '—')); ?></td>
+                        <td><?php echo esc_html($r['checked_date'] ?? ''); ?></td>
+                      </tr>
+                    <?php endforeach; ?>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        <?php endforeach; ?>
 
         <p class="bold"><span class="marker">※日程は変更される場合があります。各都道府県の公式情報を必ず確認してください。</span></p>
       <?php endif; ?>
 
     <?php else: ?>
-      <!-- ✅ 旧方式：都道府県PHP include（2025互換） -->
       <?php
       foreach ($prefectures as $slug => $name) {
         $file = $dir . $slug . ".php";
@@ -259,7 +380,7 @@ function schedule_year_url($y) {
       <dd>ページ上部の年度リンクから切り替えできます。URLに「?sy=2026」などを指定して表示することも可能です。</dd>
 
       <dt>Q. 最新の更新日はどこで確認できますか？</dt>
-      <dd>ページ上部に「最終更新日」を表示しています（CSVに記録された確認日の最大値）。</dd>
+      <dd>ページ上部に「最終更新日」を表示しています。</dd>
     </dl>
 
     <?php get_template_part('parts-ads'); ?>
@@ -307,7 +428,7 @@ function schedule_year_url($y) {
       "name": "最新の更新日はどこで確認できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ページ上部に「最終更新日」を表示しています（CSVに記録された確認日の最大値）。"
+        "text": "ページ上部に最終更新日を表示しています。"
       }
     }
   ]
