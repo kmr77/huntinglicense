@@ -998,4 +998,47 @@ h2 {
     padding: 10px 8px;
   }
 }
+/* 申込・講習・費用リンク（SP: 縦 / PC: 横） */
+.schedule-related-title {
+  margin: 24px 0 12px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.schedule-related-links {
+  display: flex;
+  flex-direction: column; /* SPは縦 */
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.schedule-related-links__btn {
+  display: block;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.schedule-related-links__btn:hover,
+.schedule-related-links__btn:focus {
+  text-decoration: none;
+  border-color: #999;
+}
+
+/* PCで横並び */
+@media (min-width: 768px) {
+  .schedule-related-links {
+    flex-direction: row;
+  }
+
+  .schedule-related-links__btn {
+    flex: 1;
+    white-space: nowrap;
+  }
+}
 /*# sourceMappingURL=top.css.map */

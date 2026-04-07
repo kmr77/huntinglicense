@@ -247,6 +247,13 @@ foreach ($csv_rows as $r) {
         </ul>
       </nav>
 
+      <h2 class="schedule-related-title">申込・講習・費用もあわせて確認</h2>
+      <div class="schedule-related-links" aria-label="申込・講習・費用の案内">
+        <a class="schedule-related-links__btn" href="/examination/application/">申込方法と必要書類</a>
+        <a class="schedule-related-links__btn" href="/examination/gun-procedure/">猟銃等講習会の流れ</a>
+        <a class="schedule-related-links__btn" href="/gun-cost/">所持・準備にかかる費用</a>
+      </div>
+
       <?php if (!empty($max_checked)): ?>
         <p class="update">最終更新日：<?php echo esc_html($max_checked); ?></p>
       <?php endif; ?>
