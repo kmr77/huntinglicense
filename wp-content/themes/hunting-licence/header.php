@@ -285,6 +285,11 @@ if ( is_category() ) {
   }
 }
 ?>
+<?php 
+if ( is_page('contact') ) {
+  echo '<meta name="robots" content="noindex,follow">' . "\n";
+}
+?>
 </head>
 
 <body>
