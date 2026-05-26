@@ -1,51 +1,76 @@
-﻿no,prefecture,official_url,status,application_period,exam_date,exam_type,venue,checked_date
-1,北海道,https://www.pref.hokkaido.lg.jp/ks/skn/syuryo/syuryoumenkyo.html,要確認,,,,,2026-04-07
-2,青森県,https://www.pref.aomori.lg.jp/soshiki/kankyo/shizen/syuryoumenkyo.html,要確認,,,,,2026-04-07
-3,岩手県,https://www.pref.iwate.jp/,未公表,,,,,2026-04-07
-4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,要確認,,,,,2026-04-07
-5,秋田県,https://www.pref.akita.lg.jp/pages/genre/69054,要確認,,,,,2026-04-07
-6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/text.html,要確認,,,,,2026-04-07
-7,福島県,https://www.pref.fukushima.lg.jp/sec/01220a/kenmin-shuryou.html,要確認,,,,,2026-04-07
-8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-04-17〜2026-05-07,2026-05-17,第一種銃猟 / 第二種銃猟,茨城県狩猟者研修センター（笠間市石寺680番地）,2026-04-07
-8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-05-08〜2026-05-28,2026-06-09,網猟 / わな猟,茨城県狩猟者研修センター（笠間市石寺680番地）,2026-04-07
-8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-06-12〜2026-07-02,2026-07-12,第一種銃猟 / 第二種銃猟,茨城県狩猟者研修センター（笠間市石寺680番地）,2026-04-07
-9,栃木県,https://www.pref.tochigi.lg.jp/d56/kanrika/syuryou.html,要確認,,,,,2026-04-07
-10,群馬県,https://www.pref.gunma.jp/,要確認,,,,,2026-04-07
-11,埼玉県,https://www.pref.saitama.lg.jp/a0508/tyouzyu/syuryomenkyo/shiken.html,未公表,,,,,2026-04-07
-12,千葉県,https://www.pref.chiba.lg.jp/shizen/tetsuzuki/syuryo/index.html,要確認,,,,,2026-04-07
-13,東京都,https://www.metro.tokyo.lg.jp/,要確認,,,,,2026-04-07
-14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,2026-05-08〜2026-05-21,2026-07-06,第一種銃猟（単願） / 第二種銃猟（単願） / わな猟・第一種銃猟（併願） / わな猟・第二種銃猟（併願）,小田原合同庁舎（小田原市荻窪350-1）,2026-04-07
-14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,2026-05-08〜2026-05-21,2026-07-07,わな猟（単願）,小田原合同庁舎（小田原市荻窪350-1）,2026-04-07
-15,新潟県,https://www.pref.niigata.lg.jp/sec/kankyotaisaku/1356754341872.html,公開済,,,,,2026-04-07
-16,富山県,https://www.pref.toyama.jp/1709/kurashi/kankyoushizen/shizen/shuryou/shiken.html,要確認,,,,,2026-04-07
-17,石川県,https://www.pref.ishikawa.lg.jp/sizen/syuryou/shuryoumenkyo.html,要確認,,,,,2026-04-07
-18,福井県,https://www.pref.fukui.lg.jp/doc/shizen/shuryoumennkyokousinn/syuryo_miryoku.html,要確認,,,,,2026-04-07
-19,山梨県,https://www.pref.yamanashi.jp/shizen/syuryoumenkyosiken.html,要確認,,,,,2026-04-07
-20,長野県,https://www.pref.nagano.lg.jp/yasei/sangyo/ringyo/shuryo/oshirase.html,要確認,,,,,2026-04-07
-21,岐阜県,https://www.pref.gifu.lg.jp/page/17280.html,要確認,,,,,2026-04-07
-22,静岡県,https://www.pref.shizuoka.jp/kurashikankyo/shizenkankyo/wild/1017685.html,要確認,,,,,2026-04-07
-23,愛知県,https://www.pref.aichi.jp/soshiki/shizen/syuryou.html,要確認,,,,,2026-04-07
-24,三重県,https://www.pref.mie.lg.jp/,要確認,,,,,2026-04-07
-25,滋賀県,https://www.pref.shiga.lg.jp/ippan/kankyoshizen/shizen/14043.html,要確認,,,,,2026-04-07
-26,京都府,https://www.pref.kyoto.jp/choujyu/shuryou.html,要確認,,,,,2026-04-07
-27,大阪府,https://www.pref.osaka.lg.jp/o120140/doubutu/yaseidoubutu/syuryo_siken.html,要確認,,,,,2026-04-07
-28,兵庫県,https://web.pref.hyogo.lg.jp/,要確認,,,,,2026-04-07
-29,奈良県,https://www.pref.nara.jp/,要確認,,,,,2026-04-07
-30,和歌山県,https://www.pref.wakayama.lg.jp/prefg/072000/d00216577.html,要確認,,,,,2026-04-07
-31,鳥取県,https://www.pref.tottori.lg.jp/289517.htm,要確認,,,,,2026-04-07
-32,島根県,https://www.pref.shimane.lg.jp/,要確認,,,,,2026-04-07
-33,岡山県,https://www.pref.okayama.jp/,要確認,,,,,2026-04-07
-34,広島県,https://www.pref.hiroshima.lg.jp/,要確認,,,,,2026-04-07
-35,山口県,https://www.pref.yamaguchi.lg.jp/,要確認,,,,,2026-04-07
-36,徳島県,https://www.pref.tokushima.lg.jp/,要確認,,,,,2026-04-07
-37,香川県,https://www.pref.kagawa.lg.jp/,要確認,,,,,2026-04-07
-38,愛媛県,https://www.pref.ehime.jp/,要確認,,,,,2026-04-07
-39,高知県,https://www.pref.kochi.lg.jp/,要確認,,,,,2026-04-07
-40,福岡県,https://www.pref.fukuoka.lg.jp/,要確認,,,,,2026-04-07
-41,佐賀県,https://www.pref.saga.lg.jp/,要確認,,,,,2026-04-07
-42,長崎県,https://www.pref.nagasaki.lg.jp/,要確認,,,,,2026-04-07
-43,熊本県,https://www.pref.kumamoto.jp/,要確認,,,,,2026-04-07
-44,大分県,https://www.pref.oita.jp/,要確認,,,,,2026-04-07
-45,宮崎県,https://www.pref.miyazaki.lg.jp/,要確認,,,,,2026-04-07
-46,鹿児島県,https://www.pref.kagoshima.jp/,要確認,,,,,2026-04-07
-47,沖縄県,https://www.pref.okinawa.lg.jp/,要確認,,,,,2026-04-07
+no,prefecture,official_url,status,application_period,exam_date,exam_type,venue,checked_date
+1,北海道,https://www.pref.hokkaido.lg.jp/ks/skn/syuryo/syuryoumenkyo.html,公開済（前期）,,公式ページ参照,全種類,道内各会場,2026-05-08
+2,青森県,https://www.pref.aomori.lg.jp/soshiki/kankyo/shizen/syuryoumenkyo.html,公開済,,公式ページ参照,全種類,公式ページ参照,2026-05-08
+3,岩手県,https://www.pref.iwate.jp/kurashikankyou/shizen/yasei/shuryou/1073864.html,公開済,2026-05-27〜2026-06-10,2026-07-12,わな猟 / 第一種銃猟,岩手県立大学宮古短期大学部,2026-05-08
+3,岩手県,https://www.pref.iwate.jp/kurashikankyou/shizen/yasei/shuryou/1073864.html,公開済,2026-08-19〜2026-09-02,2026-10-04,網猟 / わな猟 / 第一種銃猟 / 第二種銃猟,岩手県立大学,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-06-25,わな猟限定,岩出山文化会館,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-07-11,全種類等（公式参照）,宮城県石巻合同庁舎,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-07-22,全種類等（公式参照）,宮城県大河原合同庁舎,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-08-22,全種類等（公式参照）,宮城県仙台合同庁舎,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-08-23,全種類等（公式参照）,宮城県仙台合同庁舎,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-09-15,わな猟限定,宮城県自治会館,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2026-11-07,わな猟限定,宮城県農業大学校,2026-05-08
+4,宮城県,https://www.pref.miyagi.jp/soshiki/sizenhogo/syuryoumenkyosiken.html,公開済,,2027-01-16,全種類等（公式参照）,宮城県自治会館,2026-05-08
+5,秋田県,https://www.pref.akita.lg.jp/pages/archive/95347,公開済,,2026-06-14,全種類等（公式参照）,秋田県森林学習交流館プラザクリプトン,2026-05-08
+5,秋田県,https://www.pref.akita.lg.jp/pages/archive/95347,公開済,,2026-07-26,全種類等（公式参照）,大仙市神岡農村環境改善センター,2026-05-08
+5,秋田県,https://www.pref.akita.lg.jp/pages/archive/95347,公開済,,2026-09-27,全種類等（公式参照）,北欧の杜公園パークセンター,2026-05-08
+5,秋田県,https://www.pref.akita.lg.jp/pages/archive/95347,公開済,,2026-12-06,全種類等（公式参照）,秋田県森林学習交流館プラザクリプトン,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-06-08〜2026-06-22,2026-07-18,全種類等（公式参照）,庄内総合支庁,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-07-06〜2026-07-21,2026-08-22,全種類等（公式参照）,置賜総合支庁本庁舎,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-08-03〜2026-08-17,2026-09-12,わな猟免許単願者不可,村山総合支庁本庁舎,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-08-03〜2026-08-17,2026-09-13,わな猟のみ,村山総合支庁本庁舎,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-10-26〜2026-11-09,2026-12-04,銃猟免許のみ,最上総合支庁,2026-05-08
+6,山形県,https://www.pref.yamagata.jp/050011/kurashi/shizen/seibutsu/about_hunting/hunter_license_test/index.html,公開済,2026-12-14〜2026-12-25,2027-01-22,わな猟のみ,村山総合支庁西村山地域振興局,2026-05-08
+7,福島県,https://www.pref.fukushima.lg.jp/sec/16035b/syuryoumennkyoshiken2026.html,公開済,2026-06-08〜2026-07-10,2026-08-08,すべての免許,アピオスペース,2026-05-08
+7,福島県,https://www.pref.fukushima.lg.jp/sec/16035b/syuryoumennkyoshiken2026.html,公開済,2026-07-06〜2026-08-07,2026-09-05,すべての免許,富岡町文化交流センター 学びの森,2026-05-08
+7,福島県,https://www.pref.fukushima.lg.jp/sec/16035b/syuryoumennkyoshiken2026.html,公開済,2026-08-03〜2026-09-04,2026-10-04,すべての免許,郡山市労働福祉会館,2026-05-08
+8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-04-17〜2026-05-07,2026-05-17,第一種銃猟 / 第二種銃猟,茨城県狩猟者研修センター,2026-05-08
+8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-05-08〜2026-05-28,2026-06-09,網猟 / わな猟,茨城県狩猟者研修センター,2026-05-08
+8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-06-12〜2026-07-02,2026-07-12,第一種銃猟 / 第二種銃猟,茨城県狩猟者研修センター,2026-05-08
+8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-07-09〜2026-07-29,2026-08-08,網猟 / わな猟,茨城県土浦合同庁舎,2026-05-08
+8,茨城県,https://www.pref.ibaraki.jp/seikatsukankyo/shizen/shizen/hunting_license_exam/exam.html,公開済,2026-08-10〜2026-08-31,2026-09-10,第一種銃猟 / 第二種銃猟,茨城県狩猟者研修センター,2026-05-08
+9,栃木県,https://www.pref.tochigi.lg.jp/d04/eco/shizenkankyou/shizen/syuryomenkyo.html,公開済,,2026-07-26,全種類等（会場により異なる）,県芳賀庁舎 / 県那須庁舎 / 県安蘇庁舎,2026-05-08
+9,栃木県,https://www.pref.tochigi.lg.jp/d04/eco/shizenkankyou/shizen/syuryomenkyo.html,公開済,,2026-08-29,わな猟 / 第一種銃猟等,日光市大沢公民館 / 塩谷町生涯学習センター,2026-05-08
+9,栃木県,https://www.pref.tochigi.lg.jp/d04/eco/shizenkankyou/shizen/syuryomenkyo.html,公開済,,2026-10-16,わな猟 / 第一種銃猟等,県上都賀庁舎 / 県安蘇庁舎,2026-05-08
+9,栃木県,https://www.pref.tochigi.lg.jp/d04/eco/shizenkankyou/shizen/syuryomenkyo.html,公開済,,2026-11-29,わな猟 / 第一種銃猟等,県芳賀庁舎 / 県那須庁舎 / 矢板市生涯学習館,2026-05-08
+10,群馬県,https://www.pref.gunma.jp/page/637096.html,公開済,,公式ページ参照,全種類,公式ページ参照,2026-05-08
+11,埼玉県,https://www.pref.saitama.lg.jp/a0508/tyouzyu/syuryomenkyo/shiken.html,要確認（県報公告あり）,,公式ページ参照,全種類,公式ページ参照,2026-05-08
+12,千葉県,https://www.pref.chiba.lg.jp/shizen/tetsuzuki/syuryo/siken.html,公開済,,公式ページ参照,全種類,千葉県射撃場ほか,2026-05-08
+13,東京都,https://www.metro.tokyo.lg.jp/,未確認,,,,,2026-05-08
+14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,2026-05-08〜2026-05-21,2026-07-06,銃猟単願 / 併願等,小田原合同庁舎,2026-05-08
+14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,2026-05-08〜2026-05-21,2026-07-07,わな猟単願,小田原合同庁舎,2026-05-08
+14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,,2026-08-29,網猟・第一種銃猟等,県立保健福祉大学 横須賀キャンパス,2026-05-08
+14,神奈川県,https://www.pref.kanagawa.jp/docs/t4i/cnt/f986/p889836.html,公開済,,2026-08-30,網猟 / わな猟等,県立保健福祉大学 横須賀キャンパス,2026-05-08
+15,新潟県,https://www.pref.niigata.lg.jp/sec/kankyotaisaku/1356779151430.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+16,富山県,https://www.pref.toyama.jp/1709/kurashi/kankyoushizen/shizen/shuryou/shiken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+17,石川県,https://www.pref.ishikawa.lg.jp/sizen/syuryou/shuryoumenkyo.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+18,福井県,https://www.pref.fukui.lg.jp/doc/shizen/shuryoushikenr08.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+19,山梨県,https://www.pref.yamanashi.jp/shizen/syuryoumenkyosiken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+20,長野県,https://www.pref.nagano.lg.jp/yasei/sangyo/ringyo/shuryo/oshirase.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+21,岐阜県,https://www.pref.gifu.lg.jp/page/17280.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+22,静岡県,https://www.pref.shizuoka.jp/kurashikankyo/shizenkankyo/wild/1017684.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+23,愛知県,https://www.pref.aichi.jp/soshiki/shizen/shuryoumenkyoshiken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+24,三重県,https://www.pref.mie.lg.jp/TOPICS/m0025300099.htm,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+25,滋賀県,https://www.pref.shiga.lg.jp/ippan/kankyoshizen/shizen/14043.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+26,京都府,https://www.pref.kyoto.jp/noson/syuryouexam.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+27,大阪府,https://www.pref.osaka.lg.jp/o120140/doubutu/yaseidoubutu/syuryo_siken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+28,兵庫県,https://web.pref.hyogo.lg.jp/nk27/hw24_000000008.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+29,奈良県,https://nsa.pref.nara.jp/ctztop/pin-content/a1DJ30000025z8CMAQ/co00004141,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+30,和歌山県,https://www.pref.wakayama.lg.jp/prefg/072000/d00216577.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+31,鳥取県,https://www.pref.tottori.lg.jp/289602.htm,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+32,島根県,https://www.pref.shimane.lg.jp/industry/norin/choujyu_taisaku/syuryou.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+33,岡山県,https://www.pref.okayama.jp/page/666064.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+34,広島県,https://www.pref.hiroshima.lg.jp/site/huntinglicense/huntinglicense01.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+35,山口県,https://www.pref.yamaguchi.lg.jp/,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+36,徳島県,https://www.pref.tokushima.lg.jp/,未確認,,,,,2026-05-08
+37,香川県,https://www.pref.kagawa.lg.jp/midorihozen/shuryo/shuryo/shiken2026.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+38,愛媛県,https://www.pref.ehime.jp/page/111681.html,未公表（令和8年5月末頃公表予定）,,,,,2026-05-08
+39,高知県,https://www.pref.kochi.lg.jp/category/mokuteki/shikaku_shiken/,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+40,福岡県,https://www.pref.fukuoka.lg.jp/contents/syuryoushiken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+41,佐賀県,https://www.pref.saga.lg.jp/kiji00360440/index.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+42,長崎県,https://www.pref.nagasaki.jp/doc/46148.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+43,熊本県,https://www.pref.kumamoto.jp/soshiki/52/231385.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+44,大分県,https://www.pref.oita.jp/soshiki/16210/r8-syuryousikenn-nittei.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+45,宮崎県,https://www.pref.miyazaki.lg.jp/shizen/kense/saiyo-shikaku/20260415170252.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+46,鹿児島県,https://www.pref.kagoshima.jp/ad04/sangyo-rodo/rinsui/shinrin/syuryo/r8_syuryoumenkyosiken.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
+47,沖縄県,https://www.pref.okinawa.jp/kurashikankyo/kankyo/1004587/1004588/1004593.html,公開済,,公式ページ参照,全種類等（公式参照）,公式ページ参照,2026-05-08
