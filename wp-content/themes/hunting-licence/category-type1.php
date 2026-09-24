@@ -80,7 +80,6 @@
                         <span class="question">問<?php echo $counter; ?>：<?php the_title(); ?><span class="small">（問題番号.<?php the_field('no'); ?>）</span></span>
                         <div class="btn-layout">
                             <button class="open-btn">選択肢を見る</button>
-                            <button class="single-btn"><a href="<?php the_permalink(); ?>" target="_blank">設問へ移動</a></button>
                         </div>
                     </dt>
                     <dd>
@@ -141,4 +140,3 @@
     </div>
 
 <?php get_footer(); ?>
-

@@ -71,7 +71,6 @@ get_header(); ?>
                         <span class="question">問<?php echo $counter; ?>：<?php the_title(); ?>は狩猟鳥獣か？非狩猟鳥獣か？</span>
                         <div class="btn-layout">
                           <button class="open-btn">画像を見る</button>
-                          <button class="single-btn"><a href="<?php the_permalink(); ?>" target="_blank">設問へ移動</a></button>
                         </div>
                     </dt>
                     <dd>
@@ -92,7 +91,6 @@ get_header(); ?>
                             <dd class="answer-dd">
                                 <span class="answer">答）<?php the_field('answer'); ?><br>
                                 <?php the_field('answer_body'); ?></span>
-                                <p><a href="<?php the_permalink(); ?>" target="_blank">より詳しい解説へ移動</a></p>
                             </dd>
                         </dl>
                         </dd>
