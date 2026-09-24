@@ -1,164 +1,5 @@
 <?php get_header(); ?>
 
-<style>
-/* トップページ専用。確認後、必要に応じて style.css へ移動してください。 */
-.home-lead {
-	margin: 0 0 28px;
-}
-
-.home-section {
-	margin: 36px 0;
-}
-
-.home-section > h2 {
-	margin-bottom: 8px;
-}
-
-.home-section-intro {
-	margin: 0 0 18px;
-	color: #555;
-}
-
-.study-card-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 16px;
-	margin: 18px 0 0;
-}
-
-.study-card {
-	display: block;
-	padding: 20px;
-	border: 1px solid #dce3df;
-	border-radius: 12px;
-	background: #fff;
-	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
-	color: inherit;
-	text-decoration: none;
-	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-.study-card:hover,
-.study-card:focus {
-	transform: translateY(-2px);
-	border-color: #2f7d4f;
-	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.11);
-}
-
-.study-card-title {
-	display: block;
-	margin-bottom: 7px;
-	font-size: 1.08rem;
-	font-weight: 700;
-	line-height: 1.5;
-}
-
-.study-card-desc {
-	display: block;
-	margin-bottom: 12px;
-	color: #555;
-	font-size: 0.95rem;
-	line-height: 1.7;
-}
-
-.study-card-link {
-	display: block;
-	color: #267344;
-	font-weight: 700;
-}
-
-.study-card-featured {
-	background: #f5faf7;
-	border-color: #cfe1d5;
-}
-
-.compact-link-list {
-	margin: 14px 0 0;
-	padding-left: 1.2em;
-}
-
-.compact-link-list li {
-	margin: 8px 0;
-}
-
-.study-card-wide {
-	grid-column: 1 / -1;
-}
-
-.article-link-list {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 10px 14px;
-	margin: 16px 0 0;
-}
-
-.article-link {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 14px;
-	padding: 13px 15px;
-	border: 1px solid #e1e6e3;
-	border-radius: 9px;
-	background: #fff;
-	color: #176b8c;
-	text-decoration: none;
-	line-height: 1.5;
-	transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
-
-.article-link::after {
-	content: "→";
-	flex: 0 0 auto;
-	color: #267344;
-	font-weight: 700;
-}
-
-.article-link:hover,
-.article-link:focus {
-	background: #f7faf8;
-	border-color: #bfd4c6;
-	transform: translateY(-1px);
-}
-
-.checker-intro-box {
-	margin: 36px 0;
-	padding: 22px;
-	border: 1px solid #dce3df;
-	border-radius: 12px;
-	background: #f8faf9;
-}
-
-.checker-intro-box h2,
-.checker-intro-box h3 {
-	margin-top: 0;
-}
-
-.checker-intro-btn a {
-	display: inline-block;
-	padding: 11px 18px;
-	border-radius: 8px;
-	background: #267344;
-	color: #fff;
-	font-weight: 700;
-	text-decoration: none;
-}
-
-@media (max-width: 700px) {
-	.study-card-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.study-card {
-		padding: 17px;
-	}
-
-	.article-link-list {
-		grid-template-columns: 1fr;
-	}
-}
-</style>
-
 <div class="main-visual top">
 	<div class="inner">
 		<h1>狩猟免許過去問620問｜無料で学べる試験問題集</h1>
@@ -235,8 +76,50 @@
 			</a>
 		</div>
 
-		<!-- 30問模擬試験を実装したら、この分野の直後に大きな導線を追加する -->
 	</section>
+
+	<section class="home-section" aria-labelledby="mock-exam-title">
+		<h2 id="mock-exam-title">模擬試験で実力を確認する</h2>
+		<p class="home-section-intro">通常問題で学習した後は、30問の模擬試験で実力を確認できます。本番形式では受験する免許に合わせて出題します。</p>
+
+		<div class="study-card-grid">
+			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/mock-exam/full-test/') ); ?>">
+				<span class="study-card-title">狩猟免許 本番形式30問模擬試験</span>
+				<span class="study-card-desc">受験する免許を選び、法令・猟具・鳥獣・保護管理から本番形式で30問に挑戦します。</span>
+				<span class="study-card-link">本番形式の模擬試験を始める →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">
+				<span class="study-card-title">第一種銃猟 30問模擬試験</span>
+				<span class="study-card-desc">第一種銃猟の問題から30問をランダム出題します。</span>
+				<span class="study-card-link">第一種銃猟の模擬試験へ →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/type2/') ); ?>">
+				<span class="study-card-title">第二種銃猟 30問模擬試験</span>
+				<span class="study-card-desc">第二種銃猟の問題から30問をランダム出題します。</span>
+				<span class="study-card-link">第二種銃猟の模擬試験へ →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/wana/') ); ?>">
+				<span class="study-card-title">わな猟 30問模擬試験</span>
+				<span class="study-card-desc">わな猟の問題から30問をランダム出題します。</span>
+				<span class="study-card-link">わな猟の模擬試験へ →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/ami/') ); ?>">
+				<span class="study-card-title">網猟 30問模擬試験</span>
+				<span class="study-card-desc">網猟の問題から30問をランダム出題します。</span>
+				<span class="study-card-link">網猟の模擬試験へ →</span>
+			</a>
+		</div>
+
+		<div class="article-link-list">
+			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/laws/') ); ?>">法令30問模擬試験</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/animals/') ); ?>">鳥獣30問模擬試験</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/protection/') ); ?>">保護管理模擬試験</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">猟銃等講習会 50問模擬考査</a>
+		</div>
 
 	<section class="home-section" aria-labelledby="exam-support-title">
 		<h2 id="exam-support-title">受験前に確認する</h2>
