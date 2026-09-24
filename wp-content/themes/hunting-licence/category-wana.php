@@ -32,6 +32,7 @@
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
+    <?php get_template_part('parts-category-mock-link'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
     <p>わな猟に関する問題は、適法なわなの使用方法や設置条件、安全に関する規定などが中心です。
       特に、わな猟の実施に関する法律的な細かい部分が出題されることが多いので、基本的な規定をしっかりと覚えておくことが重要です。

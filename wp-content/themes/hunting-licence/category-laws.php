@@ -30,6 +30,7 @@
   </p>
 
   <?php get_template_part('parts-ads'); ?>
+  <?php get_template_part('parts-category-mock-link'); ?>
   <h2><?php single_cat_title(); ?> 過去問</h2>
   <p>狩猟免許試験における法令問題は、特に難解で紛らわしい表現が使われることが多いです。
     しかし、法令に関する知識が試験合否を大きく左右するため、しっかりとした準備が求められます。

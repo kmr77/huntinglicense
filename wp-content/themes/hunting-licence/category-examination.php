@@ -13,6 +13,7 @@
     </div>
     <div class="inner">
 <?php if ( !is_paged() ) : ?>
+    <?php get_template_part('parts-category-mock-link'); ?>
     <h2>猟銃等講習会の考査問題とは？</h2>
     <p>このページでは、<strong>猟銃等講習会で実施される筆記試験（考査）</strong>の過去問を掲載しています。</p>
     <p>「猟銃を持ちたい」「狩猟やクレー射撃を始めたい」と考えている方は、まず警察主催の講習会を受ける必要があります。</p>

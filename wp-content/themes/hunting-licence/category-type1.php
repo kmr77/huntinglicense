@@ -28,6 +28,7 @@
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
+    <?php get_template_part('parts-category-mock-link'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
         <p>
         一種銃猟に関する問題も難易度が高い場合がありますが、銃の取り扱いや使用に関する法令や技術的なポイントが重要です。

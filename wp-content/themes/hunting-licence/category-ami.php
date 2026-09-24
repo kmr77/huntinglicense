@@ -31,6 +31,7 @@
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
+    <?php get_template_part('parts-category-mock-link'); ?>
     <h2><?php single_cat_title(); ?>過去問</h2>
         <p>
         網猟に関する問題は、網の種類や使用法に加え、設置基準や猟場に関する法律が問われます。
