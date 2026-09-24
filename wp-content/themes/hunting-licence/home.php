@@ -9,6 +9,32 @@
 
 <div class="inner">
 
+	<section class="top-intro-box" aria-labelledby="top-intro-title">
+		<h2 id="top-intro-title">狩猟免許試験対策を、無料でしっかり学べます</h2>
+		<p>「狩猟免許過去問ドリル」は、狩猟免許試験の問題演習に特化した無料学習サイトです。<br>第一種銃猟・第二種銃猟・わな猟・網猟をはじめ、法令や鳥獣などの問題を分野別に学習できます。</p>
+		<p>問題は一部だけではなく、サイトに収録している問題をすべて無料で公開しています。<br>さらに、本番を想定した30問の模擬試験も無料で利用できます。</p>
+
+		<ul class="top-intro-features">
+			<li>
+				<h3>全問題を無料公開</h3>
+				<p>免許別・分野別に、収録している問題を制限なく学習できます。</p>
+			</li>
+			<li>
+				<h3>本番形式30問の模擬試験</h3>
+				<p>法令・猟具・鳥獣・保護管理を組み合わせ、本番を想定した形式で実力を確認できます。</p>
+			</li>
+			<li>
+				<h3>免許別・分野別に学習</h3>
+				<p>第一種銃猟・第二種銃猟・わな猟・網猟、法令や鳥獣などから目的に合わせて学習できます。</p>
+			</li>
+		</ul>
+
+		<nav class="top-intro-actions" aria-label="学習を始める">
+			<a href="<?php echo esc_url( home_url('/category/all/') ); ?>">全問題から学習する</a>
+			<a class="top-intro-action-primary" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">本番形式の模擬試験を受ける</a>
+		</nav>
+	</section>
+
 	<section class="home-section" aria-labelledby="license-study-title">
 		<h2 id="license-study-title">試験・考査から問題を選ぶ</h2>
 		<p class="home-section-intro">受験する狩猟免許や猟銃等講習会の考査に合わせて、必要な問題をまとめて学習できます。</p>
