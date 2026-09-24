@@ -1,296 +1,369 @@
 <?php get_header(); ?>
 
-		<div class="main-visual top">
-			<div class="inner">
-				<h1>狩猟免許試験例題集（狩猟免許試験過去問集）</h1>
-				<p>狩猟免許試験例題集の全問題をカテゴリ別に掲載。スマホ対応でいつでもどこでも学習可能。試験対策や過去問の暗記に最適な学習ツールです。</p>
-			</div>
+<style>
+/* トップページ専用。確認後、必要に応じて style.css へ移動してください。 */
+.home-lead {
+	margin: 0 0 28px;
+}
+
+.home-section {
+	margin: 36px 0;
+}
+
+.home-section > h2 {
+	margin-bottom: 8px;
+}
+
+.home-section-intro {
+	margin: 0 0 18px;
+	color: #555;
+}
+
+.study-card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+	margin: 18px 0 0;
+}
+
+.study-card {
+	display: block;
+	padding: 20px;
+	border: 1px solid #dce3df;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+	color: inherit;
+	text-decoration: none;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.study-card:hover,
+.study-card:focus {
+	transform: translateY(-2px);
+	border-color: #2f7d4f;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.11);
+}
+
+.study-card-title {
+	display: block;
+	margin-bottom: 7px;
+	font-size: 1.08rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.study-card-desc {
+	display: block;
+	margin-bottom: 12px;
+	color: #555;
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+
+.study-card-link {
+	display: block;
+	color: #267344;
+	font-weight: 700;
+}
+
+.study-card-featured {
+	background: #f5faf7;
+	border-color: #cfe1d5;
+}
+
+.compact-link-list {
+	margin: 14px 0 0;
+	padding-left: 1.2em;
+}
+
+.compact-link-list li {
+	margin: 8px 0;
+}
+
+.study-card-wide {
+	grid-column: 1 / -1;
+}
+
+.article-link-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 14px;
+	margin: 16px 0 0;
+}
+
+.article-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+	padding: 13px 15px;
+	border: 1px solid #e1e6e3;
+	border-radius: 9px;
+	background: #fff;
+	color: #176b8c;
+	text-decoration: none;
+	line-height: 1.5;
+	transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.article-link::after {
+	content: "→";
+	flex: 0 0 auto;
+	color: #267344;
+	font-weight: 700;
+}
+
+.article-link:hover,
+.article-link:focus {
+	background: #f7faf8;
+	border-color: #bfd4c6;
+	transform: translateY(-1px);
+}
+
+.checker-intro-box {
+	margin: 36px 0;
+	padding: 22px;
+	border: 1px solid #dce3df;
+	border-radius: 12px;
+	background: #f8faf9;
+}
+
+.checker-intro-box h2,
+.checker-intro-box h3 {
+	margin-top: 0;
+}
+
+.checker-intro-btn a {
+	display: inline-block;
+	padding: 11px 18px;
+	border-radius: 8px;
+	background: #267344;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	.study-card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.study-card {
+		padding: 17px;
+	}
+
+	.article-link-list {
+		grid-template-columns: 1fr;
+	}
+}
+</style>
+
+<div class="main-visual top">
+	<div class="inner">
+		<h1>狩猟免許過去問620問｜無料で学べる試験問題集</h1>
+		<p>第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣判別など、狩猟免許試験対策の問題を無料で学べます。受験する免許や苦手分野から選んで学習してください。</p>
+	</div>
+</div>
+
+<div class="inner">
+
+	<section class="home-section" aria-labelledby="license-study-title">
+		<h2 id="license-study-title">試験・考査から問題を選ぶ</h2>
+		<p class="home-section-intro">受験する狩猟免許や猟銃等講習会の考査に合わせて、必要な問題をまとめて学習できます。</p>
+
+		<div class="study-card-grid">
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/type1/') ); ?>">
+				<span class="study-card-title">第一種銃猟免許</span>
+				<span class="study-card-desc">散弾銃・ライフル銃などの装薬銃を使用する第一種銃猟免許の試験対策問題です。</span>
+				<span class="study-card-link">第一種銃猟の問題を解く →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/type2/') ); ?>">
+				<span class="study-card-title">第二種銃猟免許</span>
+				<span class="study-card-desc">空気銃を使用する第二種銃猟免許に必要な知識を、問題形式で確認できます。</span>
+				<span class="study-card-link">第二種銃猟の問題を解く →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/wana/') ); ?>">
+				<span class="study-card-title">わな猟免許</span>
+				<span class="study-card-desc">わなの構造・使用方法・捕獲対象など、わな猟免許で問われる内容を学習できます。</span>
+				<span class="study-card-link">わな猟の問題を解く →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/ami/') ); ?>">
+				<span class="study-card-title">網猟免許</span>
+				<span class="study-card-desc">網の種類・構造・使用方法など、網猟免許に必要な知識を問題形式で確認できます。</span>
+				<span class="study-card-link">網猟の問題を解く →</span>
+			</a>
+
+			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/category/examination/') ); ?>">
+				<span class="study-card-title">猟銃等講習会の考査</span>
+				<span class="study-card-desc">猟銃の所持を目指す方向け。初心者講習の考査対策問題をまとめています。</span>
+				<span class="study-card-link">考査問題を解く →</span>
+			</a>
 		</div>
-		<div class="inner">
-			<!-- ▼ 主要ナビ（常時表示のボタン＋折りたたみ） -->
-		<h2>よく使われている過去問と情報</h2>
-		<nav class="primary-cta-nav">
-			<!-- ★ クラスを gun-links-list → quick-links に変更（赤ボタン化） -->
-			<ul class="primary-cta quick-links">
-				<li><a href="<?php echo home_url('/schedule/'); ?>">狩猟免許試験スケジュール</a></li>
-				<li><a href="<?php echo home_url('/category/all/'); ?>">直前対策 カテゴリMIX問題</a></li>
-				<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
-				<li><a href="<?php echo home_url('/category/type1/'); ?>">第一種銃猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/type2/'); ?>">第二種銃猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/wana/'); ?>">わな猟試験 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟 過去問</a></li>
-				<li><a href="<?php echo home_url('/category/animals-judge/'); ?>">狩猟鳥獣識別イラスト過去問</a></li>
-				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">猟友会による予備講習</a></li>
-				<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 過去問</a></li>
-				<li><a href="<?php echo home_url('/examination-beginner/'); ?>">猟銃等講習会（初心者）日程</a></li>
-			</ul>
-			
-			<p class="center">
-				<button class="question-btn" id="more-cta-toggle" type="button" aria-expanded="false" aria-controls="more-cta">
-					もっと見る
-				</button>
-			</p>
-			
-			<div id="more-cta" class="more-cta" style="display:none;">
-				<!-- ★ こちらも gun-links-list → quick-links に変更（赤ボタン化を揃える） -->
-				<ul class="secondary-cta quick-links">
-					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃の費用まとめ</a></li>
-					<li><a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方</a></li>
-					<li><a href="<?php echo home_url('/gun-types-detail/'); ?>">銃の種類（射程・所持条件）</a></li>
-					<li><a href="<?php echo home_url('/rifle/'); ?>">ライフルとは？</a></li>
-					<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">狩猟免許 FAQ</a></li>
-					<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格の勉強法</a></li>
-					<li><a href="<?php echo home_url('/information/'); ?>">都道府県の申込情報まとめ</a></li>
-					<li><a href="<?php echo home_url('/rifle-revision/'); ?>">ライフル法改正</a></li>
-				<li><a href="<?php echo home_url('/examination-info/'); ?>">講習会の流れと対策</a></li>
-				<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">所持許可の手続き</a></li>
-				</ul>
-			</div>
-			<section class="checker-intro-box">
-				<h3>狩猟免許・銃砲所持許可の更新時期が気になる方へ</h3>
-				<p>
-					狩猟免許や銃砲所持許可を取得した後は、試験対策とは別に更新時期の確認も必要です。
-					更新チェッカーでは、入力した日付をもとに<strong>狩猟免許・銃砲所持許可の更新時期の目安</strong>をまとめて確認できます。
-				</p>
-				<p class="checker-intro-note">
-					<span>取得後の管理が不安な方は、先に更新時期を確認しておくと安心です。</span>
-				</p>
-				<p class="checker-intro-btn">
-					<a href="https://shuryo-checker.com/" target="_blank" rel="noopener noreferrer">狩猟免許更新チェッカーを見る</a>
-				</p>
-			</section>
-			</nav>
-			<!-- ▲ 主要ナビここまで -->
-			
-			<div class="gun-links-box">
-			<h2>猟銃の所持・講習会を考えている方へ</h2>
-			<p>狩猟免許を取得したあとに「猟銃を持ちたい」と考えている方は、猟銃等講習会や所持許可の取得、費用の目安、安全な保管方法などについても事前に理解しておく必要があります。
-				以下のリンク集では、猟銃を持つために必要な情報をわかりやすくまとめているので、狩猟免許とあわせてぜひ参考にしてください。<br>
-				▶ <a href="<?php echo home_url('/category/examination/'); ?>">猟銃免許 過去問はこちら</a></p>
-			<div class="top-link">
-				<ul class="gun-links-list">
-					<li><a href="<?php echo home_url('/examination/'); ?>">猟銃等講習会とは？講習内容と試験の流れ</a></li>
-					<li><a href="<?php echo home_url('/examination-info/'); ?>">猟銃等講習会の流れと考査対策ガイド</a></li>
-					<li><a href="<?php echo home_url('/examination/gun-procedure/'); ?>">猟銃所持許可の手続きと費用まとめ</a></li>
-					<li><a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用の詳細</a></li>
-					<li><a href="<?php echo home_url('/gun-types/'); ?>">銃の種類の違い（ライフル・散弾銃・空気銃）</a></li>
-					<li><a href="<?php echo home_url('/faq-guns-license/'); ?>">猟銃免許・所持許可に関するQ&A</a></li>
-				</ul>
-			</div>
-			</div>
+	</section>
 
-			<!-- ▼ 賃貸×ガンロッカー設置（高CPC文脈ブロック） -->
-			<section class="rental-locker-tips">
-			<h2>賃貸住宅でのガンロッカー設置は可能？</h2>
-			<p>
-				猟銃を所持するうえで悩みやすいのが<strong>「賃貸でもロッカー固定ができるのか」</strong>という点です。結論としては、
-				管理規約と建物構造によっては<strong>壁や床へのビス固定が認められるケース</strong>があります。傷を避けたい場合は
-				<strong>床面固定型・重量型ロッカー</strong>を選ぶ方法も現実的です。
-			</p>
-			<p>
-				公安委員会の許可審査では<strong>「持ち出し防止のための固定」</strong>が重視されます。事前に管理会社へ固定可否を確認し、
-				設置位置・方法（アンカー/固定金具）を準備しましょう。あわせて<strong>火災保険や家財保険の補償範囲</strong>も確認しておくと安心です。
-			</p>	
-			<ul class="rental-locker-links">
-				<li>▶ <a href="<?php echo home_url('/gun-locker/'); ?>">ガンロッカーの選び方・おすすめ製品</a></li>
-				<li>▶ <a href="<?php echo home_url('/gun-cost/'); ?>">初期費用・維持費の目安（所持許可・設備費）</a></li>
-			</ul>
-			<div class="insurance-info-box">
-		   <h3><span class="marker">ガンロッカー設置時に知っておきたい保険・補償制度</span></h3>
-		   <p>賃貸住宅でガンロッカーを設置する場合、<strong>火災・水漏れ・盗難</strong>などのトラブルに備えて保険内容を確認しておくことが重要です。  
-		   加入している<strong>火災保険や家財保険に「個人賠償責任補償」</strong>が含まれていれば、万一の破損や事故にも対応できるケースがあります。</p>
+	<section class="home-section" aria-labelledby="topic-study-title">
+		<h2 id="topic-study-title">分野別に学ぶ</h2>
+		<p class="home-section-intro">苦手な分野だけを集中的に復習したい場合はこちらから選べます。</p>
 
-		   <p>また、狩猟・射撃を行う方は、猟友会などを通じて加入できる<strong>「ハンター保険（猟銃保険）」</strong>にも注目しましょう。  
-		   銃の誤射や第三者への損害にも対応する補償内容があり、<a href="<?php echo home_url('/gun-insurance/'); ?>">猟銃保険・補償ガイド</a>で詳細を解説しています。</p>
-
-		   <ul class="link-list">
-			<li>▶ <a href="<?php echo home_url('/gun-insurance/'); ?>">猟銃保険・補償ガイド（加入方法と費用）</a></li>
-			<li>▶ <a href="<?php echo home_url('/gun-cost/'); ?>">猟銃所持にかかる費用まとめ</a></li>
-		  </ul>
-
-		   </div>
-			</section>
-			<!-- ▲ 賃貸×ガンロッカー設置（高CPC文脈ブロック） -->
-
-
-			<?php // 高視認ゾーンで広告も1枠だけ挿入（クリック率向上）
-			get_template_part('parts-ads'); ?>
-
-
-			<h2>狩猟免許試験の例題集</h2>
-			<p>狩猟免許試験の例題集は、狩猟免許を取得するために必要な知識を身につけるための重要な教材です。<br>このページでは、狩猟免許試験に出題される問題を厳選し、解答と詳細な解説を付けた問題集を提供しています。</p>
-			<p>特に、狩猟免許試験は法令や鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。<br>このサイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
-			<h2>狩猟免許の勉強を始めるには？</h2>
-			<p>このサイトでは、狩猟免許試験に必要な知識を例題形式で学ぶことができます。<br>独学で合格を目指す方に向けた学習法も解説しています。</p>
-			<div class="top-link">
-			<ul class="top-links">
-				<li><a href="<?php echo home_url('/study-method/'); ?>">最短合格までの独学勉強方法</a></li>
-				<li><a href="<?php echo home_url('/study-method/'); ?>#exam-day">試験当日の流れと対策を見る</a></li>
-				<li><a href="<?php echo home_url('/know/'); ?>">狩猟免許の概要を見る</a></li>
-				<li><a href="<?php echo home_url('/category/ami/'); ?>">網猟の例題に挑戦する</a></li>
-				<li><a href="<?php echo home_url('/information/'); ?>">都道府県別の申込情報を見る</a></li>
-				<li><a href="<?php echo home_url('/experience/'); ?>">合格者の体験談を読む</a></li>
-				<li><a href="<?php echo home_url('/license-job/'); ?>">狩猟免許で副業をする</a></li>
-				<li><a href="<?php echo home_url('/schedule/'); ?>" class="schedule-link-list">狩猟免許試験日程を見る</a></li>
-				<li><a href="<?php echo home_url('/examination/'); ?>">猟銃講習会とは？</a></li>
-				<li><a href="<?php echo home_url('/for-corporate/'); ?>">法人・自治体の皆さまへ</a></li>
-			</ul>
-
-			</div>
-			<h2>狩猟免許試験の概要</h2>
-			<?php get_template_part('parts-ads'); ?>
-			<p>狩猟免許試験は、狩猟を行うために必要な知識と技術を確認するための試験です。<br>試験は筆記試験と実技試験に分かれており、合格することで狩猟免許を取得できます。</p>
-			<p>狩猟免許試験は、法令、鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。<br>このサイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
-			
-			<h2>狩猟免許の合格を目指すあなたへ</h2>
-			<p>このサイト「狩猟免許の問題対策集」は、狩猟免許をこれから取得しようと考えている方や、すでに学習を始めている方のために作られた無料学習サイトです。</p>
-			<p>狩猟免許は、種類ごとに出題傾向が異なり、法令、鳥獣の識別、猟具の知識、安全対策など、幅広い内容が問われます。本サイトでは、過去に出題された例題やそれに準じた問題を中心に掲載し、「どこでも、スキマ時間にスマホで学べる」ことを重視しています。</p>
-				<ul class="info-list">
-					<li>どんな問題が出るのかわからない</li>
-					<li>参考書だけでは理解しにくい</li>
-					<li>問題の正解はわかっても、なぜそうなるのかが理解できない</li>
-					<li>単語を覚えるように問題自体を覚えて対策したい</li>
-					<li>とにかく合格だけ目指したい</li>
-				</ul>
-			<p>そこで当サイトでは、選択肢形式の問題に加えて、今後は詳しい解説も順次追加予定です。また、どのページも広告や装飾を最小限に抑え、ストレスの少ない学習環境を提供しています。</p>
-			<p>運営者自身も狩猟免許を取得した経験があり、試験勉強で「こういうサイトがあればよかった」と思ったことを形にしています。誰でも無料で利用できるよう公開しているので、ぜひ活用してください。</p>
-			<h2>初心者向けおすすめコンテンツ</h2>
-			<?php get_template_part('parts-ads'); ?>
-			<div class="top-link-box">
-			<ul>
-				<li><a href="<?php echo home_url('/study-method/'); ?>">▶ 最短2週間で合格！ 狩猟免許 独学勉強法ガイド</a></li>
-				<li><a href="<?php echo home_url('/license-difference/'); ?>">▶ 狩猟免許と銃所持許可の違いを知る</a></li>
-				<li><a href="<?php echo home_url('/license-types/'); ?>">▶ 狩猟免許の種類と違いを比較する</a></li>
-				<li><a href="<?php echo home_url('/type1-type2-difference/'); ?>">▶ 第一種銃猟と第二種銃猟免許の違い</a></li>
-				<li><a href="<?php echo home_url('/license-extermination/'); ?>">▶ 狩猟免許と有害駆除（捕獲従事者）の違い</a></li>
-				<li><a href="<?php echo home_url('/gun-difference/'); ?>">▶ 散弾銃と空気銃の違い</a></li>
-				<li><a href="<?php echo home_url('/gun-types/'); ?>">▶ 銃の種類の違い</a></li>
-				<li><a href="<?php echo home_url('/rifle-revision/'); ?>">▶ 2025年法改正とハーフライフル</a></li>
-				<li><a href="<?php echo home_url('/words/'); ?>">▶ 狩猟用語・猟具用語集</a></li>
-				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">▶ 狩猟免許に関するよくある質問（Q&A）を見る</a></li>
-				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">▶ 猟友会による予備講習の受け方と注意点</a></li>
-				<li><a href="<?php echo home_url('/application/'); ?>">▶ 狩猟免許の受験申請の手順（必要書類・費用）</a></li>
-				<!-- ↑ 差し替え -->
-			</ul>
-			</div>
-
-			<h2>免許別の解説ページを見る</h2>
-			<ul>
-				<li><a href="<?php echo home_url('/wana-info/'); ?>">▶ わな猟免許とは？使える罠と試験のポイント</a></li>
-				<li><a href="<?php echo home_url('/ami-info/'); ?>">▶ 網猟免許とは？むそう網・はり網の特徴と試験対策</a></li>
-			</ul>
-			<h2>過去問題集</h2>
-			<p>狩猟免許試験の過去問題を猟具ごとに整理し、全ての問題に答えと詳しい解説を網羅しています。また、スマートフォン対応により、移動中やテスト直前でも手軽に復習できる設計となっており、効率的な暗記や知識の定着に役立ちます。これにより、狩猟免許試験の準備をいつでもどこでも進めることができ、受験者が合格に向けた学習を効率的に行えるようサポートしています。</p>
-			<div class="top-link">
-				<div class="contents-nav">
-					<ul>
-						<li><a href="<?php echo home_url('/category/all/'); ?>">狩猟免許全カテゴリ問題</a></li>
-						<li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
-						<li><a href="<?php echo home_url('/category/type1/'); ?>">一種猟銃問題</a></li>
-						<li><a href="<?php echo home_url('/category/type2/'); ?>">二種猟銃問題</a></li>
-						<li><a href="<?php echo home_url('/category/ami/'); ?>">網（あみ）猟問題</a></li>
-						<li><a href="<?php echo home_url('/category/wana/'); ?>">罠（わな）猟問題</a></li>
-						<li><a href="<?php echo home_url('/category/numbers/'); ?>">数字問題</a></li>
-						<li><a href="<?php echo home_url('/category/examination/'); ?>">猟銃等講習会 考査問題</a></li>
-					</ul>
-				</div>
-			</div>
-			<h2>狩猟免許試験_申し込み〜取得までの流れ</h2>
-			<p>狩猟免許を取得するためには、幅広い知識が求められます。具体的には、鳥獣の生態や保護に関する知識、狩猟に使用する猟具の取り扱いや使用方法、さらに狩猟に関連する法律や規制の理解が必要です。また、狩猟は安全性が重視されるため、猟具の操作技術や適切な使用方法も重要です。これらの知識と技術を身につけることで、安全で適法な狩猟が可能となり、狩猟免許試験の合格に必要不可欠です。</p>
-			<div class="top-link">
-				<div class="contents-nav">
-					<ul>
-						<li><a href="<?php echo home_url('/know/'); ?>">知っておくべきこと</a></li>
-						<li><a href="<?php echo home_url('/application/'); ?>">狩猟免許受験申請</a></li>
-						<li><a href="<?php echo home_url('/content/'); ?>">狩猟免許試験の内容と対策</a></li>
-						<li><a href="<?php echo home_url('/registration/'); ?>">狩猟者登録</a></li>
-						<li><a href="<?php echo home_url('/information/'); ?>">全国の狩猟者免許試験情報一覧</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="popular-pages-block">
-			<h2>よく読まれているページ</h2>
-			<?php get_template_part('parts-ads'); ?>
-			<ul>
-				<li><a href="<?php echo home_url('/category/examination/'); ?>">▶ 猟銃免許の試験カテゴリページ</a></li>
-				<li><a href="<?php echo home_url('/tag/examination/'); ?>">▶ 猟銃免許の過去問・練習問題一覧</a></li>
-				<li><a href="<?php echo home_url('/category/all/'); ?>">▶ 狩猟免許の全カテゴリ問題集</a></li>
-				<li><a href="<?php echo home_url('/faq-hunting-license/'); ?>">▶ 狩猟免許に関するよくある質問</a></li>
-				<li><a href="<?php echo home_url('/category/experience/'); ?>">▶ 合格者の体験談</a></li>
-				<li><a href="<?php echo home_url('/application/'); ?>">▶ 狩猟免許の申請・受験手続き方法</a></li>
-			</ul>
-			<h2>猟銃所持関連ページ</h2>
-			<ul>
-				<li><a href="<?php echo home_url('/gun-cost/'); ?>">▶ 猟銃の所持費用まとめ</a></li>
-				<li><a href="<?php echo home_url('/pre-lecture/'); ?>">▶ 猟友会の予備講習（内容・費用・申込み）</a></li>
-			</ul>
-			</div>
-			<!-- <h2>都道府県狩猟免許問い合わせ先</h2>
-			<p>問い合わせ先</p>
-			<div class="contents-nav">
-				<ul>
-					<li><a href="#">北海道</a></li>
-					<li><a href="#">青森</a></li>
-					<li><a href="#">秋田</a></li>
-				</ul>
-			</div>
-			<h2>販売店</h2>
-			<p>販売店一覧</p>
-			<div class="contents-nav">
-				<ul>
-					<li><a href="#">●●</a></li>
-					<li><a href="#">●●</a></li>
-					<li><a href="#">●●</a></li>
-				</ul>
-			</div> -->
-			<section class="category-overview">
-			<h2>猟具別の例題カテゴリから学ぶ</h2>
-			<ul class="category-links">
-			<li>
-			<a href="<?php echo home_url('/category/ami/'); ?>">
-				<strong>網猟（あみ猟）</strong><br>
-				設置可能な網の種類や法律の制限を確認できる問題集
+		<div class="study-card-grid">
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/laws/') ); ?>">
+				<span class="study-card-title">法令問題</span>
+				<span class="study-card-desc">狩猟期間、狩猟者登録、禁止猟法など、法令に関する問題をまとめています。</span>
+				<span class="study-card-link">法令問題を解く →</span>
 			</a>
-			</li>
-			<li>
-			<a href="<?php echo home_url('/category/wana/'); ?>">
-				<strong>罠猟（わな猟）</strong><br>
-				捕獲対象や罠の仕組みに関する問題を重点的に掲載
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/animals-judge/') ); ?>">
+				<span class="study-card-title">鳥獣判別</span>
+				<span class="study-card-desc">狩猟鳥獣の特徴や見分け方を、判別問題で確認できます。</span>
+				<span class="study-card-link">鳥獣判別に挑戦する →</span>
 			</a>
-			</li>
-			<li>
-			<a href="<?php echo home_url('/category/type1/'); ?>">
-				<strong>第一種銃猟</strong><br>
-				散弾銃・ライフル銃など装薬銃に関する試験対策問題
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/category/numbers/') ); ?>">
+				<span class="study-card-title">数字問題</span>
+				<span class="study-card-desc">日数・距離・期間など、数字を覚える必要がある問題を集中的に復習できます。</span>
+				<span class="study-card-link">数字問題を解く →</span>
 			</a>
-			</li>
-			<li>
-			<a href="<?php echo home_url('/category/type2/'); ?>">
-				<strong>第二種銃猟</strong><br>
-				空気銃を扱う上で必要な知識を問う例題を収録
+
+			<a class="study-card study-card-featured" href="<?php echo esc_url( home_url('/category/all/') ); ?>">
+				<span class="study-card-title">カテゴリMIX問題</span>
+				<span class="study-card-desc">複数分野をまとめて復習したい方向け。試験前の総仕上げに使えます。</span>
+				<span class="study-card-link">MIX問題を解く →</span>
 			</a>
-			</li>
-			</ul>
-		</section>
-		<hr>
-		<h2>過去の試験日程（2025年度・参考）</h2>
-		<p>
-		以下は<strong>2025年度に実施された狩猟免許試験の日程（参考情報）</strong>です。<br>
-		申込受付は終了しており、最新の日程ではありません。最新情報は各都道府県の公式発表をご確認ください。
+		</div>
+
+		<!-- 30問模擬試験を実装したら、この分野の直後に大きな導線を追加する -->
+	</section>
+
+	<section class="home-section" aria-labelledby="exam-support-title">
+		<h2 id="exam-support-title">受験前に確認する</h2>
+		<p class="home-section-intro">勉強方法、申請、試験日程、予備講習など、受験前に必要な情報をまとめています。</p>
+
+		<div class="study-card-grid">
+			<a class="study-card" href="<?php echo esc_url( home_url('/study-method/') ); ?>">
+				<span class="study-card-title">狩猟免許の勉強方法</span>
+				<span class="study-card-desc">独学で合格を目指すための進め方と、試験前に確認しておきたいポイントを解説します。</span>
+				<span class="study-card-link">勉強方法を見る →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/schedule/') ); ?>">
+				<span class="study-card-title">狩猟免許試験の日程</span>
+				<span class="study-card-desc">都道府県ごとの試験日程を確認できます。</span>
+				<span class="study-card-link">試験日程を見る →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/application/') ); ?>">
+				<span class="study-card-title">受験申請の手順</span>
+				<span class="study-card-desc">必要書類や費用など、狩猟免許試験の申込みに必要な情報を確認できます。</span>
+				<span class="study-card-link">申請方法を見る →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/pre-lecture/') ); ?>">
+				<span class="study-card-title">猟友会の予備講習</span>
+				<span class="study-card-desc">予備講習の内容、受講方法、試験対策としての使い方を確認できます。</span>
+				<span class="study-card-link">予備講習について見る →</span>
+			</a>
+		</div>
+	</section>
+
+	<?php get_template_part('parts-ads'); ?>
+
+	<section class="home-section" aria-labelledby="about-drill-title">
+		<h2 id="about-drill-title">狩猟免許過去問ドリルについて</h2>
+		<p>「狩猟免許過去問ドリル」は、狩猟免許をこれから取得する方のための無料学習サイトです。過去に出題された例題や、それに準じた問題を中心に約620問を掲載し、スマートフォンでも学習しやすい構成にしています。</p>
+		<p>問題を解くだけでなく、狩猟免許の申請、試験日程、勉強方法、狩猟者登録など、受験から取得後まで必要になる情報も掲載しています。運営者自身の狩猟免許取得や猟銃所持手続きの経験をもとに、実際の手続きで確認した内容も順次反映しています。</p>
+
+		<div class="article-link-list">
+			<a class="article-link" href="<?php echo esc_url( home_url('/know/') ); ?>">狩猟免許とは？基礎知識</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/content/') ); ?>">狩猟免許試験の内容と対策</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/registration/') ); ?>">狩猟者登録の手続き</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/information/') ); ?>">都道府県別の申込情報</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/experience/') ); ?>">狩猟免許取得の体験談</a>
+		</div>
+	</section>
+
+	<section class="home-section" aria-labelledby="basic-info-title">
+		<h2 id="basic-info-title">狩猟免許の基礎知識</h2>
+		<div class="article-link-list">
+			<a class="article-link" href="<?php echo esc_url( home_url('/license-difference/') ); ?>">狩猟免許と銃所持許可の違い</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/license-types/') ); ?>">狩猟免許の種類と違い</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/type1-type2-difference/') ); ?>">第一種銃猟と第二種銃猟免許の違い</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/license-extermination/') ); ?>">狩猟免許と有害鳥獣捕獲の違い</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/words/') ); ?>">狩猟・猟具の用語集</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/faq-hunting-license/') ); ?>">狩猟免許に関するよくある質問</a>
+		</div>
+	</section>
+
+	<section class="home-section" aria-labelledby="gun-title">
+		<h2 id="gun-title">猟銃の所持・講習会を考えている方へ</h2>
+		<p>第一種銃猟免許などを取得しても、それだけで猟銃を所持できるわけではありません。猟銃を所持する場合は、猟銃等講習会や所持許可申請など、狩猟免許とは別の手続きが必要です。</p>
+
+		<div class="study-card-grid">
+			<a class="study-card study-card-featured" href="<?php echo esc_url( home_url('/category/examination/') ); ?>">
+				<span class="study-card-title">猟銃等講習会の考査問題</span>
+				<span class="study-card-desc">初心者講習の考査対策として、問題形式で知識を確認できます。</span>
+				<span class="study-card-link">考査問題を解く →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/examination-info/') ); ?>">
+				<span class="study-card-title">猟銃等講習会の流れと対策</span>
+				<span class="study-card-desc">講習内容や考査までの流れを確認できます。</span>
+				<span class="study-card-link">講習会について見る →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/examination/gun-procedure/') ); ?>">
+				<span class="study-card-title">猟銃所持許可の手続き</span>
+				<span class="study-card-desc">所持許可取得までに必要な手続きをまとめています。</span>
+				<span class="study-card-link">所持許可の流れを見る →</span>
+			</a>
+
+			<a class="study-card" href="<?php echo esc_url( home_url('/gun-cost/') ); ?>">
+				<span class="study-card-title">猟銃所持にかかる費用</span>
+				<span class="study-card-desc">講習、射撃教習、設備、銃本体などにかかる費用の目安を確認できます。</span>
+				<span class="study-card-link">費用を見る →</span>
+			</a>
+		</div>
+
+		<div class="article-link-list">
+			<a class="article-link" href="<?php echo esc_url( home_url('/gun-locker/') ); ?>">ガンロッカーの選び方</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/gun-types/') ); ?>">銃の種類の違い</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/rifle/') ); ?>">ライフルとは？</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/faq-guns-license/') ); ?>">猟銃所持許可に関するQ&A</a>
+			<a class="article-link" href="<?php echo esc_url( home_url('/rifle-revision/') ); ?>">ライフル・ハーフライフルの法改正情報</a>
+		</div>
+	</section>
+
+	<section class="checker-intro-box">
+		<h2>狩猟免許・銃砲所持許可の更新時期を確認する</h2>
+		<p>狩猟免許や銃砲所持許可を取得した後は、更新時期の管理も必要です。更新チェッカーでは、入力した日付をもとに狩猟免許・銃砲所持許可の更新時期の目安をまとめて確認できます。</p>
+		<p class="checker-intro-btn">
+			<a href="https://shuryo-checker.com/" target="_blank" rel="noopener noreferrer">更新チェッカーを見る</a>
 		</p>
+	</section>
 
-		<p>
-		<a href="<?php echo esc_url( home_url('/schedule/?sy=2025') ); ?>">
-			【参考】2025年度の狩猟免許試験日程を見る（終了）
-		</a>
-		</p>
+	<?php get_template_part('parts-ads'); ?>
 
-		<p>
-		<a href="<?php echo esc_url( home_url('/schedule/?sy=2026') ); ?>">
-			▶ 最新：2026年度の狩猟免許試験日程を見る
-		</a>
-		</p>
+	<section class="home-section" aria-labelledby="past-schedule-title">
+		<h2 id="past-schedule-title">過去の試験日程（2025年度・参考）</h2>
+		<p>以下は<strong>2025年度に実施された狩猟免許試験の日程（参考情報）</strong>です。申込受付は終了しており、最新の日程ではありません。</p>
 
+		<ul class="compact-link-list">
+			<li>
+				<a href="<?php echo esc_url( home_url('/schedule/?sy=2025') ); ?>">
+					【参考】2025年度の狩猟免許試験日程を見る（終了）
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo esc_url( home_url('/schedule/?sy=2026') ); ?>">
+					最新：2026年度の狩猟免許試験日程を見る
+				</a>
+			</li>
+		</ul>
+	</section>
 
-<!-- <?php get_sidebar(); ?> -->
+</div>
+
 <?php get_footer(); ?>
