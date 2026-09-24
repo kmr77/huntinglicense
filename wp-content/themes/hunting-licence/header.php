@@ -36,8 +36,8 @@ crossorigin="anonymous"></script>
   }
 ?>
   <?php if ( is_home() || is_front_page() ) : ?>
-  <title>狩猟免許過去問620問｜無料問題集・試験対策｜狩猟免許過去問ドリル</title>
-    <meta name="description" content="狩猟免許試験の過去問・例題620問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣問題をカテゴリ別にスマホで学習できます。試験直前の復習や苦手分野の対策に使える狩猟免許過去問ドリルです。">
+  <title>狩猟免許過去問620問・無料模擬試験｜狩猟免許過去問ドリル</title>
+    <meta name="description" content="狩猟免許試験の過去問・例題620問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣問題をカテゴリ別に学習でき、本番形式30問や分野別の無料模擬試験にも挑戦できます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
     <title>狩猟免許取得に知っておくべき基本情報まとめ</title>
@@ -222,18 +222,14 @@ crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="<?php bloginfo ('stylesheet_url'); ?>" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css" type="text/css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css?v=<?php echo filemtime( get_template_directory() . '/css/common.css' ); ?>" type="text/css" />
 
   <?php if ( is_page() || is_category() || is_single() || is_tag() ) : ?>
-    <link rel="stylesheet"
-          href="<?php echo esc_url( get_template_directory_uri() . '/css/question.css?v=' . filemtime( get_template_directory() . '/css/question.css' ) ); ?>"
-          type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/question.css?v=<?php echo filemtime( get_template_directory() . '/css/question.css' ); ?>" type="text/css" />
   <?php endif; ?>
 
   <?php if ( is_home() || is_front_page() || is_page() || is_category() || is_single() || is_tag() ) : ?>
-    <link rel="stylesheet"
-          href="<?php echo esc_url( get_template_directory_uri() . '/css/top.css?v=' . filemtime( get_template_directory() . '/css/top.css' ) ); ?>"
-          type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css?v=<?php echo filemtime( get_template_directory() . '/css/top.css' ); ?>" type="text/css" />
   <?php endif; ?>
   
   <?php if ( is_page_template('page-schedule-detail.php') ) : ?>
@@ -308,18 +304,19 @@ if ( is_page('contact') ) {
   <div class="header-layout">
     <div class="logo">
       <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許 試験問題 過去問">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="狩猟免許 過去問・模擬試験">
       </a>
     </div>
     <!-- スマホ用サイトタイトル -->
     <div class="site-title-sp">
-      <a href="<?php echo home_url('/'); ?>">狩猟免許過去問題集</a>
+      <a href="<?php echo home_url('/'); ?>">狩猟免許 過去問・模擬試験</a>
     </div>
     <div class="pc-header pc-only">
       <div class="header-nav">
         <nav class="pc-nav">
           <ul>
             <li><a href="<?php echo home_url('/'); ?>">狩猟免許過去問TOP</a></li>
+            <li><a href="<?php echo home_url('/mock-exam/'); ?>">模擬試験</a></li>
             <li><a href="<?php echo home_url('/category/all/'); ?>">全カテゴリ問題</a></li>
             <li><a href="<?php echo home_url('/category/laws/'); ?>">法令問題</a></li>
             <li><a href="<?php echo home_url('/category/type1/'); ?>">一種猟銃問題</a></li>
@@ -346,6 +343,7 @@ if ( is_page('contact') ) {
             <ul class="global-navigation__list">
               <li><a href="https://shuryo-checker.com/" target="_blank" rel="noopener noreferrer" class="global-navigation__link">狩猟免許更新チェッカー</a></li>
               <li><a href="<?php echo home_url('/'); ?>" class="global-navigation__link">狩猟免許試験過去問題集 TOP</a></li>
+              <li><a href="<?php echo home_url('/mock-exam/'); ?>" class="global-navigation__link">無料模擬試験</a></li>
               <li><a href="<?php echo home_url('/category/all/'); ?>" class="global-navigation__link">全カテゴリ問題</a></li>
               <li><a href="<?php echo home_url('/category/laws/'); ?>" class="global-navigation__link">法令問題</a></li>
               <li><a href="<?php echo home_url('/category/type1/'); ?>" class="global-navigation__link">一種猟銃問題</a></li>

@@ -83,10 +83,10 @@
 		<p class="home-section-intro">通常問題で学習した後は、30問の模擬試験で実力を確認できます。本番形式では受験する免許に合わせて出題します。</p>
 
 		<div class="study-card-grid">
-			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/mock-exam/full-test/') ); ?>">
-				<span class="study-card-title">狩猟免許 本番形式30問模擬試験</span>
-				<span class="study-card-desc">受験する免許を選び、法令・猟具・鳥獣・保護管理から本番形式で30問に挑戦します。</span>
-				<span class="study-card-link">本番形式の模擬試験を始める →</span>
+			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/mock-exam/') ); ?>">
+				<span class="study-card-title">狩猟免許 模擬試験</span>
+				<span class="study-card-desc">本番形式30問、免許別、法令・鳥獣などの分野別模擬試験から選べます。</span>
+				<span class="study-card-link">模擬試験一覧を見る →</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">
@@ -108,8 +108,8 @@
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/mock-exam/ami/') ); ?>">
-				<span class="study-card-title">網猟 30問模擬試験</span>
-				<span class="study-card-desc">網猟の問題から30問をランダム出題します。</span>
+				<span class="study-card-title">網猟 27問模擬試験</span>
+				<span class="study-card-desc">網猟の全27問をランダム順で出題します。</span>
 				<span class="study-card-link">網猟の模擬試験へ →</span>
 			</a>
 		</div>
@@ -120,6 +120,7 @@
 			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/protection/') ); ?>">保護管理模擬試験</a>
 			<a class="article-link" href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">猟銃等講習会 50問模擬考査</a>
 		</div>
+	</section>
 
 	<section class="home-section" aria-labelledby="exam-support-title">
 		<h2 id="exam-support-title">受験前に確認する</h2>

@@ -20,59 +20,131 @@ $license_labels = [
     'ami'   => '網猟',
 ];
 
-$is_official_child = (
-    $parent_slug === 'hunting-license' &&
-    $grandparent_slug === 'mock-exam' &&
-    isset( $license_labels[ $page_slug ] )
+$license_tool_labels = [
+    'type1' => '猟具（第一種銃猟）',
+    'type2' => '猟具（第二種銃猟）',
+    'wana'  => '猟具（わな）',
+    'ami'   => '猟具（網）',
+];
+
+$license_descriptions = [
+    'type1' => '第一種銃猟免許向けの本番形式30問です。法令13問・第一種銃猟の猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
+    'type2' => '第二種銃猟免許向けの本番形式30問です。法令13問・第二種銃猟の猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
+    'wana'  => 'わな猟免許向けの本番形式30問です。法令13問・わな猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
+    'ami'   => '網猟免許向けの本番形式30問です。法令13問・網猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
+];
+
+$is_mock_index = (
+    $page_slug === 'mock-exam'
+    && ! $parent_id
 );
 
-$selected_license = $is_official_child ? $page_slug : '';
+$is_official_index = (
+    $page_slug === 'hunting-license'
+    && $parent_slug === 'mock-exam'
+);
+
+// 本番形式は /mock-exam/hunting-license/ の1ページ内で完結。
+// 免許の切替は ?license=type1 などのクエリで行う。
+$requested_license = isset( $_GET['license'] )
+    ? sanitize_key( wp_unslash( $_GET['license'] ) )
+    : '';
+
+$selected_license = isset( $license_labels[ $requested_license ] )
+    ? $requested_license
+    : ( $is_official_index ? 'type1' : '' );
+
+// 旧URLを残している場合だけ互換動作させる。
+$is_official_child = (
+    $parent_slug === 'hunting-license'
+    && $grandparent_slug === 'mock-exam'
+    && isset( $license_labels[ $page_slug ] )
+);
+
+if ( $is_official_child ) {
+    $selected_license = $page_slug;
+}
+
 $mock_configs = [
     'type1' => [
         'title'       => '第一種銃猟 30問模擬試験',
-        'description' => '第一種銃猟の問題から30問をランダム出題します。分野を集中して確認したい方向けの模擬試験です。',
+        'description' => '第一種銃猟の問題から30問をランダム出題します。',
         'mode'        => 'category',
         'category'    => 'type1',
         'count'       => 30,
     ],
     'type2' => [
         'title'       => '第二種銃猟 30問模擬試験',
-        'description' => '第二種銃猟の問題から30問をランダム出題します。分野を集中して確認したい方向けの模擬試験です。',
+        'description' => '第二種銃猟の問題から30問をランダム出題します。',
         'mode'        => 'category',
         'category'    => 'type2',
         'count'       => 30,
     ],
     'wana' => [
         'title'       => 'わな猟 30問模擬試験',
-        'description' => 'わな猟の問題から30問をランダム出題します。分野を集中して確認したい方向けの模擬試験です。',
+        'description' => 'わな猟の問題から30問をランダム出題します。',
         'mode'        => 'category',
         'category'    => 'wana',
         'count'       => 30,
     ],
     'ami' => [
-        'title'       => '網猟 30問模擬試験',
-        'description' => '網猟の問題から30問をランダム出題します。分野を集中して確認したい方向けの模擬試験です。',
+        'title'       => '網猟 27問模擬試験',
+        'description' => '網猟の全27問をランダム順で出題します。',
         'mode'        => 'category',
         'category'    => 'ami',
+        'count'       => 27,
+    ],
+    'laws' => [
+        'title'       => '狩猟免許 法令30問模擬試験',
+        'description' => '法令問題から30問をランダム出題します。',
+        'mode'        => 'category',
+        'category'    => 'laws',
         'count'       => 30,
+    ],
+    'animals' => [
+        'title'       => '狩猟免許 鳥獣30問模擬試験',
+        'description' => '鳥獣問題から30問をランダム出題します。',
+        'mode'        => 'category',
+        'category'    => 'animals',
+        'count'       => 30,
+    ],
+    'protection' => [
+        'title'       => '狩猟免許 保護管理20問模擬試験',
+        'description' => '保護管理の問題から20問をランダム出題します。',
+        'mode'        => 'tag',
+        'tag'         => 'protection',
+        'count'       => 20,
     ],
     'gun-course' => [
         'title'       => '猟銃等講習会 50問模擬考査',
-        'description' => '猟銃等講習会の考査問題から50問をランダム出題します。○・×で回答し、最後にまとめて採点します。',
+        'description' => '猟銃等講習会の考査問題から50問をランダム出題します。',
         'mode'        => 'category',
         'category'    => 'examination',
         'count'       => 50,
     ],
-    'hunting-license' => [
-        'title'       => '狩猟免許 本番形式30問模擬試験（' . $license_labels[ $selected_license ] . '）',
-        'description' => '本番を想定し、法令13問・猟具6問・鳥獣9問・保護管理2問の合計30問を出題します。',
-        'mode'        => 'official-format',
-        'count'       => 30,
-    ],
 ];
 
-if ( $is_official_child ) {
-    $config = $mock_configs['hunting-license'];
+if ( $is_mock_index ) {
+    $config = [
+        'title'       => '狩猟免許 模擬試験',
+        'description' => '本番形式30問と、免許・分野別の模擬試験から選んで学習できます。',
+        'mode'        => 'index',
+        'count'       => 0,
+    ];
+} elseif ( $is_official_index ) {
+    $config = [
+        'title'       => $license_labels[ $selected_license ] . ' 本番形式30問模擬試験',
+        'description' => $license_descriptions[ $selected_license ],
+        'mode'        => 'official-format',
+        'count'       => 30,
+    ];
+} elseif ( $is_official_child ) {
+    $config = [
+        'title'       => $license_labels[ $selected_license ] . ' 本番形式30問模擬試験',
+        'description' => $license_descriptions[ $selected_license ],
+        'mode'        => 'official-format',
+        'count'       => 30,
+    ];
 } else {
     $config = $mock_configs[ $page_slug ] ?? null;
 }
@@ -167,6 +239,8 @@ $breakdown = [];
 
 if ( ! $config ) {
     $mock_error = 'この固定ページは模擬試験テンプレートの対象外です。URLスラッグを確認してください。';
+} elseif ( $config['mode'] === 'index' ) {
+    // 模擬試験トップでは問題を取得しません。
 } elseif ( $config['mode'] === 'category' ) {
     $ids = shuryo_mock_random_ids( $config['count'], [
         'category_name' => $config['category'],
@@ -178,6 +252,18 @@ if ( ! $config ) {
 
     if ( count( $questions ) < $config['count'] ) {
         $mock_error = '対象カテゴリの問題数が不足しています。必要数：' . $config['count'] . '問、取得数：' . count( $questions ) . '問。';
+    }
+} elseif ( $config['mode'] === 'tag' ) {
+    $ids = shuryo_mock_random_ids( $config['count'], [
+        'tag' => $config['tag'],
+    ] );
+
+    foreach ( $ids as $post_id ) {
+        $questions[] = shuryo_mock_post_to_question( $post_id );
+    }
+
+    if ( count( $questions ) < $config['count'] ) {
+        $mock_error = '対象タグの問題数が不足しています。必要数：' . $config['count'] . '問、取得数：' . count( $questions ) . '問。';
     }
 } elseif ( $config['mode'] === 'official-format' ) {
     /*
@@ -263,23 +349,95 @@ if ( ! $config ) {
         <?php endif; ?>
     </header>
 
-    <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
-        <nav class="mock-license-select" aria-label="受験する狩猟免許を選択">
-            <p class="mock-license-select__title">受験する免許を選択</p>
-            <div class="mock-license-select__buttons">
-                <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
-                    <?php
-                    $official_parent_url = trailingslashit( get_permalink( $parent_id ) );
-                    $url = $official_parent_url . $license_slug . '/';
-                    $class = $selected_license === $license_slug ? ' is-current' : '';
-                    ?>
-                    <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>">
-                        <?php echo esc_html( $license_label ); ?>
+    <?php if ( $config && $config['mode'] === 'index' ) : ?>
+
+        <section class="mock-menu">
+
+            <a class="mock-menu-main"
+               href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">
+                <span class="mock-menu-main__label">本番対策</span>
+                <strong>狩猟免許 本番形式30問</strong>
+                <span>受験する免許を選んで、本番を想定した30問に挑戦</span>
+                <span class="mock-menu-main__link">本番形式を始める →</span>
+            </a>
+
+            <section class="mock-menu-section">
+                <h2>免許別の模擬試験</h2>
+
+                <div class="mock-menu-grid">
+                    <a href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">
+                        <strong>第一種銃猟</strong>
+                        <span>30問</span>
                     </a>
-                <?php endforeach; ?>
-            </div>
-        </nav>
-    <?php endif; ?>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/type2/') ); ?>">
+                        <strong>第二種銃猟</strong>
+                        <span>30問</span>
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/wana/') ); ?>">
+                        <strong>わな猟</strong>
+                        <span>30問</span>
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/ami/') ); ?>">
+                        <strong>網猟</strong>
+                        <span>27問</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="mock-menu-section">
+                <h2>分野別の模擬試験</h2>
+
+                <div class="mock-menu-grid mock-menu-grid--sub">
+                    <a href="<?php echo esc_url( home_url('/mock-exam/laws/') ); ?>">
+                        <strong>法令</strong>
+                        <span>30問</span>
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/animals/') ); ?>">
+                        <strong>鳥獣</strong>
+                        <span>30問</span>
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/protection/') ); ?>">
+                        <strong>保護管理</strong>
+                        <span>20問</span>
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">
+                        <strong>猟銃等講習会</strong>
+                        <span>50問</span>
+                    </a>
+                </div>
+            </section>
+
+        </section>
+
+    <?php else : ?>
+
+        <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
+            <nav class="mock-license-select mock-license-select--compact" aria-label="本番形式の受験免許を切り替える">
+                <p class="mock-license-select__title">受験免許</p>
+                <div class="mock-license-select__buttons">
+                    <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
+                        <?php
+                        $url = add_query_arg(
+                            'license',
+                            $license_slug,
+                            home_url('/mock-exam/hunting-license/')
+                        );
+                        $class = $selected_license === $license_slug ? ' is-current' : '';
+                        ?>
+                        <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>"
+                           href="<?php echo esc_url( $url ); ?>">
+                            <?php echo esc_html( $license_label ); ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </nav>
+        <?php endif; ?>
 
     <?php if ( $mock_error ) : ?>
         <div class="mock-error"><?php echo esc_html( $mock_error ); ?></div>
@@ -288,12 +446,12 @@ if ( ! $config ) {
     <?php else : ?>
 
     <section class="mock-start-card" id="mock-start">
-        <h2>模擬試験について</h2>
+        <h2><?php echo ( $config && $config['mode'] === 'official-format' ) ? '本番形式30問' : '模擬試験について'; ?></h2>
 
         <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
             <div class="mock-format-breakdown" aria-label="出題内訳">
                 <div><strong>13問</strong><span>法令</span></div>
-                <div><strong>6問</strong><span>猟具</span></div>
+                <div><strong>6問</strong><span><?php echo esc_html( $license_tool_labels[ $selected_license ] ); ?></span></div>
                 <div><strong>9問</strong><span>鳥獣</span></div>
                 <div><strong>2問</strong><span>保護管理</span></div>
             </div>
@@ -305,7 +463,14 @@ if ( ! $config ) {
             </div>
         <?php endif; ?>
 
-        <p class="mock-note">回答中は正解を表示しません。すべて回答した後に採点すると、正解・不正解と解説をまとめて確認できます。ページを再読み込みすると問題は再抽選されます。</p>
+        <p class="mock-note">
+            <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
+                法令13問・<?php echo esc_html( $license_tool_labels[ $selected_license ] ); ?>6問・鳥獣9問・保護管理2問をランダム抽選し、30問を混ぜて出題します。
+                回答中は正解を表示せず、全問回答後にまとめて採点・解説を確認できます。ページを再読み込みすると問題は再抽選されます。
+            <?php else : ?>
+                回答中は正解を表示しません。すべて回答した後に採点すると、正解・不正解と解説をまとめて確認できます。ページを再読み込みすると問題は再抽選されます。
+            <?php endif; ?>
+        </p>
         <div class="mock-start-actions"><button type="button" class="mock-primary-btn" id="mock-start-btn">模擬試験を開始する</button></div>
     </section>
 
@@ -396,11 +561,13 @@ if ( ! $config ) {
     </section>
 
     <?php endif; ?>
+
+    <?php endif; ?>
 </main>
 </div>
 </div>
 
-<?php if ( $config && ! $mock_error && count( $questions ) > 0 ) : ?>
+<?php if ( $config && in_array( $config['mode'], [ 'category', 'tag', 'official-format' ], true ) && ! $mock_error && count( $questions ) > 0 ) : ?>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const startBox = document.getElementById('mock-start');
