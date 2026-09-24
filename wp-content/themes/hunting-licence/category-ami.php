@@ -13,6 +13,7 @@
     <div class="inner">
 <?php if ( !is_paged() ) : ?>
     <div class="category-intro">
+      <?php get_template_part('parts-category-mock-link'); ?>
         <h2>網猟免許とは？</h2>
         <p>網猟免許は、落とし網やむそう網などを使って鳥類を捕獲するための免許です。使用できる器具や対象が限られており、受験者は比較的少ない傾向があります。</p>
         <p>このページでは、網猟免許試験に関する筆記問題を掲載しています。法令や器具の取り扱い、識別に関する内容を中心にまとめています。</p>
@@ -31,7 +32,6 @@
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
-    <?php get_template_part('parts-category-mock-link'); ?>
     <h2><?php single_cat_title(); ?>過去問</h2>
         <p>
         網猟に関する問題は、網の種類や使用法に加え、設置基準や猟場に関する法律が問われます。

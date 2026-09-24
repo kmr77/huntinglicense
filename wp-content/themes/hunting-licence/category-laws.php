@@ -16,6 +16,7 @@
 <div class="inner">
 <?php if ( !is_paged() ) : ?>
   <div class="category-intro">
+    <?php get_template_part('parts-category-mock-link'); ?>
     <h2>狩猟免許試験の法令問題とは？</h2>
     <p>法令問題はすべての狩猟免許試験に共通して出題される重要な分野です。狩猟に関する法律、安全管理、禁止事項などを正しく理解することが求められます。</p>
     <p>このカテゴリでは、狩猟免許試験で出題される法令関連の筆記問題を中心にまとめています。</p>
@@ -30,7 +31,6 @@
   </p>
 
   <?php get_template_part('parts-ads'); ?>
-  <?php get_template_part('parts-category-mock-link'); ?>
   <h2><?php single_cat_title(); ?> 過去問</h2>
   <p>狩猟免許試験における法令問題は、特に難解で紛らわしい表現が使われることが多いです。
     しかし、法令に関する知識が試験合否を大きく左右するため、しっかりとした準備が求められます。

@@ -13,6 +13,7 @@
     <div class="inner">
 <?php if ( !is_paged() ) : ?>
     <div class="category-intro">
+        <?php get_template_part('parts-category-mock-link'); ?>
         <h2>第二種銃猟免許とは？</h2>
         <p>第二種銃猟免許は、空気銃を使って鳥類などを狩猟するための免許です。第一種よりも取り扱いが容易で、比較的初心者にも人気があります。</p>
         <p>銃を所持するには、猟銃等講習会への参加や警察による所持許可が必要です。このページでは、第二種銃猟免許に関する筆記試験の過去問題を掲載しています。</p>
@@ -31,7 +32,6 @@
     </div>
     <?php get_template_part('parts-ads'); ?>
     <?php get_template_part('parts-affiliate'); ?>
-    <?php get_template_part('parts-category-mock-link'); ?>
     <h2><?php single_cat_title(); ?> 過去問</h2>
         <p>二種銃猟に関する問題も法令や猟具の使い方、銃器の管理方法などが問われます。
           特に安全管理や法律的な規制に関する部分が多いため、試験準備を怠らず、しっかりと理解しておきましょう。
