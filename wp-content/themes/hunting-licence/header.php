@@ -224,13 +224,16 @@ crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css" type="text/css" />
 
-  <?php if ( is_home() || is_front_page() ) : ?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css" type="text/css" />
+  <?php if ( is_page() || is_category() || is_single() || is_tag() ) : ?>
+    <link rel="stylesheet"
+          href="<?php echo esc_url( get_template_directory_uri() . '/css/question.css?v=' . filemtime( get_template_directory() . '/css/question.css' ) ); ?>"
+          type="text/css" />
   <?php endif; ?>
 
-  <?php if ( is_page() || is_category() || is_single() || is_tag() ): ?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/question.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/top.css">
+  <?php if ( is_home() || is_front_page() || is_page() || is_category() || is_single() || is_tag() ) : ?>
+    <link rel="stylesheet"
+          href="<?php echo esc_url( get_template_directory_uri() . '/css/top.css?v=' . filemtime( get_template_directory() . '/css/top.css' ) ); ?>"
+          type="text/css" />
   <?php endif; ?>
   
   <?php if ( is_page_template('page-schedule-detail.php') ) : ?>
