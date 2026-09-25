@@ -57,7 +57,7 @@ crossorigin="anonymous"></script>
     $front_exam_count    = $front_count_category_posts( 'examination' );
     $front_hunting_count = max( 0, $front_all_count - $front_exam_count );
   ?>
-  <title>狩猟免許過去問・猟銃等講習会考査 全<?php echo esc_html( number_format_i18n( $front_all_count ) ); ?>問｜無料問題集</title>
+  <title>狩猟免許過去問<?php echo esc_html( number_format_i18n( $front_all_count ) ); ?>問・無料模擬試験｜狩猟免許過去問ドリル</title>
     <meta name="description" content="狩猟免許試験の過去問・例題<?php echo esc_attr( number_format_i18n( $front_hunting_count ) ); ?>問と猟銃等講習会の考査問題<?php echo esc_attr( number_format_i18n( $front_exam_count ) ); ?>問、合計<?php echo esc_attr( number_format_i18n( $front_all_count ) ); ?>問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣判別を分野別に学べ、本番形式の無料模擬試験にも挑戦できます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
