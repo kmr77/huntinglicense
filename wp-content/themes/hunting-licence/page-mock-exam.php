@@ -227,9 +227,15 @@ function shuryo_mock_post_to_question( $post_id, $section = '' ) {
      */
     $choice_answer  = shuryo_mock_choice_answer( $answer );
     $boolean_answer = shuryo_mock_boolean_answer( $answer );
+    /*
+     * 鳥獣カテゴリの画像問題は、画像内にア・イ・ウが描かれているため
+     * ACFの select_a / select_i / select_u が空でも3択として扱う。
+     * 問題形式の判定を answer の文言に依存させない。
+     */
     $is_image_choice = ! $has_text_choices
         && $img_url !== ''
-        && $choice_answer !== '';
+        && has_category( 'animals', $post_id )
+        && ! $is_animals_judge;
 
     $has_choices = $has_text_choices || $is_image_choice;
 
@@ -258,6 +264,7 @@ function shuryo_mock_post_to_question( $post_id, $section = '' ) {
         'correct'            => $has_choices ? $choice_answer : $boolean_answer,
         'has_choices'        => $has_choices,
         'is_image_choice'    => (bool) $is_image_choice,
+        'format_error'       => (bool) ( $is_image_choice && $choice_answer === '' ),
         'image_choice_marks' => $image_choice_marks,
         'image'              => $img_url,
         'section'            => $section,
@@ -382,6 +389,23 @@ if ( ! $config ) {
         // 出題順をランダム化。
         shuffle( $questions );
     }
+}
+
+/*
+ * 画像3択として判定した問題で正解記号を取得できない場合は、
+ * 誤採点のまま試験を開始させず問題番号を表示する。
+ */
+$format_error_nos = [];
+foreach ( $questions as $question ) {
+    if ( ! empty( $question['format_error'] ) ) {
+        $format_error_nos[] = (string) $question['no'];
+    }
+}
+if ( ! empty( $format_error_nos ) ) {
+    $mock_error .= ( $mock_error ? ' ' : '' )
+        . '画像3択問題の正解データを判定できません（No.'
+        . implode( ', No.', array_map( 'esc_html', $format_error_nos ) )
+        . '）。';
 }
 ?>
 
