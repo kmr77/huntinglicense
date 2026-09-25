@@ -17,20 +17,48 @@ crossorigin="anonymous"></script>
   <?php
   // ▼▼ 固定ページにカスタムフィールドが設定されている場合のSEO表示対応 ▼▼
   if ( is_page() ) {
-    $template = get_page_template_slug(); // 空文字ならデフォルトテンプレート
-    $custom_title = get_post_meta(get_the_ID(), 'custom_title', true);
-    $custom_description = get_post_meta(get_the_ID(), 'custom_description', true);
+    $page_id     = get_queried_object_id();
+    $page_slug   = get_post_field( 'post_name', $page_id );
+    $parent_id   = wp_get_post_parent_id( $page_id );
+    $parent_slug = $parent_id ? get_post_field( 'post_name', $parent_id ) : '';
 
-    // 対象：カスタムテンプレート使用ページ or デフォルトテンプレートページ（テンプレート未指定）
-    if ( $template || $custom_title || $custom_description ) {
-      if ( $custom_title ) {
-          echo '<title>' . esc_html($custom_title) . '</title>';
-      } else {
-          echo '<title>' . esc_html(get_the_title()) . '｜狩猟免許スケジュール</title>';
-      }
+    // /mock-exam/ami/ は、公開中の網猟問題数をタイトルへ自動反映する。
+    // 既存の custom_title に「30問」が残っていても、ここを優先する。
+    if ( $page_slug === 'ami' && $parent_slug === 'mock-exam' ) {
+      $ami_count_query = new WP_Query( array(
+        'post_type'           => 'post',
+        'post_status'         => 'publish',
+        'category_name'       => 'ami',
+        'posts_per_page'      => 1,
+        'fields'              => 'ids',
+        'ignore_sticky_posts' => true,
+        'no_found_rows'       => false,
+      ) );
 
-      if ( $custom_description ) {
-          echo '<meta name="description" content="' . esc_attr($custom_description) . '">';
+      $ami_question_count = (int) $ami_count_query->found_posts;
+      wp_reset_postdata();
+
+      echo '<title>網猟 ' . esc_html( number_format_i18n( $ami_question_count ) ) . '問模擬試験｜狩猟免許過去問ドリル</title>';
+      echo '<meta name="description" content="' . esc_attr(
+        '網猟の全' . number_format_i18n( $ami_question_count ) . '問をランダム順で出題する無料模擬試験です。網猟免許の試験対策に利用できます。'
+      ) . '">';
+
+    } else {
+      $template = get_page_template_slug(); // 空文字ならデフォルトテンプレート
+      $custom_title = get_post_meta( $page_id, 'custom_title', true );
+      $custom_description = get_post_meta( $page_id, 'custom_description', true );
+
+      // 対象：カスタムテンプレート使用ページ or デフォルトテンプレートページ（テンプレート未指定）
+      if ( $template || $custom_title || $custom_description ) {
+        if ( $custom_title ) {
+            echo '<title>' . esc_html($custom_title) . '</title>';
+        } else {
+            echo '<title>' . esc_html(get_the_title()) . '｜狩猟免許スケジュール</title>';
+        }
+
+        if ( $custom_description ) {
+            echo '<meta name="description" content="' . esc_attr($custom_description) . '">';
+        }
       }
     }
   }

@@ -14,6 +14,23 @@ if ( ! $category || empty( $category->slug ) ) {
 	return;
 }
 
+$ami_question_count = 0;
+
+if ( $category->slug === 'ami' ) {
+	$ami_count_query = new WP_Query( array(
+		'post_type'           => 'post',
+		'post_status'         => 'publish',
+		'category_name'       => 'ami',
+		'posts_per_page'      => 1,
+		'fields'              => 'ids',
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => false,
+	) );
+
+	$ami_question_count = (int) $ami_count_query->found_posts;
+	wp_reset_postdata();
+}
+
 $mock_links = [
 	'type1' => [
 		'title' => '第一種銃猟 30問模擬試験',
@@ -31,8 +48,8 @@ $mock_links = [
 		'url'   => '/mock-exam/wana/',
 	],
 	'ami' => [
-		'title' => '網猟 30問模擬試験',
-		'desc'  => '網猟の問題から30問をランダム出題。通常問題で学習した後の実力確認に使えます。',
+		'title' => '網猟 ' . number_format_i18n( $ami_question_count ) . '問模擬試験',
+		'desc'  => '網猟の全' . number_format_i18n( $ami_question_count ) . '問をランダム順で出題。通常問題で学習した後の実力確認に使えます。',
 		'url'   => '/mock-exam/ami/',
 	],
 	'laws' => [

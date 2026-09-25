@@ -20,20 +20,6 @@ $license_labels = [
     'ami'   => '網猟',
 ];
 
-$license_tool_labels = [
-    'type1' => '猟具（第一種銃猟）',
-    'type2' => '猟具（第二種銃猟）',
-    'wana'  => '猟具（わな）',
-    'ami'   => '猟具（網）',
-];
-
-$license_descriptions = [
-    'type1' => '第一種銃猟免許向けの本番形式30問です。法令13問・第一種銃猟の猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
-    'type2' => '第二種銃猟免許向けの本番形式30問です。法令13問・第二種銃猟の猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
-    'wana'  => 'わな猟免許向けの本番形式30問です。法令13問・わな猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
-    'ami'   => '網猟免許向けの本番形式30問です。法令13問・網猟具6問・鳥獣9問・保護管理2問をランダムに出題します。',
-];
-
 $is_mock_index = (
     $page_slug === 'mock-exam'
     && ! $parent_id
@@ -44,26 +30,13 @@ $is_official_index = (
     && $parent_slug === 'mock-exam'
 );
 
-// 本番形式は /mock-exam/hunting-license/ の1ページ内で完結。
-// 免許の切替は ?license=type1 などのクエリで行う。
-$requested_license = isset( $_GET['license'] )
-    ? sanitize_key( wp_unslash( $_GET['license'] ) )
-    : '';
-
-$selected_license = isset( $license_labels[ $requested_license ] )
-    ? $requested_license
-    : ( $is_official_index ? 'type1' : '' );
-
-// 旧URLを残している場合だけ互換動作させる。
 $is_official_child = (
     $parent_slug === 'hunting-license'
     && $grandparent_slug === 'mock-exam'
     && isset( $license_labels[ $page_slug ] )
 );
 
-if ( $is_official_child ) {
-    $selected_license = $page_slug;
-}
+$selected_license = $is_official_child ? $page_slug : '';
 
 $mock_configs = [
     'type1' => [
@@ -133,15 +106,15 @@ if ( $is_mock_index ) {
     ];
 } elseif ( $is_official_index ) {
     $config = [
-        'title'       => $license_labels[ $selected_license ] . ' 本番形式30問模擬試験',
-        'description' => $license_descriptions[ $selected_license ],
-        'mode'        => 'official-format',
-        'count'       => 30,
+        'title'       => '狩猟免許 本番形式30問模擬試験',
+        'description' => '受験する免許を選んで、本番を想定した30問に挑戦できます。',
+        'mode'        => 'official-index',
+        'count'       => 0,
     ];
 } elseif ( $is_official_child ) {
     $config = [
-        'title'       => $license_labels[ $selected_license ] . ' 本番形式30問模擬試験',
-        'description' => $license_descriptions[ $selected_license ],
+        'title'       => '狩猟免許 本番形式30問模擬試験（' . $license_labels[ $selected_license ] . '）',
+        'description' => '現在設定している本番形式の構成で、合計30問を出題します。',
         'mode'        => 'official-format',
         'count'       => 30,
     ];
@@ -149,14 +122,51 @@ if ( $is_mock_index ) {
     $config = $mock_configs[ $page_slug ] ?? null;
 }
 
-function shuryo_mock_normalize_answer( $answer, $has_choices ) {
+function shuryo_mock_choice_answer( $answer ) {
     $answer = trim( wp_strip_all_tags( (string) $answer ) );
 
-    if ( $has_choices ) {
-        if ( preg_match( '/^[\s\(（]*ア/u', $answer ) ) return 'a';
-        if ( preg_match( '/^[\s\(（]*イ/u', $answer ) ) return 'i';
-        if ( preg_match( '/^[\s\(（]*ウ/u', $answer ) ) return 'u';
+    // 「正解：イ」「答）2」「正しいものはウ」などの保存形式にも対応。
+    $answer = preg_replace( '/^(?:正解|答え?|回答)\s*(?:は)?\s*[：:\)）\-－]?\s*/u', '', $answer );
+
+    // 文中に明示されている「正しいものはイ」「イが正解」等を優先。
+    if ( preg_match( '/(?:正しい(?:もの)?|適切(?:なもの)?|正解|答え?|回答)\s*(?:は|：|:)?\s*[（\(]?\s*(ア|イ|ウ)\s*[）\)]?/u', $answer, $m ) ) {
+        return [ 'ア' => 'a', 'イ' => 'i', 'ウ' => 'u' ][ $m[1] ];
     }
+    if ( preg_match( '/[（\(]?\s*(ア|イ|ウ)\s*[）\)]?\s*(?:が)?\s*(?:正解|正しい|適切)/u', $answer, $m ) ) {
+        return [ 'ア' => 'a', 'イ' => 'i', 'ウ' => 'u' ][ $m[1] ];
+    }
+
+    // ア・イ・ウ単独、または独立した選択肢記号。
+    if ( preg_match( '/^[\s\(（]*ア/u', $answer ) || preg_match( '/(?:^|[\s：:、,（\(])ア(?:[\s。．、,）\)]|$)/u', $answer ) ) return 'a';
+    if ( preg_match( '/^[\s\(（]*イ/u', $answer ) || preg_match( '/(?:^|[\s：:、,（\(])イ(?:[\s。．、,）\)]|$)/u', $answer ) ) return 'i';
+    if ( preg_match( '/^[\s\(（]*ウ/u', $answer ) || preg_match( '/(?:^|[\s：:、,（\(])ウ(?:[\s。．、,）\)]|$)/u', $answer ) ) return 'u';
+
+    // 1・2・3 / ①・②・③。
+    if ( preg_match( '/(?:正しい(?:もの)?|適切(?:なもの)?|正解|答え?|回答)\s*(?:は|：|:)?\s*[（\(]?\s*(1|１|①|2|２|②|3|３|③)\s*[）\)]?/u', $answer, $m ) ) {
+        if ( in_array( $m[1], [ '1', '１', '①' ], true ) ) return 'a';
+        if ( in_array( $m[1], [ '2', '２', '②' ], true ) ) return 'i';
+        return 'u';
+    }
+    if ( preg_match( '/^[\s\(（]*(?:1|１|①)(?:[^0-9０-９]|$)/u', $answer ) ) return 'a';
+    if ( preg_match( '/^[\s\(（]*(?:2|２|②)(?:[^0-9０-９]|$)/u', $answer ) ) return 'i';
+    if ( preg_match( '/^[\s\(（]*(?:3|３|③)(?:[^0-9０-９]|$)/u', $answer ) ) return 'u';
+
+    // A・B・C。
+    if ( preg_match( '/(?:正しい(?:もの)?|適切(?:なもの)?|正解|答え?|回答)\s*(?:は|：|:)?\s*[（\(]?\s*([A-Ca-cＡ-Ｃａ-ｃ])\s*[）\)]?/u', $answer, $m ) ) {
+        $v = mb_strtoupper( mb_convert_kana( $m[1], 'a' ) );
+        if ( $v === 'A' ) return 'a';
+        if ( $v === 'B' ) return 'i';
+        if ( $v === 'C' ) return 'u';
+    }
+    if ( preg_match( '/^[\s\(（]*[AaＡａ](?:[^A-Za-zＡ-Ｚａ-ｚ]|$)/u', $answer ) ) return 'a';
+    if ( preg_match( '/^[\s\(（]*[BbＢｂ](?:[^A-Za-zＡ-Ｚａ-ｚ]|$)/u', $answer ) ) return 'i';
+    if ( preg_match( '/^[\s\(（]*[CcＣｃ](?:[^A-Za-zＡ-Ｚａ-ｚ]|$)/u', $answer ) ) return 'u';
+
+    return '';
+}
+
+function shuryo_mock_boolean_answer( $answer ) {
+    $answer = trim( wp_strip_all_tags( (string) $answer ) );
 
     if (
         strpos( $answer, '〇' ) !== false ||
@@ -174,6 +184,14 @@ function shuryo_mock_normalize_answer( $answer, $has_choices ) {
     return '';
 }
 
+function shuryo_mock_normalize_answer( $answer, $has_choices ) {
+    if ( $has_choices ) {
+        return shuryo_mock_choice_answer( $answer );
+    }
+
+    return shuryo_mock_boolean_answer( $answer );
+}
+
 function shuryo_mock_post_to_question( $post_id, $section = '' ) {
     $no       = get_field( 'no', $post_id );
     $select_a = get_field( 'select_a', $post_id );
@@ -182,7 +200,7 @@ function shuryo_mock_post_to_question( $post_id, $section = '' ) {
     $answer   = get_field( 'answer', $post_id );
     $body     = get_field( 'answer_body', $post_id );
 
-    $has_choices = ( $select_a !== '' && $select_a !== null )
+    $has_text_choices = ( $select_a !== '' && $select_a !== null )
         || ( $select_i !== '' && $select_i !== null )
         || ( $select_u !== '' && $select_u !== null );
 
@@ -202,6 +220,32 @@ function shuryo_mock_post_to_question( $post_id, $section = '' ) {
         }
     }
 
+    /*
+     * 画像内の候補を選ぶ問題では、select_a / select_i / select_u が空のデータがある。
+     * その場合でも answer が ア/イ/ウ、1/2/3、A/B/C のいずれかなら3択問題として扱う。
+     * 一方、画像付きでも answer が ○×・正しい/誤りなら○×問題のままにする。
+     */
+    $choice_answer  = shuryo_mock_choice_answer( $answer );
+    $boolean_answer = shuryo_mock_boolean_answer( $answer );
+    $is_image_choice = ! $has_text_choices
+        && $img_url !== ''
+        && $choice_answer !== '';
+
+    $has_choices = $has_text_choices || $is_image_choice;
+
+    // 画像内のラベル表示を、保存されている正解形式に合わせる。
+    $image_choice_marks = [ 'ア', 'イ', 'ウ' ];
+    if ( $is_image_choice ) {
+        $answer_plain = trim( wp_strip_all_tags( (string) $answer ) );
+        $answer_plain = preg_replace( '/^(?:正解|答え?|回答)\s*(?:は)?\s*[：:\)）\-－]?\s*/u', '', $answer_plain );
+
+        if ( preg_match( '/^[\s\(（]*(?:1|１|①|2|２|②|3|３|③)/u', $answer_plain ) ) {
+            $image_choice_marks = [ '1', '2', '3' ];
+        } elseif ( preg_match( '/^[\s\(（]*[A-Ca-cＡ-Ｃａ-ｃ]/u', $answer_plain ) ) {
+            $image_choice_marks = [ 'A', 'B', 'C' ];
+        }
+    }
+
     return [
         'id'          => $post_id,
         'no'          => $no,
@@ -209,12 +253,14 @@ function shuryo_mock_post_to_question( $post_id, $section = '' ) {
         'select_a'    => $select_a,
         'select_i'    => $select_i,
         'select_u'    => $select_u,
-        'answer_text' => $answer,
-        'answer_body' => $body,
-        'correct'     => shuryo_mock_normalize_answer( $answer, $has_choices ),
-        'has_choices' => $has_choices,
-        'image'       => $img_url,
-        'section'     => $section,
+        'answer_text'        => $answer,
+        'answer_body'        => $body,
+        'correct'            => $has_choices ? $choice_answer : $boolean_answer,
+        'has_choices'        => $has_choices,
+        'is_image_choice'    => (bool) $is_image_choice,
+        'image_choice_marks' => $image_choice_marks,
+        'image'              => $img_url,
+        'section'            => $section,
     ];
 }
 
@@ -239,8 +285,8 @@ $breakdown = [];
 
 if ( ! $config ) {
     $mock_error = 'この固定ページは模擬試験テンプレートの対象外です。URLスラッグを確認してください。';
-} elseif ( $config['mode'] === 'index' ) {
-    // 模擬試験トップでは問題を取得しません。
+} elseif ( in_array( $config['mode'], [ 'index', 'official-index' ], true ) ) {
+    // 一覧ページでは問題を取得しません。
 } elseif ( $config['mode'] === 'category' ) {
     $ids = shuryo_mock_random_ids( $config['count'], [
         'category_name' => $config['category'],
@@ -351,87 +397,61 @@ if ( ! $config ) {
 
     <?php if ( $config && $config['mode'] === 'index' ) : ?>
 
-        <section class="mock-menu">
+        <section class="mock-start-card">
+            <h2>本番形式30問</h2>
+            <p class="mock-note">受験する免許を選び、本番を想定した30問に挑戦します。</p>
+            <div class="mock-start-actions">
+                <a class="mock-primary-btn" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">本番形式30問を選ぶ</a>
+            </div>
+        </section>
 
-            <a class="mock-menu-main"
-               href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">
-                <span class="mock-menu-main__label">本番対策</span>
-                <strong>狩猟免許 本番形式30問</strong>
-                <span>受験する免許を選んで、本番を想定した30問に挑戦</span>
-                <span class="mock-menu-main__link">本番形式を始める →</span>
-            </a>
+        <section class="mock-start-card">
+            <h2>免許別の模擬試験</h2>
+            <div class="mock-license-select__buttons">
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">第一種銃猟 30問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/type2/') ); ?>">第二種銃猟 30問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/wana/') ); ?>">わな猟 30問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/ami/') ); ?>">網猟 27問</a>
+            </div>
+        </section>
 
-            <section class="mock-menu-section">
-                <h2>免許別の模擬試験</h2>
+        <section class="mock-start-card">
+            <h2>分野別の模擬試験</h2>
+            <div class="mock-license-select__buttons">
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/laws/') ); ?>">法令 30問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/animals/') ); ?>">鳥獣 30問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/protection/') ); ?>">保護管理 20問</a>
+                <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">猟銃等講習会 50問</a>
+            </div>
+        </section>
 
-                <div class="mock-menu-grid">
-                    <a href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">
-                        <strong>第一種銃猟</strong>
-                        <span>30問</span>
+    <?php elseif ( $config && $config['mode'] === 'official-index' ) : ?>
+
+        <section class="mock-start-card">
+            <h2>受験する免許を選んでください</h2>
+            <p class="mock-note">選んだ免許に応じて猟具分野を切り替えます。</p>
+            <div class="mock-license-select__buttons">
+                <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
+                    <a class="mock-license-select__button"
+                       href="<?php echo esc_url( home_url('/mock-exam/hunting-license/' . $license_slug . '/') ); ?>">
+                        <?php echo esc_html( $license_label ); ?>
                     </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/type2/') ); ?>">
-                        <strong>第二種銃猟</strong>
-                        <span>30問</span>
-                    </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/wana/') ); ?>">
-                        <strong>わな猟</strong>
-                        <span>30問</span>
-                    </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/ami/') ); ?>">
-                        <strong>網猟</strong>
-                        <span>27問</span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="mock-menu-section">
-                <h2>分野別の模擬試験</h2>
-
-                <div class="mock-menu-grid mock-menu-grid--sub">
-                    <a href="<?php echo esc_url( home_url('/mock-exam/laws/') ); ?>">
-                        <strong>法令</strong>
-                        <span>30問</span>
-                    </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/animals/') ); ?>">
-                        <strong>鳥獣</strong>
-                        <span>30問</span>
-                    </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/protection/') ); ?>">
-                        <strong>保護管理</strong>
-                        <span>20問</span>
-                    </a>
-
-                    <a href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">
-                        <strong>猟銃等講習会</strong>
-                        <span>50問</span>
-                    </a>
-                </div>
-            </section>
-
+                <?php endforeach; ?>
+            </div>
         </section>
 
     <?php else : ?>
 
         <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
-            <nav class="mock-license-select mock-license-select--compact" aria-label="本番形式の受験免許を切り替える">
-                <p class="mock-license-select__title">受験免許</p>
+            <nav class="mock-license-select" aria-label="受験する狩猟免許を選択">
+                <p class="mock-license-select__title">受験する免許を選択</p>
                 <div class="mock-license-select__buttons">
                     <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
                         <?php
-                        $url = add_query_arg(
-                            'license',
-                            $license_slug,
-                            home_url('/mock-exam/hunting-license/')
-                        );
+                        $url = home_url('/mock-exam/hunting-license/' . $license_slug . '/');
                         $class = $selected_license === $license_slug ? ' is-current' : '';
                         ?>
-                        <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>"
-                           href="<?php echo esc_url( $url ); ?>">
+                        <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>">
                             <?php echo esc_html( $license_label ); ?>
                         </a>
                     <?php endforeach; ?>
@@ -446,12 +466,12 @@ if ( ! $config ) {
     <?php else : ?>
 
     <section class="mock-start-card" id="mock-start">
-        <h2><?php echo ( $config && $config['mode'] === 'official-format' ) ? '本番形式30問' : '模擬試験について'; ?></h2>
+        <h2>模擬試験について</h2>
 
         <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
             <div class="mock-format-breakdown" aria-label="出題内訳">
                 <div><strong>13問</strong><span>法令</span></div>
-                <div><strong>6問</strong><span><?php echo esc_html( $license_tool_labels[ $selected_license ] ); ?></span></div>
+                <div><strong>6問</strong><span>猟具</span></div>
                 <div><strong>9問</strong><span>鳥獣</span></div>
                 <div><strong>2問</strong><span>保護管理</span></div>
             </div>
@@ -463,14 +483,7 @@ if ( ! $config ) {
             </div>
         <?php endif; ?>
 
-        <p class="mock-note">
-            <?php if ( $config && $config['mode'] === 'official-format' ) : ?>
-                法令13問・<?php echo esc_html( $license_tool_labels[ $selected_license ] ); ?>6問・鳥獣9問・保護管理2問をランダム抽選し、30問を混ぜて出題します。
-                回答中は正解を表示せず、全問回答後にまとめて採点・解説を確認できます。ページを再読み込みすると問題は再抽選されます。
-            <?php else : ?>
-                回答中は正解を表示しません。すべて回答した後に採点すると、正解・不正解と解説をまとめて確認できます。ページを再読み込みすると問題は再抽選されます。
-            <?php endif; ?>
-        </p>
+        <p class="mock-note">回答中は正解を表示しません。すべて回答した後に採点すると、正解・不正解と解説をまとめて確認できます。ページを再読み込みすると問題は再抽選されます。</p>
         <div class="mock-start-actions"><button type="button" class="mock-primary-btn" id="mock-start-btn">模擬試験を開始する</button></div>
     </section>
 
@@ -506,14 +519,21 @@ if ( ! $config ) {
 
                     <div class="mock-options">
                     <?php if ( $question['has_choices'] ) : ?>
-                        <?php if ( $question['select_a'] !== '' && $question['select_a'] !== null ) : ?>
-                            <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="a"><span data-mark="ア"><?php echo esc_html( $question['select_a'] ); ?></span></label>
-                        <?php endif; ?>
-                        <?php if ( $question['select_i'] !== '' && $question['select_i'] !== null ) : ?>
-                            <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="i"><span data-mark="イ"><?php echo esc_html( $question['select_i'] ); ?></span></label>
-                        <?php endif; ?>
-                        <?php if ( $question['select_u'] !== '' && $question['select_u'] !== null ) : ?>
-                            <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="u"><span data-mark="ウ"><?php echo esc_html( $question['select_u'] ); ?></span></label>
+                        <?php if ( ! empty( $question['is_image_choice'] ) ) : ?>
+                            <?php $marks = $question['image_choice_marks'] ?? [ 'ア', 'イ', 'ウ' ]; ?>
+                            <label class="mock-option" aria-label="<?php echo esc_attr( $marks[0] ); ?>を選択"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="a"><span data-mark="<?php echo esc_attr( $marks[0] ); ?>"></span></label>
+                            <label class="mock-option" aria-label="<?php echo esc_attr( $marks[1] ); ?>を選択"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="i"><span data-mark="<?php echo esc_attr( $marks[1] ); ?>"></span></label>
+                            <label class="mock-option" aria-label="<?php echo esc_attr( $marks[2] ); ?>を選択"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="u"><span data-mark="<?php echo esc_attr( $marks[2] ); ?>"></span></label>
+                        <?php else : ?>
+                            <?php if ( $question['select_a'] !== '' && $question['select_a'] !== null ) : ?>
+                                <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="a"><span data-mark="ア"><?php echo esc_html( $question['select_a'] ); ?></span></label>
+                            <?php endif; ?>
+                            <?php if ( $question['select_i'] !== '' && $question['select_i'] !== null ) : ?>
+                                <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="i"><span data-mark="イ"><?php echo esc_html( $question['select_i'] ); ?></span></label>
+                            <?php endif; ?>
+                            <?php if ( $question['select_u'] !== '' && $question['select_u'] !== null ) : ?>
+                                <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="u"><span data-mark="ウ"><?php echo esc_html( $question['select_u'] ); ?></span></label>
+                            <?php endif; ?>
                         <?php endif; ?>
                     <?php else : ?>
                         <label class="mock-option"><input type="radio" name="q<?php echo esc_attr( $index ); ?>" value="maru"><span data-mark="〇">正しい</span></label>
