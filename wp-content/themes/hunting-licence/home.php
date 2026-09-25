@@ -1,17 +1,53 @@
 <?php get_header(); ?>
 
+<?php
+// v3: カテゴリ件数は wp_term_taxonomy の保存件数ではなく、
+// wp_posts × wp_term_relationships を直接集計して実数を表示する。
+// これにより、DBへ直接追加した問題も即座に反映される。
+global $wpdb;
+
+$shuryo_count_category_posts = static function ( $slug ) use ( $wpdb ) {
+	$sql = $wpdb->prepare(
+		"SELECT COUNT(DISTINCT p.ID)
+		 FROM {$wpdb->posts} p
+		 INNER JOIN {$wpdb->term_relationships} tr
+		   ON tr.object_id = p.ID
+		 INNER JOIN {$wpdb->term_taxonomy} tt
+		   ON tt.term_taxonomy_id = tr.term_taxonomy_id
+		 INNER JOIN {$wpdb->terms} t
+		   ON t.term_id = tt.term_id
+		 WHERE p.post_type = 'post'
+		   AND p.post_status = 'publish'
+		   AND tt.taxonomy = 'category'
+		   AND t.slug = %s",
+		$slug
+	);
+
+	return (int) $wpdb->get_var( $sql );
+};
+
+$home_question_counts = array();
+foreach ( array( 'type1', 'type2', 'wana', 'ami', 'examination', 'laws', 'animals-judge', 'numbers', 'all' ) as $slug ) {
+	$home_question_counts[ $slug ] = $shuryo_count_category_posts( $slug );
+}
+
+$home_total_question_count   = $home_question_counts['all'];
+$home_exam_question_count    = $home_question_counts['examination'];
+$home_hunting_question_count = max( 0, $home_total_question_count - $home_exam_question_count );
+?>
+
 <div class="main-visual top">
 	<div class="inner">
-		<h1>狩猟免許過去問620問｜無料で学べる試験問題集</h1>
-		<p>第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣判別など、狩猟免許試験対策の問題を無料で学べます。受験する免許や苦手分野から選んで学習してください。</p>
+		<h1>狩猟免許過去問・猟銃等講習会考査 全<?php echo esc_html( number_format_i18n( $home_total_question_count ) ); ?>問｜無料問題集</h1>
+		<p>狩猟免許試験<?php echo esc_html( number_format_i18n( $home_hunting_question_count ) ); ?>問、猟銃等講習会の考査<?php echo esc_html( number_format_i18n( $home_exam_question_count ) ); ?>問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣判別などから選んで学習できます。</p>
 	</div>
 </div>
 
 <div class="inner">
 
 	<section class="top-intro-box" aria-labelledby="top-intro-title">
-		<h2 id="top-intro-title">狩猟免許試験・猟銃等講習会考査の対策を無料でしっかり学べます</h2>
-		<p>「狩猟免許過去問ドリル」は、狩猟免許試験と猟銃等講習会考査の問題演習に対応した無料学習サイトです。<br>第一種銃猟・第二種銃猟・わな猟・網猟をはじめ、法令や鳥獣、猟銃等講習会考査の問題を目的に合わせて学習できます。</p>
+		<h2 id="top-intro-title">狩猟免許試験対策を、無料でしっかり学べます</h2>
+		<p>「狩猟免許過去問ドリル」は、狩猟免許試験の問題演習に特化した無料学習サイトです。<br>第一種銃猟・第二種銃猟・わな猟・網猟をはじめ、法令や鳥獣などの問題を分野別に学習できます。</p>
 		<p>問題は一部だけではなく、サイトに収録している問題をすべて無料で公開しています。<br>さらに、本番を想定した30問の模擬試験も無料で利用できます。</p>
 
 		<ul class="top-intro-features">
@@ -24,15 +60,14 @@
 				<p>法令・猟具・鳥獣・保護管理を組み合わせ、本番を想定した形式で実力を確認できます。</p>
 			</li>
 			<li>
-				<h3>免許別・分野別・猟銃等講習会考査に対応</h3>
-				<p>第一種銃猟・第二種銃猟・わな猟・網猟、法令や鳥獣、猟銃等講習会考査から目的に合わせて学習できます。</p>
+				<h3>免許別・分野別に学習</h3>
+				<p>第一種銃猟・第二種銃猟・わな猟・網猟、法令や鳥獣などから目的に合わせて学習できます。</p>
 			</li>
 		</ul>
 
 		<nav class="top-intro-actions" aria-label="学習を始める">
 			<a href="<?php echo esc_url( home_url('/category/all/') ); ?>">全問題から学習する</a>
-			<a class="top-intro-action-primary" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">狩猟免許の模擬試験を受ける</a>
-			<a href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">猟銃等講習会の模擬考査を受ける</a>
+			<a class="top-intro-action-primary" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">本番形式の模擬試験を受ける</a>
 		</nav>
 	</section>
 
@@ -44,31 +79,31 @@
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/type1/') ); ?>">
 				<span class="study-card-title">第一種銃猟免許</span>
 				<span class="study-card-desc">散弾銃・ライフル銃などの装薬銃を使用する第一種銃猟免許の試験対策問題です。</span>
-				<span class="study-card-link">第一種銃猟の問題を解く →</span>
+				<span class="study-card-link">第一種銃猟の問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['type1'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/type2/') ); ?>">
 				<span class="study-card-title">第二種銃猟免許</span>
 				<span class="study-card-desc">空気銃を使用する第二種銃猟免許に必要な知識を、問題形式で確認できます。</span>
-				<span class="study-card-link">第二種銃猟の問題を解く →</span>
+				<span class="study-card-link">第二種銃猟の問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['type2'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/wana/') ); ?>">
 				<span class="study-card-title">わな猟免許</span>
 				<span class="study-card-desc">わなの構造・使用方法・捕獲対象など、わな猟免許で問われる内容を学習できます。</span>
-				<span class="study-card-link">わな猟の問題を解く →</span>
+				<span class="study-card-link">わな猟の問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['wana'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/ami/') ); ?>">
 				<span class="study-card-title">網猟免許</span>
 				<span class="study-card-desc">網の種類・構造・使用方法など、網猟免許に必要な知識を問題形式で確認できます。</span>
-				<span class="study-card-link">網猟の問題を解く →</span>
+				<span class="study-card-link">網猟の問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['ami'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/category/examination/') ); ?>">
 				<span class="study-card-title">猟銃等講習会の考査</span>
 				<span class="study-card-desc">猟銃の所持を目指す方向け。初心者講習の考査対策問題をまとめています。</span>
-				<span class="study-card-link">考査問題を解く →</span>
+				<span class="study-card-link">考査問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['examination'] ) ); ?>問）→</span>
 			</a>
 		</div>
 	</section>
@@ -81,25 +116,25 @@
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/laws/') ); ?>">
 				<span class="study-card-title">法令問題</span>
 				<span class="study-card-desc">狩猟期間、狩猟者登録、禁止猟法など、法令に関する問題をまとめています。</span>
-				<span class="study-card-link">法令問題を解く →</span>
+				<span class="study-card-link">法令問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['laws'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/animals-judge/') ); ?>">
 				<span class="study-card-title">鳥獣判別</span>
 				<span class="study-card-desc">狩猟鳥獣の特徴や見分け方を、判別問題で確認できます。</span>
-				<span class="study-card-link">鳥獣判別に挑戦する →</span>
+				<span class="study-card-link">鳥獣判別に挑戦する（<?php echo esc_html( number_format_i18n( $home_question_counts['animals-judge'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/category/numbers/') ); ?>">
 				<span class="study-card-title">数字問題</span>
 				<span class="study-card-desc">日数・距離・期間など、数字を覚える必要がある問題を集中的に復習できます。</span>
-				<span class="study-card-link">数字問題を解く →</span>
+				<span class="study-card-link">数字問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['numbers'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card study-card-featured" href="<?php echo esc_url( home_url('/category/all/') ); ?>">
 				<span class="study-card-title">カテゴリMIX問題</span>
 				<span class="study-card-desc">複数分野をまとめて復習したい方向け。試験前の総仕上げに使えます。</span>
-				<span class="study-card-link">MIX問題を解く →</span>
+				<span class="study-card-link">MIX問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['all'] ) ); ?>問）→</span>
 			</a>
 		</div>
 
@@ -184,7 +219,7 @@
 
 	<section class="home-section" aria-labelledby="about-drill-title">
 		<h2 id="about-drill-title">狩猟免許過去問ドリルについて</h2>
-		<p>「狩猟免許過去問ドリル」は、狩猟免許をこれから取得する方のための無料学習サイトです。過去に出題された例題や、それに準じた問題を中心に約620問を掲載し、スマートフォンでも学習しやすい構成にしています。</p>
+		<p>「狩猟免許過去問ドリル」は、狩猟免許試験と猟銃等講習会の考査対策を無料で学べるサイトです。狩猟免許試験<?php echo esc_html( number_format_i18n( $home_hunting_question_count ) ); ?>問、猟銃等講習会の考査<?php echo esc_html( number_format_i18n( $home_exam_question_count ) ); ?>問、合計<?php echo esc_html( number_format_i18n( $home_total_question_count ) ); ?>問を掲載し、スマートフォンでも学習しやすい構成にしています。</p>
 		<p>問題を解くだけでなく、狩猟免許の申請、試験日程、勉強方法、狩猟者登録など、受験から取得後まで必要になる情報も掲載しています。運営者自身の狩猟免許取得や猟銃所持手続きの経験をもとに、実際の手続きで確認した内容も順次反映しています。</p>
 
 		<div class="article-link-list">
@@ -216,7 +251,7 @@
 			<a class="study-card study-card-featured" href="<?php echo esc_url( home_url('/category/examination/') ); ?>">
 				<span class="study-card-title">猟銃等講習会の考査問題</span>
 				<span class="study-card-desc">初心者講習の考査対策として、問題形式で知識を確認できます。</span>
-				<span class="study-card-link">考査問題を解く →</span>
+				<span class="study-card-link">考査問題を解く（<?php echo esc_html( number_format_i18n( $home_question_counts['examination'] ) ); ?>問）→</span>
 			</a>
 
 			<a class="study-card" href="<?php echo esc_url( home_url('/examination-info/') ); ?>">

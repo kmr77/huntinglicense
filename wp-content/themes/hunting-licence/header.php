@@ -35,9 +35,30 @@ crossorigin="anonymous"></script>
     }
   }
 ?>
-  <?php if ( is_home() || is_front_page() ) : ?>
-  <title>狩猟免許過去問620問・無料模擬試験｜狩猟免許過去問ドリル</title>
-    <meta name="description" content="狩猟免許試験の過去問・例題620問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣問題をカテゴリ別に学習でき、本番形式30問や分野別の無料模擬試験にも挑戦できます。">
+  <?php if ( is_home() || is_front_page() ) :
+    $front_count_category_posts = static function ( $slug ) {
+      $q = new WP_Query( array(
+        'post_type'           => 'post',
+        'post_status'         => 'publish',
+        'category_name'       => $slug,
+        'posts_per_page'      => 1,
+        'fields'              => 'ids',
+        'ignore_sticky_posts' => true,
+        'no_found_rows'       => false,
+      ) );
+
+      $count = (int) $q->found_posts;
+      wp_reset_postdata();
+
+      return $count;
+    };
+
+    $front_all_count     = $front_count_category_posts( 'all' );
+    $front_exam_count    = $front_count_category_posts( 'examination' );
+    $front_hunting_count = max( 0, $front_all_count - $front_exam_count );
+  ?>
+  <title>狩猟免許過去問・猟銃等講習会考査 全<?php echo esc_html( number_format_i18n( $front_all_count ) ); ?>問｜無料問題集</title>
+    <meta name="description" content="狩猟免許試験の過去問・例題<?php echo esc_attr( number_format_i18n( $front_hunting_count ) ); ?>問と猟銃等講習会の考査問題<?php echo esc_attr( number_format_i18n( $front_exam_count ) ); ?>問、合計<?php echo esc_attr( number_format_i18n( $front_all_count ) ); ?>問を無料掲載。第一種銃猟・第二種銃猟・わな猟・網猟・法令・鳥獣判別を分野別に学べ、本番形式の無料模擬試験にも挑戦できます。">
     <meta name="keywords" content="狩猟免許,狩猟免許試験,過去問,例題集,テキスト,猟具,法令,一種銃猟,二種銃猟,網猟,あみ猟,罠猟,わな猟,空気銃">
   <?php elseif ( is_page('know') ) : ?>
     <title>狩猟免許取得に知っておくべき基本情報まとめ</title>
@@ -93,13 +114,24 @@ crossorigin="anonymous"></script>
     ?>
     <meta name="description" content="わな猟の法令や設置方法に関する問題を厳選。実技を含めた総合的な対策が可能な、わな猟免許受験者向け問題集です。">
   <?php elseif ( is_category('examination') ) :
-    $title = '猟銃等講習会 過去問｜【一発合格できる】猟銃免許の初心者考査50問と解答解説を無料公開';
+    $exam_count_query = new WP_Query( array(
+      'post_type'           => 'post',
+      'post_status'         => 'publish',
+      'category_name'       => 'examination',
+      'posts_per_page'      => 1,
+      'fields'              => 'ids',
+      'ignore_sticky_posts' => true,
+      'no_found_rows'       => false,
+    ) );
+    $exam_count = (int) $exam_count_query->found_posts;
+    wp_reset_postdata();
+    $title = '猟銃等講習会 考査問題' . number_format_i18n( $exam_count ) . '問｜初心者講習の無料問題集';
     if ( $paged >= 2 ) {
         $title = 'ページ' . $paged . '：' . $title;
     }
     echo '<title>' . esc_html($title) . '</title>';
     ?>
-    <meta name="description" content="猟銃等講習会の初心者考査・試験問題に出題される重要過去問50問を厳選収録。実際の猟銃等講習会で出やすい問題を中心に、解答と詳しい解説つきで初心者でも一発合格を目指せます。">
+    <meta name="description" content="猟銃等講習会の初心者講習の考査対策問題を<?php echo esc_attr( number_format_i18n( $exam_count ) ); ?>問無料掲載。銃の法令・火薬類・構造・安全な取扱いなどを○×問題と解説で学習できます。">
   <?php elseif ( is_category('numbers') ) :
     $title = '数字に特化した対策問題集｜狩猟免許過去問ドリル';
     if ( $paged >= 2 ) {
