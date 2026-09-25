@@ -31,7 +31,8 @@
 
 		<nav class="top-intro-actions" aria-label="学習を始める">
 			<a href="<?php echo esc_url( home_url('/category/all/') ); ?>">全問題から学習する</a>
-			<a class="top-intro-action-primary" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">本番形式の模擬試験を受ける</a>
+			<a class="top-intro-action-primary" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">狩猟免許の模擬試験を受ける</a>
+			<a href="<?php echo esc_url( home_url('/mock-exam/gun-course/') ); ?>">猟銃等講習会の模擬考査を受ける</a>
 		</nav>
 	</section>
 
