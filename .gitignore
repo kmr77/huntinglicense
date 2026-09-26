@@ -1,1 +1,17 @@
-wp-content/plugins/*
+# 基本的にすべて無視
+/*
+
+# .gitignore 自体は追跡
+!/.gitignore
+
+# 対象テーマまでのディレクトリだけ通す
+!/wp-content/
+#/wp-content 以下は一旦すべて無視
+/wp-content/*
+
+!/wp-content/themes/
+/wp-content/themes/*
+
+# hunting-licence テーマだけ追跡
+!/wp-content/themes/hunting-licence/
+!/wp-content/themes/hunting-licence/**
