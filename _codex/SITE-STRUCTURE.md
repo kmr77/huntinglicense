@@ -19,6 +19,7 @@
 
 - 調査日時: 2026-09-26 15:13〜15:16 JST。
 - 管理体制の更新日時: 2026-09-26 15:33 JST。下記のサイト実体に関する数値・バージョン・主要ファイルの存在を読み取りで再確認した。
+- テーマの現在状態確認: 2026-09-27 08:38 JST。ローカルに試験的に作られた `functions.php` の削除後に確認。
 - WordPressルート: `/Applications/MAMP/htdocs/huntinglicense`。ローカルURLは `http://localhost:8888/huntinglicense/`（HTTP HEAD 200を確認）。
 - 調査方法: テーマ実ファイル、WordPressを読み込むPHP CLI、DBの `SELECT` / `SHOW TABLES` / `DESCRIBE`、ローカルHTTPのHEAD。DBへの書き込みは行っていない。
 - 有効テーマ: `hunting-licence`（表示名 `Hunting Licence`）。親・子テーマ設定とも同じスラッグ。
@@ -35,7 +36,7 @@ huntinglicense/
 │   ├── plugins/              プラグイン
 │   ├── themes/hunting-licence/
 │   │   ├── home.php, header.php, footer.php
-│   │   ├── functions.php, function.php
+│   │   ├── function.php
 │   │   ├── category-*.php, tag-*.php, single.php, page-*.php
 │   │   ├── parts-*.php, css/, img/, schedule-list/, common.js, style.css
 │   ├── uploads/              アップロード
@@ -48,13 +49,12 @@ huntinglicense/
     └── logs/                 作業ごとの詳細ログ
 ```
 
-テーマ内の `img/animal/` と `img/question/` に問題画像、`schedule-list/2025/` と `schedule-list/2026/` に日程データがある。`function.php`（単数形）と `functions.php` は別ファイル。WordPressがテーマ起動時に自動読み込みするのは `functions.php`。`function.php` にテーマ設定・スタイル登録・タグ一覧件数用の関数定義があるが、テーマ内で同ファイルを読み込む記述は見つかっていないため、現状はそれらが実行される前提にしない。
+テーマ内の `img/animal/` と `img/question/` に問題画像、`schedule-list/2025/` と `schedule-list/2026/` に日程データがある。テーマ内に `functions.php`（複数形）は存在しない。`function.php`（単数形）にはテーマ設定・スタイル登録・タグ一覧件数用の関数定義があるが、WordPressの標準自動読込名ではなく、テーマ内で同ファイルを読み込む記述も見つかっていないため、現状はそれらが実行される前提にしない。
 
 ## 主要PHPファイルと役割
 
 | ファイル | 役割 |
 | --- | --- |
-| `functions.php` | 公開側の `the_title` フィルター。投稿の先頭がACF `no` と一致する場合だけ元資料番号を表示から除く。管理画面とRESTを除外。現時点でGit未追跡。 |
 | `function.php` | テーマサポート、スタイル登録、タグ一覧件数を定義しているが、現在は自動読込対象ではない。 |
 | `header.php` / `footer.php` | 共通ヘッダー・フッター、SEOメタ、CSS/JS読込、ナビゲーション。 |
 | `home.php` | 投稿一覧をトップに設定したホーム画面。分野・試験への導線と件数表示。 |
@@ -89,7 +89,7 @@ huntinglicense/
 ## 問題データと表示処理
 
 - 通常問題はWordPress標準の `post`。タイトルの保存元は `wp_posts.post_title`。`the_title()` / `get_the_title()` で表示する。ACFにも `title` フィールドがあるが、調査した通常の一覧・詳細・模擬試験の問題文タイトル取得元は投稿タイトル。
-- 問題番号はACF `no`（`wp_postmeta`）で、一覧の `問N` は画面内の連番。カテゴリ画面には別途 `問題番号.` + `no` を表示する箇所がある。`functions.php` のフィルターは保存値を変更せず、元タイトルが `no` で始まる場合のみ公開側で先頭の重複を除く。
+- 問題番号はACF `no`（`wp_postmeta`）で、一覧の `問N` は画面内の連番。カテゴリ画面には別途 `問題番号.` + `no` を表示する箇所がある。タイトル先頭の元資料番号を除く公開側の処理は現在未実装。
 - 通常のカテゴリテンプレートは `WP_Query` で対象カテゴリの投稿を取り、`the_title()`、`the_field('no')`、`select_a/i/u`、`answer`、`answer_body` を出力。ページ送りや `?random=1` による順序変更がある。`common.js` がアコーディオンを制御する。
 - 投稿詳細 `single.php` はカテゴリにより選択肢を隠す。`animals-judge` は `habitat`、`habit`、`features`、`type` も表示。問題画像は `no` に基づく `img/question/<no>.avif` または `img/animal/<no>.avif` の存在を確認して表示。
 - 模擬試験 `page-mock-exam.php` は固定ページのスラッグ・親子関係からモードを決め、`shuryo_mock_random_ids()` でカテゴリまたは `protection` タグからランダム抽選し、`shuryo_mock_post_to_question()` で投稿タイトル・ACF項目・画像・正解形式をまとめる。3択、画像内3択、○×を扱う。回答と採点はページ内JS。本番形式30問は法令13、免許別猟具6、鳥獣9、保護管理2。選択済み投稿IDを除外して重複を避ける。
@@ -145,7 +145,7 @@ huntinglicense/
 - `header.php` が `style.css` と主要CSSを読込み、`footer.php` が `common.js` を読む。カテゴリテンプレートは `parts-breadcrumb.php`、`parts-random-btn.php`、広告部品、模擬試験導線等を `get_template_part()` で読む。日程テンプレートはテーマ内CSVに依存する。
 - 問題一覧・詳細と模擬試験はいずれもACFの `no` / 選択肢 / 答え / 解説に依存。模擬試験は `protection` タグと各カテゴリ、親子スラッグに依存。画像は番号をファイル名に使い、ファイルの存在で表示を決める。
 - `page-mock-exam.php` に回答文字列をア・イ・ウ / 数字 / A・B・C / ○×に正規化する関数があり、画像内選択肢も扱う。正解形式を判定できない画像3択が混じる場合は試験開始前にエラーを出す。
-- `functions.php` は公開表示用のタイトルフィルターを持つが、保存元 `post_title` は変更しない。`function.php` の単数形はWordPressの標準読込名ではない。
+- テーマに `functions.php` はなく、元資料番号を除く `the_title` フィルターもない。`function.php` の単数形はWordPressの標準読込名ではない。
 - `page-schedule.php` と `page-examination-beginner.php` はテーマ内CSVを読む。`schedule-list/2026/hunting-license.csv` と `schedule-list/2025/gun-beginner.csv` は存在するが、`page-schedule.php` が2025年の表示に使う `schedule-list/2025/hunting-license.csv` は存在しない。詳細な日程データの正確性・更新時期は今回の調査対象外。
 
 ## 現時点で確認できない事項
@@ -154,4 +154,4 @@ huntinglicense/
 - 別接頭部 `wp9bdcd0` のテーブル群が残っている経緯と管理方針。
 - `/mock-exam/hunting-license/{license}/` の公開固定ページがない状態でのアクセス結果。テンプレート内にはリンクと処理がある。
 - すべてのURL・全端末での画面確認、外部スクリプトの稼働状況、CSV内容の網羅的な妥当性。
-- `_codex/` は `.gitignore` の例外により指定の管理MarkdownだけがGit追跡候補。追跡開始には今後のGit追加・コミットが必要（本作業ではコミットしない）。
+- `_codex/` は `.gitignore` の例外により指定の管理MarkdownがGit管理対象。その他のWordPress本体やアップロードは引き続き除外される。

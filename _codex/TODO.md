@@ -8,7 +8,7 @@
 
 ## 次に行う
 
-- **通常問題・模擬試験の投稿タイトル先頭に付く元資料番号を、DB・管理画面では保持したままフロント表示時のみ非表示にする。** 現在の `wp-content/themes/hunting-licence/functions.php` には該当する表示フィルターが存在するが、着手前からGit未追跡で、今回その実装や全画面での動作確認は行っていない。次の作業で通常問題一覧・詳細・模擬試験、管理画面、数字が問題文の一部である例を確認し、完了条件を満たすか判断する。関連ファイル: `functions.php`、`page-mock-exam.php`、通常問題テンプレート。関連方針: `DECISIONS.md`。
+- **未実装 / 再設計待ち:** 通常問題・模擬試験の投稿タイトル先頭に付く元資料番号を、DBとWordPress管理画面では保持したまま、フロントの問題文表示時だけ非表示にする。`functions.php` の新設と `the_title` のグローバルフィルターは使わず、通常問題・模擬試験の問題文表示箇所だけを対象にする。`18歳`、`1丁`、`7.5号` など問題文に必要な数字を残し、SEOタイトル・パンくず・URL・その他のタイトル表示へ波及させない。関連ファイル: `page-mock-exam.php`、通常問題テンプレート。関連方針: `DECISIONS.md`。
 
 ## 保留
 
@@ -18,3 +18,4 @@
 
 - 2026-09-26: `_codex/SITE-STRUCTURE.md` と `logs/` を作成し、サイト構成を初回調査した。詳細: `logs/2026-09-26_1517_codex-documentation-setup.md`。
 - 2026-09-26: `TODO.md`、`CHANGELOG.md`、`DECISIONS.md` と作業前差分確認の運用を追加し、管理MarkdownだけをGit追跡候補にした。詳細: `logs/2026-09-26_1533_codex-management-setup.md`。
+- 2026-09-27: ローカルで試験的に作成した未追跡 `functions.php` を削除し、管理資料を現在の状態へ更新した。接頭番号の代替実装は未着手。詳細: `logs/2026-09-27_1007_revert-local-functions-title-filter.md`。
