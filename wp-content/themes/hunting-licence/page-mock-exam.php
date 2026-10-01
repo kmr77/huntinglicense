@@ -457,7 +457,7 @@ if ( ! empty( $format_error_nos ) ) {
             <div class="mock-license-select__buttons">
                 <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
                     <a class="mock-license-select__button"
-                       href="<?php echo esc_url( home_url('/mock-exam/hunting-license/' . $license_slug . '/') ); ?>">
+                       href="<?php echo esc_url( home_url('/mock-exam/' . $license_slug . '/') ); ?>">
                         <?php echo esc_html( $license_label ); ?>
                     </a>
                 <?php endforeach; ?>
@@ -472,7 +472,7 @@ if ( ! empty( $format_error_nos ) ) {
                 <div class="mock-license-select__buttons">
                     <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
                         <?php
-                        $url = home_url('/mock-exam/hunting-license/' . $license_slug . '/');
+                        $url = home_url('/mock-exam/' . $license_slug . '/');
                         $class = $selected_license === $license_slug ? ' is-current' : '';
                         ?>
                         <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>">
