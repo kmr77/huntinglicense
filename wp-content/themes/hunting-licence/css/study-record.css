@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* 学習記録・復習ページ。模擬試験のカードと配色に合わせる。 */
+.learning-page.inner { width: 100%; max-width: 860px; min-width: 0; box-sizing: border-box; margin: 30px auto 64px; padding: 0 16px; color: #1f2923; }
+.learning-page .learning-header { margin: 0 0 24px; padding: 22px 24px 20px; border-left: 6px solid #267344; border-radius: 0 12px 12px 0; background: #f2f8f4; }
+.learning-page .learning-header::before { content: "狩猟免許過去問ドリル"; display: block; margin-bottom: 6px; color: #267344; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+.learning-page .learning-header h1 { margin: 0 0 8px !important; padding: 0 !important; background: none !important; color: #17231b !important; font-size: clamp(1.55rem, 3vw, 2.05rem) !important; line-height: 1.45 !important; text-align: left !important; text-shadow: none !important; -webkit-text-stroke: 0 !important; }
+.learning-page .learning-header p { margin: 0 !important; padding: 0 !important; color: #526058 !important; font-size: .98rem; line-height: 1.8; text-shadow: none !important; }
+.learning-page .learning-note, .learning-page .learning-notice { margin: 0 0 22px; padding: 13px 15px; border-left: 4px solid #c6d7cc; background: #f7f8f7; color: #4e5952; font-size: .93rem; line-height: 1.8; overflow-wrap: anywhere; }
+.learning-page .learning-card { min-width: 0; margin: 0 0 22px; padding: 24px; border: 1px solid #dfe7e2; border-radius: 12px; background: #fff; box-shadow: 0 4px 16px rgba(26, 53, 36, .06); }
+.learning-page .learning-card h2 { margin: 0 0 18px; padding: 0; border: 0; background: none; color: #17231b; font-size: 1.25rem; line-height: 1.5; text-align: left; text-shadow: none; }
+.learning-page .learning-card h3 { margin: 22px 0 12px; color: #344139; font-size: 1.05rem; text-align: left; }
+
+.learning-page .learning-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.learning-page .learning-grid > div { min-width: 0; padding: 15px 12px; border-top: 3px solid #9fc4ac; border-radius: 8px; background: #f7faf8; }
+.learning-page .learning-grid span, .learning-page .learning-grid strong { display: block; }
+.learning-page .learning-grid span { color: #526058; font-size: .87rem; }
+.learning-page .learning-grid strong { margin-top: 6px; color: #174e2b; font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.4; overflow-wrap: anywhere; }
+.learning-page .learning-overview-card .learning-grid > div:nth-child(3), .learning-page .learning-overview-card .learning-grid > div:nth-child(6) { border-top-color: #267344; }
+.learning-page .learning-goal-card #learning-goal-status { margin: 0 0 20px; color: #174e2b; font-size: 1.3rem; font-weight: 700; line-height: 1.6; }
+.learning-page .learning-goal-form label { display: block; margin-bottom: 8px; color: #526058; font-size: .9rem; }
+.learning-page .learning-goal-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+.learning-page input[type="date"] { min-height: 46px; box-sizing: border-box; margin: 0; padding: 8px 12px; border: 1px solid #cfd8d2; border-radius: 8px; background: #fff; color: #1f2923; font: inherit; }
+
+.learning-page .learning-button, .learning-page .learning-choices button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; box-sizing: border-box; padding: 10px 22px; border: 1px solid #267344; border-radius: 999px; background: #267344; color: #fff; font: inherit; font-weight: 700; line-height: 1.4; text-align: center; text-decoration: none; cursor: pointer; transition: transform .15s ease, opacity .15s ease; }
+.learning-page .learning-button:hover, .learning-page .learning-button:focus-visible, .learning-page .learning-choices button:hover, .learning-page .learning-choices button:focus-visible { color: #fff; opacity: .9; transform: translateY(-1px); }
+.learning-page .learning-button-secondary, .learning-page .learning-choices button { border-color: #cfd8d2; background: #fff; color: #344139; }
+.learning-page .learning-button-secondary:hover, .learning-page .learning-button-secondary:focus-visible, .learning-page .learning-choices button:hover, .learning-page .learning-choices button:focus-visible { color: #174e2b; }
+.learning-page .learning-choices button:disabled { opacity: .6; cursor: default; transform: none; }
+.learning-page .learning-button-reset { border-color: #cfd8d2; background: #fff; color: #526058; }
+.learning-page .learning-button-reset:hover, .learning-page .learning-button-reset:focus-visible { color: #344139; }
+.learning-page .learning-button-reset-confirm { border-color: #a35b5b; background: #a35b5b; }
+.learning-page .learning-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+.learning-page .learning-history { margin-top: 24px; padding-top: 4px; border-top: 1px solid #ecefec; }
+.learning-page .learning-table-wrap { max-width: 100%; overflow-x: auto; }
+.learning-page .learning-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.learning-page .learning-table th, .learning-page .learning-table td { padding: 12px 10px; border-bottom: 1px solid #e4ebe6; color: #344139; line-height: 1.5; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.learning-page .learning-table th { background: #f7faf8; color: #174e2b; font-size: .9rem; }
+.learning-page .learning-history-table th:nth-child(1) { width: 24%; }
+.learning-page .learning-history-table th:nth-child(2) { width: 31%; }
+.learning-page .learning-history-table th:nth-child(3) { width: 29%; }
+.learning-page .learning-history-table th:nth-child(4) { width: 16%; }
+.learning-page .learning-table td[colspan] { padding: 20px 14px; border: 1px solid #e4ebe6; border-radius: 8px; background: #f7faf8; color: #526058; }
+.learning-page .learning-area-table td:first-child { font-weight: 700; }
+
+.learning-page .learning-weak-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.learning-page .learning-weak-summary p { min-width: 0; margin: 0; padding: 15px 12px; border-top: 3px solid #9fc4ac; border-radius: 8px; background: #f7faf8; color: #526058; font-size: .88rem; }
+.learning-page .learning-weak-summary strong { display: block; margin-top: 6px; color: #174e2b; font-size: 1.35rem; overflow-wrap: anywhere; }
+.learning-page .learning-empty-note { margin: 16px 0 0; color: #526058; }
+.learning-page #learning-wrong-list { margin: 0; padding-left: 1.5em; }
+.learning-page #learning-wrong-list li { margin-bottom: 8px; line-height: 1.6; overflow-wrap: anywhere; }
+.learning-page .learning-about-card { color: #526058; }
+.learning-page #learning-reset-confirm { margin-top: 16px; padding: 16px; border-radius: 8px; background: #fbf5f4; }
+.learning-page #learning-reset-confirm p { margin: 0 0 14px; line-height: 1.7; }
+.learning-page #learning-reset-confirm button { margin-right: 8px; }
+
+.learning-page .learning-back { margin: 0 0 18px; }
+.learning-page .learning-review-question h2 { overflow-wrap: anywhere; }
+.learning-page .learning-question-image { display: block; max-width: 560px; width: 100%; height: auto; margin: 0 auto; }
+.learning-page .learning-choices { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+.learning-page .learning-choices button { border-radius: 10px; justify-content: flex-start; text-align: left; overflow-wrap: anywhere; }
+.learning-page #learning-review-feedback { margin: 18px 0 0; color: #344139; font-weight: 700; }
+.learning-page #learning-review-answer { margin-top: 18px; padding: 18px; border-left: 5px solid #9fc4ac; border-radius: 0 8px 8px 0; background: #f7faf8; line-height: 1.7; }
+.learning-page #learning-review-answer p:first-child { margin-top: 0; }
+.learning-page #learning-review-navigation { text-align: center; }
+.learning-page #learning-review-status { margin: 0 0 16px; line-height: 1.7; }
+
+/* 模擬試験タイマーは既存の表示を維持する。 */
+.mock-timer { margin-top: 12px; font-size: 1rem; }
+.mock-timer strong { display: inline-block; min-width: 3.6em; font-variant-numeric: tabular-nums; }
+.mock-timer button { margin-left: 8px; padding: 3px 8px; border: 1px solid currentColor; border-radius: 4px; background: transparent; color: inherit; cursor: pointer; }
+[hidden] { display: none !important; }
+
+@media (max-width: 700px) {
+  .learning-page.inner { margin: 18px auto 48px; }
+  .learning-page .learning-header { padding: 18px 17px 17px; }
+  .learning-page .learning-card { padding: 18px 16px; }
+  .learning-page .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .learning-page .learning-history-table th:nth-child(n) { width: auto; }
+  .learning-page .learning-table-wrap { overflow-x: visible; }
+  .learning-page .learning-table, .learning-page .learning-table tbody, .learning-page .learning-table tr { display: block; width: 100%; }
+  .learning-page .learning-table thead { display: none; }
+  .learning-page .learning-table tr { box-sizing: border-box; margin-bottom: 10px; padding: 8px 12px; border: 1px solid #dfe7e2; border-radius: 10px; background: #f7faf8; }
+  .learning-page .learning-table td { display: flex; justify-content: space-between; gap: 12px; width: 100%; box-sizing: border-box; padding: 8px 0; border-bottom: 1px solid #e4ebe6; text-align: right; }
+  .learning-page .learning-table td:last-child { border-bottom: 0; }
+  .learning-page .learning-table td::before { flex: 0 0 auto; color: #526058; font-size: .86rem; font-weight: 400; text-align: left; }
+  .learning-page .learning-history-table td:nth-child(1)::before { content: "日時"; }
+  .learning-page .learning-history-table td:nth-child(2)::before { content: "模擬試験"; }
+  .learning-page .learning-history-table td:nth-child(3)::before { content: "結果・正答率"; }
+  .learning-page .learning-history-table td:nth-child(4)::before { content: "所要時間"; }
+  .learning-page .learning-area-table td:nth-child(1)::before { content: "分野"; }
+  .learning-page .learning-area-table td:nth-child(2)::before { content: "解答数"; }
+  .learning-page .learning-area-table td:nth-child(3)::before { content: "正答率"; }
+  .learning-page .learning-table td[colspan] { display: block; width: 100%; box-sizing: border-box; padding: 12px 0; border: 0; text-align: left; }
+  .learning-page .learning-table td[colspan]::before { content: none; }
+}
+
+@media (max-width: 480px) {
+  .learning-page .learning-grid, .learning-page .learning-weak-summary { grid-template-columns: 1fr; }
+  .learning-page .learning-goal-controls { flex-direction: column; }
+  .learning-page .learning-goal-controls input, .learning-page .learning-goal-controls button, .learning-page .learning-actions .learning-button, .learning-page .learning-choices button { width: 100%; }
+  .learning-page .learning-actions, .learning-page .learning-choices { flex-direction: column; }
+}

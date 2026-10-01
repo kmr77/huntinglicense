@@ -57,6 +57,9 @@
   </div>
 </footer>
 
+<?php if ( is_page( [ 'study-record', 'review' ] ) || is_page_template( 'page-mock-exam.php' ) || is_page_template( 'page-study-record.php' ) || is_page_template( 'page-review.php' ) ) : ?>
+<script src="<?php echo esc_url( get_template_directory_uri() . '/learning-progress.js?v=' . filemtime( get_template_directory() . '/learning-progress.js' ) ); ?>" defer></script>
+<?php endif; ?>
 <script src="<?php echo esc_url( get_template_directory_uri() . '/common.js' ); ?>" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

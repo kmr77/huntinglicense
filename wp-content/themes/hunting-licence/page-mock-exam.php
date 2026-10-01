@@ -419,6 +419,10 @@ if ( ! empty( $format_error_nos ) ) {
         <?php endif; ?>
     </header>
 
+    <?php if ( $config && in_array( $config['mode'], [ 'index', 'official-index' ], true ) ) : ?>
+        <?php get_template_part('parts-ads'); ?>
+    <?php endif; ?>
+
     <?php if ( $config && $config['mode'] === 'index' ) : ?>
 
         <section class="mock-start-card">
@@ -510,6 +514,8 @@ if ( ! empty( $format_error_nos ) ) {
         <p class="mock-note">回答中は正解を表示しません。すべて回答した後に採点すると、正解・不正解と解説をまとめて確認できます。ページを再読み込みすると問題は再抽選されます。</p>
         <div class="mock-start-actions"><button type="button" class="mock-primary-btn" id="mock-start-btn">模擬試験を開始する</button></div>
     </section>
+
+    <?php get_template_part('parts-ads'); ?>
 
     <section class="mock-test" id="mock-test">
         <div class="mock-status">
@@ -606,6 +612,9 @@ if ( ! empty( $format_error_nos ) ) {
 
     <?php endif; ?>
 
+    <?php endif; ?>
+    <?php if ( $config ) : ?>
+        <?php get_template_part('parts-ads'); ?>
     <?php endif; ?>
 </main>
 </div>

@@ -24,7 +24,12 @@ crossorigin="anonymous"></script>
 
     // /mock-exam/ami/ は、公開中の網猟問題数をタイトルへ自動反映する。
     // 既存の custom_title に「30問」が残っていても、ここを優先する。
-    if ( $page_slug === 'ami' && $parent_slug === 'mock-exam' ) {
+    if ( is_page_template( 'page-study-record.php' ) || is_page_template( 'page-review.php' ) ) {
+      $learning_title = is_page_template( 'page-study-record.php' ) ? '学習記録' : '問題の復習';
+      echo '<title>' . esc_html( $learning_title ) . '｜狩猟免許過去問ドリル</title>';
+      echo '<meta name="description" content="' . esc_attr( $learning_title . 'をこの端末で確認できます。' ) . '">';
+      echo '<meta name="robots" content="noindex,follow">';
+    } elseif ( $page_slug === 'ami' && $parent_slug === 'mock-exam' ) {
       $ami_count_query = new WP_Query( array(
         'post_type'           => 'post',
         'post_status'         => 'publish',
@@ -294,6 +299,9 @@ crossorigin="anonymous"></script>
   
   <?php if ( is_page_template('page-schedule-detail.php') ) : ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/schedule.css">
+  <?php endif; ?>
+  <?php if ( is_page( [ 'study-record', 'review' ] ) || is_page_template( 'page-study-record.php' ) || is_page_template( 'page-review.php' ) || is_page_template( 'page-mock-exam.php' ) ) : ?>
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() . '/css/study-record.css?v=' . filemtime( get_template_directory() . '/css/study-record.css' ) ); ?>">
   <?php endif; ?>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
   <!-- JS -->

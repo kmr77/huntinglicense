@@ -159,7 +159,9 @@ Modal.prototype.close = function() {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("toggle-random").addEventListener("click", function () {
+  const randomToggle = document.getElementById("toggle-random");
+  if (!randomToggle) return;
+  randomToggle.addEventListener("click", function () {
       let url = new URL(window.location.href);
       if (url.searchParams.get("random") === "1") {
           url.searchParams.delete("random"); // 通常順に戻す

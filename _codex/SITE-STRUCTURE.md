@@ -20,6 +20,7 @@
 - 調査日時: 2026-09-26 15:13〜15:16 JST。
 - 管理体制の更新日時: 2026-09-26 15:33 JST。下記のサイト実体に関する数値・バージョン・主要ファイルの存在を読み取りで再確認した。
 - テーマの現在状態確認: 2026-09-27 08:38 JST。ローカルに試験的に作られた `functions.php` の削除後に確認。
+- 学習記録・復習ページのURL確認: 2026-10-01 JST。両固定ページの公開とHTTP 200を確認。下記の2026-09-30時点の未作成記録より新しい状態。
 - WordPressルート: `/Applications/MAMP/htdocs/huntinglicense`。ローカルURLは `http://localhost:8888/huntinglicense/`（HTTP HEAD 200を確認）。
 - 調査方法: テーマ実ファイル、WordPressを読み込むPHP CLI、DBの `SELECT` / `SHOW TABLES` / `DESCRIBE`、ローカルHTTPのHEAD。DBへの書き込みは行っていない。
 - 有効テーマ: `hunting-licence`（表示名 `Hunting Licence`）。親・子テーマ設定とも同じスラッグ。
@@ -65,6 +66,7 @@ huntinglicense/
 | `single.php` / `single-experience.php` | 投稿詳細。体験談カテゴリは `single.php` から体験談用ファイルを読み込む。 |
 | `single-question.php` | 問題詳細用のファイルも存在。ただしDBの公開投稿は `post` 型で、テーマ内に `question` 投稿タイプの登録は見つからない。現行の通常投稿詳細は `single.php`。 |
 | `page-mock-exam.php` | 模擬試験のページテンプレート。出題抽選、回答形式判定、HTML出力、ページ内JSによる採点。 |
+| `page-study-record.php` / `page-review.php` | 学習記録と問題単位の復習テンプレート。2026-10-01時点で対応する公開固定ページあり。スラッグによるWordPressのテンプレート階層で選択される。 |
 | `page-schedule.php` / `page-schedule-detail.php` | 試験日程CSVの表示と詳細用テンプレート。後者を選択した公開ページは今回のDB調査では見つからない。 |
 | `page-experience.php` / `page-contact.php` / `page.php` | 体験談一覧、問い合わせ、汎用固定ページ。 |
 | `page-examination*.php`、`page-gun*.php`、`page-license*.php`、その他 `page-*.php` | 猟銃・免許・受験手続き等の個別記事テンプレート。適用先は下記のURL対応を参照。 |
@@ -82,6 +84,8 @@ huntinglicense/
 | `css/schedule.css` | `page-schedule-detail.php` 適用ページで追加読込。 |
 | `css/category-mock-link.css` | カテゴリから模擬試験への導線用のCSSファイル。テーマPHP内にこのファイルを読み込む記述は見つからない。 |
 | `common.js` | ハンバーガーメニュー、モーダル、アコーディオン等。`footer.php` から読込。 |
+| `learning-progress.js` | `localStorage` の問題履歴・模擬試験履歴・目標日、集計、学習記録と復習ページの画面処理。通常問題では読み込まず、`footer.php` から対象画面で読込。 |
+| `css/study-record.css` | 学習記録・復習・模擬試験タイマー。通常問題では読み込まず、`header.php` から対象画面で読込。 |
 | `page-mock-exam.php` 内のJS | 模擬試験の進行、選択・採点、結果と解説の表示。独立したJSファイルではない。 |
 
 `header.php` はGoogle配信のjQuery、外部アイコン、広告・計測用スクリプトも読み込む。ここにはサービス識別子を転記しない。
@@ -93,6 +97,7 @@ huntinglicense/
 - 通常のカテゴリテンプレートは `WP_Query` で対象カテゴリの投稿を取り、`the_title()`、`the_field('no')`、`select_a/i/u`、`answer`、`answer_body` を出力。ページ送りや `?random=1` による順序変更がある。`common.js` がアコーディオンを制御する。
 - 投稿詳細 `single.php` はカテゴリにより選択肢を隠す。`animals-judge` は `habitat`、`habit`、`features`、`type` も表示。問題画像は `no` に基づく `img/question/<no>.avif` または `img/animal/<no>.avif` の存在を確認して表示。
 - 模擬試験 `page-mock-exam.php` は固定ページのスラッグ・親子関係からモードを決め、`shuryo_mock_random_ids()` でカテゴリまたは `protection` タグからランダム抽選し、`shuryo_mock_post_to_question()` で投稿タイトル・ACF項目・画像・正解形式をまとめる。3択、画像内3択、○×を扱う。回答と採点はページ内JS。本番形式30問は法令13、免許別猟具6、鳥獣9、保護管理2。選択済み投稿IDを除外して重複を避ける。
+- 模擬試験ページは共通テンプレート内で `parts-ads.php` を2回読み込む。TOP・本番形式の親ページは説明直後と一覧・選択カード後、出題ページは試験説明カード後と採点結果セクション後。問題ループ・回答フォームの内側に広告は置かない。
 
 ### ACFフィールド（DB上のフィールドグループ定義）
 
@@ -122,6 +127,7 @@ huntinglicense/
 | `/{post-slug}/` | 標準投稿は `single.php`。体験談カテゴリはそこから `single-experience.php`。 |
 | `/mock-exam/` と `/mock-exam/{type1,type2,wana,ami,laws,animals,protection,gun-course,hunting-license}/` | DBで `page-mock-exam.php` を指定。 |
 | `/mock-exam/hunting-license/{type1,type2,wana,ami}/` | `page-mock-exam.php` はこの親子スラッグを本番形式として扱う。該当する公開固定ページ自体は今回のDB一覧では未確認。 |
+| `/study-record/`、`/review/` | 2026-10-01時点で両URLはHTTP 200。`page-study-record.php`、`page-review.php` がスラッグにより自動選択される。固定ページの `_wp_page_template` は空欄。専用CSS・JSは `is_page()` のスラッグ判定でも読み込む。 |
 | `/schedule/` | `page-schedule.php`。 |
 | `/experience/` | `page-experience.php`。 |
 | `/contact/`、`/contact-checker/` | `page-contact.php`。 |
@@ -152,6 +158,16 @@ huntinglicense/
 
 - 本番公開環境のWordPress・PHP・DBのバージョン、設定、プラグイン状態。上記はこのローカル環境の結果。
 - 別接頭部 `wp9bdcd0` のテーブル群が残っている経緯と管理方針。
-- `/mock-exam/hunting-license/{license}/` の公開固定ページがない状態でのアクセス結果。テンプレート内にはリンクと処理がある。
+- `/mock-exam/hunting-license/{type1,type2,wana,ami}/` は2026-10-01のローカルHTTP確認で全て404。テンプレート内の本番形式処理は存在するが、対応する公開固定ページは確認できない。
 - すべてのURL・全端末での画面確認、外部スクリプトの稼働状況、CSV内容の網羅的な妥当性。
 - `_codex/` は `.gitignore` の例外により指定の管理MarkdownがGit管理対象。その他のWordPress本体やアップロードは引き続き除外される。
+
+## 学習記録・復習（2026-09-30追加）
+
+- 個人の学習記録は `shuryoLearningRecordV1` というブラウザの `localStorage` キーに保存する。DBスキーマとユーザー認証は使用しない。模擬試験の採点完了分だけ所要時間を履歴へ保存し、タイマーは `Date.now()` による実経過時間を使う。
+- 通常問題の10種類の `category-*.php` と `single.php` には自己判定用のdata属性・UIを置かず、閲覧だけでは記録しない。既存の選択肢・回答・解説の開閉処理はそのまま使う。正誤は模擬試験の採点と復習ページで保存する。
+- 模擬試験では各問題の投稿IDと分野をDOMへ渡し、採点時に各問の正誤と試験履歴を一度に保存する。`page-mock-exam.php` の抽選・出題数・採点方法は維持する。
+- 分野は `laws`、`type1`、`type2`、`wana`、`ami`、`animals`（`animals-judge` を含む）、`protection` タグ、`examination`。`all` は集約用、`numbers` は横断用で主要分野にしない。主要分野に紐付かない数字問題等は記録内で `cross` / `other` とし、全体集計には含めるが分野別の8行には加算しない。複数の主要カテゴリを持つ問題は1つの主要分野へ分類する。
+- 未回答問題の母集団は公開 `post` の `all` カテゴリと `animals-judge` カテゴリの和集合。追加時のローカルDBでは700件＋70件、重複0件。`experience` 投稿を含めない。
+- 復習はブラウザ側で対象IDを選び、`/review/?q={投稿ID}&mode={review|unanswered}` へ1問ずつ遷移する。PHPは公開済み `post` かつ上記母集団に属することを検証する。一時的な順番は `sessionStorage` に保存する。
+- 学習記録・復習の固定ページはコードでは自動作成しない。2026-10-01時点でローカルDBに両ページが公開済みで、PCと390px表示、主要なブラウザ操作を確認した。

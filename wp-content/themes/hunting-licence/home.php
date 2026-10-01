@@ -143,6 +143,7 @@ $home_hunting_question_count = max( 0, $home_total_question_count - $home_exam_q
 	<section class="home-section" aria-labelledby="mock-exam-title">
 		<h2 id="mock-exam-title">模擬試験で実力を確認する</h2>
 		<p class="home-section-intro">通常問題で学習した後は、30問の模擬試験で実力を確認できます。本番形式では受験する免許に合わせて出題します。</p>
+		<p class="home-section-intro">模擬試験の結果や苦手問題を学習記録として確認できます。 <a href="<?php echo esc_url( home_url( '/study-record/' ) ); ?>">学習記録を見る →</a></p>
 
 		<div class="study-card-grid">
 			<a class="study-card study-card-featured study-card-wide" href="<?php echo esc_url( home_url('/mock-exam/') ); ?>">
