@@ -42,6 +42,7 @@ $mock_configs = [
     'type1' => [
         'title'       => '第一種銃猟 30問模擬試験',
         'description' => '第一種銃猟の問題から30問をランダム出題します。',
+        'retry_label' => 'もう一度 第一種銃猟問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'type1',
         'count'       => 30,
@@ -49,6 +50,7 @@ $mock_configs = [
     'type2' => [
         'title'       => '第二種銃猟 30問模擬試験',
         'description' => '第二種銃猟の問題から30問をランダム出題します。',
+        'retry_label' => 'もう一度 第二種銃猟問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'type2',
         'count'       => 30,
@@ -56,6 +58,7 @@ $mock_configs = [
     'wana' => [
         'title'       => 'わな猟 30問模擬試験',
         'description' => 'わな猟の問題から30問をランダム出題します。',
+        'retry_label' => 'もう一度 わな猟問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'wana',
         'count'       => 30,
@@ -63,6 +66,7 @@ $mock_configs = [
     'ami' => [
         'title'       => '網猟 27問模擬試験',
         'description' => '網猟の全27問をランダム順で出題します。',
+        'retry_label' => 'もう一度 網猟問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'ami',
         'count'       => 27,
@@ -70,6 +74,7 @@ $mock_configs = [
     'laws' => [
         'title'       => '狩猟免許 法令30問模擬試験',
         'description' => '法令問題から30問をランダム出題します。',
+        'retry_label' => 'もう一度 法令問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'laws',
         'count'       => 30,
@@ -77,6 +82,7 @@ $mock_configs = [
     'animals' => [
         'title'       => '狩猟免許 鳥獣30問模擬試験',
         'description' => '鳥獣問題から30問をランダム出題します。',
+        'retry_label' => 'もう一度 鳥獣問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'animals',
         'count'       => 30,
@@ -84,6 +90,7 @@ $mock_configs = [
     'protection' => [
         'title'       => '狩猟免許 保護管理20問模擬試験',
         'description' => '保護管理の問題から20問をランダム出題します。',
+        'retry_label' => 'もう一度 保護管理問題に挑戦する',
         'mode'        => 'tag',
         'tag'         => 'protection',
         'count'       => 20,
@@ -91,6 +98,7 @@ $mock_configs = [
     'gun-course' => [
         'title'       => '猟銃等講習会 50問模擬考査',
         'description' => '猟銃等講習会の考査問題から50問をランダム出題します。',
+        'retry_label' => 'もう一度 猟銃等講習会問題に挑戦する',
         'mode'        => 'category',
         'category'    => 'examination',
         'count'       => 50,
@@ -115,6 +123,7 @@ if ( $is_mock_index ) {
     $config = [
         'title'       => '狩猟免許 本番形式30問模擬試験（' . $license_labels[ $selected_license ] . '）',
         'description' => '現在設定している本番形式の構成で、合計30問を出題します。',
+        'retry_label' => 'もう一度 本番形式30問に挑戦する',
         'mode'        => 'official-format',
         'count'       => 30,
     ];
@@ -607,7 +616,10 @@ if ( ! empty( $format_error_nos ) ) {
             <div id="mock-score-rate"></div>
         </div>
         <div class="mock-review" id="mock-review"></div>
-        <div class="mock-retry"><button type="button" class="mock-primary-btn" id="mock-retry">別の問題でもう一度挑戦する</button></div>
+        <div class="mock-retry">
+            <button type="button" class="mock-primary-btn" id="mock-retry"><?php echo esc_html( $config['retry_label'] ?? 'もう一度挑戦する' ); ?></button>
+            <a class="mock-secondary-btn" href="<?php echo esc_url( home_url('/mock-exam/') ); ?>">模擬試験一覧に戻る</a>
+        </div>
     </section>
 
     <?php endif; ?>

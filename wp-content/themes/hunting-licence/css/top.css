@@ -1571,6 +1571,10 @@ h2 {
 	gap: 8px;
 }
 
+.mock-exam-page .mock-start-card > .mock-note + .mock-license-select__buttons {
+	margin-top: 16px;
+}
+
 .mock-exam-page .mock-license-select__button {
 	display: inline-block;
 	padding: 8px 14px;
@@ -2023,8 +2027,19 @@ h2 {
 }
 
 .mock-exam-page .mock-retry {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
 	margin-top: 22px;
 	text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+	.mock-exam-page .mock-retry { flex-direction: column; }
+	.mock-exam-page .mock-retry .mock-primary-btn,
+	.mock-exam-page .mock-retry .mock-secondary-btn { width: 100%; box-sizing: border-box; }
+	.mock-exam-page .mock-retry .mock-primary-btn { text-wrap: balance; }
 }
 
 .mock-exam-page .mock-error {
