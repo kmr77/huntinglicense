@@ -96,7 +96,7 @@ huntinglicense/
 - 問題番号はACF `no`（`wp_postmeta`）で、一覧の `問N` は画面内の連番。カテゴリ画面には別途 `問題番号.` + `no` を表示する箇所がある。タイトル先頭の元資料番号を除く公開側の処理は現在未実装。
 - 通常のカテゴリテンプレートは `WP_Query` で対象カテゴリの投稿を取り、`the_title()`、`the_field('no')`、`select_a/i/u`、`answer`、`answer_body` を出力。ページ送りや `?random=1` による順序変更がある。`common.js` がアコーディオンを制御する。
 - 投稿詳細 `single.php` はカテゴリにより選択肢を隠す。`animals-judge` は `habitat`、`habit`、`features`、`type` も表示。問題画像は `no` に基づく `img/question/<no>.avif` または `img/animal/<no>.avif` の存在を確認して表示。
-- 模擬試験 `page-mock-exam.php` は固定ページのスラッグ・親子関係からモードを決め、`shuryo_mock_random_ids()` でカテゴリまたは `protection` タグからランダム抽選し、`shuryo_mock_post_to_question()` で投稿タイトル・ACF項目・画像・正解形式をまとめる。3択、画像内3択、○×を扱う。回答と採点はページ内JS。本番形式30問は法令13、免許別猟具6、鳥獣9、保護管理2。選択済み投稿IDを除外して重複を避ける。
+- 模擬試験 `page-mock-exam.php` は固定ページのスラッグ・親子関係と、本番形式では許可した `license` GET値からモードを決める。`shuryo_mock_random_ids()` でカテゴリまたは `protection` タグからランダム抽選し、`shuryo_mock_post_to_question()` で投稿タイトル・ACF項目・画像・正解形式をまとめる。3択、画像内3択、○×を扱う。回答と採点はページ内JS。本番形式30問は法令13、免許別猟具6、鳥獣9、保護管理2。選択済み投稿IDを除外して重複を避ける。
 - 模擬試験ページは共通テンプレート内で `parts-ads.php` を2回読み込む。TOP・本番形式の親ページは説明直後と一覧・選択カード後、出題ページは試験説明カード後と採点結果セクション後。問題ループ・回答フォームの内側に広告は置かない。
 
 ### ACFフィールド（DB上のフィールドグループ定義）
@@ -126,7 +126,7 @@ huntinglicense/
 | `/tag/{slug}/` | `tag-license.php`、`tag-examination.php`、`tag-hunting-ok.php`、`tag-hunting-ng.php` の該当分、他は `tag.php`。 |
 | `/{post-slug}/` | 標準投稿は `single.php`。体験談カテゴリはそこから `single-experience.php`。 |
 | `/mock-exam/` と `/mock-exam/{type1,type2,wana,ami,laws,animals,protection,gun-course,hunting-license}/` | DBで `page-mock-exam.php` を指定。 |
-| `/mock-exam/hunting-license/{type1,type2,wana,ami}/` | `page-mock-exam.php` はこの親子スラッグを本番形式として扱う。該当する公開固定ページ自体は今回のDB一覧では未確認。 |
+| `/mock-exam/hunting-license/?license={type1\|type2\|wana\|ami}` | 本番形式は既存の `hunting-license` 固定ページ1件を使用。`page-mock-exam.php` が許可済みGET値を検証し、指定免許の猟具6問を含むMIX30問を出す。4つの子固定ページは不要。値なし・無効値は同じ固定ページで免許選択画面を出す。 |
 | `/study-record/`、`/review/` | 2026-10-01時点で両URLはHTTP 200。`page-study-record.php`、`page-review.php` がスラッグにより自動選択される。固定ページの `_wp_page_template` は空欄。専用CSS・JSは `is_page()` のスラッグ判定でも読み込む。 |
 | `/schedule/` | `page-schedule.php`。 |
 | `/experience/` | `page-experience.php`。 |
@@ -158,15 +158,15 @@ huntinglicense/
 
 - 本番公開環境のWordPress・PHP・DBのバージョン、設定、プラグイン状態。上記はこのローカル環境の結果。
 - 別接頭部 `wp9bdcd0` のテーブル群が残っている経緯と管理方針。
-- `/mock-exam/hunting-license/{type1,type2,wana,ami}/` は2026-10-01のローカルHTTP確認で全て404。テンプレート内の本番形式処理は存在するが、対応する公開固定ページは確認できない。
+- 旧形式の `/mock-exam/hunting-license/{type1,type2,wana,ami}/` は2026-10-01のローカルHTTP確認で全て404。本番形式は2026-10-04から親固定ページと `license` GET値を使用するため、子固定ページは不要。
 - すべてのURL・全端末での画面確認、外部スクリプトの稼働状況、CSV内容の網羅的な妥当性。
 - `_codex/` は `.gitignore` の例外により指定の管理MarkdownがGit管理対象。その他のWordPress本体やアップロードは引き続き除外される。
 
 ## 学習記録・復習（2026-09-30追加）
 
-- 個人の学習記録用APIは `shuryoLearningRecordV1` というブラウザの `localStorage` キーを使用する。DBスキーマとユーザー認証は使用しない。2026-10-04時点の `page-mock-exam.php` は採点時に記録APIを呼ばず、タイマーUIも出力していない。以前のタイマー・履歴保存に関する記述は現在の実ファイルと一致しない。
+- 個人の学習記録用APIは `shuryoLearningRecordV1` というブラウザの `localStorage` キーを使用する。DBスキーマとユーザー認証は使用しない。2026-10-05に模擬試験タイマーと採点時の履歴保存を復旧。開始ボタンを押してからの `Date.now()` の差を秒で計算し、採点完了時だけ `recordExam()` で受験結果・所要秒数・各問の正誤を保存する。未採点離脱は記録しない。
 - 通常問題の10種類の `category-*.php` と `single.php` には自己判定用のdata属性・UIを置かず、閲覧だけでは記録しない。既存の選択肢・回答・解説の開閉処理はそのまま使う。正誤は模擬試験の採点と復習ページで保存する。
-- 模擬試験は `page-mock-exam.php` 内のJSで回答・採点・解説表示を行う。2026-10-04時点の問題DOMには正解判定用属性があるが、投稿ID・分野の記録用属性と採点時の履歴保存呼出しはない。採点結果では種類別の再挑戦文言を表示し、`/mock-exam/`へのリンクを置く。
+- 模擬試験は `page-mock-exam.php` 内のJSで回答・採点・解説表示を行う。問題DOMに投稿IDと分野を渡し、採点時に既存の `learning-progress.js` の `recordExam()` を1回呼ぶ。問題一覧カードのタイマーはPCで右上、狭い画面で縦並び。採点画面には所要時間、種類別の再挑戦文言、`/mock-exam/`へのリンクを表示する。学習記録の「模擬試験学習時間」は秒まで表示する。
 - 分野は `laws`、`type1`、`type2`、`wana`、`ami`、`animals`（`animals-judge` を含む）、`protection` タグ、`examination`。`all` は集約用、`numbers` は横断用で主要分野にしない。主要分野に紐付かない数字問題等は記録内で `cross` / `other` とし、全体集計には含めるが分野別の8行には加算しない。複数の主要カテゴリを持つ問題は1つの主要分野へ分類する。
 - 未回答問題の母集団は公開 `post` の `all` カテゴリと `animals-judge` カテゴリの和集合。追加時のローカルDBでは700件＋70件、重複0件。`experience` 投稿を含めない。
 - 復習はブラウザ側で対象IDを選び、`/review/?q={投稿ID}&mode={review|unanswered}` へ1問ずつ遷移する。PHPは公開済み `post` かつ上記母集団に属することを検証する。一時的な順番は `sessionStorage` に保存する。

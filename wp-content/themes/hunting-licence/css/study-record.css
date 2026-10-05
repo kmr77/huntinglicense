@@ -70,9 +70,16 @@
 .mock-timer { margin-top: 12px; font-size: 1rem; }
 .mock-timer strong { display: inline-block; min-width: 3.6em; font-variant-numeric: tabular-nums; }
 .mock-timer button { margin-left: 8px; padding: 3px 8px; border: 1px solid currentColor; border-radius: 4px; background: transparent; color: inherit; cursor: pointer; }
+.mock-exam-page .mock-index-head { align-items: flex-start; }
+.mock-exam-page .mock-index-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; text-align: right; }
+.mock-exam-page .mock-index-head .mock-timer { margin: 0; color: #344139; font-size: .9rem; font-weight: 700; white-space: nowrap; }
+.mock-exam-page .mock-index-legend { overflow-wrap: anywhere; }
+.mock-exam-page .mock-result-time { margin: 8px 0 0; color: #344139; font-weight: 700; font-variant-numeric: tabular-nums; }
 [hidden] { display: none !important; }
 
 @media (max-width: 700px) {
+  .mock-exam-page .mock-index-head { flex-direction: column; gap: 6px; }
+  .mock-exam-page .mock-index-meta { align-items: flex-start; text-align: left; }
   .learning-page.inner { margin: 18px auto 48px; }
   .learning-page .learning-header { padding: 18px 17px 17px; }
   .learning-page .learning-card { padding: 18px 16px; }

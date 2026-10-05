@@ -10,8 +10,6 @@ $current_page_id = get_queried_object_id();
 $page_slug       = get_post_field( 'post_name', $current_page_id );
 $parent_id       = wp_get_post_parent_id( $current_page_id );
 $parent_slug     = $parent_id ? get_post_field( 'post_name', $parent_id ) : '';
-$grandparent_id  = $parent_id ? wp_get_post_parent_id( $parent_id ) : 0;
-$grandparent_slug = $grandparent_id ? get_post_field( 'post_name', $grandparent_id ) : '';
 
 $license_labels = [
     'type1' => '第一種銃猟',
@@ -30,13 +28,14 @@ $is_official_index = (
     && $parent_slug === 'mock-exam'
 );
 
-$is_official_child = (
-    $parent_slug === 'hunting-license'
-    && $grandparent_slug === 'mock-exam'
-    && isset( $license_labels[ $page_slug ] )
-);
-
-$selected_license = $is_official_child ? $page_slug : '';
+$official_url = home_url('/mock-exam/hunting-license/');
+$selected_license = '';
+if ( $is_official_index && isset( $_GET['license'] ) && is_string( $_GET['license'] ) ) {
+    $requested_license = sanitize_key( wp_unslash( $_GET['license'] ) );
+    if ( isset( $license_labels[ $requested_license ] ) ) {
+        $selected_license = $requested_license;
+    }
+}
 
 $mock_configs = [
     'type1' => [
@@ -108,9 +107,17 @@ $mock_configs = [
 if ( $is_mock_index ) {
     $config = [
         'title'       => '狩猟免許 模擬試験',
-        'description' => '本番形式30問と、免許・分野別の模擬試験から選んで学習できます。',
+        'description' => '本番形式30問と、免許別・分野別の集中練習から選んで学習できます。',
         'mode'        => 'index',
         'count'       => 0,
+    ];
+} elseif ( $is_official_index && $selected_license ) {
+    $config = [
+        'title'       => '狩猟免許 本番形式30問模擬試験（' . $license_labels[ $selected_license ] . '）',
+        'description' => $license_labels[ $selected_license ] . '免許の本番を想定し、法令13問・猟具6問・鳥獣9問・保護管理2問の合計30問を出題します。',
+        'retry_label' => 'もう一度 本番形式30問に挑戦する',
+        'mode'        => 'official-format',
+        'count'       => 30,
     ];
 } elseif ( $is_official_index ) {
     $config = [
@@ -118,14 +125,6 @@ if ( $is_mock_index ) {
         'description' => '受験する免許を選んで、本番を想定した30問に挑戦できます。',
         'mode'        => 'official-index',
         'count'       => 0,
-    ];
-} elseif ( $is_official_child ) {
-    $config = [
-        'title'       => '狩猟免許 本番形式30問模擬試験（' . $license_labels[ $selected_license ] . '）',
-        'description' => '現在設定している本番形式の構成で、合計30問を出題します。',
-        'retry_label' => 'もう一度 本番形式30問に挑戦する',
-        'mode'        => 'official-format',
-        'count'       => 30,
     ];
 } else {
     $config = $mock_configs[ $page_slug ] ?? null;
@@ -436,14 +435,17 @@ if ( ! empty( $format_error_nos ) ) {
 
         <section class="mock-start-card">
             <h2>本番形式30問</h2>
-            <p class="mock-note">受験する免許を選び、本番を想定した30問に挑戦します。</p>
-            <div class="mock-start-actions">
-                <a class="mock-primary-btn" href="<?php echo esc_url( home_url('/mock-exam/hunting-license/') ); ?>">本番形式30問を選ぶ</a>
+            <p class="mock-note">本番と同じ分野構成で30問を出題します。<br>法令13問・猟具6問・鳥獣9問・保護管理2問</p>
+            <div class="mock-license-select__buttons">
+                <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
+                    <a class="mock-license-select__button" href="<?php echo esc_url( add_query_arg( 'license', $license_slug, $official_url ) ); ?>"><?php echo esc_html( $license_label ); ?> 本番形式30問</a>
+                <?php endforeach; ?>
             </div>
         </section>
 
         <section class="mock-start-card">
-            <h2>免許別の模擬試験</h2>
+            <h2>免許別・集中練習</h2>
+            <p class="mock-note">選んだ免許の問題だけを集中して練習できます。</p>
             <div class="mock-license-select__buttons">
                 <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/type1/') ); ?>">第一種銃猟 30問</a>
                 <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/type2/') ); ?>">第二種銃猟 30問</a>
@@ -453,7 +455,8 @@ if ( ! empty( $format_error_nos ) ) {
         </section>
 
         <section class="mock-start-card">
-            <h2>分野別の模擬試験</h2>
+            <h2>分野別・集中練習</h2>
+            <p class="mock-note">法令・鳥獣・保護管理など、苦手な分野を集中して練習できます。</p>
             <div class="mock-license-select__buttons">
                 <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/laws/') ); ?>">法令 30問</a>
                 <a class="mock-license-select__button" href="<?php echo esc_url( home_url('/mock-exam/animals/') ); ?>">鳥獣 30問</a>
@@ -470,7 +473,7 @@ if ( ! empty( $format_error_nos ) ) {
             <div class="mock-license-select__buttons">
                 <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
                     <a class="mock-license-select__button"
-                       href="<?php echo esc_url( home_url('/mock-exam/' . $license_slug . '/') ); ?>">
+                       href="<?php echo esc_url( add_query_arg( 'license', $license_slug, $official_url ) ); ?>">
                         <?php echo esc_html( $license_label ); ?>
                     </a>
                 <?php endforeach; ?>
@@ -485,7 +488,7 @@ if ( ! empty( $format_error_nos ) ) {
                 <div class="mock-license-select__buttons">
                     <?php foreach ( $license_labels as $license_slug => $license_label ) : ?>
                         <?php
-                        $url = home_url('/mock-exam/' . $license_slug . '/');
+                        $url = add_query_arg( 'license', $license_slug, $official_url );
                         $class = $selected_license === $license_slug ? ' is-current' : '';
                         ?>
                         <a class="mock-license-select__button<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>">
@@ -538,8 +541,16 @@ if ( ! empty( $format_error_nos ) ) {
         <div class="mock-paper">
             <form id="mock-form">
             <?php foreach ( $questions as $index => $question ) : ?>
+                <?php
+                $section_areas = [ '法令' => 'laws', '猟具' => $selected_license, '鳥獣' => 'animals', '保護管理' => 'protection' ];
+                $question_area = $config['mode'] === 'official-format'
+                    ? ( $section_areas[ $question['section'] ] ?? '' )
+                    : ( $config['mode'] === 'tag' ? $config['tag'] : $config['category'] );
+                ?>
                 <article class="mock-question<?php echo $index === 0 ? ' is-current' : ''; ?>"
                     data-index="<?php echo esc_attr( $index ); ?>"
+                    data-question-id="<?php echo esc_attr( $question['id'] ); ?>"
+                    data-area="<?php echo esc_attr( $question_area ); ?>"
                     data-correct="<?php echo esc_attr( $question['correct'] ); ?>"
                     data-answer-text="<?php echo esc_attr( wp_strip_all_tags( (string) $question['answer_text'] ) ); ?>">
 
@@ -592,7 +603,10 @@ if ( ! empty( $format_error_nos ) ) {
                 <div class="mock-index-box">
                     <div class="mock-index-head">
                         <p class="mock-index-title">問題一覧</p>
-                        <span class="mock-index-legend">回答済みは薄緑・現在の問題は濃緑</span>
+                        <div class="mock-index-meta">
+                            <p class="mock-timer"><span id="mock-timer-label">経過時間</span> <strong id="mock-timer-value">00:00</strong></p>
+                            <span class="mock-index-legend">回答済みは薄緑・現在の問題は濃緑</span>
+                        </div>
                     </div>
                     <div class="mock-jump">
                         <?php foreach ( $questions as $index => $question ) : ?>
@@ -614,6 +628,7 @@ if ( ! empty( $format_error_nos ) ) {
             <h2>採点結果</h2>
             <div class="mock-score-number" id="mock-score-number"></div>
             <div id="mock-score-rate"></div>
+            <p class="mock-result-time" id="mock-result-time">所要時間 00:00</p>
         </div>
         <div class="mock-review" id="mock-review"></div>
         <div class="mock-retry">
@@ -650,10 +665,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultBox = document.getElementById('mock-result');
     const scoreNumber = document.getElementById('mock-score-number');
     const scoreRate = document.getElementById('mock-score-rate');
+    const resultTime = document.getElementById('mock-result-time');
     const review = document.getElementById('mock-review');
     const retryBtn = document.getElementById('mock-retry');
+    const timerLabel = document.getElementById('mock-timer-label');
+    const timerValue = document.getElementById('mock-timer-value');
+    const examType = <?php echo wp_json_encode( $config['title'] ); ?>;
 
     let current = 0;
+    let startedAt = null;
+    let timerInterval = null;
+    let submitted = false;
+    const examId = String(Date.now()) + '-' + Math.random().toString(36).slice(2);
+
+    function formatTime(seconds) {
+        return String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(seconds % 60).padStart(2, '0');
+    }
+
+    function elapsedSeconds() {
+        return startedAt === null ? 0 : Math.max(0, Math.floor((Date.now() - startedAt) / 1000));
+    }
+
+    function updateTimer() {
+        if (!submitted) timerValue.textContent = formatTime(elapsedSeconds());
+    }
 
     function getAnsweredCount() {
         return questions.reduce(function(total, question, index) {
@@ -688,9 +723,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     startBtn.addEventListener('click', function() {
+        if (startedAt !== null) return;
         startBox.style.display = 'none';
         testBox.classList.add('is-active');
+        startedAt = Date.now();
+        timerValue.textContent = '00:00';
+        timerInterval = window.setInterval(updateTimer, 1000);
         showQuestion(0);
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) updateTimer();
     });
 
     prevBtn.addEventListener('click', function() { showQuestion(current - 1); });
@@ -706,8 +749,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        if (startedAt === null || submitted) return;
+        submitted = true;
+        const durationSeconds = elapsedSeconds();
+        window.clearInterval(timerInterval);
+        timerLabel.textContent = '所要時間';
+        timerValue.textContent = formatTime(durationSeconds);
         let score = 0;
         let html = '';
+        const answers = [];
 
         questions.forEach(function(question, index) {
             const checked = form.querySelector('input[name="q' + index + '"]:checked');
@@ -719,6 +769,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const explanation = question.querySelector('.mock-explanation-template').innerHTML;
 
             if (isCorrect) score++;
+            answers.push({
+                id: Number(question.dataset.questionId),
+                areas: [question.dataset.area],
+                title: title,
+                correct: isCorrect
+            });
 
             html += '<div class="mock-review-item ' + (isCorrect ? 'is-correct' : 'is-wrong') + '">';
             html += '<p><strong>問' + (index + 1) + '：</strong>' + escapeHtml(title) + '</p>';
@@ -731,7 +787,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const rate = Math.round((score / questions.length) * 100);
         scoreNumber.textContent = score + ' / ' + questions.length + '問';
         scoreRate.textContent = '正答率 ' + rate + '%';
+        resultTime.textContent = '所要時間 ' + formatTime(durationSeconds);
         review.innerHTML = html;
+
+        if (window.ShuryoLearning && typeof window.ShuryoLearning.recordExam === 'function') {
+            window.ShuryoLearning.recordExam({
+                id: examId, type: examType, total: questions.length,
+                correct: score, durationSeconds: durationSeconds
+            }, answers);
+        }
 
         testBox.style.display = 'none';
         resultBox.classList.add('is-active');

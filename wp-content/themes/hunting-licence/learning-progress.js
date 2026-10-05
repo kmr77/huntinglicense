@@ -125,9 +125,11 @@
   }
   function percent(correct, total) { return total ? Math.round(correct / total * 100) + '%' : '—'; }
   function duration(seconds) {
-    const minutes = Math.floor((Number(seconds) || 0) / 60);
+    const value = Math.max(0, Math.floor(Number(seconds) || 0));
+    const minutes = Math.floor(value / 60);
     const hours = Math.floor(minutes / 60);
-    return hours ? hours + '時間' + (minutes % 60) + '分' : minutes + '分';
+    const remainder = String(value % 60).padStart(2, '0') + '秒';
+    return hours ? hours + '時間' + (minutes % 60) + '分' + remainder : minutes + '分' + remainder;
   }
   function preciseDuration(seconds) {
     const value = Math.max(0, Math.floor(Number(seconds) || 0));
